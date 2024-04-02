@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>[主文件]HVM使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>[主文件]HVM使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/VM Related User Manual/HVM/Main HVM User Manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hvm">
+<span id="main-hvm-user-manual"></span><h1>[主文件]HVM使用手册<a class="headerlink" href="#hvm" title="Permalink to this headline">¶</a></h1>
+<p>HVM是趣链底层区块链平台自主研发的执行Java智能合约的执行引擎，通过实现轻量级的Java虚拟机，通过定制合约编写规范和结合区块链账本实现高可用的智能合约执行引擎。</p>
+<div class="section" id="id1">
+<h2>配套设施<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="litesdk">
+<h3>LiteSDK<a class="headerlink" href="#litesdk" title="Permalink to this headline">¶</a></h3>
+<p>LiteSDK是趣链开源的一款JavaSDK，可用于同区块链平台交互，部署和调用hvm合约，以及提供了对hvm参数编码和解码的功能，以下hvm的功能均可通过LiteSDK来进行使用。</p>
+<p>开源项目地址：<a class="reference external" href="https://github.com/hyperchain/javasdk">https://github.com/hyperchain/javasdk</a></p>
+<p>LiteSDK使用文档： <a class="reference external" href="https://github.com/hyperchain/javasdk/tree/master/docs">https://github.com/hyperchain/javasdk/tree/master/docs</a></p>
+</div>
+<div class="section" id="hvm-sdk">
+<h3>hvm-sdk<a class="headerlink" href="#hvm-sdk" title="Permalink to this headline">¶</a></h3>
+<p>hvm-sdk是用于编写hvm合约的工具包，包括以下介绍的合约主体类，InvokeBean接口和账本数据结构等，是编写合约项目必不可少的工具包。</p>
+<p>公网maven仓库地址： <a class="reference external" href="https://mvnrepository.com/artifact/cn.hyperchain/hvm-sdk">https://mvnrepository.com/artifact/cn.hyperchain/hvm-sdk</a></p>
+<p>可以使用maven或gradle来导入合约项目中:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">maven</span><span class="p">:</span>
+
+<span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">cn</span><span class="o">.</span><span class="n">hyperchain</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">hvm</span><span class="o">-</span><span class="n">sdk</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.1.5</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
+
+<span class="n">gradle</span><span class="p">:</span>
+
+<span class="nb">compile</span> <span class="n">group</span><span class="p">:</span> <span class="s1">&#39;cn.hyperchain&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;hvm-sdk&#39;</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="s1">&#39;1.1.5&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>合约规范<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>合约接口<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>我们可以编写一个或多个合约接口来指定合约提供的功能，最终合约需要实现这些接口定义的功能，而每个合约接口都需要继承自 <strong>BaseContractInterface</strong> ， <strong>BaseContractInterface</strong> 是一个空接口，用于标识合约的作用。</p>
+<p>一个合约接口的定义可以是如下的:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">interface</span> <span class="n">ISBank</span> <span class="n">extends</span> <span class="n">BaseContractInterface</span> <span class="p">{</span>
+   <span class="n">boolean</span> <span class="n">transfer</span><span class="p">(</span><span class="n">String</span> <span class="n">from</span><span class="p">,</span> <span class="n">String</span> <span class="n">to</span><span class="p">,</span> <span class="nb">int</span> <span class="n">value</span><span class="p">);</span>
+   <span class="n">boolean</span> <span class="n">withdraw</span><span class="p">(</span><span class="n">String</span> <span class="n">from</span><span class="p">,</span> <span class="nb">int</span> <span class="n">val</span><span class="p">);</span>
+   <span class="n">boolean</span> <span class="n">deposit</span><span class="p">(</span><span class="n">String</span> <span class="n">from</span><span class="p">,</span> <span class="nb">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>合约主体类<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>我们规定一个继承了 <strong>BaseContract</strong> 并实现了一系列 <strong>BaseContractInterface</strong> 的子接口（合约接口）的类被称为一个合约主体类。该类内的所有实现自合约接口的方法代表合约方法，可以被外界调用。要求该合约主体类中 <strong>必须提供无参构造方法，且不建议在构造函数中写合约逻辑</strong> ，为了解决可能存在的初始化的需求，我们提供了一个钩子函数 <cite>onInit()</cite> 来代替原构造函数的作用（见下文）。其中 <strong>BaseContract</strong> 提供了一系列特性和钩子函数的功能。</p>
+<p>一个合约主体类的结构大概如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">SBank</span> <span class="n">extends</span> <span class="n">BaseContract</span> <span class="n">implements</span> <span class="n">ISBank2</span><span class="p">,</span> <span class="n">ISBank</span> <span class="p">{</span>
+   <span class="nd">@StoreField</span>
+   <span class="n">public</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">accounts</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+   <span class="n">public</span> <span class="n">SBank</span><span class="p">()</span> <span class="p">{}</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">void</span> <span class="n">onInit</span><span class="p">()</span> <span class="p">{}</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">boolean</span> <span class="n">transfer</span><span class="p">(</span><span class="n">String</span> <span class="n">from</span><span class="p">,</span> <span class="n">String</span> <span class="n">to</span><span class="p">,</span> <span class="nb">int</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">boolean</span> <span class="n">withdraw</span><span class="p">(</span><span class="n">String</span> <span class="n">from</span><span class="p">,</span> <span class="nb">int</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">boolean</span> <span class="n">deposit</span><span class="p">(</span><span class="n">String</span> <span class="n">from</span><span class="p">,</span> <span class="nb">int</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">void</span> <span class="n">onCreated</span><span class="p">()</span> <span class="p">{}</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">void</span> <span class="n">onPreCommit</span><span class="p">()</span> <span class="p">{}</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">void</span> <span class="n">onCommitted</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>合约执行的生命周期<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>用户可以通过按需重写 <strong>BaseContract</strong> 中四个钩子方法 <cite>onInit()</cite> 、 <cite>onCreated()</cite> 、 <cite>onPreCommit()</cite> 和 <cite>onCommitted()</cite> 来在合约生命周期中的不同阶段加入自定代码。</p>
+<p>合约的生命周期如下：</p>
+<ul class="simple">
+<li><p><cite>deploy</cite> ：合约部署阶段，该阶段只会在合约部署时出现一次。</p></li>
+<li><p><cite>create</cite> ：构建合约对象阶段，无论部署还是调用均有该阶段。</p></li>
+<li><p><cite>execute</cite> ：执行指定的合约方法阶段，该阶段仅仅在调用合约时出现。</p></li>
+<li><p><cite>commit</cite> ：持久化阶段会自动扫描合约对象所有的持久化变量并做持久化操作（即数据真正上链），该阶段仅仅在调用合约时出现。</p></li>
+</ul>
+<p>各钩子函数的调用顺序如下：</p>
+<ul class="simple">
+<li><p><cite>部署合约</cite> : <strong>onInit()</strong> -&gt; <strong>onCreate()</strong> -&gt; <strong>onPreCommit()</strong> -&gt; <strong>onCommitted()</strong></p></li>
+<li><p><cite>调用合约</cite> : <strong>onCreate()</strong> -&gt; <strong>onPreCommit()</strong> -&gt; <strong>onCommitted()</strong></p></li>
+</ul>
+<p>&gt; 注：上面提到的四个钩子函数除了`onInit()`外，无论是在合约部署还是合约调用的时候均会被调用。</p>
+<p><img alt="image0" src="../../_images/lifecycle1.jpg" /></p>
+<p><strong>用户可以在钩子函数中添加自定义的逻辑，比如可以在</strong> <cite>onInit()</cite> <strong>中代替空参空体的构造函数初始化合约属性，在</strong> <cite>onCreate()</cite> <strong>中添加权限检查或者非持久化变量的初始化，在</strong> <cite>onPreCommit()</cite> <strong>中添加执行结果的校验，在</strong> <cite>onCommitted()</cite> <strong>中添加日志的打印等。</strong></p>
+<p>一般而言不建议重写 <strong>BaseContract</strong> 中的钩子函数，增加钩子函数后会带来不必要的性能开销，一般可用于调试。如不需要使用则可以忽略钩子函数。</p>
+</div>
+<div class="section" id="bean">
+<h3>合约功能bean<a class="headerlink" href="#bean" title="Permalink to this headline">¶</a></h3>
+<p>合约中需要用到一些数据结构的定义，对象转换的bean等等时，编写这些类时需要注意必须提供 <strong>空参构造函数</strong> ，并且重写 <cite>hashCode()</cite> 函数和 <cite>equals()</cite> 函数。</p>
+<p>例如SBank中Account账户bean的编写:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">Account</span> <span class="p">{</span>
+   <span class="n">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+   <span class="n">private</span> <span class="nb">int</span> <span class="n">amount</span><span class="p">;</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="nb">int</span> <span class="n">hashCode</span><span class="p">()</span> <span class="p">{</span>
+       <span class="o">...</span>
+   <span class="p">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">boolean</span> <span class="n">equals</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span><span class="p">)</span> <span class="p">{</span>
+       <span class="o">...</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>合约持久化属性<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>并非所有的合约属性都会被保存到区块链账本中，我们定义了合约持久化注解 <cite>&#64;StoreField</cite> 来表示该合约属性是需要保存到区块链账本当中的，StoreField注解只能用于修饰合约主类当中的属性，不能用于修饰其他bean文件当中的属性，合约主类中用StoreField注解修饰的形式如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="n">public</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;sbank&quot;</span><span class="p">;</span>
+
+<span class="nd">@StoreField</span>
+<span class="n">public</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">accounts</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HyperMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>使用StoreField修饰后的属性将在合约执行完成后保存数据到账本中，在合约中执行时也将从账本内获取最新值，StoreField注解还用于 <strong>配合HyperMap、HyperTable、HyperList和NestedMap</strong> 等账本数据结构使用，具体说明可以参看后续的合约账本数据结构内容。</p>
+<p>而对于合约中非&#64;StoreField注解修饰的属性值，则在每次合约调用时初始化为默认值，例如:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">String</span> <span class="n">key</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="nb">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>合约结构<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>上述是合约规范的介绍，了解了上述的编写规则后，我们可以完成一个简单的合约项目的构建。我们以一个银行积分转账的项目为例，来给出合约项目demo。合约项目我们推荐使用maven来构建，一个合约项目主要就包括了合约接口、合约主类和bean类，以及maven项目的pom.xml文件，用于执行合约主类和要打包的合约class文件。最终一个项目的结构大概如下(具体逻辑可以查看合约demo文件)：</p>
+<p><img alt="image1" src="../../_images/lifecycle2.png" /></p>
+<p>下面简单介绍一下样例代码：</p>
+<ul class="simple">
+<li><p><strong>Sbank.java</strong> : 合约主体类。需要继承 <strong>BaseContract</strong> 父类。合约主要功能是模拟了一个银行业务，提供了存钱、取钱和转账接口。</p></li>
+<li><p><strong>ISBank.java</strong> : 交付接口类，继承了 <strong>BaseContractInterface</strong> 。用来交付给应用程序开发者，包含了合约拥有者想要对应用程序1（假设）暴露的接口。</p></li>
+<li><p><strong>ISBank2.java</strong> : 交付接口类，继承了 <strong>BaseContractInterface</strong> 。用来交付给应用程序开发者，包含了合约拥有者想要对应用程序2（假设）暴露的接口。</p></li>
+<li><p><strong>pom.xml</strong> : 用户需要根据编写的合约主体类修改pom中 <cite>&lt;main-class&gt;&lt;/main-class&gt;</cite> 属性，值应该为 <strong>合约主体类的全限定类名</strong> 。</p></li>
+</ul>
+<p>pom.xml的样例如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+        xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+   &lt;groupId&gt;com.hyperchain&lt;/groupId&gt;
+   &lt;artifactId&gt;sbank&lt;/artifactId&gt;
+   &lt;version&gt;1.0&lt;/version&gt;
+   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+   &lt;build&gt;
+       &lt;plugins&gt;
+           &lt;plugin&gt;
+               &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+               &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+               &lt;version&gt;3.1.0&lt;/version&gt;
+               &lt;executions&gt;
+                   &lt;execution&gt;
+                       &lt;phase&gt;package&lt;/phase&gt;
+                       &lt;goals&gt;
+                           &lt;goal&gt;jar&lt;/goal&gt;
+                       &lt;/goals&gt;
+                       &lt;configuration&gt;
+                           &lt;classifier&gt;bank&lt;/classifier&gt;
+                           &lt;!-- 用于配置合约打包的java文件的包路径，应将合约执行过程中用到的类文件都打包进去 --&gt;
+                           &lt;includes&gt;
+                               &lt;include&gt;**/logic/**&lt;/include&gt;
+                               &lt;include&gt;**/bean/**&lt;/include&gt;
+                           &lt;/includes&gt;
+                           &lt;archive&gt;
+                               &lt;!-- 用于配置合约主类，必须提供合约主类全类名 --&gt;
+                               &lt;manifestEntries&gt;
+                                   &lt;Main-Class&gt;logic.SBank&lt;/Main-Class&gt;
+                               &lt;/manifestEntries&gt;
+                           &lt;/archive&gt;
+                       &lt;/configuration&gt;
+                   &lt;/execution&gt;
+               &lt;/executions&gt;
+           &lt;/plugin&gt;
+       &lt;/plugins&gt;
+   &lt;/build&gt;
+
+   &lt;dependencies&gt;
+       &lt;dependency&gt;
+           &lt;groupId&gt;cn.hyperchain&lt;/groupId&gt;
+           &lt;artifactId&gt;hvm-sdk&lt;/artifactId&gt;
+           &lt;version&gt;1.1.5&lt;/version&gt;
+       &lt;/dependency&gt;
+   &lt;/dependencies&gt;
+&lt;/project&gt;
+</pre></div>
+</div>
+<p>最终通过 <strong>mvn package -DskipTests</strong> 即可打包出合约jar包。</p>
+</div>
+<div class="section" id="id8">
+<h3>注意事项<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>合约中的任意类以及InvokeBean类的包名都不能以 <strong>cn.hyperchain、com.google.gson、gnu、java、sun</strong> 这些包名开头，否则hvm将拒绝部署和调用；</p></li>
+<li><p>合约打包时pom.xml文件中一定要有&lt;Main-Class&gt;配置</p></li>
+<li><p>合约必须继承自BaseContract虚类</p></li>
+</ul>
+</div>
+<div class="section" id="demo">
+<h3>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h3>
+<p><strong>【完整的合约项目demo文件，参考HVM使用手册——HVM合约demo文件——hvm-manual-demo的sbank合约】</strong></p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2><strong>合约调用</strong><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>调用合约之前需要先部署合约，部署合约时使用的即为合约jar包，部署成功后将获得一个合约地址，对于合约调用都需要基于部署的合约地址。对于合约的部署和调用则请结合SDK的使用说明来使用，这里不再展开讲解。</p>
+<p>hvm合约提供了两种调用的方式，分别是编写InvokeBean类和直接调用合约方法的形式。</p>
+<div class="section" id="invokebean">
+<h3>InvokeBean<a class="headerlink" href="#invokebean" title="Permalink to this headline">¶</a></h3>
+<p>我们将InvokeBean称为合约调用类，通过InvokeBean形式调用合约需要编写一个合约调用类，且该调用类需要实现 <cite>BaseInvoke</cite> 接口，该接口的具体实现如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 泛型T表示返回的类型，V表示合约类
+public interface BaseInvoke&lt;T, V extends BaseContractInterface&gt;  {
+   T invoke(V obj);
+}
+</pre></div>
+</div>
+<p>实现接口的 <cite>invoke</cite> 来编写执行合约的具体逻辑， <cite>obj</cite> 即为合约对象，其中对于该调用类必须有一个空参空体的构造函数。</p>
+<p>一次合约交易是以一个InvokeBean内实现的invoke方法逻辑决定的，可以在invoke方法内调用一个或多个合约接口的方法，InvokeBean作为交易调用参数传入到SDK中，一个InvokeBean的invoke方法调用逻辑为原子的。</p>
+<ul class="simple">
+<li><p>泛型T表示返回的类型，即最终这笔合约调用交易的返回结果；</p></li>
+<li><p>泛型V表示合约接口，用于在invoke方法内调用合约主体类的实现逻辑。</p></li>
+</ul>
+<p>以调用之前 <cite>SBank</cite> 为例，编写 <cite>BankInvoke</cite> 来进行转账操作，调用类具体示例如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">BankInvoke</span> <span class="n">implements</span> <span class="n">BaseInvoke</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="p">,</span> <span class="n">ISBank</span><span class="o">&gt;</span> <span class="p">{</span>
+
+   <span class="o">/**</span>
+   <span class="o">*</span> <span class="n">调用参数</span><span class="p">(</span><span class="n">也可使用单个Bean</span><span class="p">)</span>
+   <span class="o">*/</span>
+   <span class="n">public</span> <span class="n">String</span> <span class="n">from</span><span class="p">;</span>
+   <span class="n">public</span> <span class="n">String</span> <span class="n">to</span><span class="p">;</span>
+   <span class="n">public</span> <span class="nb">int</span> <span class="n">value</span><span class="p">;</span>
+
+   <span class="o">//</span> <span class="n">必须提供的空参空体构造函数</span>
+   <span class="n">public</span> <span class="n">BankInvoke</span><span class="p">()</span> <span class="p">{}</span>
+
+   <span class="o">//</span> <span class="n">方便初始化参数的构造函数</span>
+   <span class="n">public</span> <span class="n">BankInvoke</span><span class="p">(</span><span class="n">String</span> <span class="n">from</span><span class="p">,</span> <span class="n">String</span> <span class="n">to</span><span class="p">,</span> <span class="nb">int</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">this</span><span class="o">.</span><span class="kn">from</span> <span class="o">=</span> <span class="n">from</span><span class="p">;</span>
+      <span class="n">this</span><span class="o">.</span><span class="n">to</span> <span class="o">=</span> <span class="n">to</span><span class="p">;</span>
+      <span class="n">this</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="o">//</span> <span class="n">接口实现</span>
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">Boolean</span> <span class="n">invoke</span><span class="p">(</span><span class="n">ISBank</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">boolean</span> <span class="n">a</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">from</span><span class="p">,</span> <span class="n">to</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+       <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+           <span class="o">//</span> <span class="n">转账成功在进行后续操作</span>
+           <span class="n">obj</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="n">from</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+       <span class="p">}</span>
+       <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>我们以LiteSDK中构造使用InvokeBean的调用交易为例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span><span class="n">HVMBuilder</span><span class="p">(</span><span class="n">account</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">contractAddress</span><span class="p">,</span> <span class="n">invokeBean</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>上述例子中contractAddress为合约地址，invokeBean为我们编写的合约调用类的实例。</p>
+</div>
+<div class="section" id="id10">
+<h3>直接调用<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>直接调用相对于InvokeBean的优势是不需要编写额外的调用类，可以通过合约方法名直接调用合约方法，相对而言更加简单、高效，但是一笔交易只能调用一个合约方法，不能像InvokeBean一样对多个合约方法形成一个原子调用。</p>
+<p>直接调用则使用SDK提供的编码类，通过传入合约方法名称和要调用的合约方法的参数，通过SDK完成编码后，在封装成交易发送给区块链平台。</p>
+<p>我们以之前编写的SBank中的transfer方法为例，说明使用LiteSDK的调用形式。</p>
+<p>合约方法:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">boolean</span> <span class="n">transfer</span><span class="p">(</span><span class="n">String</span> <span class="n">from</span><span class="p">,</span> <span class="n">String</span> <span class="n">to</span><span class="p">,</span> <span class="nb">int</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+   <span class="o">......</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>使用LiteSDK中构造上述方法的直接调用的参数如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">InvokeDirectlyParams</span> <span class="n">invokeDirectlyParams</span> <span class="o">=</span> <span class="n">new</span> <span class="n">InvokeDirectlyParams</span><span class="o">.</span><span class="n">ParamBuilder</span><span class="p">(</span><span class="s2">&quot;transfer&quot;</span><span class="p">)</span>
+               <span class="o">.</span><span class="n">addString</span><span class="p">(</span><span class="s2">&quot;AAA&quot;</span><span class="p">)</span>
+               <span class="o">.</span><span class="n">addString</span><span class="p">(</span><span class="s2">&quot;BBB&quot;</span><span class="p">)</span>
+               <span class="o">.</span><span class="n">addint</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+               <span class="o">.</span><span class="n">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<p><strong>注意直接调用函数参数类型和数量必须与合约方法里面声明的类型一致，否则会出现找到不方法定义的错误，不支持参数的自动拆箱和装箱， 比如Integer 和int不能混用。</strong></p>
+<p>最终构造出直接调用的交易:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span><span class="n">HVMBuilder</span><span class="p">(</span><span class="n">account</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span><span class="n">invokeDirectly</span><span class="p">(</span><span class="n">contractAddress</span><span class="p">,</span> <span class="n">invokeDirectlyParams</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>上述例子中contractAddress为合约地址，invokeDirectlyParams为我们编写的直接调用合约方法参数。</p>
+<p>LiteSDK直接调用InvokeDirectlyParams的Builder类中增加参数的方法和Java参数类型的对应关系如下：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 65%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>增加参数方法</p></th>
+<th class="head"><p>对应Java参数类型</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>addInteger</p></td>
+<td><p>Integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>addInt</p></td>
+<td><p>int</p></td>
+</tr>
+<tr class="row-even"><td><p>addShort</p></td>
+<td><p>Short</p></td>
+</tr>
+<tr class="row-odd"><td><p>addshort</p></td>
+<td><p>short</p></td>
+</tr>
+<tr class="row-even"><td><p>addLong</p></td>
+<td><p>Long</p></td>
+</tr>
+<tr class="row-odd"><td><p>addlong</p></td>
+<td><p>long</p></td>
+</tr>
+<tr class="row-even"><td><p>addByte</p></td>
+<td><p>Byte</p></td>
+</tr>
+<tr class="row-odd"><td><p>addbyte</p></td>
+<td><p>byte</p></td>
+</tr>
+<tr class="row-even"><td><p>addFloat</p></td>
+<td><p>Float</p></td>
+</tr>
+<tr class="row-odd"><td><p>addfloat</p></td>
+<td><p>float</p></td>
+</tr>
+<tr class="row-even"><td><p>addDouble</p></td>
+<td><p>Double</p></td>
+</tr>
+<tr class="row-odd"><td><p>adddouble</p></td>
+<td><p>double</p></td>
+</tr>
+<tr class="row-even"><td><p>addCharacter</p></td>
+<td><p>Character</p></td>
+</tr>
+<tr class="row-odd"><td><p>addchar</p></td>
+<td><p>char</p></td>
+</tr>
+<tr class="row-even"><td><p>addBoolean</p></td>
+<td><p>Boolean</p></td>
+</tr>
+<tr class="row-odd"><td><p>addboolean</p></td>
+<td><p>boolean</p></td>
+</tr>
+<tr class="row-even"><td><p>addString</p></td>
+<td><p>java.lang.String</p></td>
+</tr>
+<tr class="row-odd"><td><p>addObject(Class&lt;?&gt; clazz, Object obj)</p></td>
+<td><p>java.lang.Object</p></td>
+</tr>
+<tr class="row-even"><td><p>addParamizedObject(Class&lt;?&gt;[] classes,
+Object obj)</p></td>
+<td><p>Colle
+ction或Map接口的实现类</p></td>
+</tr>
+</tbody>
+</table>
+<p>需要特殊说明的是addObject(Class&lt;?&gt; clazz, Object obj)和addParamizedObject(Class&lt;?&gt;[] classes, Object obj)两个接口：</p>
+<ol class="arabic simple">
+<li><p>addObject(Class&lt;?&gt; clazz, Object obj)</p></li>
+</ol>
+<p>需要注意的是支持没有泛型的Java类型，添加参数时需要指定Java的class，一般用于合约中bean类的传参。例如:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">addObject</span><span class="p">(</span><span class="n">Account</span><span class="o">.</span><span class="n">class</span><span class="p">,</span> <span class="n">new</span> <span class="n">Account</span><span class="p">())</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>addParamizedObject(Class&lt;?&gt;[] classes, Object obj)</p></li>
+</ol>
+<p>泛型类型，仅支持实现Collection或Map的接口类型，且需要把泛型类型也添加到classes中，不支持泛型类型嵌套泛型类型。泛型需要按顺序增加，Collection接口只能带一个泛型，Map接口只能带两个泛型。例如：</p>
+<p>增加ArrayList:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;</span> <span class="n">accounts</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="n">InvokeDirectlyParams</span> <span class="n">invokeDirectlyParams</span> <span class="o">=</span> <span class="n">new</span> <span class="n">InvokeDirectlyParams</span><span class="o">.</span><span class="n">ParamBuilder</span><span class="p">(</span><span class="s2">&quot;transfer&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">addParamizedObject</span><span class="p">(</span><span class="n">new</span> <span class="n">Class</span><span class="p">[]{</span><span class="n">ArrayList</span><span class="o">.</span><span class="n">class</span><span class="p">,</span> <span class="n">Account</span><span class="o">.</span><span class="n">class</span><span class="p">},</span> <span class="n">accounts</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>增加HashMap，Map类型的泛型应按K-V的顺序给:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Account</span><span class="o">&gt;</span> <span class="n">accountHashMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="n">InvokeDirectlyParams</span> <span class="n">invokeDirectlyParams</span> <span class="o">=</span> <span class="n">new</span> <span class="n">InvokeDirectlyParams</span><span class="o">.</span><span class="n">ParamBuilder</span><span class="p">(</span><span class="s2">&quot;transfer&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">addParamizedObject</span><span class="p">(</span><span class="n">new</span> <span class="n">Class</span><span class="p">[]{</span><span class="n">HashMap</span><span class="o">.</span><span class="n">class</span><span class="p">,</span> <span class="n">String</span><span class="o">.</span><span class="n">class</span><span class="p">,</span> <span class="n">Account</span><span class="o">.</span><span class="n">class</span><span class="p">},</span> <span class="n">accountHashMap</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>以下情况的类型添加则是**不被允许**的:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;&gt;</span> <span class="n">accounts</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;&gt;</span> <span class="n">accountHashMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>demo<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>提供的demo还是以SBank为例，增加了单元测试，提供的了通过InvokeBean和直接调用两种形式来调用合约的transfer方法:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">InputStream</span> <span class="ow">is</span> <span class="o">=</span> <span class="n">FileUtil</span><span class="o">.</span><span class="n">readFileAsStream</span><span class="p">(</span><span class="n">jarPath</span><span class="p">);</span>
+<span class="n">DefaultHttpProvider</span> <span class="n">defaultHttpProvider</span> <span class="o">=</span> <span class="n">new</span> <span class="n">DefaultHttpProvider</span><span class="o">.</span><span class="n">Builder</span><span class="p">()</span><span class="o">.</span><span class="n">setUrl</span><span class="p">(</span><span class="n">defaultURL</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+<span class="n">ProviderManager</span> <span class="n">providerManager</span> <span class="o">=</span> <span class="n">ProviderManager</span><span class="o">.</span><span class="n">createManager</span><span class="p">(</span><span class="n">defaultHttpProvider</span><span class="p">);</span>
+
+<span class="n">ContractService</span> <span class="n">contractService</span> <span class="o">=</span> <span class="n">ServiceManager</span><span class="o">.</span><span class="n">getContractService</span><span class="p">(</span><span class="n">providerManager</span><span class="p">);</span>
+<span class="n">AccountService</span> <span class="n">accountService</span> <span class="o">=</span> <span class="n">ServiceManager</span><span class="o">.</span><span class="n">getAccountService</span><span class="p">(</span><span class="n">providerManager</span><span class="p">);</span>
+<span class="n">Account</span> <span class="n">account</span> <span class="o">=</span> <span class="n">accountService</span><span class="o">.</span><span class="n">genAccount</span><span class="p">(</span><span class="n">Algo</span><span class="o">.</span><span class="n">ECRAW</span><span class="p">);</span>
+
+<span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span><span class="n">HVMBuilder</span><span class="p">(</span><span class="n">account</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="ow">is</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+<span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">account</span><span class="p">);</span>
+<span class="n">ReceiptResponse</span> <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">contractAddress</span> <span class="o">=</span> <span class="n">receiptResponse</span><span class="o">.</span><span class="n">getContractAddress</span><span class="p">();</span>
+<span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;contract address: &quot;</span> <span class="o">+</span> <span class="n">contractAddress</span><span class="p">);</span>
+
+<span class="n">Transaction</span> <span class="n">transaction1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span><span class="n">HVMBuilder</span><span class="p">(</span><span class="n">account</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">contractAddress</span><span class="p">,</span> <span class="n">new</span> <span class="n">InvokeBank</span><span class="p">(</span><span class="s2">&quot;AAA&quot;</span><span class="p">,</span> <span class="s2">&quot;BBB&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+<span class="n">transaction1</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">account</span><span class="p">);</span>
+<span class="n">ReceiptResponse</span> <span class="n">receiptResponse1</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction1</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">decodeHVM</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeHVM</span><span class="p">(</span><span class="n">receiptResponse1</span><span class="o">.</span><span class="n">getRet</span><span class="p">(),</span> <span class="n">String</span><span class="o">.</span><span class="n">class</span><span class="p">);</span>
+<span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;decode: &quot;</span> <span class="o">+</span> <span class="n">decodeHVM</span><span class="p">);</span>
+
+<span class="n">InvokeDirectlyParams</span> <span class="n">invokeDirectlyParams</span> <span class="o">=</span> <span class="n">new</span> <span class="n">InvokeDirectlyParams</span><span class="o">.</span><span class="n">ParamBuilder</span><span class="p">(</span><span class="s2">&quot;transfer&quot;</span><span class="p">)</span>
+       <span class="o">.</span><span class="n">addString</span><span class="p">(</span><span class="s2">&quot;AAA&quot;</span><span class="p">)</span>
+       <span class="o">.</span><span class="n">addString</span><span class="p">(</span><span class="s2">&quot;BBB&quot;</span><span class="p">)</span>
+       <span class="o">.</span><span class="n">addint</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+       <span class="o">.</span><span class="n">build</span><span class="p">();</span>
+<span class="n">Transaction</span> <span class="n">transaction2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span><span class="n">HVMBuilder</span><span class="p">(</span><span class="n">account</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span><span class="n">invokeDirectly</span><span class="p">(</span><span class="n">contractAddress</span><span class="p">,</span> <span class="n">invokeDirectlyParams</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+<span class="n">transaction2</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">account</span><span class="p">);</span>
+<span class="n">ReceiptResponse</span> <span class="n">receiptResponse2</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction2</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+<span class="n">decodeHVM</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeHVM</span><span class="p">(</span><span class="n">receiptResponse2</span><span class="o">.</span><span class="n">getRet</span><span class="p">(),</span> <span class="n">String</span><span class="o">.</span><span class="n">class</span><span class="p">);</span>
+<span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;decode: &quot;</span> <span class="o">+</span> <span class="n">decodeHVM</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>完整例子代码可获取源码包后直接运行体验，需在项目根目录下先运行mvn package。</p>
+<p>【完整的合约项目demo文件，参考HVM使用手册——HVM合约demo文件——hvm-manual-demo的sbank合约】</p>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>合约账本结构<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>为方便合约中和账本的交互，以及提供多样化的合约功能，能让合约编写者像使用本地Java集合一样来操作区块链账本，目前hvm中提供了HyperTable，HyperMap、HyperList和NestedMap四种类型，当合约中需要保存持续增长的数据的时候，都应考虑使用提供的账本数据结构。</p>
+<div class="section" id="hypertable">
+<h3>HyperTable<a class="headerlink" href="#hypertable" title="Permalink to this headline">¶</a></h3>
+<p>HyperTable通过将账本kv数据抽象为数据表格的形式提供服务，可以精确保存和读取每一行数据的每一个字段，提供了高效的数据写入和查询功能。</p>
+<p>【HyperTable使用详情参考HVM使用手册文件 - 合约账本数据结构使用手册 - HyperTable】</p>
+</div>
+<div class="section" id="hypermap">
+<h3>HyperMap<a class="headerlink" href="#hypermap" title="Permalink to this headline">¶</a></h3>
+<p>HyperMap实现了Java中Map接口，可以操作Map一样来操作账本数据，适合以kv形式保存的数据，key作为唯一索引，需要注意的是value数据不应该是持续增长的类型。</p>
+<p>【HyperMap使用详情参考HVM使用手册文件 - 合约账本数据结构使用手册 - HyperMap】</p>
+</div>
+<div class="section" id="hyperlist">
+<h3>HyperList<a class="headerlink" href="#hyperlist" title="Permalink to this headline">¶</a></h3>
+<p>HyperList实现了Java中的List接口，可以操作List一样来操作账本数据，保持插入有序，以数据的index下标作为索引，需要注意的是HyperList不适合做为持续保存的数据结构，更适合做为队列，需要消费过期数据。</p>
+<p>【HyperList使用详情参考HVM使用手册文件 - 合约账本数据结构使用手册 - HyperList】</p>
+</div>
+<div class="section" id="nestedmap">
+<h3>NestedMap<a class="headerlink" href="#nestedmap" title="Permalink to this headline">¶</a></h3>
+<p>NestedMap和HashMap一样，实现了Map接口，所以其提供的功能与HashMap基本一致，不过在部分接口的使用上还是略有差别，更适合做复杂的嵌套数据。具体请查看直接接口章节。</p>
+<p>【NestedMap使用详情参考HVM使用手册文件 - 合约账本数据结构使用手册 - NestedMap】</p>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>跨合约调用<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>hvm提供了在一个合约内调用另一个合约的功能。</p>
+<p>【跨合约调用使用详情参考HVM使用手册文件 - HVM跨合约功能使用说明】</p>
+</div>
+<div class="section" id="id14">
+<h2>合约内置方法功能<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p>hvm在合约基类BaseContract中提供了许多内置方法，合约编写者可在合约主类中通过this引用直接调用。</p>
+<p>【HVM合约内置方法使用详情参考HVM使用手册文件 - HVM合约内置方法和工具方法使用手册】</p>
+</div>
+<div class="section" id="id15">
+<h2>工具方法<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<p>hvm合约中提供了一些不同类型的工具方法，包括密码学套件、字节转换工具等，相较于原生JDK实现有较高的性能</p>
+<p>【HVM合约工具方法使用详情参考HVM使用手册文件 - HVM合约工具方法和工具方法使用手册】</p>
+</div>
+<div class="section" id="id16">
+<h2>合约升级<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h3>合约升级介绍<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>HVM在LiteSdk中为用户提供了合约升级的功能，即可以用新的合约覆盖旧的合约。其升级操作示例如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span><span class="n">HVMBuilder</span><span class="p">(</span><span class="n">account</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span><span class="n">upgrade</span><span class="p">(</span><span class="n">contractAddress</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>示例中的contractAddress为原合约地址，payload为新合约的代码。两者均为String类型。</p>
+<p>playload可以通过合约的jar文件获得，获取方式示例如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">InputStream</span> <span class="n">fis</span> <span class="o">=</span> <span class="n">FileUtil</span><span class="o">.</span><span class="n">readFileAsStream</span><span class="p">(</span><span class="n">jarPath</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">payload</span> <span class="o">=</span> <span class="n">Encoder</span><span class="o">.</span><span class="n">encodeDeployJar</span><span class="p">(</span><span class="n">fis</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id18">
+<h3>合约升级需要注意事项：<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p><strong>权限</strong></p></li>
+</ol>
+<p>与冻结合约和解冻合约一样，合约升级需要权限。只有创建合约的账户才有升级该合约的权限。</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>合约类原有的属性不能删改</strong></p></li>
+</ol>
+<p>合约升级支持对合约类中方法的增加、修改和删除。也支持在合约类中增加属性，但是不允许删除或修改原有属性。</p>
+<p>以下场景是被允许的：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>新合约增加了新的成员变量</p></li>
+<li><p>新合约增加了新的函数</p></li>
+<li><p>新合约删除和修改了旧合约的函数</p></li>
+<li><p>如果类是enum，enum可以新增新的常量，但不可以删除已有的常量</p></li>
+<li><p>类里面引用的其他类可以增加成员变量</p></li>
+<li><p>数组或者HyperMap，HyperList里面的类增加成员变量</p></li>
+<li><p>HyperMap的泛型key为String类型的情况下，支持升级为NestedMap，泛型类型需保持不变</p></li>
+</ul>
+</div></blockquote>
+<p>以下场景是不被允许的：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>新合约删除了旧合约的成员变量</p></li>
+<li><p>新合约修改了旧合约成员变量的名字</p></li>
+<li><p>enum减少常量</p></li>
+<li><p>类里面引用的其他类减少成员变量</p></li>
+<li><p>数组或者HyperMap，HyperList里面的类减少成员变量</p></li>
+<li><p>StoreField属性类型被修改(除部分HyperMap升级为NestedMap的场景)</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id19">
+<h3>合约升级demo<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p>完整例子代码可获取源码包后直接运行体验，包中已经包含了新旧两份合约的jar文件。例子中的代码为新合约，其相对旧合约的改变在代码中均标有注释。</p>
+<p>【HVM合约升级使用详情参考HVM使用手册文件 - HVM合约demo文件 - hvm-manual-demo的contractUpdate目录 】</p>
+</div>
+</div>
+<div class="section" id="oracle">
+<h2>Oracle调用<a class="headerlink" href="#oracle" title="Permalink to this headline">¶</a></h2>
+<p>hvm中提供了调用外部可信数据源的功能，该功能需要hyperchain v2.0.0和hvm-sdk 1.1.0及其以上版本</p>
+<p>【Oracle调用使用详情参考预言机使用手册文件】</p>
+</div>
+<div class="section" id="hvm-abi">
+<h2>hvm-abi插件<a class="headerlink" href="#hvm-abi" title="Permalink to this headline">¶</a></h2>
+<p>hvm提供了类似Solidity的二进制调用接口abi文件，通过abi我们可以提供给非LiteSDK实现的SDK调用hvm合约，目前提供了gosdk的支持。</p>
+<p>hvm-abi插件支持了对hvm合约进行字节码增强，实现合约的storefiled在hvm中懒加载的功能。</p>
+<p>【HVM abi使用详情参考HVM使用手册文件 - HVM ABI插件使用手册】</p>
+</div>
+<div class="section" id="jdk">
+<h2>JDK支持列表<a class="headerlink" href="#jdk" title="Permalink to this headline">¶</a></h2>
+<p>【JDK支持列表使用详情参考HVM使用手册文件 - 附录 HVM JDK支持列表】</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>CA模式管理 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>CA模式管理</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Chain Authority Management/CA Mode Management.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ca">
+<span id="ca-mode-management"></span><h1>CA模式管理<a class="headerlink" href="#ca" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>引言<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>编写目的<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>本文档提供Hyperchain中ca模式管理的操作指南，作为ca模式管理与root ca管理的使用说明。</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>CA模式管理<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>功能描述<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>ca模式管理用于管理ca模式。</p>
+<p>默认情况下ca模式在启动时配置好无法更改，后续只能查询。但是对于特殊的，从2.7.0以前的版本升级到2.7.0时，配置的ca模式无法通过升级记录到链上，因此需要通过提案设置ca模式，设置后也无法更改。</p>
+<p>ca模式管理包括如下操作：</p>
+<ol class="arabic simple">
+<li><p>设置ca模式。从2.7.0以前的版本升级到2.7.0+，需要通过提案设置ca模式，如果为中心ca，设置完ca模式后还需要通过新增root ca的方式将所有使用的root ca上链。</p></li>
+<li><p>查询ca模式。查询ca模式可以通过提案的 <cite>Direct</cite> 操作直接进行查询。</p></li>
+</ol>
+<p>当ca模式为中心ca（非分布式ca）即Center时，可通过 <cite>RootCAContract</cite> 合约管理中心ca模式下使用的root ca，root ca管理包括如下操作：</p>
+<ol class="arabic simple" start="3">
+<li><p>新增root ca，即增加一个新的信任的root ca。</p></li>
+<li><p>查询root ca，即查询当前模式下信任的所有的root ca。</p></li>
+</ol>
+</div>
+<div class="section" id="litesdk">
+<h3>litesdk接口说明<a class="headerlink" href="#litesdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>ca模式接口说明<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>litesdk提供了 <cite>ProposalBuilder</cite> 构造器用于构造提案的操作，在 <cite>ProposalBuilder</cite> 中提供了 <cite>createForCAMode</cite> 、 <cite>directForCAMode</cite> 、 <cite>vote</cite> 、 <cite>cancel</cite> 和 <cite>execute</cite> 方法分别用于创建ca模式类提案、直接执行ca模式类操作、提案投票、取消提案和执行提案的提案操作，其定义如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="k">class</span> <span class="nc">ProposalBuilder</span> <span class="n">extends</span> <span class="n">BuiltinOperationBuilder</span> <span class="p">{</span>
+
+       <span class="o">/**</span>
+        <span class="o">*</span> <span class="n">create</span> <span class="n">creat</span> <span class="n">ProposalOperation</span> <span class="k">for</span> <span class="n">ca</span> <span class="n">to</span> <span class="n">create</span> <span class="n">ca</span> <span class="n">mode</span> <span class="n">proposal</span><span class="o">.</span>
+        <span class="o">*</span>
+        <span class="o">*</span> <span class="nd">@param</span> <span class="n">opts</span> <span class="n">ca_mode</span> <span class="n">operations</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">setCAMode</span>
+        <span class="o">*</span> <span class="nd">@return</span> <span class="p">{</span><span class="nd">@link</span> <span class="n">ProposalBuilder</span><span class="p">}</span>
+        <span class="o">*/</span>
+       <span class="n">public</span> <span class="n">ProposalBuilder</span> <span class="n">createForCAMode</span><span class="p">(</span><span class="n">CAModeOperation</span><span class="o">...</span> <span class="n">opts</span><span class="p">);</span>
+
+       <span class="o">/**</span>
+        <span class="o">*</span> <span class="n">create</span> <span class="n">direct</span> <span class="n">ProposalOperation</span> <span class="k">for</span> <span class="n">ca</span> <span class="n">to</span> <span class="n">execute</span> <span class="n">ca</span> <span class="n">mode</span> <span class="n">operation</span> <span class="n">directly</span><span class="o">.</span>
+        <span class="o">*</span>
+        <span class="o">*</span> <span class="nd">@param</span> <span class="n">opts</span> <span class="n">ca_mode</span> <span class="n">operations</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">getCAMode</span>
+        <span class="o">*</span> <span class="nd">@return</span> <span class="p">{</span><span class="nd">@link</span> <span class="n">ProposalBuilder</span><span class="p">}</span>
+        <span class="o">*/</span>
+       <span class="n">public</span> <span class="n">ProposalBuilder</span> <span class="n">directForCAMode</span><span class="p">(</span><span class="n">CAModeOperation</span><span class="o">...</span> <span class="n">opts</span><span class="p">);</span>
+
+       <span class="o">/**</span>
+        <span class="o">*</span> <span class="n">create</span> <span class="n">vote</span> <span class="n">ProposalOperation</span> <span class="n">to</span> <span class="n">vote</span> <span class="n">proposal</span><span class="o">.</span>
+        <span class="o">*</span>
+        <span class="o">*</span> <span class="nd">@param</span> <span class="n">proposalID</span> <span class="n">proposal</span> <span class="nb">id</span>
+        <span class="o">*</span> <span class="nd">@param</span> <span class="n">vote</span>       <span class="n">vote</span> <span class="n">value</span><span class="p">,</span> <span class="n">true</span> <span class="n">means</span> <span class="n">agree</span><span class="p">;</span> <span class="n">false</span> <span class="n">means</span> <span class="n">refuse</span>
+        <span class="o">*</span> <span class="nd">@return</span> <span class="p">{</span><span class="nd">@link</span> <span class="n">ProposalBuilder</span><span class="p">}</span>
+        <span class="o">*/</span>
+       <span class="n">public</span> <span class="n">ProposalBuilder</span> <span class="n">vote</span><span class="p">(</span><span class="nb">int</span> <span class="n">proposalID</span><span class="p">,</span> <span class="n">boolean</span> <span class="n">vote</span><span class="p">);</span>
+
+       <span class="o">/**</span>
+        <span class="o">*</span> <span class="n">create</span> <span class="n">cancel</span> <span class="n">ProposalOperation</span> <span class="n">to</span> <span class="n">cancel</span> <span class="n">proposal</span><span class="o">.</span>
+        <span class="o">*</span>
+        <span class="o">*</span> <span class="nd">@param</span> <span class="n">proposalID</span> <span class="n">proposal</span> <span class="nb">id</span>
+        <span class="o">*</span> <span class="nd">@return</span> <span class="p">{</span><span class="nd">@link</span> <span class="n">ProposalBuilder</span><span class="p">}</span>
+        <span class="o">*/</span>
+       <span class="n">public</span> <span class="n">ProposalBuilder</span> <span class="n">cancel</span><span class="p">(</span><span class="nb">int</span> <span class="n">proposalID</span><span class="p">);</span>
+
+       <span class="o">/**</span>
+        <span class="o">*</span> <span class="n">create</span> <span class="n">execute</span> <span class="n">ProposalOperation</span> <span class="n">to</span> <span class="n">cancel</span> <span class="n">proposal</span><span class="o">.</span>
+        <span class="o">*</span>
+        <span class="o">*</span> <span class="nd">@param</span> <span class="n">proposalID</span> <span class="n">proposal</span> <span class="nb">id</span>
+        <span class="o">*</span> <span class="nd">@return</span> <span class="p">{</span><span class="nd">@link</span> <span class="n">ProposalBuilder</span><span class="p">}</span>
+        <span class="o">*/</span>
+       <span class="n">public</span> <span class="n">ProposalBuilder</span> <span class="n">execute</span><span class="p">(</span><span class="nb">int</span> <span class="n">proposalID</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>ca模式的操作分以下几种：</p>
+<ul class="simple">
+<li><p>SetCAMode，设置ca模式，即为当前ns设置ca模式。ca模式存在的情况下不能再次设置ca模式，即只有当老版本升级到2.7.0+的版本时，可通过这届操作设置ca模式，设置的ca模式需要与新版启动时设置的ca模式相同，否则当前ns将停止运行。</p></li>
+<li><p>GetCAMode，查询ca模式，即返回当前ns设置的ca模式。可通过 <cite>ProposalContract</cite> 的 <cite>Direct</cite> 操作直接查询，无需投票。</p></li>
+</ul>
+<p>构造合约命名类操作 <cite>CAModeOperation</cite> 的构造器 <cite>CAModeBuilder</cite> 提供了 <cite>setCAMode</cite> 、 <cite>getCAMode</cite> 和 <cite>build</cite> 方法，其定义如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public static class CAModeBuilder {
+        /**
+         * create CAModeOperation to set ca mode.
+         * when has not set ca mode, can set ca mode.
+         *
+         * @param mode {@link CAMode}
+         * @return {@link CAModeBuilder}
+         */
+        public CAModeBuilder setCAMode(CAMode mode);
+​
+        /**
+         * create CAModeOperation to get ca mode.
+         *
+         * @return {@link CAModeBuilder}
+         */
+        public CAModeBuilder getCAMode();
+
+        /**
+         * return build CNSOperation.
+         *
+         * @return {@link CAModeOperation}
+         */
+        public CAModeOperation build();
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="root-ca">
+<h4>root ca接口说明<a class="headerlink" href="#root-ca" title="Permalink to this headline">¶</a></h4>
+<p><cite>RootCAContract</cite> 中提供的合约方法如下：</p>
+<ol class="arabic simple">
+<li><p><cite>AddRootCA</cite> : AddRootCA方法接收一个参数，即新增的root.ca文件内容，用于新增root ca，当ca mode为center，即中心ca时，链级管理员（admin用户）可以新增root ca。</p></li>
+<li><p><cite>GetRootCAs</cite> : GetRootCAs方法不需要入参，用于查询链上所有的root ca，当ca mode为center时，返回链上所有当root ca。</p></li>
+</ol>
+<p>构造 <cite>RootCAContract</cite> 操作的构造器 <cite>RootCABuilder</cite> 提供了 <cite>addRootCA</cite> 和 <cite>getRootCAs</cite> 方法，分别用于构造 <cite>RootCAContract</cite> 合约中的 <cite>AddRootCA</cite> 和 <cite>GetRootCAs</cite> 方法，其定义如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public static class RootCABuilder extends BuiltinOperationBuilder{
+        /**
+         * create RootCAOperation to add root ca.
+         * when ca mode is center, admin can add root ca.
+         *
+         * @param rootCA the root ca which will be add.
+         * @return {@link RootCABuilder}
+         */
+        public RootCABuilder addRootCA(String rootCA);
+​
+        /**
+         * create RootCAOperation to get root cas.
+         * when ca mode is center, everyone can get root cas.
+         *
+         * @return {@link RootCABuilder}
+         */
+        public RootCABuilder getRootCAs();
+​
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>litesdk使用示例<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h4>ca模式使用示例<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p>设置ca模式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">旧版升级第一次设置才能成功</span><span class="p">)</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">testCAModeOperation</span><span class="p">()</span> <span class="n">throws</span> <span class="n">RequestException</span> <span class="p">{</span>
+   <span class="o">//</span> <span class="n">new</span> <span class="n">proposal</span> <span class="n">create</span> <span class="n">operation</span> <span class="k">for</span> <span class="n">ca</span> <span class="n">mode</span>
+   <span class="n">BuiltinOperation</span> <span class="n">opt</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ProposalOperation</span><span class="o">.</span><span class="n">ProposalBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">createForCAMode</span><span class="p">(</span>
+           <span class="n">new</span> <span class="n">CAModeOperation</span><span class="o">.</span><span class="n">CAModeBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">setCAMode</span><span class="p">(</span><span class="n">CAMode</span><span class="o">.</span><span class="kc">None</span><span class="p">)</span><span class="o">.</span><span class="n">builder</span><span class="p">()</span>
+   <span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+
+   <span class="o">//</span> <span class="n">send</span> <span class="n">transaction</span> <span class="n">to</span> <span class="n">create</span> <span class="n">proposal</span>
+   <span class="n">invokeBVMContract</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="n">accountService</span><span class="o">.</span><span class="n">fromAccountJson</span><span class="p">(</span><span class="n">accountJsons</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
+
+   <span class="o">//</span> <span class="n">get</span> <span class="n">proposal</span>
+   <span class="n">Request</span><span class="o">&lt;</span><span class="n">ProposalResponse</span><span class="o">&gt;</span> <span class="n">proposal</span> <span class="o">=</span> <span class="n">configService</span><span class="o">.</span><span class="n">getProposal</span><span class="p">();</span>
+   <span class="n">ProposalResponse</span> <span class="n">proposalResponse</span> <span class="o">=</span> <span class="n">proposal</span><span class="o">.</span><span class="n">send</span><span class="p">();</span>
+   <span class="n">ProposalResponse</span><span class="o">.</span><span class="n">Proposal</span> <span class="n">prop</span> <span class="o">=</span> <span class="n">proposalResponse</span><span class="o">.</span><span class="n">getProposal</span><span class="p">();</span>
+
+   <span class="o">//</span> <span class="n">vote</span>
+   <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">invokeBVMContract</span><span class="p">(</span><span class="n">new</span> <span class="n">ProposalOperation</span><span class="o">.</span><span class="n">ProposalBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">vote</span><span class="p">(</span><span class="n">prop</span><span class="o">.</span><span class="n">getId</span><span class="p">(),</span> <span class="n">true</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">(),</span> <span class="n">accountService</span><span class="o">.</span><span class="n">fromAccountJson</span><span class="p">(</span><span class="n">accountJsons</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+   <span class="p">}</span>
+
+   <span class="o">//</span> <span class="n">execute</span>
+   <span class="n">Result</span> <span class="n">result</span> <span class="o">=</span> <span class="n">invokeBVMContract</span><span class="p">(</span><span class="n">new</span> <span class="n">ProposalOperation</span><span class="o">.</span><span class="n">ProposalBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">prop</span><span class="o">.</span><span class="n">getId</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">(),</span> <span class="n">accountService</span><span class="o">.</span><span class="n">fromAccountJson</span><span class="p">(</span><span class="n">accountJsons</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
+   <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">getErr</span><span class="p">());</span>
+
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+   <span class="n">List</span><span class="o">&lt;</span><span class="n">OperationResult</span><span class="o">&gt;</span> <span class="n">resultList</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeBVMResult</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">OperationResult</span> <span class="ow">or</span> <span class="p">:</span> <span class="n">resultList</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">SuccessCode</span><span class="o">.</span><span class="n">getCode</span><span class="p">(),</span> <span class="ow">or</span><span class="o">.</span><span class="n">getCode</span><span class="p">());</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">public</span> <span class="n">Result</span> <span class="n">invokeBVMContract</span><span class="p">(</span><span class="n">BuiltinOperation</span> <span class="n">opt</span><span class="p">,</span> <span class="n">Account</span> <span class="n">acc</span><span class="p">)</span> <span class="n">throws</span> <span class="n">RequestException</span> <span class="p">{</span>
+   <span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span>
+           <span class="n">BVMBuilder</span><span class="p">(</span><span class="n">acc</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span>
+           <span class="n">invoke</span><span class="p">(</span><span class="n">opt</span><span class="p">)</span><span class="o">.</span>
+           <span class="n">build</span><span class="p">();</span>
+   <span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">acc</span><span class="p">);</span>
+
+   <span class="n">ReceiptResponse</span> <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+   <span class="n">Result</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeBVM</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+   <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>通过 <cite>Direct</cite> 查询ca模式</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">getCAMode</span><span class="p">()</span> <span class="n">throws</span> <span class="n">RequestException</span> <span class="p">{</span>
+   <span class="n">Account</span> <span class="n">ac</span> <span class="o">=</span> <span class="n">accountService</span><span class="o">.</span><span class="n">fromAccountJson</span><span class="p">(</span><span class="n">accountJson</span><span class="p">);</span>
+   <span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span>
+           <span class="n">BVMBuilder</span><span class="p">(</span><span class="n">ac</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span>
+           <span class="n">invoke</span><span class="p">(</span><span class="n">new</span> <span class="n">ProposalOperation</span><span class="o">.</span><span class="n">ProposalBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">directForCAMode</span><span class="p">(</span><span class="n">new</span> <span class="n">CAModeOperation</span><span class="o">.</span><span class="n">CAModeBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">getCAMode</span><span class="p">()</span><span class="o">.</span><span class="n">builder</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">())</span><span class="o">.</span>
+           <span class="n">build</span><span class="p">();</span>
+   <span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">ac</span><span class="p">);</span>
+   <span class="n">ReceiptResponse</span> <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+   <span class="n">Result</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeBVM</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getErr</span><span class="p">());</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h4>root ca使用示例<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p>当ca模式为 <cite>Center</cite> 即中心ca时，可以对root ca进行管理。</p>
+<ol class="arabic">
+<li><p>新增root ca</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">setRootCA</span><span class="p">()</span> <span class="n">throws</span> <span class="n">RequestException</span> <span class="p">{</span>
+   <span class="n">String</span> <span class="n">rootCA</span> <span class="o">=</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;MIICSTCCAfWgAwIBAgIBATAKBggqhkjOPQQDAjB0MQkwBwYDVQQIEwAxCTAHBgNV</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;BAcTADEJMAcGA1UECRMAMQkwBwYDVQQREwAxDjAMBgNVBAoTBWZsYXRvMQkwBwYD</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;VQQLEwAxDjAMBgNVBAMTBW5vZGUyMQswCQYDVQQGEwJaSDEOMAwGA1UEKhMFZWNl</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;cnQwIBcNMjAwNTIxMDU1ODU2WhgPMjEyMDA0MjcwNjU4NTZaMHQxCTAHBgNVBAgT</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;ADEJMAcGA1UEBxMAMQkwBwYDVQQJEwAxCTAHBgNVBBETADEOMAwGA1UEChMFZmxh</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;dG8xCTAHBgNVBAsTADEOMAwGA1UEAxMFbm9kZTQxCzAJBgNVBAYTAlpIMQ4wDAYD</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;VQQqEwVlY2VydDBWMBAGByqGSM49AgEGBSuBBAAKA0IABBI3ewNK21vHNOPG6U3X</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;mKJohSNNz72QKDxUpRt0fCJHwaGYfSvY4cnqkbliclfckUTpCkFSRr4cqN6PURCF</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;zkWjeTB3MA4GA1UdDwEB/wQEAwIChDAmBgNVHSUEHzAdBggrBgEFBQcDAgYIKwYB</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;BQUHAwEGAioDBgOBCwEwDwYDVR0TAQH/BAUwAwEB/zANBgNVHQ4EBgQEAQIDBDAP</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;BgNVHSMECDAGgAQBAgMEMAwGAypWAQQFZWNlcnQwCgYIKoZIzj0EAwIDQgDJibFh</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;a1tZ3VhL3WIs36DqOS22aetvcn2dXHH9Pw5/s2XI70Mr3ow3RKqJmdmi0PsmLr+K</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;pCFkuMv2bHnkWuiZAQ==</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+           <span class="s2">&quot;-----END CERTIFICATE-----&quot;</span><span class="p">;</span>
+   <span class="n">String</span> <span class="n">adminAccount</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+   <span class="n">Account</span> <span class="n">ac</span> <span class="o">=</span> <span class="n">accountService</span><span class="o">.</span><span class="n">fromAccountJson</span><span class="p">(</span><span class="n">adminAccount</span><span class="p">);</span>
+   <span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span>
+           <span class="n">BVMBuilder</span><span class="p">(</span><span class="n">ac</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span>
+           <span class="n">invoke</span><span class="p">(</span><span class="n">new</span> <span class="n">RootCAOperation</span><span class="o">.</span><span class="n">RootCABuilder</span><span class="p">()</span><span class="o">.</span><span class="n">addRootCA</span><span class="p">(</span><span class="n">rootCA</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">())</span><span class="o">.</span>
+           <span class="n">build</span><span class="p">();</span>
+   <span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">ac</span><span class="p">);</span>
+   <span class="n">ReceiptResponse</span> <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+   <span class="n">Result</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeBVM</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getErr</span><span class="p">());</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>查询root ca</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">getRootCA</span><span class="p">()</span> <span class="n">throws</span> <span class="n">RequestException</span> <span class="p">{</span>
+   <span class="n">Account</span> <span class="n">ac</span> <span class="o">=</span> <span class="n">accountService</span><span class="o">.</span><span class="n">fromAccountJson</span><span class="p">(</span><span class="n">accountJson</span><span class="p">);</span>
+   <span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span>
+           <span class="n">BVMBuilder</span><span class="p">(</span><span class="n">ac</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span>
+   <span class="n">invoke</span><span class="p">(</span><span class="n">new</span> <span class="n">RootCAOperation</span><span class="o">.</span><span class="n">RootCABuilder</span><span class="p">()</span><span class="o">.</span><span class="n">getRootCAs</span><span class="p">()</span><span class="o">.</span><span class="n">build</span><span class="p">())</span><span class="o">.</span>
+                   <span class="n">build</span><span class="p">();</span>
+   <span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">ac</span><span class="p">);</span>
+   <span class="n">ReceiptResponse</span> <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+   <span class="n">Result</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeBVM</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getErr</span><span class="p">());</span>
+   <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

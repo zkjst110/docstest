@@ -1,0 +1,567 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>容器化部署 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>容器化部署</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/quickstart/Containerized deployment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="containerized-deployment">
+<span id="id1"></span><h1>容器化部署<a class="headerlink" href="#containerized-deployment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. 引言<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>本文档针对需要使用容器化来进行部署的项目使用，在一些部署环境中必须通过镜像+挂载空磁盘的部署情况，无法将配置文件和证书放置到容器环境中，可通过开启环境变量配置模式的方式，来启动平台，方便此类环境的节点部署，本文档将介绍如何进行环境变量部署。</p>
+</div>
+<div class="section" id="docker">
+<h2>2.安装docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h2>
+<p>【如客户方提供服务器已有docker服务则可以跳过此章节，直接阅读第2.2章节】</p>
+<p>Docker离线安装部署文档</p>
+<p><strong>文档基于centos 7.5; docker 19.03.5</strong></p>
+<p><strong>1. 准备linux环境</strong></p>
+<p><strong>1.1 先关闭防火墙</strong> <cite>sudo systemctl stop firewalld</cite></p>
+<p><img alt="image1" src="../_images/Containerized1.png" /></p>
+<p><strong>1.2 关闭selinux策略</strong>
+<cite>vi /etc/selinux/config</cite>
+修改完成后，重启一次系统；可以使用reboot</p>
+<p><img alt="image2" src="../_images/Containerized2.png" /></p>
+<p><strong>1.3 检查文件</strong>
+检查是否存在/etc/timezone文件，如果没有，在后面执行 <cite>docker run</cite>
+命令的时候，需要删除命令中关于/etc/timezone
+的映射，以免报错，只使用/etc/localtime 做时间同步。</p>
+<p><img alt="image3" src="../_images/Containerized3.png" /></p>
+<p>准备工作完成。</p>
+<p><strong>2. 安装docker</strong></p>
+<p>如果没有安装包，在官网下载二进制安装包,下载地址<a class="reference external" href="https://links.jianshu.com/go?to=https%3A%2F%2Fdownload.docker.com%2Flinux%2Fstatic%2Fstable%2Fx86_64%2F">https://download.docker.com/linux/static/stable/x86_64/</a></p>
+<p><img alt="image4" src="../_images/Containerized4.png" /></p>
+<p>下面只需要安官网的步骤执行就可以了，官网安装网址<a class="reference external" href="https://links.jianshu.com/go?to=https%3A%2F%2Fdocs.docker.com%2Fengine%2Finstall%2Fbinaries%2F">https://docs.docker.com/engine/install/binaries/</a></p>
+<p>就下面这三步：</p>
+<p><strong>2.1</strong> <strong>解压</strong>：tar xzvf docker-19.03.5.tgz</p>
+<p><strong>2.2</strong> <strong>拷贝</strong>： sudo cp docker/* /usr/bin/</p>
+<p><strong>2.3</strong> <strong>运行</strong>： sudo dockerd &amp;。</p>
+<p>这一步可以不用后台执行，即直接执行sudo
+dockerd，命令行界面会直接打印执行结果，查看执行结果。</p>
+<p><img alt="image5" src="../_images/Containerized5.png" /></p>
+<p><img alt="image6" src="../_images/Containerized6.png" /></p>
+<p>如果没有异常，按 ctrl + c 强制退出，Docker
+其实已经安装好了，后面会配置开机启动。</p>
+<p><strong>3. 配置docker开机启动</strong></p>
+<p>这里包括两个文件（强调一下必须先执行1.2步骤，即关闭selinux，并且重启了系统）</p>
+<p><img alt="image7" src="../_images/Containerized7.png" /></p>
+<p>docker.service</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[Unit]
+
+Description=Docker Application Container Engine
+
+Documentation=https://docs.docker.com
+
+After=network-online.target firewalld.service
+
+Wants=network-online.target
+
+[Service]
+
+Type=notify
+
+# the default is not to use systemd for cgroups because the delegate issues still
+
+# exists and systemd currently does not support the cgroup feature set required
+
+# for containers run by docker
+
+ExecStart=/usr/bin/dockerd
+
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+
+# in the kernel. We recommend using cgroups to do container-local accounting.
+
+LimitNOFILE=infinity
+
+LimitNPROC=infinity
+
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+
+# Only systemd 226 and above support this version.
+
+#TasksMax=infinity
+
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+
+KillMode=process
+
+# restart the docker process if it exits prematurely
+
+Restart=on-failure
+
+StartLimitBurst=3
+
+StartLimitInterval=60s
+
+[Install]
+
+WantedBy=multi-user.target
+</pre></div>
+</div>
+<p>docker.socket:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Unit</span><span class="p">]</span>
+
+<span class="n">Description</span><span class="o">=</span><span class="n">Docker</span> <span class="n">Socket</span> <span class="k">for</span> <span class="n">the</span> <span class="n">API</span>
+
+<span class="n">PartOf</span><span class="o">=</span><span class="n">docker</span><span class="o">.</span><span class="n">service</span>
+
+<span class="p">[</span><span class="n">Socket</span><span class="p">]</span>
+
+<span class="c1"># If /var/run is not implemented as a symlink to /run, you may need to</span>
+
+<span class="c1"># specify ListenStream=/var/run/docker.sock instead.</span>
+
+<span class="n">ListenStream</span><span class="o">=/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span>
+
+<span class="n">SocketMode</span><span class="o">=</span><span class="mi">0660</span>
+
+<span class="n">SocketUser</span><span class="o">=</span><span class="n">root</span>
+
+<span class="n">SocketGroup</span><span class="o">=</span><span class="n">docker</span>
+
+<span class="p">[</span><span class="n">Install</span><span class="p">]</span>
+
+<span class="n">WantedBy</span><span class="o">=</span><span class="n">sockets</span><span class="o">.</span><span class="n">target</span>
+</pre></div>
+</div>
+<p>执行下列命令，设置docker开机自启；在docker.service，
+docker.socket所在的文件夹中执行下命令，设置docker开机自启。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cp</span> <span class="n">docker</span><span class="o">.</span><span class="n">socket</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span>
+
+<span class="n">sudo</span> <span class="n">cp</span> <span class="n">docker</span><span class="o">.</span><span class="n">service</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span>
+
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">daemon</span><span class="o">-</span><span class="n">reload</span>
+
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">docker</span>
+
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">docker</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>重启一下系统，检验docker是否开机自启</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">reboot</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>重启成功后，执行docker ps 检验docker是否启动成功。</p>
+<p>到这里docker已经安装完成，并且开机自启。</p>
+<div class="section" id="docker-compose">
+<h3>2.1 安装docker-compose<a class="headerlink" href="#docker-compose" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 如服务器无外网则可以在电脑浏览器中先下载好而后上传服务器/usr/local/bin/docker-compose目录
+curl -L https://get.daocloud.io/docker/compose/releases/download/1.29.1/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose
+
+# 给docker compose 目录授权
+sudo chmod +x /usr/local/bin/docker-compose
+
+     # 将文件软链到/usr/bin/目录下cp /roo
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+# 查看一下version，显示有版本号那就说明安装成功了
+docker-compose version
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h3>2.2 部署容器<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>1.拉取镜像</p>
+<p>具体版本镜像请询问&#64;汪剑锋或者&#64;相关对接人员</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">harbor</span><span class="o">.</span><span class="n">hyperchain</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">hyperchain</span><span class="nd">@sha256</span><span class="p">:</span><span class="mi">4</span><span class="n">b9a33331c4a98943a476a3f6ad38f763598445a77dafcd0f631ff72e6d50dd7</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>2.创建目录（所有节点在同一台服务器的话需要分别创建对应的节点目录）</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>3.写入部署包</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">上传deploy</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">deploy</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="n">C</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>4.上传LICENSE文件</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">外部人员可通过内部工作人员签发拿到License文件</span>
+<span class="o">//</span><span class="n">压缩包中解压出的license文件需要重命名为LICENSE并放到</span><span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">目录</span>
+<span class="n">mv</span> <span class="mi">20221119</span><span class="o">@.</span><span class="n">LICENSE</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">LICENSE</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>5.docker-compose.yml</p>
+<p>vim docker- compose.yml</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span>
+<span class="n">networks</span><span class="p">:</span>
+  <span class="n">mynet1</span><span class="p">:</span>
+    <span class="n">ipam</span><span class="p">:</span>
+      <span class="n">config</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">subnet</span><span class="p">:</span> <span class="mf">172.19.0.0</span><span class="o">/</span><span class="mi">24</span>
+<span class="n">services</span><span class="p">:</span>
+        <span class="n">hyperchain1</span><span class="p">:</span>
+                <span class="n">image</span><span class="p">:</span> <span class="mi">6</span><span class="n">d73921dbb35</span>
+                <span class="n">container_name</span><span class="p">:</span> <span class="n">hyperchain1</span>
+                <span class="n">networks</span><span class="p">:</span>
+                        <span class="n">mynet1</span><span class="p">:</span>
+                                <span class="n">ipv4_address</span><span class="p">:</span> <span class="mf">172.19.0.2</span>
+                <span class="n">ports</span><span class="p">:</span>
+                        <span class="o">-</span> <span class="s2">&quot;8081:8081&quot;</span>
+                        <span class="o">-</span> <span class="s2">&quot;50011:50011&quot;</span>
+                        <span class="o">-</span> <span class="s2">&quot;12001:12001&quot;</span>
+                <span class="n">volumes</span><span class="p">:</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node1</span><span class="o">/</span><span class="n">configuration</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">configuration</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node1</span><span class="o">/</span><span class="n">namespaces</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">namespaces</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node1</span><span class="o">/</span><span class="n">system</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">system</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node1</span><span class="o">/</span><span class="n">tls</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">tls</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">LICENSE</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">LICENSE</span>
+                <span class="n">working_dir</span><span class="p">:</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span>
+                <span class="n">entrypoint</span><span class="p">:</span> <span class="o">./</span><span class="n">hyperchain</span> <span class="n">start</span>
+                <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+
+        <span class="n">hyperchain2</span><span class="p">:</span>
+                <span class="n">image</span><span class="p">:</span> <span class="mi">6</span><span class="n">d73921dbb35</span>
+                <span class="n">container_name</span><span class="p">:</span> <span class="n">hyperchain2</span>
+                <span class="n">networks</span><span class="p">:</span>
+                        <span class="n">mynet1</span><span class="p">:</span>
+                                <span class="n">ipv4_address</span><span class="p">:</span> <span class="mf">172.19.0.3</span>
+                <span class="n">ports</span><span class="p">:</span>
+                        <span class="o">-</span> <span class="s2">&quot;8082:8081&quot;</span>
+                        <span class="o">-</span> <span class="s2">&quot;50012:50011&quot;</span>
+                        <span class="o">-</span> <span class="s2">&quot;12002:12001&quot;</span>
+                <span class="n">volumes</span><span class="p">:</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node2</span><span class="o">/</span><span class="n">configuration</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">configuration</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node2</span><span class="o">/</span><span class="n">namespaces</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">namespaces</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node2</span><span class="o">/</span><span class="n">system</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">system</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node2</span><span class="o">/</span><span class="n">tls</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">tls</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">LICENSE</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">LICENSE</span>
+                <span class="n">working_dir</span><span class="p">:</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span>
+                <span class="n">entrypoint</span><span class="p">:</span> <span class="o">./</span><span class="n">hyperchain</span> <span class="n">start</span>
+                <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+
+        <span class="n">hyperchain3</span><span class="p">:</span>
+                <span class="n">image</span><span class="p">:</span> <span class="mi">6</span><span class="n">d73921dbb35</span>
+                <span class="n">container_name</span><span class="p">:</span> <span class="n">hyperchain3</span>
+                <span class="n">networks</span><span class="p">:</span>
+                        <span class="n">mynet1</span><span class="p">:</span>
+                                <span class="n">ipv4_address</span><span class="p">:</span> <span class="mf">172.19.0.4</span>
+                <span class="n">ports</span><span class="p">:</span>
+                        <span class="o">-</span> <span class="s2">&quot;8083:8081&quot;</span>
+                        <span class="o">-</span> <span class="s2">&quot;50013:50011&quot;</span>
+                        <span class="o">-</span> <span class="s2">&quot;12003:12001&quot;</span>
+                <span class="n">volumes</span><span class="p">:</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node3</span><span class="o">/</span><span class="n">configuration</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">configuration</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node3</span><span class="o">/</span><span class="n">namespaces</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">namespaces</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node3</span><span class="o">/</span><span class="n">system</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">system</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node3</span><span class="o">/</span><span class="n">tls</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">tls</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">LICENSE</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">LICENSE</span>
+                <span class="n">working_dir</span><span class="p">:</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span>
+                <span class="n">entrypoint</span><span class="p">:</span> <span class="o">./</span><span class="n">hyperchain</span> <span class="n">start</span>
+                <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+
+        <span class="n">hyperchain4</span><span class="p">:</span>
+                <span class="n">image</span><span class="p">:</span> <span class="mi">6</span><span class="n">d73921dbb35</span>
+                <span class="n">container_name</span><span class="p">:</span> <span class="n">hyperchain4</span>
+                <span class="n">networks</span><span class="p">:</span>
+                        <span class="n">mynet1</span><span class="p">:</span>
+                                <span class="n">ipv4_address</span><span class="p">:</span> <span class="mf">172.19.0.5</span>
+                <span class="n">ports</span><span class="p">:</span>
+                        <span class="o">-</span> <span class="s2">&quot;8084:8081&quot;</span>
+                        <span class="o">-</span> <span class="s2">&quot;50014:50011&quot;</span>
+                        <span class="o">-</span> <span class="s2">&quot;12004:12001&quot;</span>
+                <span class="n">volumes</span><span class="p">:</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node4</span><span class="o">/</span><span class="n">configuration</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">configuration</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node4</span><span class="o">/</span><span class="n">namespaces</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">namespaces</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node4</span><span class="o">/</span><span class="n">system</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">system</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">node4</span><span class="o">/</span><span class="n">tls</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">tls</span>
+                        <span class="o">-</span> <span class="o">~/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">LICENSE</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span><span class="n">LICENSE</span>
+                <span class="n">working_dir</span><span class="p">:</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hyperchain</span><span class="o">/</span>
+                <span class="n">entrypoint</span><span class="p">:</span> <span class="o">./</span><span class="n">hyperchain</span> <span class="n">start</span>
+                <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>6.创建并启动容器</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">##在docker-compose.yml文件同级目录执行,</span>
+<span class="c1">##创建并启动节点容器</span>
+<span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="o">-</span><span class="n">f</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">.</span><span class="n">yml</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span>
+<span class="c1">##注意不要重复执行此命令，如需要删除节点执行</span>
+<span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="o">-</span><span class="n">f</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">.</span><span class="n">yml</span> <span class="n">down</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>7.重启容器</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="o">-</span><span class="n">f</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">.</span><span class="n">yml</span> <span class="n">stop</span>
+<span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="o">-</span><span class="n">f</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">.</span><span class="n">yml</span> <span class="n">start</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>注意：部分配置项在节点执行过程中会被程序改写，如果不清楚改写后的内容，建议在启动成功后，不在使用之前配置的环境变量内容，下次重启时只在环境变量中配置需要修改的配置内容。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

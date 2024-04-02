@@ -1,0 +1,610 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SGX VC 使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>SGX VC 使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Password related/sgx vc user manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sgx-vc">
+<span id="sgx-vc-user-manual"></span><h1>SGX VC 使用手册<a class="headerlink" href="#sgx-vc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1. 引言<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>1.1 编写目的<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>本文档为sgx vc使用文档，着重以fabric多链为例。</p>
+</div>
+<div class="section" id="id3">
+<h3>1.2背景<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>zkp多链主要是通过插件机制对不同的区块链系统进行支持，在使用fabric的时候需要提前编译好fabric插件。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>2. 安装和初始化<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>编译安装</p>
+<ul class="simple">
+<li><p>解压缩tar包，得到zkp目录</p></li>
+<li><p>zkp server  -C ./config.toml运行</p></li>
+</ul>
+</li>
+<li><p>初始化fabric网络： 启动fabric节点组网</p></li>
+<li><p>部署fabric合约：依次部署proxy chaincode, business chaincode</p></li>
+</ol>
+</div>
+<div class="section" id="id5">
+<h2>3.配置说明<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>配置模式</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">general</span><span class="p">]</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;sgx&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>服务监听相关说明:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">http</span><span class="p">]</span>
+<span class="n">tls</span> <span class="o">=</span> <span class="n">true</span>                 <span class="c1">#是否启用安全传输层</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">8080</span>                <span class="c1">#监听端口</span>
+<span class="n">net</span> <span class="o">=</span> <span class="s2">&quot;0.0.0.0&quot;</span>            <span class="c1">#监听网卡，0.0.0.0表示全部网卡</span>
+<span class="n">domainName</span> <span class="o">=</span> <span class="s2">&quot;example.com&quot;</span> <span class="c1">#服务域名</span>
+<span class="n">cert</span> <span class="o">=</span> <span class="s2">&quot;./certs/tls.cert&quot;</span>  <span class="c1">#启用安全传输层情况下的证书文件</span>
+<span class="n">ca</span> <span class="o">=</span> <span class="s2">&quot;./certs/ca.cert&quot;</span>     <span class="c1">#启用安全传输层情况下的ca文件</span>
+<span class="n">priv</span> <span class="o">=</span> <span class="s2">&quot;./certs/tls.priv&quot;</span>  <span class="c1">#启用安全传输层情况下的证书私钥文件</span>
+<span class="n">clientAuth</span> <span class="o">=</span> <span class="n">false</span>         <span class="c1">#是否验证客户端身份</span>
+</pre></div>
+</div>
+<p>隐私数据库配置说明:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dbNum</span> <span class="o">=</span> <span class="mi">0</span>     <span class="c1">#连接隐私数据库数量，0表示不连接，此时忽略下面的配置项</span>
+
+<span class="p">[</span><span class="n">db1</span><span class="p">]</span>         <span class="c1">#隐私数据库1配置</span>
+<span class="n">dbPath</span> <span class="o">=</span> <span class="s2">&quot;petShop&quot;</span>
+<span class="n">dbType</span> <span class="o">=</span> <span class="s2">&quot;mysql&quot;</span>
+<span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">3306</span>
+<span class="n">userName</span> <span class="o">=</span> <span class="s2">&quot;root&quot;</span>
+<span class="n">pwd</span> <span class="o">=</span> <span class="s2">&quot;123456&quot;</span>
+<span class="n">dbName</span> <span class="o">=</span> <span class="s2">&quot;flatoVC&quot;</span>
+<span class="n">maxIdle</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#最大的空闲连接数，没有redis连接时依然可以保持N个空闲的连接</span>
+<span class="n">maxActive</span> <span class="o">=</span> <span class="mi">11</span> <span class="c1">#最大的激活连接数，同时最多有N个连接</span>
+<span class="n">maxIdleTime</span> <span class="o">=</span> <span class="mi">180</span> <span class="c1"># second</span>
+
+<span class="p">[</span><span class="n">db2</span><span class="p">]</span>         <span class="c1">#隐私数据库2配置</span>
+<span class="n">dbPath</span> <span class="o">=</span> <span class="s2">&quot;superMarket&quot;</span>
+<span class="n">dbType</span> <span class="o">=</span> <span class="s2">&quot;leveldb&quot;</span>
+<span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;./leveldb&quot;</span>
+
+<span class="p">[</span><span class="n">db3</span><span class="p">]</span>         <span class="c1">#隐私数据库3配置</span>
+<span class="n">dbPath</span> <span class="o">=</span> <span class="s2">&quot;coffeeShop&quot;</span>
+<span class="n">dbType</span> <span class="o">=</span> <span class="s2">&quot;redis&quot;</span>
+<span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">6379</span>
+<span class="n">userName</span> <span class="o">=</span> <span class="s2">&quot;root&quot;</span>
+<span class="n">pwd</span> <span class="o">=</span> <span class="s2">&quot;123456&quot;</span>
+<span class="n">dbName</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
+<span class="n">maxIdle</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#最大的空闲连接数，没有redis连接时依然可以保持N个空闲的连接</span>
+<span class="n">maxActive</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">#最大的激活连接数，同时最多有N个连接</span>
+
+<span class="c1">#支持任意合理数量的数据库连接，如[db4],[db5]等</span>
+</pre></div>
+</div>
+<p>电路数据库相关配置:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">manager</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;.data&quot;</span>      <span class="c1">#电路数据库位置</span>
+</pre></div>
+</div>
+<p>sdk配置说明（fabric）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">sdk</span><span class="p">]</span>
+<span class="n">enable</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;peer0.org1.example.com&quot;</span><span class="p">,</span> <span class="s2">&quot;peer0.org2.example.com&quot;</span><span class="p">]]</span>
+<span class="n">plugin</span> <span class="o">=</span> <span class="s2">&quot;./fabric.so&quot;</span>
+<span class="n">configpath</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;/Users/jalyzhang/Documents/t2/untitled29/fabric-sdk-go/test/demo/org1-config.yaml&quot;</span><span class="p">]</span>
+<span class="n">user</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;User1&quot;</span><span class="p">]</span>
+<span class="n">namespace</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;jackchannel&quot;</span><span class="p">]</span>
+
+<span class="c1">#！！！如果启用SDK请先检查sdkconfig.toml的配置是否正确，以及配置必要的crypto-config</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>enable 为true时，使用插件</p></li>
+<li><p>nodes：根据proxy chaincode部署时的策略，对proxy chaincode使用invoke时需要的背书节点集合。</p></li>
+<li><p>plugin：插件的位置</p></li>
+<li><p>configpath：使用fabric go sdk时的配置文件位置</p></li>
+<li><p>user：对proxy chaincode使用invoke时需要的用户</p></li>
+<li><p>namespace：proxy chaincode和business chaincode所处的channel</p></li>
+</ol>
+</div>
+<div class="section" id="id6">
+<h2>4.操作实例<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>4.1 场景介绍<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>启动fabric1.4的一个网络，本文档以fabric samples中byfn的网络为例2个org，每个org下有两个节点，1个orderer，依次部署proxy chaincode, business chaincode。</p>
+</div>
+<div class="section" id="vc">
+<h3>4.2 启动vc节点<a class="headerlink" href="#vc" title="Permalink to this headline">¶</a></h3>
+<p>zkp  server -C ./config.toml</p>
+<p><img alt="image0" src="../_images/sgx_vc1.png" /></p>
+</div>
+<div class="section" id="sdk">
+<h3>4.3 sdk操作<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h3>
+<p>本文档用fabric go sdk在业务调用侧进行一次对business chaincode的invoke操作，并在invoke前后分别做一次query。</p>
+<p>进行invoke的参数:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[]</span><span class="n">string</span><span class="p">{</span><span class="s2">&quot;proxyCC&quot;</span><span class="p">,</span> <span class="s2">&quot;{</span><span class="se">\&quot;</span><span class="s2">v</span><span class="se">\&quot;</span><span class="s2">:99,</span><span class="se">\&quot;</span><span class="s2">r</span><span class="se">\&quot;</span><span class="s2">: 101}&quot;</span><span class="p">,</span> <span class="s2">&quot;becc&quot;</span><span class="p">,</span> <span class="s2">&quot;callback&quot;</span><span class="p">,</span> <span class="s2">&quot;http://127.0.0.1:9088/Callback&quot;</span><span class="p">,</span> <span class="s2">&quot;result: $</span><span class="si">{result}</span><span class="s2">, proof: $</span><span class="si">{proof}</span><span class="s2">&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>分别对应为</p>
+<p>proxyContractAddr, input, businessContractAddr, businessContractMethod, WebHook and WebHookBodyPattern</p>
+<p><img alt="image1" src="../_images/sgx_vc2.png" /></p>
+<p>sdk执行结果：</p>
+<p><img alt="image2" src="../_images/sgx_vc3.png" /></p>
+<p>vc节点执行结果：</p>
+<p><img alt="image3" src="../_images/sgx_vc4.png" /></p>
+</div>
+<div class="section" id="id8">
+<h3>4.4 非sdk操作<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>可以不使用sdk，而直接使用restful接口进行操作。例如4.3所示操作可以使用5.2中接口6computeandprove实现类似效果的操作。</p>
+</div>
+</div>
+<div class="section" id="restful">
+<h2>5.restful 接口<a class="headerlink" href="#restful" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="zkp-vc">
+<h3>5.1 zkp vc<a class="headerlink" href="#zkp-vc" title="Permalink to this headline">¶</a></h3>
+<p>注：localhost:8080作为参考，最终IP和端口以服务器地址为准。</p>
+<div class="section" id="id9">
+<h4>接口1：编译<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>url： <a class="reference external" href="https://localhost:8080//v1/zkp/circom/build">https://localhost:8080/v1/zkp/circom/build</a></p></li>
+<li><p>输入（form-data格式）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>file：xxx.tar.gz或xxx.circom（文件格式。tar包形式应该包含所有电路，例如一个circom文件中include其他文件，则应该全部包含。）
+target：xxx.circom （文本格式。指定要编译的文件名称）
+algo：groth16_bn254 （文本格式。算法名称）
+withC：tmp （可省略。给定一个文件夹名称，用于生成withC的文件，compute过程时无需再次传参，默认使用上次生成的witchC文件）
+</pre></div>
+</div>
+</li>
+</ul>
+<p>如下图：</p>
+<p><img alt="image4" src="../_images/sgx_vc5.png" /></p>
+<ul>
+<li><p>输出:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xxx.tar.gz的下载链接（包含编译后的solidity合约（链上部分）、带setup的r1cs文件（链下部分））
+id（链下计算ID）
+</pre></div>
+</div>
+</li>
+</ul>
+<p>如下图：</p>
+<p><img alt="image5" src="../_images/sgx_vc6.png" /></p>
+<ul class="simple">
+<li><p>错误提示</p></li>
+</ul>
+<p>输入错误，错误码601，缺少字段，错误信息（”input data error , give input(algo or target is nil) error, should input eg. (file, target, algo)”）;</p>
+<p>输入错误，错误码601，字段内容解析错误，错误信息（”input data error , give input(err.Error()) error, should input eg. (file, target, algo)”）；</p>
+<p>内部错误，错误码602，编译失败的具体原因，错误信息（”inner compilation error, function(genR1csAndSol) error: err.Error()”）</p>
+<p>内部错误，错误码602，数据库操作失败，错误信息（”inner compilation error, function(db.Put) error: err.Error”）</p>
+</div>
+<div class="section" id="id10">
+<h4>接口2：重置<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>url： <a class="reference external" href="https://localhost:8080//v1/zkp/circom/resetup">https://localhost:8080//v1/zkp/circom/resetup</a></p></li>
+<li><p>输入（raw-json格式）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>id:&quot;xxxxx&quot; （build返回的id）
+</pre></div>
+</div>
+</li>
+</ul>
+<p>如下图：</p>
+<p><img alt="image6" src="../_images/sgx_vc7.png" /></p>
+<ul>
+<li><p>输出:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xxx.tar.gz的下载链接（编译后的solidity合约（链上部分，用于合约升级）、带setup的r1cs文件（链下部分））
+</pre></div>
+</div>
+</li>
+</ul>
+<p><img alt="image7" src="../_images/sgx_vc8.png" /></p>
+<ul class="simple">
+<li><p>错误码：</p></li>
+</ul>
+<p>输入错误，错误码602，没有传入请求body，检查是否是post格式，是否按照接口传入了正确的参数，错误信息（check whether it is an https post request or whether~~ ~~parameters are passed in）</p>
+<p>输入错误，错误码601，缺少字段，错误信息（”input data error , give input(your input) error, should input eg. (id)”）</p>
+<p>输入错误，错误码601，ID不存在，错误信息（”input data error , give input(your ID) error, should input eg. (a right id)”）</p>
+<p>内部错误，错误码602，数据库操作失败，错误信息（”inner compilation error, function(db.Put) error: err.Error”）</p>
+</div>
+<div class="section" id="id11">
+<h4>接口3：证明<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>url： <a class="reference external" href="https://localhost:9080/v1/zkp/circom/computeandprove">https://localhost:9080/v1/zkp/circom/computeandprove</a></p></li>
+<li><p>输入（form-data）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>file：input.tar.gz或public.json（包含privacy.json隐私输入和public.json公共输入）
+id: 链下计算id
+tx_verison: 目前还未对tx_version做检查
+</pre></div>
+</div>
+</li>
+</ul>
+<p>如下图：</p>
+<p><img alt="image8" src="../_images/sgx_vc9.png" /></p>
+<ul class="simple">
+<li><p>输出</p></li>
+</ul>
+<p>正确则直接返回proof。如下图：</p>
+<p><img alt="image9" src="../_images/sgx_vc10.png" /></p>
+<ul class="simple">
+<li><p>错误提示</p></li>
+</ul>
+<p>输入错误，错误码601，缺少字段，错误信息（input data error , give input(err.error) error, should input eg. (file, id, tx_version)）</p>
+<p>输入错误，错误码601，id不存在，错误信息（input data error , give input(err.error) error, should input eg. (a  right id )）</p>
+<p>输入错误，错误码601，字段内容解析错误，错误信息（input data error , give input(err.error) error, should input eg. (right input json file)）</p>
+<p>内部错误，错误码602，数据库脏数据，错误信息（”inner compilation error, function(ReadR1CS/ReadPkBytes) error: err.Error”），此种情况是从数据库中获取数据，发现数据读取失败，可能的原因是服务器端发生异常，写数据到数据库时内容错误，或者服务器端数据库数据被手动更改</p>
+<p>内部错误，错误码602，生成证明失败或计算过程失败，详细原因在error中，错误信息（”inner compilation error, function(ComputeAndProve) error: err.Error”）</p>
+</div>
+<div class="section" id="id12">
+<h4>接口4：验证<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>url：<a class="reference external" href="https://localhost:9080/v1/zkp/circom/verify">https://localhost:9080/v1/zkp/circom/verify</a></p></li>
+<li><p>输入（form-data）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>proof:{}（由computeandprove得到）
+public:public.json (公共输入)
+id:链下计算id
+</pre></div>
+</div>
+</li>
+</ul>
+<p>如下图：</p>
+<p><img alt="image10" src="../_images/sgx_vc11.png" /></p>
+<ul class="simple">
+<li><p>输出</p></li>
+</ul>
+<p>成功显示verify success，错误显示具体原因</p>
+<p>如下图：</p>
+<p><img alt="image11" src="../_images/sgx_vc12.png" /></p>
+<ul class="simple">
+<li><p>错误提示</p></li>
+</ul>
+<p>输入错误，错误码601，缺少字段，错误提示（input data error , give input(err.error) error, should input eg. (proof, public, id)）</p>
+<p>输入错误，错误码601，proof出错，错误提示（input data error , give input(err.error) error, should input eg. (a right proof)）</p>
+<p>输入错误，错误码601，id不存在，错误信息（input data error , give input(err.error) error, should input eg. (a  right id )）</p>
+<p>输入错误，错误码601， 输入的public.json解析失败，错误信息（input data error , give input(your public json) error, should input eg. (a  right public json )）</p>
+<p>输入错误，错误码601，给定的proof组数与公共输入组数不相等，错误信息（error: give public json num[xxx], but proof num[xxx].）</p>
+<p>内部错误，错误码602，数据库脏数据，错误信息（”inner compilation error, function(ReadVkBytes) error: err.Error”）</p>
+<p>内部错误，错误码602，验证失败具体返回，错误信息（verify failed, proof[xxx], public json[xxx], error: xxx）</p>
+</div>
+<div class="section" id="solidity">
+<h4>接口5：查询solidity源码<a class="headerlink" href="#solidity" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>url： <a class="reference external" href="https://localhost:9080/v1/zkp/circom/getsol">https://localhost:9080/v1/zkp/circom/getsol</a></p></li>
+<li><p>输入 (raw-json):</p></li>
+</ul>
+<blockquote>
+<div><p>id：链下计算id</p>
+</div></blockquote>
+<p>如下图：</p>
+<p><img alt="image12" src="../_images/sgx_vc13.png" /></p>
+<p>输出:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar包文件的下载链接</span>
+</pre></div>
+</div>
+<p><img alt="image13" src="../_images/sgx_vc14.png" /></p>
+<ul class="simple">
+<li><p>错误信息</p></li>
+</ul>
+<p>输入错误，错误码601，没有传入请求body，检查是否是post格式，是否按照接口传入了正确的参数，错误信息（check whether it is an https post request or whether parameters are passed in）</p>
+<p>输入错误，错误码601，字段解析失败，错误信息（input data error , give input(your input) error, should input eg. (only need to provide id)）</p>
+<p>输入错误，错误码601，id不存在，错误信息（input data error , give input(err.error) error, should input eg. (a  right id )）</p>
+</div>
+<div class="section" id="id13">
+<h4>接口6：查询编译结果<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>url： <a class="reference external" href="https://localhost:9080/v1/zkp/circom/getbin">https://localhost:9080/v1/zkp/circom/getbin</a></p></li>
+<li><p>输入 (raw-json):</p></li>
+</ul>
+<blockquote>
+<div><p>id：链下计算id</p>
+</div></blockquote>
+<p>如下图：</p>
+<p><img alt="image14" src="../_images/sgx_vc15.png" /></p>
+<ul>
+<li><p>输出:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar包文件的下载链接（编译后的solidity合约（链上部分）、带setup的r1cs文件（链下部分））
+</pre></div>
+</div>
+</li>
+</ul>
+<p>如下图：</p>
+<p><img alt="image15" src="../_images/sgx_vc16.png" /></p>
+<ul class="simple">
+<li><p>错误信息：</p></li>
+</ul>
+<p>输入错误，错误码601，没有传入请求body，检查是否是post格式，是否按照接口传入了正确的参数，错误信息（check whether it is an https post request or whether parameters are passed in）</p>
+<p>输入错误，错误码601，字段解析失败，错误信息（input data error , give input(your input) error, should input eg. (only need to provide id)）</p>
+<p>输入错误，错误码601，id不存在，错误信息（input data error , give input(err.error) error, should input eg. (a  right id )）</p>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>5.2 sgx vc<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="build">
+<h4>接口1：build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h4>
+<p>url：<a class="reference external" href="https://ino4:8080/v1/sgx/wasm/build">https://ino4:8080/v1/sgx/wasm/build</a></p>
+<p><img alt="image16" src="../_images/sgx_vc17.png" /></p>
+</div>
+<div class="section" id="resetup">
+<h4>接口2：resetup<a class="headerlink" href="#resetup" title="Permalink to this headline">¶</a></h4>
+<p>url：<a class="reference external" href="https://ino4:8080/v1/sgx/wasm/resetup">https://ino4:8080/v1/sgx/wasm/resetup</a></p>
+<p><img alt="image17" src="../_images/sgx_vc18.png" /></p>
+</div>
+<div class="section" id="getsol">
+<h4>接口3：getsol<a class="headerlink" href="#getsol" title="Permalink to this headline">¶</a></h4>
+<p>url：<a class="reference external" href="https://ino4:8080/v1/sgx/wasm/getsol">https://ino4:8080/v1/sgx/wasm/getsol</a></p>
+<p><img alt="image18" src="../_images/sgx_vc19.png" /></p>
+</div>
+<div class="section" id="getbin">
+<h4>接口4：getbin<a class="headerlink" href="#getbin" title="Permalink to this headline">¶</a></h4>
+<p>url：<a class="reference external" href="https://ino4:8080/v1/sgx/wasm/getbin">https://ino4:8080/v1/sgx/wasm/getbin</a></p>
+<p><img alt="image19" src="../_images/sgx_vc20.png" /></p>
+<p>接口5：computeandprove
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;.</p>
+<p>url：<a class="reference external" href="https://ino4:8080/v1/sgx/wasm/computeandprove">https://ino4:8080/v1/sgx/wasm/computeandprove</a></p>
+<p><img alt="image20" src="../_images/sgx_vc21.png" /></p>
+</div>
+<div class="section" id="computeandprove">
+<h4>接口6：computeandprove异步<a class="headerlink" href="#computeandprove" title="Permalink to this headline">¶</a></h4>
+<p>url：<a class="reference external" href="https://ino4:8080/v1/sgx/wasm/computeandprove">https://ino4:8080/v1/sgx/wasm/computeandprove</a></p>
+<p><img alt="image21" src="../_images/sgx_vc22.png" /></p>
+</div>
+<div class="section" id="querytaskresult">
+<h4>接口7：querytaskresult<a class="headerlink" href="#querytaskresult" title="Permalink to this headline">¶</a></h4>
+<p>url：<a class="reference external" href="https://ino4:8080/v1/sgx/wasm/querytaskresult">https://ino4:8080/v1/sgx/wasm/querytaskresult</a></p>
+<p><img alt="image22" src="../_images/sgx_vc23.png" /></p>
+</div>
+<div class="section" id="verify">
+<h4>接口8：verify<a class="headerlink" href="#verify" title="Permalink to this headline">¶</a></h4>
+<p>url：<a class="reference external" href="https://ino4:8080/v1/sgx/wasm/verify">https://ino4:8080/v1/sgx/wasm/verify</a></p>
+<p><img alt="image23" src="../_images/sgx_vc24.png" /></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

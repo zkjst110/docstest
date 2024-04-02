@@ -1,0 +1,699 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>轻节点介绍 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>轻节点介绍</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Node and zone management/LP User Manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lp-user-manual">
+<span id="id1"></span><h1>轻节点介绍<a class="headerlink" href="#lp-user-manual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. 引言<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1.1 编写目的<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>本文档用于向开发人员介绍LP功能和使用方式。</p>
+<p>LP（Light Peer）不参与共识，仅通过信任的VP来同步区块头数据，并对外提供区块头数据查询、交易转发上链等服务。LP同一时刻只能连接一个VP，但可动态替换VP，VP可以连接多个LP。</p>
+</div>
+<div class="section" id="id4">
+<h3>1.2 相关术语<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>VP（Validate Peer）：验证节点</p>
+<p>LP（Light Peer）：轻节点</p>
+</div>
+<div class="section" id="id5">
+<h3>1.3 连接方式<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>vp和lp节点互相连接一共四种方式，分别是：</p>
+<ol class="arabic simple">
+<li><p>在lp的配置文件里增加vp信息，启动后自动连接；</p></li>
+<li><p>在vp的配置文件里增加lp信息，启动后自动连接；</p></li>
+<li><p>通过ipc命令，在vp上动态添加lp；</p></li>
+<li><p>通过ipc命令，在lp上动态添加vp；</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>2. 启动节点&amp;检查证书配置<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vp">
+<h3>2.1 VP节点部署<a class="headerlink" href="#vp" title="Permalink to this headline">¶</a></h3>
+<p>可以参照部署文档，启动vp节点。</p>
+</div>
+<div class="section" id="lp">
+<h3>2.2 LP节点部署<a class="headerlink" href="#lp" title="Permalink to this headline">¶</a></h3>
+<p>LP与NVP共享一套证书体系，LP的证书配置以及生成方式与NVP一致，可以参照NVP使用手册的节点部署以及生成证书章节</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>3. 节点连接<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>对于LP节点来说，若其未连接任何VP节点，也能正常工作，但不能转发交易，不能同步新数据。当要与VP节点连接时，LP节点需要提前准备和VP相连的证书文件，还需要进行相应的配置：</p>
+<ol class="arabic simple">
+<li><p>LP作为独立节点启动，需要LP节点的 <cite>configuration/dynamic.toml</cite> 文件中 <strong>修改self节点名称、port端口、域配置。</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>注意： <strong>LP的配置信息不能和VP节点以及NVP节点的配置信息重复</strong></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>在LP节点的 <cite>configuration/global/ns_dynamic.toml</cite> 文件 <strong>修改[self]信息</strong> ，具体的配置根据不同的连接方式略有不同，在下面详细介绍。</p></li>
+<li><p>配置完成之后，可以通过 <cite>start.sh</cite> 脚本来启动节点。由于VP和LP可以动态地建立连接，因此无须同时启动。</p></li>
+</ol>
+<p>VP和LP节点互相连接方式一共有四种，选择任一一种方式都可以完成LP和VP的连接，下文将详细介绍每种连接方式。</p>
+<div class="section" id="vplp">
+<h3>3.1 在VP上配置LP<a class="headerlink" href="#vplp" title="Permalink to this headline">¶</a></h3>
+<p>如果要在VP启动时能够自动去连接指定的LP，需要在VP节点的 <cite>configuration/global/ns_dynamic.toml</cite> 文件做相应修改。在四个VP节点启动并相互连接的场景下，增加两个与node1相连接的LP需要修改的配置项如下所示:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">lps</span><span class="p">]]</span>                                <span class="c1"># 运行时修改。lps数组在节点运行过程中实时变化。</span>
+<span class="n">hostname</span>       <span class="o">=</span> <span class="s2">&quot;lp1&quot;</span>    <span class="c1"># lp节点的名称</span>
+<span class="n">score</span>       <span class="o">=</span> <span class="mi">10</span>        <span class="c1"># 默认为10，表示节点的优先级</span>
+
+<span class="p">[[</span><span class="n">lps</span><span class="p">]]</span>                                <span class="c1"># 运行时修改。lps数组在节点运行过程中实时变化。</span>
+<span class="n">hostname</span>       <span class="o">=</span> <span class="s2">&quot;lp2&quot;</span>    <span class="c1"># lp节点的名称</span>
+<span class="n">score</span>       <span class="o">=</span> <span class="mi">10</span>        <span class="c1"># 默认为10，表示节点的优先级</span>
+
+<span class="p">[</span><span class="n">p2p</span><span class="p">]</span>
+
+ <span class="p">[</span><span class="n">p2p</span><span class="o">.</span><span class="n">ip</span><span class="p">]</span>
+
+   <span class="p">[</span><span class="n">p2p</span><span class="o">.</span><span class="n">ip</span><span class="o">.</span><span class="n">remote</span><span class="p">]</span>
+
+     <span class="n">hosts</span> <span class="o">=</span> <span class="p">[</span>
+               <span class="s2">&quot;node1 127.0.0.1:50011&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;node2 127.0.0.1:50012&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;node3 127.0.0.1:50013&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;node4 127.0.0.1:50014&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;lp1 127.0.0.1:50215&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;lp2 127.0.0.1:50216&quot;</span><span class="p">,</span>
+               <span class="p">]</span>
+</pre></div>
+</div>
+<p>由于LP是namespace级别的节点，所以只需要增加lp列表字段：</p>
+<ul class="simple">
+<li><p>[[lps]]表示lp数组，数组中记录有lp的信息。</p></li>
+<li><p>[p2p]的hosts列表中，增加lp的名字和地址信息字段。</p></li>
+</ul>
+<p>其他部分的内容无需修改，[self]中的n数量指的是连接的vp数量，无需变化。</p>
+</div>
+<div class="section" id="lpvp">
+<h3>3.2 在LP上配置VP<a class="headerlink" href="#lpvp" title="Permalink to this headline">¶</a></h3>
+<p>同理，在LP节点启动前需要指定连接的VP，先按照部署文档进行更改，然后在LP节点的 <cite>configuration/global/ns_dynamic.toml</cite> 文件做相应修改。 <strong>LP只能连接一个VP</strong> ，需要修改的配置项如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">nodes</span><span class="p">]]</span>            <span class="c1"># 运行时修改。nodes数组记录vp节点信息</span>
+                        <span class="c1"># 在节点运行过程中实时变化。</span>
+ <span class="n">hostname</span> <span class="o">=</span> <span class="s2">&quot;node1&quot;</span> <span class="c1"># vp节点的名称</span>
+ <span class="n">score</span> <span class="o">=</span> <span class="mi">10</span>         <span class="c1">#节点的优先级，默认为10</span>
+
+<span class="p">[</span><span class="n">p2p</span><span class="p">]</span>
+
+ <span class="p">[</span><span class="n">p2p</span><span class="o">.</span><span class="n">ip</span><span class="p">]</span>
+
+   <span class="p">[</span><span class="n">p2p</span><span class="o">.</span><span class="n">ip</span><span class="o">.</span><span class="n">remote</span><span class="p">]</span>
+               <span class="c1"># hosts里面需要配置lp连接的vp的节点名称和ip地址</span>
+     <span class="n">hosts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;node1 127.0.0.1:50011&quot;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="bp">self</span><span class="p">]</span>
+ <span class="n">hostname</span> <span class="o">=</span> <span class="s2">&quot;lp1&quot;</span>   <span class="c1"># lp节点的名称</span>
+ <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>              <span class="c1"># 连接的vp数量(0或者1)</span>
+ <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;lp&quot;</span>       <span class="c1"># 节点类型</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>[[nodes]]字段，添加与LP节点连接的VP节点信息；</p></li>
+<li><p>[p2p]字段，同时配置VP的节点名称和ip地址；</p></li>
+<li><p>[self]字段，修改对应的LP信息；</p>
+<ul>
+<li><p>hostname为LP节点的名称；</p></li>
+<li><p>n表示要连接的VP数量为1（LP上n的数值&lt;=1)；</p></li>
+<li><p>type字段用来记录节点的类型为LP；</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="ipclp">
+<h3>通过ipc命令新增LP<a class="headerlink" href="#ipclp" title="Permalink to this headline">¶</a></h3>
+<p>上述通过配置的方式需要进行节点的启停从而使配置生效，实际上也可以通过ipc命令动态地进行LP的增删操作。</p>
+<p>命令格式： <cite>lp add &lt;namespace&gt; &lt;hostname&gt; &lt;address&gt;</cite> 具体操作可以查看 <strong>4.2节内容</strong> 。</p>
+</div>
+<div class="section" id="ipcvp">
+<h3>3.4 通过ipc命令新增VP<a class="headerlink" href="#ipcvp" title="Permalink to this headline">¶</a></h3>
+<p>在lp上也可以通过3.3节介绍的命令动态地增删VP，这里不再赘述。</p>
+</div>
+</div>
+<div class="section" id="ipc">
+<h2>4.IPC命令<a class="headerlink" href="#ipc" title="Permalink to this headline">¶</a></h2>
+<p>平台提供查询LP状态、新增LP、删除LP三类IPC运维命令。</p>
+<ol class="arabic simple">
+<li><p><cite>lp status</cite> ：查询LP的当前状态，在LP和VP执行返回信息不同；</p></li>
+<li><p><cite>lp add</cite> ：在VP上执行为新增LP，在LP上执行为新增VP；</p></li>
+<li><p><cite>lp remove</cite> ：在VP上执行为删除LP，在LP上执行为删除VP。</p></li>
+</ol>
+<p>IPC命令格式如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lp</span> <span class="n">add</span> <span class="o">&lt;</span><span class="n">namespace</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">hostname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">addr</span><span class="o">&gt;</span>    <span class="o">//</span><span class="n">新增</span>
+<span class="n">lp</span> <span class="n">remove</span> <span class="o">&lt;</span><span class="n">namespace</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">hostname</span><span class="o">&gt;</span>        <span class="o">//</span><span class="n">删除</span>
+<span class="n">lp</span> <span class="n">status</span> <span class="o">&lt;</span><span class="n">nameapce</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">hostname</span><span class="p">]</span>         <span class="o">//</span><span class="n">状态查询</span>
+</pre></div>
+</div>
+<p>调用IPC命令前，需要先启动IPC交互式命令行:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">hyperchain</span> <span class="o">-</span><span class="n">s</span> <span class="o">--</span><span class="n">ipc</span><span class="o">=</span><span class="n">hpc_1</span><span class="o">.</span><span class="n">ipc</span>
+</pre></div>
+</div>
+<div class="section" id="lp-status">
+<h3>4.1 lp status<a class="headerlink" href="#lp-status" title="Permalink to this headline">¶</a></h3>
+<p>该命令可以用于查询LP和VP的连接状态。 <strong>VP节点上可以同时得知连接的LP的状态和自己的状态；LP节点只能查询到自己的状态信息</strong> 。</p>
+<p>命令： <cite>lp status &lt;namespace&gt; [hostname]</cite> （该条命令可在VP和LP上执行）</p>
+<p><strong>上述命令格式的具体含义如下所示：</strong></p>
+<ul class="simple">
+<li><p><cite>&lt;namespace&gt;</cite> ：&lt;&gt;表示必要参数，由于LP是namespace级别的节点，因此需指定所在的namespace；</p></li>
+<li><p><cite>[hostname]</cite> ：[]表示可选参数，在VP上调用时，若不指定hostname，将以列表形式返回所有与VP相连的LP状态信息；在LP上调用时，由于LP只能和一个VP相连，是否指定hostname对返回结果没有影响。</p></li>
+</ul>
+<p>在LP上调用 <cite>lp status</cite> 命令，返回信息如下表所示：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>返回信息</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hostname</p></td>
+<td><p>LP连接的VP名称</p></td>
+</tr>
+<tr class="row-odd"><td><p>lp_status</p></td>
+<td><p>LP当前的状态</p></td>
+</tr>
+<tr class="row-even"><td><p>height</p></td>
+<td><p>LP当前区块高度</p></td>
+</tr>
+</tbody>
+</table>
+<p>在VP上调用 <cite>lp status</cite> 命令，返回信息如下表所示：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>返回信息</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hostname</p></td>
+<td><p>VP连接的LP名称</p></td>
+</tr>
+<tr class="row-odd"><td><p>vp_status</p></td>
+<td><p>VP当前的状态</p></td>
+</tr>
+<tr class="row-even"><td><p>lp_status</p></td>
+<td><p>LP当前的状态</p></td>
+</tr>
+<tr class="row-odd"><td><p>height</p></td>
+<td><p>LP当前区块高度</p></td>
+</tr>
+<tr class="row-even"><td><p>msg</p></td>
+<td><p>对当前LP的描述，这份描述内容是LP的握手或区块事件的回复信息</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>以下是一些正常的状态指令实例：</strong></p>
+<p>LP节点查询状态:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># lp节点和一个vp节点相连接:格式 lp status &lt;namespace&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="p">{</span><span class="n">hostname</span><span class="p">:</span> <span class="n">node1</span><span class="p">,</span> <span class="n">lp_status</span><span class="p">:</span> <span class="n">IDLE</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+
+<span class="c1"># lp节点和一个vp节点相连接:格式 lp status &lt;namespace&gt; [hostname]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">status</span> <span class="k">global</span> <span class="n">node1</span>
+<span class="p">{</span><span class="n">hostname</span><span class="p">:</span> <span class="n">node1</span><span class="p">,</span> <span class="n">lp_status</span><span class="p">:</span> <span class="n">IDLE</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>VP节点查询状态:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 场景：vp节点，和多个lp节点相连接。</span>
+<span class="c1"># 使用命令格式 lp status &lt;namespace&gt; 查询</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="p">{</span><span class="n">hostname</span><span class="p">:</span> <span class="n">lp1</span><span class="p">,</span> <span class="n">vp_status</span><span class="p">:</span> <span class="n">IDLE</span><span class="p">,</span> <span class="n">lp_status</span><span class="p">:</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">msg</span><span class="p">:</span> <span class="n">NULL</span><span class="p">}</span>
+<span class="p">{</span><span class="n">hostname</span><span class="p">:</span> <span class="n">lp2</span><span class="p">,</span> <span class="n">vp_status</span><span class="p">:</span> <span class="n">IDLE</span><span class="p">,</span> <span class="n">lp_status</span><span class="p">:</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">msg</span><span class="p">:</span> <span class="n">NULL</span><span class="p">}</span>
+
+<span class="c1"># 使用命令格式 lp status &lt;namespace&gt; [hostname]查询其中一个节点信息</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">status</span> <span class="k">global</span> <span class="n">lp2</span>
+<span class="p">{</span><span class="n">hostname</span><span class="p">:</span> <span class="n">lp2</span><span class="p">,</span> <span class="n">vp_status</span><span class="p">:</span> <span class="n">IDLE</span><span class="p">,</span> <span class="n">lp_status</span><span class="p">:</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">msg</span><span class="p">:</span> <span class="n">NULL</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lp-add">
+<h3>4.2 lp add<a class="headerlink" href="#lp-add" title="Permalink to this headline">¶</a></h3>
+<p>该命令用于动态增加节点场景，VP和LP都可以使用该指令动态增加节点。</p>
+<p>命令： <cite>lp add &lt;namespace&gt; &lt;hostname&gt; &lt;address&gt;</cite></p>
+<p><strong>上述命令格式的具体含义如下所示：</strong></p>
+<ul class="simple">
+<li><p><cite>&lt;namespace&gt;</cite> ：&lt;&gt;表示必要参数，由于LP是namespace级别的节点，因此需指定所在的namespace；</p></li>
+<li><p><cite>&lt;hostname&gt;</cite> ：&lt;&gt;表示必要参数，指定要连接节点的名称；</p></li>
+<li><p><cite>&lt;address&gt;</cite> ：&lt;&gt;表示必要参数，指定要连接节点的ip地址；</p></li>
+</ul>
+<p><strong>注意：新增命令的成功返回并不意味着连接建立成功</strong>，若在VP上执行新增命令，则可以通过4.1节介绍的 <cite>lp status</cite> 命令查询LP状态，若查询结果显示 <cite>lp_status=NORMAL</cite> 则代表新增成功，而若一直处于 <cite>ABNORMAL</cite> 状态，则需要根据日志进一步排查问题；而由于LP端无法查询VP状态，因此若在LP上执行新增命令，是否连接成功只能通过日志来进行确认。</p>
+<p><strong>LP连接VP示例</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 初始阶段，lp没有连接任何vp</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="n">this</span> <span class="n">lp</span> <span class="n">connects</span> <span class="n">no</span> <span class="n">vp</span>
+
+<span class="c1"># 正确使用add命令，连接node1，此时不代表新增node1成功</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">add</span> <span class="k">global</span> <span class="n">node1</span> <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">50011</span>
+<span class="n">success</span>
+
+<span class="c1"># 使用状态查询，发现成功连接vp节点</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="p">{</span><span class="n">hostname</span><span class="p">:</span> <span class="n">node1</span><span class="p">,</span> <span class="n">lp_status</span><span class="p">:</span> <span class="n">IDLE</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lp-remove">
+<h3>4.3 lp remove<a class="headerlink" href="#lp-remove" title="Permalink to this headline">¶</a></h3>
+<p>该指令用于VP和LP之间断开连接，VP和LP都可以使用该指令动态删除节点。</p>
+<p>ipc命令格式： <a href="#id8"><span class="problematic" id="id9">`</span></a>lp remove &lt;namespace&gt; &lt;hostname&gt; `</p>
+<ul class="simple">
+<li><p><cite>&lt;namespace&gt;</cite> ：&lt;&gt;表示必要参数，由于LP是namespace级别的节点，因此需指定其所在的namespace；</p></li>
+<li><p><cite>&lt;hostname&gt;</cite> ：&lt;&gt;表示必要参数，指定要连接节点的名称；</p></li>
+</ul>
+<p>该命令的行为如下：</p>
+<ul class="simple">
+<li><p>通知对端进行同样的删除操作；</p></li>
+<li><p>断开网络逻辑连接；</p></li>
+<li><p>删除对端配置文件信息；</p></li>
+<li><p>清空相应的缓存；</p></li>
+<li><p>进行证书吊销；</p></li>
+</ul>
+<p>一般情况下该命令有如下两种返回值：</p>
+<ul class="simple">
+<li><p><cite>remove [hostname] success:</cite> 这意味着成功通知到对方，双方都会执行上面提到的删除流程；</p></li>
+<li><p><cite>inform [hostname] to delete failed, maybe need manual operation:</cite> 这意味着由于网络或其他节点异常问题，导致未能成功通知到对端进行删除，在这种情况下，本地仍然会执行上述删除流程， <strong>可能带来的影响是</strong> 对端的配置文件或内存中仍然保留本节点的信息，因此仍然会尝试进行连接，但由于本节点已经进行了证书吊销，连接不会建立成功， <strong>解决方法是在对端重新执行删除命令</strong> 。</p></li>
+</ul>
+<p><strong>VP删除LP示例</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># vp节点查询状态，显示和多个lp节点连接</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="p">{</span><span class="n">hostname</span><span class="p">:</span> <span class="n">lp1</span><span class="p">,</span> <span class="n">vp_status</span><span class="p">:</span> <span class="n">IDLE</span><span class="p">,</span> <span class="n">lp_status</span><span class="p">:</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">msg</span><span class="p">:</span> <span class="n">NULL</span><span class="p">}</span>
+<span class="p">{</span><span class="n">hostname</span><span class="p">:</span> <span class="n">lp2</span><span class="p">,</span> <span class="n">vp_status</span><span class="p">:</span> <span class="n">IDLE</span><span class="p">,</span> <span class="n">lp_status</span><span class="p">:</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">msg</span><span class="p">:</span> <span class="n">NULL</span><span class="p">}</span>
+
+<span class="c1"># 删除其中一个LP节点</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">remove</span> <span class="k">global</span> <span class="n">lp1</span>
+<span class="n">remove</span> <span class="p">[</span><span class="n">lp1</span><span class="p">]</span> <span class="n">success</span>
+
+<span class="c1"># 删除成功，查询状态</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="p">{</span><span class="n">hostname</span><span class="p">:</span> <span class="n">lp2</span><span class="p">,</span> <span class="n">vp_status</span><span class="p">:</span> <span class="n">IDLE</span><span class="p">,</span> <span class="n">kp_status</span><span class="p">:</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">msg</span><span class="p">:</span> <span class="n">NULL</span><span class="p">}</span>
+
+<span class="c1"># 删除第二个LP节点</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">remove</span> <span class="k">global</span> <span class="n">lp2</span>
+<span class="n">remove</span> <span class="p">[</span><span class="n">lp2</span><span class="p">]</span> <span class="n">success</span>
+
+<span class="c1"># 删除成功，查询状态</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="n">this</span> <span class="n">vp</span> <span class="n">connects</span> <span class="n">no</span> <span class="n">nvp</span> <span class="ow">or</span> <span class="n">lp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>5. 操作实例<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>这章会列举一些实际操作场景。</p>
+<div class="section" id="id11">
+<h3>5.1 LP动态切换VP<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>场景：LP通过IPC命令动态的切换VP。</p>
+<p>IPC命令如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="go">{hostname: node1, lp_status: IDLE, height: 0}</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lp</span> <span class="n">remove</span> <span class="k">global</span> <span class="n">node1</span>
+<span class="go">remove [node1] success</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="go">this lp connects no vp</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lp</span> <span class="n">add</span> <span class="k">global</span> <span class="n">node2</span> <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">50012</span>
+<span class="go">add node2 success</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lp</span> <span class="n">status</span> <span class="k">global</span>
+<span class="go">{hostname: node2, lp_status: IDLE, height: 0}</span>
+</pre></div>
+</div>
+<p><strong>使用过程介绍</strong></p>
+<ol class="arabic simple">
+<li><p>LP目前已经有连接的VP，通过状态查询命令可以查询到当前连接的VP节点信息；</p></li>
+<li><p>LP执行指令删除自己所连接的VP节点： <cite>lp remove global node1</cite> ；</p></li>
+<li><p>LP节点收到返回信息 <cite>remove [node1] success</cite> 表明成功删除；</p></li>
+<li><p>使用状态查询命令查询当前状态，验证已经删除成功，此时应该没有连接任何VP节点，结果应返回 <cite>this lp connects no vp</cite> ；</p></li>
+<li><p>通过add指令，添加新的想要连接的VP节点；添加新的节点之前需要根据 <strong>第二章节进行证书配置</strong> ；</p></li>
+<li><p>如果VP节点未启动，那么需要先启动该VP节点，节点配置 <strong>参考部署文档</strong> ；</p></li>
+<li><p>在LP节点执行 <cite>lp add global node2 127.0.0.1:50012</cite> 命令；</p></li>
+<li><p>等待返回 <cite>add node2 success</cite> ，说明和node2连接的准备工作完成，但此时还不证明已经连接成功；</p></li>
+<li><p>使用状态查询命令查询当前状态，验证已经添加成功，此时应该成功连接新的VP节点，结果应返回LP的状态信息： <cite>{hostname: node2, lp_status: IDLE, height: 0}</cite> ；</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>6.异常处理<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>6.1 指令格式输入错误<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>命令长度/类型出现问题:</p></li>
+</ul>
+<blockquote>
+<div><p># 命令长度不够，小于3
+&gt;&gt;&gt; lp status
+Error: invalid command</p>
+<p># 命令中的namespace不存在
+&gt;&gt;&gt; lp status g
+Error: namespace [g] not exists</p>
+<p># 命令中长度正确但是指令类型不支持，目前仅支持add、remove、status三种
+&gt;&gt;&gt; lp type global
+Error: invald command</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>add指令格式有误:</p></li>
+</ul>
+<blockquote>
+<div><p># 如namespace或者hostname的参数为空，或者输入的ip地址/端口号有问题
+&gt;&gt;&gt; lp add global   127.0.0.1:500231
+Error: invalid command</p>
+<p># 命令格式不正确，add命令长度必须为5，即lp add namespace hostname addr
+&gt;&gt;&gt; lp add global
+Error: invalid command: expected length: 5</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lp</span> <span class="n">add</span> <span class="k">global</span> <span class="n">node1</span>
+<span class="go">Error: invalid command: expected length: 5</span>
+</pre></div>
+</div>
+<p># 端口号异常
+&gt;&gt;&gt; lp add global node1 127.0.0.1：50011
+Error: Uknown rune: 65306</p>
+</div></blockquote>
+<p><strong>解决方案：</strong> 参照 <strong>第4章节</strong> ，正确输入指令</p>
+</div>
+<div class="section" id="id14">
+<h3>6.2 查询状态时VP与LP并未互相连接<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>在状态查询指令之中，输入 <cite>lp status &lt;namespace&gt; [hostname]</cite> 指令，如果查询询不到，根据节点类型返回 <cite>this vp connects no nvp or lp/this lp connects no vp</cite></p>
+</div></blockquote>
+<p><strong>解决方案：</strong> 使用添加连接命令，进行节点连接。</p>
+</div>
+<div class="section" id="id15">
+<h3>6.3 重复添加存在节点<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 如果输入指令中的hostname和现在已经启动的vp/lp的hostname重复将会报错</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lp</span> <span class="n">add</span> <span class="k">global</span> <span class="n">node1</span> <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">50023</span>
+<span class="go">Error: hostname collide with existed vp</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>解决方案：</strong> 检查LP，VP，CVP各个节点的配置文件，查看是否有重名现象，进行更改。</p>
+</div>
+<div class="section" id="id16">
+<h3><strong>6.4 删除并不存在的节点</strong><a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 删除并不存在的节点</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lp</span> <span class="n">remove</span> <span class="k">global</span> <span class="n">lp2</span>
+<span class="go">Error: not existed: lp2</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>解决方案：</strong> 该节点不存在或已经删除成功，无法再进行重复操作，可以进行下一步操作，无需处理。</p>
+</div>
+<div class="section" id="id17">
+<h3>6.5 添加节点失败<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>在添加节点之后如果出现以下情况说明添加节点失败：</p>
+<p>1）如果日志信息一直在显示反复连接，出现timeout等日志信息，此时表明建立连接失败；</p>
+<p>2）如果是vp节点使用状态查询的指令，如果连接的lp节点状态一直都是 <cite>ABNORMAL</cite> 状态，也表明建立连接出现问题。</p>
+<p><strong>解决方案：</strong></p>
+<ul class="simple">
+<li><p>此时不做处理也可以正常运行，但是后台会一直尝试连接该节点，反复打印timeout日志信息；</p></li>
+<li><p>如果想要停止打印日志信息，用户可以调用remove指令撤回上一条连接add指令。</p></li>
+</ul>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 删除节点成功</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lp</span> <span class="n">remove</span> <span class="k">global</span> <span class="n">node1</span>
+<span class="go">remove [node1] success</span>
+</pre></div>
+</div>
+<p># vp节点和lp之间的连接存在问题，需要人工介入
+&gt;&gt;&gt; lp remove global lp1
+inform [lp1] to delete failed, maybe need manual operation</p>
+</div></blockquote>
+<p>针对remove出错，没有成功返回success信息的场景</p>
+<p><strong>解决方案：</strong> 需要人工进行介入，lp和vp之间的连接状态不正常，需要根据日志信息进行人工介入。</p>
+</div>
+<div class="section" id="id18">
+<h3>6.6 查询到空区块<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>当调用查询区块接口后如果发现区块各值均为空或者零值，说明该区块为空区块，出现这种情况是因为vp在归档后再去连接lp，导致lp缺失了归档高度前的区块头数据:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">8087</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;[{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 0, &quot;method&quot;: &quot;block_getBlockByNumber&quot;, &quot;params&quot;: [10, false], &quot;namespace&quot;: &quot;global&quot;}]&#39;</span>
+<span class="go">response: {&#39;jsonrpc&#39;: &#39;2.0&#39;, &#39;namespace&#39;: &#39;global&#39;, &#39;id&#39;: 0, &#39;code&#39;: 0, &#39;message&#39;: &#39;SUCCESS&#39;, &#39;result&#39;: {&#39;version&#39;: &#39;&#39;, &#39;number&#39;: &#39;0x0&#39;, &#39;hash&#39;: &#39;0x0000000000000000000000000000000000000000000000000000000000000000&#39;, &#39;parentHash&#39;: &#39;0x0000000000000000000000000000000000000000000000000000000000000000&#39;, &#39;writeTime&#39;: 0, &#39;avgTime&#39;: &#39;0x0&#39;, &#39;txcounts&#39;: &#39;0x0&#39;, &#39;merkleRoot&#39;: &#39;0x0000000000000000000000000000000000000000000000000000000000000000&#39;, &#39;txRoot&#39;: &#39;0x0000000000000000000000000000000000000000000000000000000000000000&#39;}}</span>
+</pre></div>
+</div>
+<p>解决方案：lp应尽可能连接有完整数据的vp，才可以同步尽可能多的区块头数据</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

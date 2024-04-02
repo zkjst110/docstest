@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>灾备节点介绍 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>灾备节点介绍</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Node and zone management/CVP User Manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cvp-user-manual">
+<span id="id1"></span><h1>灾备节点介绍<a class="headerlink" href="#cvp-user-manual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>功能说明<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>CVP是一个独立运行的节点，可以对 <strong>线上节点（目前包括VP、NVP）进行实时的容灾备份，当线上节点发生了不可恢复的错误时，通过运维命令自动对CVP进行升级，替代原节点继续工作</strong> 。实际使用过程中，CVP和线上节点仅支持一对一连接。</p>
+<p>Hyperchain中支持 <strong>分区共识</strong> 功能，即一个节点上可以同时运行多个完全隔离的分区，节点在不同分区内可以是不同的角色，如VP或者NVP。CVP提供节点级别的热备服务，可以对目标 <strong>节点</strong> 进行完全的备份，即不论目标节点上有多少分区、不同分区内的节点角色（VP或NVP）是否一致，均可以实现备份。</p>
+</div>
+<div class="section" id="id3">
+<h2>数据同步<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>CVP上的备份数据主要包括：</p>
+<ul class="simple">
+<li><p>相连节点的配置文件；</p></li>
+<li><p>相连节点上所有分区的MQ注册队列；</p></li>
+<li><p>相连节点上所有分区的链上数据（包括区块及账本数据）。</p></li>
+</ul>
+<p><strong>本节将对CVP的工作方式进行简单介绍，具体操作请参考第二到第四章节内容。</strong></p>
+<div class="section" id="id4">
+<h3>配置文件<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>为了使CVP能够替代线上节点工作，CVP节点的二进制所在目录中需要保存两份配置文件：</p>
+<ul class="simple">
+<li><p><cite>configuration</cite> 目录下保存CVP节点自己运行时所需的配置文件，如数据库路径、证书路径、网络等配置，可以参考《运维手册》对CVP进行必要的配置；</p></li>
+<li><p><cite>system/cvp/configuration_vp</cite> 目录下保存了CVP节点所连接的线上节点的全量配置文件， <strong>这份配置文件由CVP自动同步并保持更新，无须用户手动准备</strong> 。</p></li>
+</ul>
+<p>CVP会对目标节点上的配置文件进行全量的同步，当CVP连接到目标节点，并且完成一次握手后，会触发一次同步，而后续若发生网络断连恢复或节点重启等事件时也会触发一次同步；我们提供了IPC命令以及RPC命令对一些配置项进行在线的修改（不宕机），那么对于有一些比较重要的配置项的在线修改，也会以 <strong>强同步</strong> 的方式同步至CVP上。这里的强同步指的是一次配置文件的修改，需要在目标节点和CVP节点都完成修改后，才正常返回。</p>
+</div>
+<div class="section" id="mq">
+<h3>MQ队列<a class="headerlink" href="#mq" title="Permalink to this headline">¶</a></h3>
+<p>CVP会在进行握手的时机进行 <strong>全量MQ队列的同步</strong> ；在线上节点上进行的MQ队列的 <strong>注册/解注册事件也</strong> 将会被自动同步至CVP节点，无须用户手动在CVP节点上重复注册。同样的，事件同步方式为强一致，即完成队列注册操作意味着两个节点都注册完成了该队列，保证CVP升级后能继续提供完整的MQ服务。</p>
+<p><strong>需要注意的是，CVP只同步队列，不同步MQ消息。</strong></p>
+</div>
+<div class="section" id="id5">
+<h3>链上数据<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>CVP将自动同步线上节点所有分区的区块及账本数据。</strong> 与前述同步方式不同，链上数据的同步是 <strong>弱一致</strong> 的，这种方式可以尽可能地保证线上节点的性能不受太大影响。</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>节点准备<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>配置文件<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>为了启用CVP功能，需要对以下配置文件进行修改：</p>
+<div class="section" id="dynamic-toml">
+<h4>修改系统级别dynamic.toml<a class="headerlink" href="#dynamic-toml" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p><cite>configuration/dynamic.toml</cite> 中需要修改的配置项如下所示:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">cvp</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>enable    = false
+node_type = “provider”
+remote     = [“”]</p>
+</div></blockquote>
+<p>上述配置项的具体含义如下所示：</p>
+<ul class="simple">
+<li><p><cite>enable</cite> ：是否开启CVP功能，CVP要与目标节点建立连接，双方必须开启该字段，可通过IPC命令动态开启该开关；</p></li>
+<li><p><cite>node_type</cite> ：节点类型，可选项为provider或receiver，CVP配置为receiver，线上节点配置为provider；</p></li>
+<li><p><cite>remote</cite> ：对端节点的hostname以及地址。</p></li>
+</ul>
+<p><strong>举例来说，一份正确的新增配置如下所示</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">线上节点配置如下</span>
+<span class="p">[</span><span class="n">cvp</span><span class="p">]</span>
+<span class="n">enable</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">node_type</span> <span class="o">=</span> <span class="s2">&quot;provider&quot;</span>
+<span class="n">remote</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cvp 127.0.0.1:50015&quot;</span><span class="p">]</span>
+
+<span class="o">//</span> <span class="n">CVP节点配置如下</span>
+<span class="n">enable</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">node_type</span> <span class="o">=</span> <span class="s2">&quot;receiver&quot;</span>
+<span class="n">remote</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;node1 127.0.0.1:50011&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="namespacens-dynamic-toml">
+<h4>修改Namespace级别ns_dynamic.toml<a class="headerlink" href="#namespacens-dynamic-toml" title="Permalink to this headline">¶</a></h4>
+<p>仅CVP节点需要修改ns_dynamic.toml配置文件，沿用前一节中的例子，CVP节点的 <cite>configuration/global/ns_dynamic.toml</cite> 的正确修改如下所示:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="bp">self</span><span class="p">]</span>
+<span class="n">n</span>         <span class="o">=</span> <span class="mi">1</span>           <span class="c1"># 运行时修改。表示所连vp节点的个数，该值在节点运行过程中会实时变化。</span>
+<span class="n">hostname</span>    <span class="o">=</span> <span class="s2">&quot;cvp&quot;</span>   <span class="c1"># 本地节点的hostname名称</span>
+<span class="n">new</span>         <span class="o">=</span> <span class="n">false</span>     <span class="c1"># 运行时修改。新节点成功加入网络以后，该值会变为false。</span>
+<span class="nb">type</span>        <span class="o">=</span> <span class="s2">&quot;cvp&quot;</span>
+<span class="n">trustNodes</span>  <span class="o">=</span> <span class="n">false</span>     <span class="c1">#运行时修改。节点成功加入共识以后，该值会变为false。当需要信任配置当nodes列表时，将此值配为true</span>
+
+<span class="p">[[</span><span class="n">nodes</span><span class="p">]]</span>
+<span class="n">hostname</span>    <span class="o">=</span> <span class="s2">&quot;node1&quot;</span>
+<span class="n">score</span>       <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>即对于CVP节点来说，其只连接一个节点，因此nodes字段只保留一个节点的信息；self字段中，将n修改为1，且节点自身类型配置为 “cvp” 。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>私钥准备<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>作为一个灾备节点，CVP需要随时顶替线上继续工作，因此CVP需要在启动之前为每个分区配备相应的节点私钥，从而在其升级后与其他节点建立连接。</p>
+<p>由于私钥性质特殊，用户需要在CVP启动前进行 <strong>手动备份</strong> ，即将目标的节点私钥放置于CVP每个分区的 <cite>certs/certs</cite> 目录下。</p>
+<div class="section" id="tls">
+<h3>TLS准备<a class="headerlink" href="#tls" title="Permalink to this headline">¶</a></h3>
+<p>若要开启目标节点与CVP节点之间的安全连接，则需要为CVP节点配置TLS。具体来说，在CVP节点的 <strong>根目录</strong> 下创建一个 <cite>tls目录</cite> ，目录中配备合法的TLS证书、TLS私钥与CA、CA私钥，如下图所示：</p>
+<p><img alt="image0" src="../_images/cvp1.png" /></p>
+<p>随后进入 <cite>system.toml</cite> 配置文件，对如下字段进行配置:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p2p</span><span class="p">]</span>
+<span class="n">enableTLS</span> <span class="o">=</span> <span class="n">true</span>
+</pre></div>
+</div>
+<p><strong>CVP和目标可以共用同一份TLS数据，且要求两者同时开启或关闭上述配置开关。</strong></p>
+</div>
+<div class="section" id="id9">
+<h3>启动节点<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>在完成上述准备后，可以通过 <cite>start.sh</cite> 脚本或 <cite>./hyperchain</cite> 来启动节点。由于节点之间可以动态地建立连接，因此无须同时启动。</p>
+<p>对于线上节点来说，当其开启了CVP功能却未连接任何CVP节点时，节点仍然可用（共识打包、交易执行、数据查询等），但不会向任何CVP节点备份数据。此时若有CVP节点主动连接该节点，则这两个节点可以成功建立连接并开始数据备份。</p>
+<p>对于CVP节点来说，若其未连接任何线上节点，则除了有限的查询接口外（见附录），不提供任何服务。</p>
+<p>可以通过在 <strong>线上节点</strong> 上执行IPC命令 <cite>cvp status</cite> 来查询与CVP的连接状态，若展示结果为 <strong>normal</strong> ，说明CVP正常工作。</p>
+<p>启动成功后，hyperchain二进制所在根目录会创建一个 <cite>system/cvp</cite> 目录，其中记录了CVP功能相关的元数据，除此之外，完成一次握手之后CVP会在根目录生成一个 <cite>system/cvp/configuration_vp</cite> 目录，其中存储了CVP所备份的线上节点的配置文件， <strong>在正常情况下绝对不能删除上述两个目录。</strong></p>
+</div>
+</div>
+<div class="section" id="cvp">
+<h2>CVP升级<a class="headerlink" href="#cvp" title="Permalink to this headline">¶</a></h2>
+<p><strong>在确认目标节点宕机离线后</strong> ， <strong>运维人员可对CVP节点进行升级。</strong></p>
+<p>通过IPC命令 <cite>cvp upgrade</cite> 完成CVP的在线升级，有如下事项需要注意：</p>
+<ul class="simple">
+<li><p>确保CVP升级之前，目标节点已经宕机；</p></li>
+<li><p>确保CVP升级之前，其根目录下存在 <cite>configuration_vp</cite> 目录，该目录在两个节点第一次建立连接并握手之后会同步至CVP节点；</p></li>
+<li><p>CVP升级之后会以原VP的身份（hostname, 证书等)尝试与其他节点建立连接，因此需要确保CVP与线上其他节点网络的连通性；</p></li>
+<li><p>由于链上数据的同步是弱一致的，CVP升级之后的区块高度可能是落后的，可自动通过数据同步恢复；</p></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h2>运维命令<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>平台提供CVP连接状态查询、CVP动态启停、CVP升级三类IPC运维命令。</p>
+<div class="section" id="id11">
+<h3>连接状态查询<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>命令： <cite>cvp status</cite> （ <strong>该条命令只能在线上节点上执行</strong> ）</p>
+<p>查询CVP和VP的连接状态，包含两种返回信息：</p>
+<ul class="simple">
+<li><p>cvp is normal：连接正常；</p></li>
+<li><p>cvp is abnormal：连接异常；</p></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>动态开启CVP功能<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>命令： <cite>cvp enable</cite> （ <strong>该条命令只能在线上节点上执行</strong> ）</p>
+<p>开启CVP功能，节点将被动和CVP建立连接。当 <cite>cvp enable</cite> 命令执行成功后，配置文件 <cite>dynamic.toml</cite> 中的 <cite>cvp.enable</cite> 字段变为true，若在已开启CVP功能的情况下使用此命令将会出错，但不会影响系统状态。</p>
+<p><strong>使用场景示例：</strong></p>
+<p>线上节点处在未开启CVP功能且正常运行中的状态，此时若希望**在不停节点的情况下添加一个CVP节点**，则需要：</p>
+<ol class="arabic simple">
+<li><p>在线上节点上执行 <cite>cvp enable</cite> 命令；</p></li>
+<li><p>准备并启动CVP节点，该CVP节点配置了线上节点的地址等信息，线上节点**不需要**进行任何配置修改；</p></li>
+<li><p>启动CVP之后若能通过 <cite>cvp status</cite> 命令查询正常状态，说明节点间连接建立成功，CVP开始正常工作。</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>动态关闭CVP功能<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>命令： <cite>cvp disable</cite> （ <strong>该条命令只能在线上节点上执行</strong> ）</p>
+<p>关闭CVP功能，此时线上节点将主动断开与CVP的物理连接，并不再接收来自其他CVP的连接请求。当 <cite>cvp disable</cite> 命令执行成功后，配置文件 <cite>dynamic.toml</cite> 中的 <cite>cvp.enable</cite> 字段将变为false。</p>
+<p><strong>使用场景示例：</strong></p>
+<p>线上节点与对应的CVP节点正常工作中，此时若希望停止CVP的备份服务，则可以通过直接在线上节点上执行 <cite>cvp disable</cite> 命令完成。</p>
+</div>
+<div class="section" id="id14">
+<h2>动态升级CVP<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p>命令： <cite>cvp upgrade</cite> （<strong>该条命令只能在CVP上执行</strong>）</p>
+<p>升级CVP，具体可参考 <strong>第三章《CVP升级》</strong> 。</p>
+</div>
+<div class="section" id="id15">
+<h2>注意事项<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id16">
+<h3>连接/工作模式<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>在当前版本中仅支持CVP和线上节点的一对一连接；</p></li>
+<li><p>不支持一个CVP节点在不清除旧数据的情况下，更换所连接的线上节点；</p></li>
+<li><p>网络波动、CVP节点宕机等异常事件并不会对线上节点服务造成影响；</p></li>
+<li><p>CVP对线上节点造成的性能影响非常有限；</p></li>
+<li><p>CVP宕机后线上节点将继续工作，但数据同步会停止，当CVP重启后将自动备份所缺数据。</p></li>
+</ol>
+</div>
+<div class="section" id="id17">
+<h3>分区管理<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>一般来说，有两种新增分区的方式：</p>
+<ul class="simple">
+<li><p>修改配置文件后重启节点</p></li>
+<li><p>通过IPC命令动态新增</p></li>
+</ul>
+<p>两种方式都需要提前在特定目录中准备好待新增的配置文件、证书等数据。 <strong>这些数据同样也需要在CVP上提前准备好</strong> ，若未在CVP上提前准备，将直接以目标节点的配置文件启动CVP上的新分区，因此 <strong>若两者的节点环境（路径、开放端口等）完全一致，则可以不用为CVP准备配置文件和证书。</strong></p>
+<p>原则上，目标节点和CVP上启动的分区必须完全匹配，因此在握手中过程中会进行分区状态的检查，若发现不一致，则会自动恢复至匹配的状态，如目标节点运行了ns1，ns2两个分区，而CVP连接时只有ns3一个分区，那么在完成握手后，CVP节点会自动停止ns3分区，并以目标节点的相关配置运行ns1，ns2两个分区。</p>
+</div>
+<div class="section" id="id18">
+<h3>数据索引<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>数据索引功能需要外接MongoDB数据库，用于存储区块数据的索引信息，详情可参考《数据索引使用手册》。</p>
+<p><strong>CVP和目标节点的数据索引开关应保持一致</strong> ，即同时开启或同时关闭，否则CVP将无法与目标节点成功建立连接。</p>
+<p>除了索引开关，CVP上的其他配置项可按照《数据索引使用手册》的内容进行独立配置。注意，若配置错误导致索引数据库没有正常启动，CVP将无法完成索引数据的灾备，待CVP升级后需要重新生成这部分数据，在区块数量很多的情况下，这一过程将花费很长时间，从而影响正常业务运行。因此，为了规避上述风险，<strong>在目标节点开启数据索引功能的情况下，请务必检查CVP上的索引数据库是否正常启动</strong>。</p>
+<p>此外，由于二层索引可在不停机的情况下进行动态创建且耗时较短，因此CVP未进行二层索引的一致性检查和同步，用户可在CVP上手动调用IPC命令创建相应的二层索引。</p>
+</div>
+<div class="section" id="id19">
+<h3>可信文件共享<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p>可信文件共享功能需要外接文件系统，用于存储原文件数据，详情可参考《可信文件共享使用手册》。</p>
+<p>CVP节点不支持可信文件共享功能。</p>
+<p><strong>CVP节点不会备份上传至VP的文件，若有需要请自行对文件进行备份。</strong></p>
+</div>
+<div class="section" id="id20">
+<h3>安全审计<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p>安全审计功能需要配置审计后端，用于存储审计日志数据，详情可参考《安全审计使用手册》。</p>
+<p>CVP节点不支持安全审计功能。</p>
+<p><strong>CVP节点不会备份审计数据，因此推荐采用ELK或Graylog审计后端，CVP升级之后可以直接使用这部分审计数据。</strong></p>
+</div>
+<div class="section" id="id21">
+<h3>CVP节点开放功能<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>CVP节点的核心功能是备份，因此只保留有限的开放接口，如下：</p>
+<ul class="simple">
+<li><p>禁用所有的IPC接口，只保留 <cite>cvp upgrade</cite> 命令；</p></li>
+<li><p>禁用大部分RPC请求，开放接口见附录。</p></li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h3>证书<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p>CVP不需要线上节点为其颁发的证书，而只需要一份合法的TLS的证书即可与线上节点进行通信。在连接初始的握手阶段，CVP会同步线上节点所有分区的证书信息，以供升级后继续使用，而对于线下手动替换的证书，若不重启节点或网络则无法让CVP同步到更新后的证书，此时也需要手动将证书放到CVP节点的对应目录下，或在CVP升级后进行证书替换。CVP证书放置目录为 <cite>namespaces/global/system/cvp</cite> 。</p>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>附录<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id24">
+<h3>CVP接口开放清单<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://upload.filoop.com/RTD-Hyperchain%2FCVP%20JSONRPC%E6%8E%A5%E5%8F%A3%E5%BC%80%E6%94%BE%E6%B8%85%E5%8D%95.xlsx">CVP接口开放清单列表</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

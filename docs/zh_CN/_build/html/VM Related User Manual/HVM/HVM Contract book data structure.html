@@ -1,0 +1,3398 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1. HyperList介绍 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>1. HyperList介绍</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/VM Related User Manual/HVM/HVM Contract book data structure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p id="hvm-contract-book-data-structure">为方便合约中和账本的交互，以及提供多样化的合约功能，能让合约编写者像使用本地Java集合一样来操作区块链账本，目前hvm中提供了HyperTable，HyperMap、HyperList和NestedMap四种类型，当合约中需要保存持续增长的数据的时候，都应考虑使用提供的账本数据结构。</p>
+<div class="section" id="hyperlist">
+<h1>1. HyperList介绍<a class="headerlink" href="#hyperlist" title="Permalink to this headline">¶</a></h1>
+<p>HyperList是HVM内部定义的一种与ArrayList类似的类型，它是一个有序的Java合约账本数据集合，实现了Java的List接口，数据以懒加载的形式，减少了内存的使用，提高了更新账本的插入效率。</p>
+<p><strong>注意：</strong></p>
+<ul class="simple">
+<li><p>HyperList应定义在HVM合约的具体实现类中，且应为合约的成员变量，同时需加上&#64;StoreField注解；</p></li>
+<li><p>考虑到HyperList的持久化存储策略，不建议向HyperList插入大量数据；</p></li>
+<li><p>Value类型<strong>不推荐</strong>使用一些含有map或list这种会不断增长的保存数据的结构体；</p></li>
+<li><p>不建议根据对象去查询其在HyperList中的索引位置（如indexOf接口），同时应减少使用迭代器接口；</p></li>
+<li><p>Value类型不能包括泛型。</p></li>
+</ul>
+<div class="section" id="id1">
+<h2><strong>HyperList使用示例</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//定义
+@StoreField
+private HyperList&lt;String&gt; hyperList = new HyperList&lt;&gt;();
+
+ //调用接口示例 hyperList.add(0, “w0”); hyperList.get(0);
+
+ String[] array = new String[]{“a”, “b”, “c”, “d”}; ArrayList arrayList =
+ new ArrayList(Arrays.asList(array)); hyperList.addAll(arrayList);
+ hyperList.get(hyperList.size() - 1);
+
+ hyperList.contains(“0”); hyperList.equals(arrayList);
+ hyperList.hashCode(); hyperList.remove(3); hyperList.remove(“b0”);
+ hyperList.set(0, “q”); ListsubList = hyperList.subList(0, 3);
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>HyperList使用demo</strong></p>
+<blockquote>
+<div><p><strong>【源码包可参考HVM使用手册 - HVM合约Demo附件源码 - hvm-manual-demo的hyperlist目录】</strong></p>
+</div></blockquote>
+<p>## HyperList接口</p>
+<p>### add</p>
+<p>向HyperList的末尾位置添加元素:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">boolean</span> <span class="n">add</span><span class="p">(</span><span class="n">E</span> <span class="n">e</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 30%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>add</p></td>
+<td><p>e：待添加的元素</p></td>
+<td><p>添加成功返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isOK</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>在HyperList的指定index位置，添加值</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="n">E</span> <span class="n">element</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 81%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>add</p></td>
+<td><p>index：HyperList中的位置element：待添加的值</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isOK</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">&quot;w0&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="addall">
+<h3>addAll<a class="headerlink" href="#addall" title="Permalink to this headline">¶</a></h3>
+<p>在HyperList尾部添加参数中的所有元素</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">addAll</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">E</span><span class="o">&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 21%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>addAll</p></td>
+<td><p>c：待添
+加的元素集合</p></td>
+<td><p>HyperList添加参
+数中的所有元素，成功返回true，失败返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="s">&quot;d&quot;</span><span class="p">};</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">arrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">array</span><span class="p">));</span>
+<span class="kt">boolean</span> <span class="n">isOK</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">arrayList</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>在HyperList指定位置添加参数中的所有元素</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">addAll</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="n">Collection</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">E</span><span class="o">&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 34%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>addAll</p></td>
+<td><p>index：指定添加位
+置c：待添加的元素集合</p></td>
+<td><p>HyperList添加集合中的所有
+元素，成功返回true，失败返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="o">[]</span> <span class="n">array0</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;a0&quot;</span><span class="p">,</span> <span class="s">&quot;b0&quot;</span><span class="p">,</span> <span class="s">&quot;c0&quot;</span><span class="p">,</span> <span class="s">&quot;d0&quot;</span><span class="p">};</span>
+<span class="kt">boolean</span> <span class="n">isOK</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">array0</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contains">
+<h3>contains<a class="headerlink" href="#contains" title="Permalink to this headline">¶</a></h3>
+<p>判断HyperList是否包含该对象</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">contains</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 13%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>contains</p></td>
+<td><p>o：对象</p></td>
+<td><p>HyperList含有对象o返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isContains</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="containsall">
+<h3>containsAll<a class="headerlink" href="#containsall" title="Permalink to this headline">¶</a></h3>
+<p>判断HyperList是否包含参数中的所有元素</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsAll</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;?&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 10%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>containsAll</p></td>
+<td><p>c：
+元素
+集合</p></td>
+<td><p>HyperLi
+st包含参数中的所有元素返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="s">&quot;d&quot;</span><span class="p">};</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">arrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">array</span><span class="p">));</span>
+<span class="kt">boolean</span> <span class="n">isContains</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">containsAll</span><span class="p">(</span><span class="n">arrayList</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="equals">
+<h3>equals<a class="headerlink" href="#equals" title="Permalink to this headline">¶</a></h3>
+<p>判断HyperList与对象o是否值相等</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 19%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>equals</p></td>
+<td><p>o：Object对象</p></td>
+<td><p>HyperList对象与参数o值相等则返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="s">&quot;d&quot;</span><span class="p">};</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">arrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">array</span><span class="p">));</span>
+<span class="kt">boolean</span> <span class="n">isEqual</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">arrayList</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get">
+<h3>get<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h3>
+<p>获取HyperList在index位置的值</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">E</span> <span class="nf">get</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 59%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>get</p></td>
+<td><p>index：HyperList中的位置</p></td>
+<td><p>index位置的值</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">hyperList</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hashcode">
+<h3>hashCode<a class="headerlink" href="#hashcode" title="Permalink to this headline">¶</a></h3>
+<p>获取HyperList的hash值</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">hashCode</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 14%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hashCode</p></td>
+<td><p>无</p></td>
+<td><p>HyperList的哈希值</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">hashCode</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">hashCode</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="isempty">
+<h3>isEmpty<a class="headerlink" href="#isempty" title="Permalink to this headline">¶</a></h3>
+<p>判断HyperList是否为空</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 9%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>isEmpty</p></td>
+<td><p>无</p></td>
+<td><p>HyperList为空返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isEmpty</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="iterator">
+<h3>iterator<a class="headerlink" href="#iterator" title="Permalink to this headline">¶</a></h3>
+<p>获取HyperList的Iterator</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="nf">iterator</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 13%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>iterator</p></td>
+<td><p>无</p></td>
+<td><p>HyperList的Iterator</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Iterator</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">iterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="kt">boolean</span> <span class="n">hasNext</span> <span class="o">=</span> <span class="n">iterator</span><span class="p">.</span><span class="na">hasNext</span><span class="p">();</span>
+<span class="n">iterator</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listiterator">
+<h3>listIterator<a class="headerlink" href="#listiterator" title="Permalink to this headline">¶</a></h3>
+<p>获取HyperList的ListIterator，默认位置为0</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="nf">listIterator</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 9%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>listIterator</p></td>
+<td><p>无</p></td>
+<td><p>HyperList在位置0的ListIterator</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ListIterator</span> <span class="n">listIterator</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">listIterator</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>获取HyperList指定位置的ListIterator</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="nf">listIterator</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 26%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>listIterator</p></td>
+<td><p>index：指定位置</p></td>
+<td><p>HyperList指定位置的ListIterator</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ListIterator</span> <span class="n">listIterator</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">listIterator</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">nextIndex</span> <span class="o">=</span> <span class="n">listIterator</span><span class="p">.</span><span class="na">nextIndex</span><span class="p">();</span>
+<span class="kt">boolean</span> <span class="n">hasNext</span> <span class="o">=</span> <span class="n">ilistIterator</span><span class="p">.</span><span class="na">hasNext</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ilistIterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">previousIndex</span> <span class="o">=</span> <span class="n">listIterator</span><span class="p">.</span><span class="na">previousIndex</span><span class="p">();</span>
+<span class="kt">boolean</span> <span class="n">hasPrevious</span> <span class="o">=</span> <span class="n">listIterator</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">value2</span> <span class="o">=</span> <span class="n">listIterator</span><span class="p">.</span><span class="na">previous</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="indexof">
+<h3>indexOf<a class="headerlink" href="#indexof" title="Permalink to this headline">¶</a></h3>
+<p>HyperList中按顺序第一次出现对象o的位置</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">indexOf</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>indexOf</p></td>
+<td><p>o：对象o</p></td>
+<td><p>HyperList中第一次出现对象o的位置index</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lastindexof">
+<h3>lastIndexOf<a class="headerlink" href="#lastindexof" title="Permalink to this headline">¶</a></h3>
+<p>HyperList中按顺序最后一次出现对象o的位置</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">lastIndexOf</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>lastIndexOf</p></td>
+<td><p>o：对象o</p></td>
+<td><p>HyperList中最后一次出现对象o的位置index</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">lastIndex</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove">
+<h3>remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h3>
+<p>根据值删除HyperList中的元素</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">remove</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 29%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>remove</p></td>
+<td><p>o：待删除的对象</p></td>
+<td><p>删除成功返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isRemove</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;p&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>删除HyperList指定index位置的元素，并返回该值</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">E</span> <span class="nf">remove</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 49%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>remove</p></td>
+<td><p>index：HyperList中的位置</p></td>
+<td><p>删除的index位置的值</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">oldValue</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="removeall">
+<h3>removeAll<a class="headerlink" href="#removeall" title="Permalink to this headline">¶</a></h3>
+<p>HyperList批量删除与集合中元素相同的所有元素</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">removeAll</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;?&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 16%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>re
+moveAll</p></td>
+<td><p>c：
+待删除的
+元素集合</p></td>
+<td><p>HyperList删除C集合
+中存在的所有元素，成功返回true，失败返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="o">[]</span> <span class="n">array0</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;a0&quot;</span><span class="p">,</span> <span class="s">&quot;b0&quot;</span><span class="p">,</span> <span class="s">&quot;c0&quot;</span><span class="p">,</span> <span class="s">&quot;d0&quot;</span><span class="p">};</span>
+<span class="kt">boolean</span> <span class="n">isRemove</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">removeAll</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">array0</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="retainall">
+<h3>retainAll<a class="headerlink" href="#retainall" title="Permalink to this headline">¶</a></h3>
+<p>HyperList批量删除参数集合中不存在的所有元素</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">retainAll</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;?&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 9%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>re
+tainAll</p></td>
+<td><p>c：
+元素
+集合</p></td>
+<td><p>HyperList批量删除C集
+合中不存在的所有元素，成功返回true，失败返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="s">&quot;d&quot;</span><span class="p">};</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">arrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">array</span><span class="p">));</span>
+<span class="kt">boolean</span> <span class="n">isRemove</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">retainAll</span><span class="p">(</span><span class="n">arrayList</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="size">
+<h3>size<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
+<p>获取HyperList的长度</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>size</p></td>
+<td><p>无</p></td>
+<td><p>HyperList的总长度</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set">
+<h3>set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h3>
+<p>HyperList的index位置的值设为新值，返回旧的值</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">E</span> <span class="nf">set</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="n">E</span> <span class="n">element</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 63%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>set</p></td>
+<td><p>index：HyperList中的位置element：新的值</p></td>
+<td><p>返回index位置的旧值</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">oldValue</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">&quot;q&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sublist">
+<h3>subList<a class="headerlink" href="#sublist" title="Permalink to this headline">¶</a></h3>
+<p>HyperList从fromIndex到toIndex位置的元素作为List对象返回</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="nf">subList</span><span class="p">(</span><span class="kt">int</span> <span class="n">fromIndex</span><span class="p">,</span> <span class="kt">int</span> <span class="n">toIndex</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 36%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sub
+List</p></td>
+<td><p>fromIndex：起
+始位置toIndex：末尾位置</p></td>
+<td><p>List对象，包含
+HyperList从fromIndex到toIndex的元素</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">subList</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">subList</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="toarray">
+<h3>toArray<a class="headerlink" href="#toarray" title="Permalink to this headline">¶</a></h3>
+<p>将HyperList转为数组并返回</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Object</span><span class="o">[]</span> <span class="nf">toArray</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>toArray</p></td>
+<td><p>无</p></td>
+<td><p>HyperList转换的数组</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="o">[]</span> <span class="n">arrString</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">toArray</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>将HyperList转为指定类型的数组并返回</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span><span class="o">[]</span> <span class="nf">toArray</span><span class="p">(</span><span class="n">T</span><span class="o">[]</span> <span class="n">a</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 30%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>toArray</p></td>
+<td><p>a：类型T的数组</p></td>
+<td><p>HyperList转换的T类型的数组</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Object</span><span class="o">[]</span> <span class="n">arrObject</span> <span class="o">=</span> <span class="n">hyperList</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span> <span class="n">Object</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hypermap">
+<h1>2. <strong>HyperMap介绍</strong><a class="headerlink" href="#hypermap" title="Permalink to this headline">¶</a></h1>
+<p>HyperMap是HVM内部定义的一种类型，与HashMap类似，都实现了Map接口。而与HashMap不同的是在账本的操作上，HashMap一直是以整个map对象为单位修改账本的，而HyperMap可以做到对于单个key，value的修改，只会涉及到单个key，value在账本中的操作，而不会涉及到整个map对象。</p>
+<p>因此HashMap适合小数据量，且变动不频繁的数据，HyperMap适合会持续增长的大数据量，一般情况下都使用HyperMap。</p>
+<div class="section" id="id2">
+<h2><strong>提供功能</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>因为HyperMap和HashMap一样，实现了Map接口，所以其提供的功能与HashMap基本一致。具体功能请查看支持接口章节。</p>
+</div>
+<div class="section" id="id3">
+<h2><strong>注意事项</strong><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>HyperMap使用时要加上&#64;StoreField注解；</p></li>
+<li><p>HyperMap不支持clear功能，调用clear方法会抛出
+UnsupportedOperationException异常。</p></li>
+<li><p>HyperMap执行过程中会用到Value的hashcode()方法，Value类型如果是自定义类，则需要<strong>实现自定义类的hashcode()方法</strong>，否则部分可能出现put数据无效的情况;</p></li>
+</ul>
+<p>示例如下：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyContract</span> <span class="kd">extends</span> <span class="n">BaseContract</span> <span class="kd">implements</span> <span class="n">IMain</span> <span class="p">{</span>
+    <span class="nd">@StoreField</span>
+    <span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">PointsInfo</span><span class="o">&gt;</span> <span class="n">mapA</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PointsInfo</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">version</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">points</span><span class="p">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">hashCode</span><span class="p">()</span> <span class="p">{</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Value类型<strong>不推荐</strong>使用一些含有map或list这种会不断增长的保存数据的结构体；</p></li>
+</ul>
+<p>错误示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Data</span> <span class="p">{</span>
+     <span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="n">hyperMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>HyperMap的Key和Value都不能是泛型，也不能是带有泛型的类型。</p></li>
+</ul>
+<p>错误示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//以下例子均为示例，不包含全部错误情况</span>
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">err1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">err2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">err3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">err4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="demo">
+<h2>demo样例<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>往HyperMap中插入数据<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">initMap</span><span class="p">(</span><span class="kt">int</span> <span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;t&quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>对HyperMap进行迭代<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">itrMap</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">StringBuilder</span> <span class="n">ans</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">map</span><span class="p">.</span><span class="na">keySet</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">it</span> <span class="p">:</span> <span class="n">itr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">it</span> <span class="o">+</span> <span class="s">&quot; , &quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;count: &quot;</span> <span class="o">+</span> <span class="n">count</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>完整例子代码可获取源码包后直接运行体验，需在项目根目录下先运行mvn
+package。</p>
+<p><strong>【源码包可参考HVM使用手册 - HVM合约Demo附件源码 -
+hvm-manual-demo的hypermap目录】</strong></p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2><strong>支持接口</strong><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>和提供功能一样，HyperMap支持的接口与与HashMap基本一致。</p>
+<div class="section" id="put">
+<h3>put<a class="headerlink" href="#put" title="Permalink to this headline">¶</a></h3>
+<p>向HyperMap添加键值对</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">V</span> <span class="nf">put</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">,</span> <span class="n">V</span> <span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>put</p></td>
+<td><p>key：键
+value：值</p></td>
+<td><p>key不能为
+空，若key为空，会抛出异常。如果HyperMap中已存在
+该key，则返回原来的value，如果不存在，返回null</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">hyperMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">,</span> <span class="mi">59</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-1">
+<span id="id7"></span><h3>get<a class="headerlink" href="#get-1" title="Permalink to this headline">¶</a></h3>
+<p>通过key得到HyperMap中对应的value</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">V</span> <span class="nf">get</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>get</p></td>
+<td><p>key</p></td>
+<td><p>若key为null返回null
+。若map中存在key，返回对应的value。若不存在，返回null</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-1">
+<span id="id8"></span><h3>remove<a class="headerlink" href="#remove-1" title="Permalink to this headline">¶</a></h3>
+<p>删除HyperMap中的键值对</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">V</span> <span class="nf">remove</span><span class="p">(</span><span class="n">Object</span> <span class="n">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 22%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>remove</p></td>
+<td><p>key：被删除的键</p></td>
+<td><p>返回key对应的value。若key不存在map中，返回null</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">hyperMap</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="size-1">
+<span id="id9"></span><h3>size<a class="headerlink" href="#size-1" title="Permalink to this headline">¶</a></h3>
+<p>获得HyperMap的大小</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>size</p></td>
+<td></td>
+<td><p>HyperMap中键值对的数量</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="isempty-1">
+<span id="id10"></span><h3>isEmpty<a class="headerlink" href="#isempty-1" title="Permalink to this headline">¶</a></h3>
+<p>判断HyperMap是否为空</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 8%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>isEmpty</p></td>
+<td></td>
+<td><p>如果HyperMap为空返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isEmpty</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="containskey">
+<h3>containsKey<a class="headerlink" href="#containskey" title="Permalink to this headline">¶</a></h3>
+<p>判断HyperMap是否包含key</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsKey</span><span class="p">(</span><span class="n">Object</span> <span class="n">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 11%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>containsKey</p></td>
+<td><p>key：键</p></td>
+<td><p>如果HyperMap中包含该key返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isContain</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="containsvalue">
+<h3>containsValue<a class="headerlink" href="#containsvalue" title="Permalink to this headline">¶</a></h3>
+<p>判断HyperMap是否包含value</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsValue</span><span class="p">(</span><span class="n">Object</span> <span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 13%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>containsValue</p></td>
+<td><p>value：值</p></td>
+<td><p>如果HyperMap中包含该value返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isContain</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">containsValue</span><span class="p">(</span><span class="mi">59</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="equals-1">
+<span id="id11"></span><h3>equals<a class="headerlink" href="#equals-1" title="Permalink to this headline">¶</a></h3>
+<p>判断HyperMap与对象o是否值相等</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 19%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>equals</p></td>
+<td><p>o：Object对象</p></td>
+<td><p>HyperMap对象与参数o值相等则返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isEqual</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">);</span> <span class="c1">//false</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="putall">
+<h3>putAll<a class="headerlink" href="#putall" title="Permalink to this headline">¶</a></h3>
+<p>将一个map对象的全部键值对放入HyperMap中</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">putAll</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">K</span><span class="p">,</span> <span class="o">?</span> <span class="kd">extends</span> <span class="n">V</span><span class="o">&gt;</span> <span class="n">m</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 70%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>putAll</p></td>
+<td><p>m：需要存入HyperMap的map对象</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">,</span> <span class="mi">59</span><span class="p">);</span>
+<span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;bob&quot;</span><span class="p">,</span> <span class="mi">58</span><span class="p">);</span>
+<span class="n">hyperMap</span><span class="p">.</span><span class="na">putAll</span><span class="p">(</span><span class="n">map</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hashcode-1">
+<span id="id12"></span><h3>hashCode<a class="headerlink" href="#hashcode-1" title="Permalink to this headline">¶</a></h3>
+<p>获取HyperMap的hash值</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">hashCode</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 14%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hashCode</p></td>
+<td><p>无</p></td>
+<td><p>HyperMap的哈希值</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">hashCode</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">hashCode</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="keyset">
+<h3>keySet<a class="headerlink" href="#keyset" title="Permalink to this headline">¶</a></h3>
+<p>获取HyperMap的key的迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">K</span><span class="o">&gt;</span> <span class="nf">keySet</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 24%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>keySet</p></td>
+<td><p>无</p></td>
+<td><p>Set对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//forEach用法</span>
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">keySet</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">keySet</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="n">String</span> <span class="n">key</span> <span class="p">:</span> <span class="n">keySet</span><span class="p">){</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">ite</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">keySet</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="values">
+<h3>values<a class="headerlink" href="#values" title="Permalink to this headline">¶</a></h3>
+<p>获取HyperMap的value的迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">values</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 17%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>values</p></td>
+<td><p>无</p></td>
+<td><p>Collection对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//forEach用法</span>
+<span class="n">Collection</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">values</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Integer</span> <span class="n">value</span> <span class="p">:</span> <span class="n">values</span><span class="p">){</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">ite</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">values</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="entryset">
+<h3>entrySet<a class="headerlink" href="#entryset" title="Permalink to this headline">¶</a></h3>
+<p>获取HyperMap的键值对的迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="o">&gt;&gt;</span> <span class="nf">entrySet</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 21%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>entrySet</p></td>
+<td><p>无</p></td>
+<td><p>Set对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//forEach用法</span>
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">entrySet</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">entrySet</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="n">String</span> <span class="n">entry</span> <span class="p">:</span> <span class="n">entrySet</span><span class="p">){</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">entry</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">ite</span> <span class="o">=</span> <span class="n">hyperMap</span><span class="p">.</span><span class="na">entrySet</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="seekkeyset">
+<h3>seekKeySet<a class="headerlink" href="#seekkeyset" title="Permalink to this headline">¶</a></h3>
+<p>创建指定位置的Key迭代器，起始位置为参数key所对应的节点。</p>
+<p>不同与普通迭代器，指定位置迭代器的迭代顺序为key的json字串的字典序升序。</p>
+<p>当传入的key为null时，该接口调用效果同keySet接口。</p>
+<p>当传入的key不存在于HyperMap中时，迭代器依旧能够创建成功，其起始位置为HyperMap中第一个比参数key大的节点的位置。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">K</span><span class="o">&gt;</span> <span class="nf">seekKeySet</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 51%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>seekKeySet</p></td>
+<td><p>key：迭代器起始节点的key</p></td>
+<td><p>返回类型：Set</p></td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">K</span><span class="o">&gt;</span> <span class="n">keySet</span> <span class="o">=</span> <span class="n">map</span><span class="p">.</span><span class="na">seekKeySet</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">K</span> <span class="n">k</span> <span class="p">:</span> <span class="n">keySet</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">keySet</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="seekvalues">
+<h3>seekValues<a class="headerlink" href="#seekvalues" title="Permalink to this headline">¶</a></h3>
+<p>创建指定位置的Value迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">seekValues</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 44%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>seekValues</p></td>
+<td><p>key：迭代器起始节点的key</p></td>
+<td><p>返回类型：Collection</p></td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">Collection</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="n">map</span><span class="p">.</span><span class="na">seekValues</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">V</span> <span class="n">value</span> <span class="p">:</span> <span class="n">values</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">values</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="seekentryset">
+<h3>seekEntrySet<a class="headerlink" href="#seekentryset" title="Permalink to this headline">¶</a></h3>
+<p>创建指定位置的Entry迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="o">&gt;&gt;</span> <span class="nf">seekEntrySet</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 49%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>seekEntrySet</p></td>
+<td><p>key：迭代器起始节点的key</p></td>
+<td><p>返回类型：Set</p></td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">entrySet</span> <span class="o">=</span> <span class="n">map</span><span class="p">.</span><span class="na">seekEntrySet</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">Node</span> <span class="n">node</span> <span class="p">:</span> <span class="n">entrySet</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">entrySet</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hypertable">
+<h1>3. <strong>HyperTable介绍</strong><a class="headerlink" href="#hypertable" title="Permalink to this headline">¶</a></h1>
+<p>HyperTable是HVM提出的第三种数据结构，具有<strong>表、行、列簇、列</strong>四个概念。他们之间的关系如下：<strong>一个表可以包含多行，一行里有一或多个列簇，每个列簇里包含一或多列。</strong>在一张表中，给定指定的<strong>行、列簇、列</strong>可以唯一确定一个值。</p>
+<p>HyperTable表结构如下图所示：</p>
+<p><img alt="image0" src="../../_images/hypertable1.png" /></p>
+<p>与Hashmap相似，HyperTable也提供了put和get方法来进行插入和查询。与HashMap不同的是，HyperTable的key是由行、列簇、列共同组成。</p>
+<p>一个HyperTable对象对应着一张表。除了表以外，我们还设计了数据结构
+<code class="docutils literal notranslate"><span class="pre">Row</span></code>、<code class="docutils literal notranslate"><span class="pre">ColumnFamily</span></code>
+分别对应行和列簇，由于确定行和列簇后，对每个列都可以指定对应的唯一的值，这类似Map的作用，所以我们没有另外为列设计一个数据结构。</p>
+<p>因此，HyperTable的数据结构包含关系也如下</p>
+<blockquote>
+<div><p><strong>HyperTable ==&gt; Row ==&gt;
+ColumnFamily</strong>，其中Row、ColumnFamily都是HyperTable的内部类。</p>
+</div></blockquote>
+<div class="section" id="id13">
+<span id="id14"></span><h2><strong>提供功能</strong><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">HyperTable</span></code> 不仅支持自己插入、更新值，也支持通过其包含的 <code class="docutils literal notranslate"><span class="pre">Row</span></code>
+对象、 <code class="docutils literal notranslate"><span class="pre">ColumnFamily</span></code>
+对象插入、查询、更新值，为用户操作提供了相应的拓展性，假设一行包含多条数据（多个列簇或列），用户可以在拿到
+<code class="docutils literal notranslate"><span class="pre">Row</span></code> 对象后往里插入值，而不需要通过 <code class="docutils literal notranslate"><span class="pre">HyperTable</span></code>
+每次提供相同的行名插入。</p>
+<p>此外，<code class="docutils literal notranslate"><span class="pre">HyperTable</span></code>
+提供了行的迭代器，即可以通过迭代得到每一行的行名信息，迭代器由
+<code class="docutils literal notranslate"><span class="pre">RowsSet</span></code>
+实现，其实用方式与普通的Java集合迭代器一致，用户可以查看支持接口一章查看如何获取迭代器。</p>
+</div>
+<div class="section" id="id15">
+<span id="id16"></span><h2><strong>注意事项</strong><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">HyperTable</span></code>
+对<strong>行名、列簇名、列名、以及值</strong>的插入有限制，不允许插入任何
+<strong>null</strong> 或 <strong>““</strong> 字符串。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HyperTable</span></code> 不允许<strong>行名、列簇名、列名</strong>包含 <a class="reference external" href="mailto:**&#37;&#52;&#48;**">**<span>&#64;</span>**</a> 符号。</p></li>
+<li><p>在使用 <code class="docutils literal notranslate"><span class="pre">HyperTable</span></code>
+的行迭代器的时候。不支持添加、删除或更新数据的操作，类似 OpenJDK
+的fast-fail机制。</p></li>
+</ol>
+</div>
+<div class="section" id="id17">
+<h2>HyperTable支持接口<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="put-1">
+<span id="id18"></span><h3>put<a class="headerlink" href="#put-1" title="Permalink to this headline">¶</a></h3>
+<p>往表内插入值</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colFamName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colName</span><span class="p">,</span> <span class="n">String</span> <span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 85%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>put</p></td>
+<td><p>rowName：行名colFamName：列簇名colName：列名value：插入值</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">HyperTable</span> <span class="n">hyperTable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperTable</span><span class="p">();</span>  <span class="c1">//表名由系统自动生成</span>
+<span class="n">hyperTable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">,</span><span class="s">&quot;59&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-2">
+<span id="id19"></span><h3>get<a class="headerlink" href="#get-2" title="Permalink to this headline">¶</a></h3>
+<p>从表中查询值</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">get</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colFamName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 39%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方
+法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>get</p></td>
+<td><p>rowName：行名colFamN
+ame：列簇名colName：列名</p></td>
+<td><p>返回类型：String返回查询结果
+，若值存在，返回值，否则返回null。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">);</span> <span class="c1">//value = 59</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;趣链一中&quot;</span><span class="p">,</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">);</span> <span class="c1">//value = null</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-2">
+<span id="id20"></span><h3>remove<a class="headerlink" href="#remove-2" title="Permalink to this headline">¶</a></h3>
+<p>通过指定的行、列簇、列删除值，可以删除不存在的值，不会报错。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colFamName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 79%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>remove</p></td>
+<td><p>rowName：行名colFamName：列簇名colName：列名</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">hyperTable</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">);</span> <span class="c1">//value = null</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="removerow">
+<h3>removeRow<a class="headerlink" href="#removerow" title="Permalink to this headline">¶</a></h3>
+<p>通过指定的行名删除行，该行名对应的行可以不存在，不会报错。该行下的所有列簇和列全部会被删除。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeRow</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 46%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>removeRow</p></td>
+<td><p>rowName：行名</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">hyperTable</span><span class="p">.</span><span class="na">removeRow</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">);</span> <span class="c1">//value = null</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="containskey-1">
+<span id="id21"></span><h3>containsKey<a class="headerlink" href="#containskey-1" title="Permalink to this headline">¶</a></h3>
+<p>通过指定的行、列簇、列查询是否包含某列。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsKey</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colFamName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 35%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>containsKey</p></td>
+<td><p>rowName：行名colFamNam
+e：列簇名colName：列名</p></td>
+<td><p>返回类型：boolean若表中存在
+该列，返回true否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isExist</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">)</span> <span class="c1">//isExist = false;</span>
+<span class="n">hyperTable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">,</span><span class="s">&quot;59&quot;</span><span class="p">);</span>
+<span class="n">isExist</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">)</span>
+<span class="c1">//isExist = true;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="containsrow">
+<h3>containsRow<a class="headerlink" href="#containsrow" title="Permalink to this headline">¶</a></h3>
+<p>通过指定行名查询是否包含某行。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsRow</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 16%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>containsRow</p></td>
+<td><p>rowN
+ame：行名</p></td>
+<td><p>返回类型：bo
+olean若表中存在该行，返回true否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isExist</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">containsRow</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">)</span> <span class="c1">//isExist = true;</span>
+<span class="n">hyperTable</span><span class="p">.</span><span class="na">removeRow</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">);</span>
+<span class="n">isExist</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">,</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">)</span>
+<span class="c1">//isExist = false;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getrow">
+<h3>getRow<a class="headerlink" href="#getrow" title="Permalink to this headline">¶</a></h3>
+<p>获取一行的引用，行名参数可以任意指定，不一定是表内已经存在的行。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">HyperTable</span><span class="p">.</span><span class="na">Row</span> <span class="nf">getRow</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getRow</p></td>
+<td><p>无</p></td>
+<td><p>返回类型：Row即使r
+owName不存在，也会返回一个Row对象，但是操作时将报错</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Row</span> <span class="n">row</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">getRow</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getname">
+<h3>getName<a class="headerlink" href="#getname" title="Permalink to this headline">¶</a></h3>
+<p>获取该表的表名</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 10%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getName</p></td>
+<td><p>无</p></td>
+<td><p>返回类型：String返回该表的表名</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">tableName</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">getName</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="hypertable-row">
+<h2><strong>HyperTable.Row支持接口</strong><a class="headerlink" href="#hypertable-row" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>因为行本身需要依赖于表，所以我们规定只能由 HyperTable 的 getRow()
+接口获得 HyperTable.Row
+对象，而不是简单地通过new构造方式构造。同样，HyperTable.Row
+对象内会保存自己所属的 HyperTable 对象的一份引用。</p>
+</div></blockquote>
+<div class="section" id="put-2">
+<span id="id22"></span><h3>put<a class="headerlink" href="#put-2" title="Permalink to this headline">¶</a></h3>
+<p>往该行插入值，与HyperTable接口功能一致。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="p">(</span><span class="n">String</span> <span class="n">colFamName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colName</span><span class="p">,</span> <span class="n">String</span> <span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 81%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>put</p></td>
+<td><p>colFamName：列簇名colName：列名value：插入值</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Row</span> <span class="n">row</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">getRow</span><span class="p">(</span><span class="s">&quot;高三&quot;</span><span class="p">);</span>
+<span class="n">row</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">,</span><span class="s">&quot;59&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-3">
+<span id="id23"></span><h3>get<a class="headerlink" href="#get-3" title="Permalink to this headline">¶</a></h3>
+<p>从行中查询值，与HyperTable接口功能一致。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">get</span><span class="p">(</span><span class="n">String</span> <span class="n">colFamName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 30%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>get</p></td>
+<td><p>colFamName：列
+簇名colName：列名</p></td>
+<td><p>返回类型：String返回查询
+结果，若值存在，返回值，否则返回null。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">);</span> <span class="c1">//value = 59</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;张三&quot;</span><span class="p">);</span> <span class="c1">//value = null</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-3">
+<span id="id24"></span><h3>remove<a class="headerlink" href="#remove-3" title="Permalink to this headline">¶</a></h3>
+<p>通过指定的列簇、列删除值。与HyperTable接口功能一致。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="p">(</span> <span class="n">String</span> <span class="n">colFamName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 72%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>remove</p></td>
+<td><p>colFamName：列簇名colName：列名</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">row</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">);</span> <span class="c1">//value = null</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="containskey-2">
+<span id="id25"></span><h3>containsKey<a class="headerlink" href="#containskey-2" title="Permalink to this headline">¶</a></h3>
+<p>通过指定的列簇、列查询是否包含某列。与HyperTable接口功能一致。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsKey</span><span class="p">(</span><span class="n">String</span> <span class="n">colFamName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 34%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>con
+tainsKey</p></td>
+<td><p>colFamName
+：列簇名colName：列名</p></td>
+<td><p>返回类型：boolean若行
+中存在该列，返回true否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isExist</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">)</span> <span class="c1">//isExist = false;</span>
+<span class="n">row</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">,</span><span class="s">&quot;59&quot;</span><span class="p">);</span>
+<span class="n">isExist</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">)</span> <span class="c1">//isExist = true;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="containscolfam">
+<h3>containsColFam<a class="headerlink" href="#containscolfam" title="Permalink to this headline">¶</a></h3>
+<p>通过指定行名查询是否包含某行。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsColFam</span><span class="p">(</span><span class="n">String</span> <span class="n">colFamName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 19%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>co
+ntainsColFam</p></td>
+<td><p>colFa
+mName：行名</p></td>
+<td><p>返回类型：boolean若行
+中存在该列簇，返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isExist</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">containsColFam</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">)</span> <span class="c1">//isExist = true;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gettable">
+<h3>getTable<a class="headerlink" href="#gettable" title="Permalink to this headline">¶</a></h3>
+<p>获取所属的表的引用</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">HyperTable</span> <span class="nf">getTable</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 7%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getTable</p></td>
+<td><p>无</p></td>
+<td><p>返回类型：HyperTable返回行所属的HyperTable对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">hyperTable</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">getTable</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getcolfam">
+<h3>getColFam<a class="headerlink" href="#getcolfam" title="Permalink to this headline">¶</a></h3>
+<p>获取一列簇的引用，列簇名参数可以任意指定，不一定是行内已经存在的列簇。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">HyperTable</span><span class="p">.</span><span class="na">ColumnFamily</span> <span class="nf">getColFam</span><span class="p">(</span><span class="n">String</span> <span class="n">colFamName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 26%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getColFam</p></td>
+<td><p>colFamName：列簇名</p></td>
+<td><p>返回类型：ColumnFamily返回ColumnFamily对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ColumnFamily</span> <span class="n">colFam</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">getColFam</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getname-1">
+<span id="id26"></span><h3>getName<a class="headerlink" href="#getname-1" title="Permalink to this headline">¶</a></h3>
+<p>获取该行名</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 10%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getName</p></td>
+<td><p>无</p></td>
+<td><p>返回类型：String返回该行的行名</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">rowName</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">getName</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="hypertable-columnfamily">
+<h2><strong>HyperTable.ColumnFamily支持接口</strong><a class="headerlink" href="#hypertable-columnfamily" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>与行同理，因为列簇本身需要依赖于行，所以我们规定只能由 HyperTable.Row
+的 getColFam() 接口获得 HyperTable.ColumnFamily 对象，而不是通过 new
+的构造方式构造。同样，HyperTable.ColFam 对象内会保存自己所属的
+HyperTable.Row 和 HyperTable 对象的各一份引用。</p>
+</div></blockquote>
+<div class="section" id="put-3">
+<span id="id27"></span><h3>put<a class="headerlink" href="#put-3" title="Permalink to this headline">¶</a></h3>
+<p>往该行插入值，与HyperTable接口功能一致。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="p">(</span><span class="n">String</span> <span class="n">colName</span><span class="p">,</span> <span class="n">String</span> <span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 72%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>put</p></td>
+<td><p>colName：列名value：插入值</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ColumnFamily</span> <span class="n">colFam</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">getColFam</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">);</span>
+<span class="n">colFam</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;十二班&quot;</span><span class="p">,</span><span class="s">&quot;李四&quot;</span><span class="p">,</span><span class="s">&quot;59&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-4">
+<span id="id28"></span><h3>get<a class="headerlink" href="#get-4" title="Permalink to this headline">¶</a></h3>
+<p>从行中查询值，与HyperTable接口功能一致。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">get</span><span class="p">(</span><span class="n">String</span> <span class="n">colName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 30%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>get</p></td>
+<td><p>colFamName：列
+簇名colName：列名</p></td>
+<td><p>返回类型：String返回查询
+结果，若值存在，返回值，否则返回null。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">colFam</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;李四&quot;</span><span class="p">);</span> <span class="c1">//value = 59</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">colFam</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;张三&quot;</span><span class="p">);</span> <span class="c1">//value = null</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-4">
+<span id="id29"></span><h3>remove<a class="headerlink" href="#remove-4" title="Permalink to this headline">¶</a></h3>
+<p>通过指定的列删除值。与HyperTable接口功能一致。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="p">(</span> <span class="n">String</span> <span class="n">colName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 52%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>remove</p></td>
+<td><p>colName：列名</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">colFam</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;李四&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">colFam</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;李四&quot;</span><span class="p">);</span> <span class="c1">//value = null</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="containskey-3">
+<span id="id30"></span><h3>containsKey<a class="headerlink" href="#containskey-3" title="Permalink to this headline">¶</a></h3>
+<p>通过指定的列查询是否包含某列。与HyperTable接口功能一致。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsKey</span><span class="p">(</span><span class="n">String</span> <span class="n">colName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 16%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>containsKey</p></td>
+<td><p>colN
+ame：列名</p></td>
+<td><p>返回类型：bo
+olean若行中存在该列，返回true否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isExist</span> <span class="o">=</span> <span class="n">colFam</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;李四&quot;</span><span class="p">)</span> <span class="c1">//isExist = false;</span>
+<span class="n">colFam</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;李四&quot;</span><span class="p">,</span><span class="s">&quot;59&quot;</span><span class="p">);</span>
+<span class="n">isExist</span> <span class="o">=</span> <span class="n">colFam</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;李四&quot;</span><span class="p">)</span> <span class="c1">//isExist = true;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getrow-1">
+<span id="id31"></span><h3>getRow<a class="headerlink" href="#getrow-1" title="Permalink to this headline">¶</a></h3>
+<p>获取所属的行的引用</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Row</span> <span class="nf">getRow</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 9%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getRow</p></td>
+<td><p>无</p></td>
+<td><p>返回类型：Row返回列簇所属的Row对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">row</span> <span class="o">=</span> <span class="n">colFam</span><span class="p">.</span><span class="na">getRow</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setrow">
+<h3>setRow<a class="headerlink" href="#setrow" title="Permalink to this headline">¶</a></h3>
+<p>注意该新行所属的表必须与该列簇所属的表为同一张表，否则会抛出异常。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setRow</span><span class="p">(</span><span class="n">HyperTable</span><span class="p">.</span><span class="na">Row</span> <span class="n">row</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 48%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>setRow</p></td>
+<td><p>row：行对象</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Row</span> <span class="n">newRow</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">getRow</span><span class="p">(</span><span class="s">&quot;十三班&quot;</span><span class="p">);</span>
+<span class="n">colFam</span><span class="p">.</span><span class="na">setRow</span><span class="p">(</span><span class="n">newRow</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getname-2">
+<span id="id32"></span><h3>getName<a class="headerlink" href="#getname-2" title="Permalink to this headline">¶</a></h3>
+<p>获取该列簇名</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 10%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getName</p></td>
+<td><p>无</p></td>
+<td><p>返回类型：String返回该行的行名</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">colFamName</span> <span class="o">=</span> <span class="n">colFam</span><span class="p">.</span><span class="na">getName</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id33">
+<h1>迭代器接口<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rows">
+<h2>rows<a class="headerlink" href="#rows" title="Permalink to this headline">¶</a></h2>
+<p>rows为HyperTable遍历行的迭代器，在迭代过程中不能修改数据。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">HyperTable</span><span class="p">.</span><span class="na">RowSet</span> <span class="nf">rows</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>rows</p></td>
+<td><p>无</p></td>
+<td><p>返回类型：RowSetRowSet为实现了I
+terable的内部类。其使用方法和普通集合的迭代器一样。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id34">
+<h3><strong>示例：</strong><a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">HyperTable</span><span class="p">.</span><span class="na">RowSet</span> <span class="n">rowSet</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">rows</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">:</span><span class="n">rowSet</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rowName</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">students</span><span class="p">.</span><span class="na">rows</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id35">
+<span id="id36"></span><h3><strong>注意事项</strong>：<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>行迭代器的迭代顺序为行名加上&#64;符号后的字典序升序。这意味着当表中的行名存在相同前缀，不同长度的情况下，行迭代器的迭代顺序不为严格的行名字典序升序。</p></li>
+</ul>
+<p>例如，表中存在如下四行时:<code class="docutils literal notranslate"><span class="pre">t,</span> <span class="pre">t1,</span> <span class="pre">t2,</span> <span class="pre">ta</span></code>，其迭代顺序如下表所示</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 59%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 7%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>表中行名的字典序</p></th>
+<th class="head"><p>t</p></th>
+<th class="head"><p>t1</p></th>
+<th class="head"><p>t2</p></th>
+<th class="head"><p>ta</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>加上&#64;后的字典序</p></td>
+<td><p>t1&#64;</p></td>
+<td><p>t2&#64;</p></td>
+<td><p>t&#64;</p></td>
+<td><p>ta&#64;</p></td>
+</tr>
+<tr class="row-odd"><td><p>实际的迭代顺序</p></td>
+<td><p>t1</p></td>
+<td><p>t2</p></td>
+<td><p>t</p></td>
+<td><p>ta</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="colfams">
+<h2>colFams<a class="headerlink" href="#colfams" title="Permalink to this headline">¶</a></h2>
+<p>遍历列簇的迭代器，在迭代过程中不能修改数据。迭代器返回的是列簇的名称，当rowName对应行不存在时，返回一个空的迭代器。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">HyperTable</span><span class="p">.</span><span class="na">ColFamSet</span> <span class="nf">colFams</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 22%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>colFams</p></td>
+<td><p>rowName：行名</p></td>
+<td><p>返回类型
+：ColFamSetColFamSet为实现了Iterable的内
+部类。其使用方法和普通集合的迭代器一样。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">String</span> <span class="n">rowName</span> <span class="o">=</span> <span class="s">&quot;row&quot;</span><span class="p">;</span>
+<span class="n">HyperTable</span><span class="p">.</span><span class="na">ColFamSet</span> <span class="n">colFamSet</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">colFams</span><span class="p">(</span><span class="n">rowName</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">colFamName</span> <span class="p">:</span> <span class="n">colFamSet</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">colFamName</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">colFams</span><span class="p">(</span><span class="n">rowName</span><span class="p">).</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>注意事项</strong>：</p>
+<p>与行迭代器相同，列簇迭代器的迭代顺序为列簇名加上&#64;符号后的字典序升序。</p>
+</div>
+<div class="section" id="cols">
+<h2>cols<a class="headerlink" href="#cols" title="Permalink to this headline">¶</a></h2>
+<p>遍历列的迭代器，在迭代过程中不能修改数据。迭代器返回的是列的名称，当rowName和colFamName对应列簇不存在时，返回一个空的迭代器。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">HyperTable</span><span class="p">.</span><span class="na">ColSet</span> <span class="nf">cols</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">,</span> <span class="n">String</span> <span class="n">colFamName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 30%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cols</p></td>
+<td><p>rowName：行名
+colFamName：列簇名</p></td>
+<td><p>返回类
+型：ColSetColSet为实现了Iterable的内部
+类。其使用方法和普通集合的迭代器一样。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">String</span> <span class="n">rowName</span> <span class="o">=</span> <span class="s">&quot;row&quot;</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">colFamName</span> <span class="o">=</span> <span class="s">&quot;colF&quot;</span><span class="p">;</span>
+<span class="n">HyperTable</span><span class="p">.</span><span class="na">ColSet</span> <span class="n">colSet</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">cols</span><span class="p">(</span><span class="n">rowName</span><span class="p">,</span> <span class="n">colFamName</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">colName</span><span class="p">:</span><span class="n">colSet</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">colName</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">cols</span><span class="p">(</span><span class="n">rowName</span><span class="p">,</span> <span class="n">colFamName</span><span class="p">).</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>注意事项</strong>：</p>
+<p>与行迭代器和列簇迭代器不同，列迭代器的迭代顺序为列名的字典序升序。</p>
+<p>例如，列簇中存在列： c,c1,c2,ca其迭代顺序为c,c1,c2,ca。</p>
+</div>
+<div class="section" id="seekrows">
+<h2>seekRows<a class="headerlink" href="#seekrows" title="Permalink to this headline">¶</a></h2>
+<p>通过行名创建行迭代器的Set，起始位置为行名对应的位置</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">RowSet</span> <span class="nf">seekRows</span><span class="p">(</span><span class="n">String</span> <span class="n">rowName</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 35%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>seekRows</p></td>
+<td><p>rowName：行名</p></td>
+<td><p>返回类型：RowSet</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">String</span> <span class="n">rowName</span> <span class="o">=</span> <span class="s">&quot;row&quot;</span><span class="p">;</span>
+<span class="n">HyperTable</span><span class="p">.</span><span class="na">RowSet</span> <span class="n">rowSet</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">seekRows</span><span class="p">(</span><span class="n">rowName</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">rowName</span> <span class="p">:</span> <span class="n">rowSet</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rowName</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">hyperTable</span><span class="p">.</span><span class="na">seekRows</span><span class="p">(</span><span class="n">rowName</span><span class="p">).</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>注意事项：</strong></p>
+<p>当传入的行名为空或者包含分隔符时，会抛出Runtime异常</p>
+<p>当传入行名在table中不存在时，存在两种情况：</p>
+<ol class="arabic simple">
+<li><p>该行排在table中所有行后面（行的排列顺序规则请查看行迭代器注意事项），创造迭代器失败，抛出异常</p></li>
+<li><p>table中存在行排在该行后面，返回起始位置为排在该行后面第一行的行迭代器。</p></li>
+<li><p>行迭代器的迭代顺序为行名加上&#64;符号后的字典序升序。这意味着当表中的行名存在相同前缀，不同长度的情况下，行迭代器的迭代顺序不为严格的行名字典序升序。</p></li>
+</ol>
+<p>例如，表中存在如下四行时:<code class="docutils literal notranslate"><span class="pre">t,</span> <span class="pre">t1,</span> <span class="pre">t2,</span> <span class="pre">ta</span></code>，其迭代顺序如下表所示</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 59%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 7%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>表中行名的字典序</p></th>
+<th class="head"><p>t</p></th>
+<th class="head"><p>t1</p></th>
+<th class="head"><p>t2</p></th>
+<th class="head"><p>ta</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>加上&#64;后的字典序</p></td>
+<td><p>t1&#64;</p></td>
+<td><p>t2&#64;</p></td>
+<td><p>t&#64;</p></td>
+<td><p>ta&#64;</p></td>
+</tr>
+<tr class="row-odd"><td><p>实际的迭代顺序</p></td>
+<td><p>t1</p></td>
+<td><p>t2</p></td>
+<td><p>t</p></td>
+<td><p>ta</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="demo-1">
+<span id="id37"></span><h2>demo样例<a class="headerlink" href="#demo-1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id38">
+<h3>往HyperTable中插入数据<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="n">HyperTable</span> <span class="n">students</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperTable</span><span class="p">();</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">initTable</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">row</span> <span class="p">:</span> <span class="n">ROW_NAME</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">colf</span> <span class="p">:</span> <span class="n">COLF_NAME</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">col</span> <span class="p">:</span> <span class="n">COL_NAME</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">students</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">colf</span><span class="p">,</span> <span class="n">col</span> <span class="o">+</span> <span class="n">count</span><span class="p">,</span> <span class="s">&quot;value&quot;</span> <span class="o">+</span> <span class="n">col</span> <span class="o">+</span> <span class="n">count</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id39">
+<h3>对行进行迭代<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">public</span> <span class="n">HyperTable</span> <span class="n">students</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HyperTable</span><span class="p">();</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">getRows</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">StringBuilder</span> <span class="n">ans</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
+
+    <span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">students</span><span class="p">.</span><span class="na">rows</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">next</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>完整例子代码可获取源码包后直接运行体验，需在项目根目录下先运行mvn
+package。</p>
+<p>【源码包可参考HVM使用手册 - <strong>HVM合约Demo附件源码 -
+hvm-manual-demo的hypertable目录</strong>】</p>
+</div>
+</div>
+</div>
+<div class="section" id="nestedmap">
+<h1>4. <strong>NestedMap介绍</strong><a class="headerlink" href="#nestedmap" title="Permalink to this headline">¶</a></h1>
+<p>NestedMap是HVM内部定义的一种类型，它基于另一个HVM内部定义的类型HyperMap做了改进。主要体现在</p>
+<ul class="simple">
+<li><p>在功能上，HyperMap不支持嵌套使用，NestedMap支持嵌套使用。</p></li>
+<li><p>在性能上，NestedMap对于缓存做了优化，相同的场景中，NestedMap的使用效率要高于HyperMap</p></li>
+</ul>
+<div class="section" id="id40">
+<span id="id41"></span><h2><strong>提供功能</strong><a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
+<p>NestedMap和HashMap一样，实现了Map接口，所以其提供的功能与HashMap基本一致，不过在部分接口的使用上还是略有差别，具体请查看直接接口章节。</p>
+<p><strong>注意事项</strong></p>
+<ul class="simple">
+<li><p>NestedMap定义为合约类的字段时使用时要加上&#64;StoreField注解</p></li>
+<li><p>NestedMap的key的类型必须为八种基本类型或者是String类型</p></li>
+<li><p>NestedMap不支持clear功能，调用clear方法会抛出
+UnsupportedOperationException异常。</p></li>
+<li><p>NestedMap不支持size功能，调用size方法会抛出
+UnsupportedOperationException异常。</p></li>
+<li><p>与其他账本数据结构不同，NestedMap允许在合约方法中定义和初始化，不过在合约方法中定义的NestedMap对象，必须先被put进一个已经初始化过的NestedMap对象中，才能进一步的使用。</p></li>
+</ul>
+<p>错误示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">school</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">example1</span><span class="p">()</span> <span class="p">{</span>
+     <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">class1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+     <span class="c1">//此时会抛出异常，因为class1没有被彻底初始化。</span>
+     <span class="n">class1</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;bob&quot;</span><span class="p">,</span> <span class="mi">89</span><span class="p">);</span>
+     <span class="n">school</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;class1&quot;</span><span class="p">,</span> <span class="n">class1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>正确示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">school</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">example1</span><span class="p">()</span> <span class="p">{</span>
+     <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">class1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+     <span class="n">school</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;class1&quot;</span><span class="p">,</span> <span class="n">class1</span><span class="p">);</span>
+     <span class="c1">//此时不会抛出异常，因为class1在被put进school时，被彻底初始化了。</span>
+     <span class="n">class1</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;bob&quot;</span><span class="p">,</span> <span class="mi">89</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>NestedMap的value类型<strong>不推荐</strong>使用一些含有map或list这种会不断增长的保存数据的结构体；</p></li>
+</ul>
+<p>错误示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Data</span> <span class="p">{</span>
+     <span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="n">nestedMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>NestedMap的Value不能是泛型，也不能是除了NestedMap以外的带有泛型的类型。</p></li>
+</ul>
+<p>错误示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//以下例子均为示例，不包含全部错误情况</span>
+
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">err1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">err2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>正确示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">nm1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">nm2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+
+<span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;&gt;</span> <span class="n">nm3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="demo-2">
+<span id="id42"></span><h2>demo样例<a class="headerlink" href="#demo-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id43">
+<h3>非嵌套使用，往NestedMap中插入数据<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">initMap</span><span class="p">(</span><span class="kt">int</span> <span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;t&quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id44">
+<h3>非嵌套使用，对NestedMap进行迭代<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">private</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">itrMap</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">StringBuilder</span> <span class="n">ans</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">map</span><span class="p">.</span><span class="na">keySet</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">it</span> <span class="p">:</span> <span class="n">itr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">it</span> <span class="o">+</span> <span class="s">&quot; , &quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;count: &quot;</span> <span class="o">+</span> <span class="n">count</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id45">
+<h3>嵌套使用，往一个两层的NestedMap中插入数据<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">public</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">school</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">writeSchool</span><span class="p">()</span> <span class="p">{</span>
+     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+             <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+             <span class="n">school</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;class&quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                     <span class="n">n</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;student&quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">j</span><span class="p">);</span>
+             <span class="p">}</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id46">
+<h3>嵌套使用，对一个两层的NestedMap进行迭代<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@StoreField</span>
+<span class="kd">public</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">school</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">iterSchool</span><span class="p">()</span> <span class="p">{</span>
+     <span class="n">StringBuilder</span> <span class="n">ans</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
+     <span class="n">Set</span><span class="o">&lt;</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="n">school</span><span class="p">.</span><span class="na">entrySet</span><span class="p">();</span>
+     <span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;school\n&quot;</span><span class="p">);</span>
+     <span class="k">for</span> <span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">entry</span> <span class="p">:</span> <span class="n">set</span><span class="p">)</span> <span class="p">{</span>
+             <span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;\t&quot;</span> <span class="o">+</span> <span class="n">entry</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span><span class="p">);</span>
+             <span class="n">Set</span><span class="o">&lt;</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">set1</span> <span class="o">=</span> <span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">().</span><span class="na">entrySet</span><span class="p">();</span>
+             <span class="k">for</span> <span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">entry1</span> <span class="p">:</span> <span class="n">set1</span><span class="p">)</span> <span class="p">{</span>
+                     <span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;\t\t&quot;</span> <span class="o">+</span> <span class="n">entry1</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="n">entry1</span><span class="p">.</span><span class="na">getValue</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span><span class="p">);</span>
+             <span class="p">}</span>
+     <span class="p">}</span>
+     <span class="k">return</span> <span class="n">ans</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>完整例子代码可获取源码包后直接运行体验，需在项目根目录下先运行mvn
+package。</p>
+<p><strong>【源码包可参考HVM使用手册 - HVM合约Demo附件源码 -
+hvm-manual-demo的nestedmap目录】</strong></p>
+</div>
+</div>
+<div class="section" id="id47">
+<span id="id48"></span><h2><strong>支持接口</strong><a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h2>
+<p>和提供功能一样，NestedMap支持的接口与与HashMap基本一致。不过需要注意的是put和remove接口不会返回旧值而是直接返回空。</p>
+<div class="section" id="put-4">
+<span id="id49"></span><h3>put<a class="headerlink" href="#put-4" title="Permalink to this headline">¶</a></h3>
+<p>向NestedMap添加键值对</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">V</span> <span class="nf">put</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">,</span> <span class="n">V</span> <span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>put</p></td>
+<td><p>key：键
+value：值</p></td>
+<td><p>key和value都不能为空，若k为空，
+会抛出异常。返回值固定为空NestedMap的value类型
+为NestedMap的情况下，如果NestedMap中已存在该key
+，会将原来的value所包含的所有数据在账本中删除。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">nestedMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">,</span> <span class="mi">59</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-5">
+<span id="id50"></span><h3>get<a class="headerlink" href="#get-5" title="Permalink to this headline">¶</a></h3>
+<p>通过key得到NestedMap中对应的value</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">V</span> <span class="nf">get</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>get</p></td>
+<td><p>key</p></td>
+<td><p>若key为null返回null。
+若map中存在key，返回对应的value。若不存在，返回null</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-5">
+<span id="id51"></span><h3>remove<a class="headerlink" href="#remove-5" title="Permalink to this headline">¶</a></h3>
+<p>删除NestedMap中的键值对</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">V</span> <span class="nf">remove</span><span class="p">(</span><span class="n">Object</span> <span class="n">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>remove</p></td>
+<td><p>key：被
+删除的键</p></td>
+<td><p>返回值固定为空NestedM
+ap的value类型为NestedMap的情况下若map中存在ke
+y，会删除key对应的NestedMap对象的所有键值对。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">nestedMap</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="isempty-2">
+<span id="id52"></span><h3>isEmpty<a class="headerlink" href="#isempty-2" title="Permalink to this headline">¶</a></h3>
+<p>判断NestedMap是否为空</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 8%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>isEmpty</p></td>
+<td></td>
+<td><p>如果NestedMap为空返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isEmpty</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="containskey-4">
+<span id="id53"></span><h3>containsKey<a class="headerlink" href="#containskey-4" title="Permalink to this headline">¶</a></h3>
+<p>判断NestedMap是否包含key</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsKey</span><span class="p">(</span><span class="n">Object</span> <span class="n">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 11%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>containsKey</p></td>
+<td><p>key：键</p></td>
+<td><p>如果NestedMap中包含该key返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isContain</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="equals-2">
+<span id="id54"></span><h3>equals<a class="headerlink" href="#equals-2" title="Permalink to this headline">¶</a></h3>
+<p>判断NestedMap与对象o是否值相等</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 19%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>equals</p></td>
+<td><p>o：Object对象</p></td>
+<td><p>NestedMap对象与参数o值相等则返回true，否则返回false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">isEqual</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">);</span> <span class="c1">//false</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="putall-1">
+<span id="id55"></span><h3>putAll<a class="headerlink" href="#putall-1" title="Permalink to this headline">¶</a></h3>
+<p>将一个map对象的全部键值对放入NestedMap中</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">putAll</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">K</span><span class="p">,</span> <span class="o">?</span> <span class="kd">extends</span> <span class="n">V</span><span class="o">&gt;</span> <span class="n">m</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 71%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>putAll</p></td>
+<td><p>m：需要存入NestedMap的map对象</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;tom&quot;</span><span class="p">,</span> <span class="mi">59</span><span class="p">);</span>
+<span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;bob&quot;</span><span class="p">,</span> <span class="mi">58</span><span class="p">);</span>
+<span class="n">nestedMap</span><span class="p">.</span><span class="na">putAll</span><span class="p">(</span><span class="n">map</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="keyset-1">
+<span id="id56"></span><h3>keySet<a class="headerlink" href="#keyset-1" title="Permalink to this headline">¶</a></h3>
+<p>获取NestedMap的key的迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">K</span><span class="o">&gt;</span> <span class="nf">keySet</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 24%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>keySet</p></td>
+<td><p>无</p></td>
+<td><p>Set对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//forEach用法</span>
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">keySet</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">keySet</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="n">String</span> <span class="n">key</span> <span class="p">:</span> <span class="n">keySet</span><span class="p">){</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">ite</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">keySet</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="values-1">
+<span id="id57"></span><h3>values<a class="headerlink" href="#values-1" title="Permalink to this headline">¶</a></h3>
+<p>获取NestedMap的value的迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">values</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 17%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>values</p></td>
+<td><p>无</p></td>
+<td><p>Collection对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//forEach用法</span>
+<span class="n">Collection</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">values</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Integer</span> <span class="n">value</span> <span class="p">:</span> <span class="n">values</span><span class="p">){</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">ite</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">values</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="entryset-1">
+<span id="id58"></span><h3>entrySet<a class="headerlink" href="#entryset-1" title="Permalink to this headline">¶</a></h3>
+<p>获取NestedMap的键值对的迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="o">&gt;&gt;</span> <span class="nf">entrySet</span><span class="p">();</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 21%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>entrySet</p></td>
+<td><p>无</p></td>
+<td><p>Set对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//forEach用法</span>
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">entrySet</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">entrySet</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="n">String</span> <span class="n">entry</span> <span class="p">:</span> <span class="n">entrySet</span><span class="p">){</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">entry</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">ite</span> <span class="o">=</span> <span class="n">nestedMap</span><span class="p">.</span><span class="na">entrySet</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="seekkeyset-1">
+<span id="id59"></span><h3>seekKeySet<a class="headerlink" href="#seekkeyset-1" title="Permalink to this headline">¶</a></h3>
+<p>创建指定位置的Key迭代器，起始位置为参数key所对应的节点。</p>
+<p>不同与普通迭代器，指定位置迭代器的迭代顺序为key的json字串的字典序升序。</p>
+<p>当传入的key不存在于NestedMap中时，迭代器依旧能够创建成功，其起始位置为NestedMap中第一个比参数key大的节点的位置。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">K</span><span class="o">&gt;</span> <span class="nf">seekKeySet</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 36%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>seekKeySet</p></td>
+<td><p>key：迭代器起始节点的key</p></td>
+<td><p>key为null时抛出异常返回类型：Set</p></td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">K</span><span class="o">&gt;</span> <span class="n">keySet</span> <span class="o">=</span> <span class="n">map</span><span class="p">.</span><span class="na">seekKeySet</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">K</span> <span class="n">k</span> <span class="p">:</span> <span class="n">keySet</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">keySet</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="seekvalues-1">
+<span id="id60"></span><h3>seekValues<a class="headerlink" href="#seekvalues-1" title="Permalink to this headline">¶</a></h3>
+<p>创建指定位置的Value迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">seekValues</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 28%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>seekValues</p></td>
+<td><p>key：迭
+代器起始节点的key</p></td>
+<td><p>key为
+null时抛出异常返回类型：Collection</p></td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">Collection</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="n">map</span><span class="p">.</span><span class="na">seekValues</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">V</span> <span class="n">value</span> <span class="p">:</span> <span class="n">values</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">values</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="seekentryset-1">
+<span id="id61"></span><h3>seekEntrySet<a class="headerlink" href="#seekentryset-1" title="Permalink to this headline">¶</a></h3>
+<p>创建指定位置的Entry迭代器</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="o">&gt;&gt;</span> <span class="nf">seekEntrySet</span><span class="p">(</span><span class="n">K</span> <span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 35%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>seekEntrySet</p></td>
+<td><p>key：迭代器起始节点的key</p></td>
+<td><p>key为null时抛出异常返回类型：Set</p></td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//foreach用法</span>
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">entrySet</span> <span class="o">=</span> <span class="n">map</span><span class="p">.</span><span class="na">seekEntrySet</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">Node</span> <span class="n">node</span> <span class="p">:</span> <span class="n">entrySet</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//迭代器用法</span>
+<span class="n">Iterator</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">entrySet</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ite</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,978 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>一键链改使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>一键链改使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/VM Related User Manual/KVSQL/KVSQL User Manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kvsql-user-manual">
+<span id="id1"></span><h1>一键链改使用手册<a class="headerlink" href="#kvsql-user-manual" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="Description%20of%20data%20paving%20tools.html#description-of-data-paving-tools"><span class="std std-ref">数据铺底工具说明</span></a></p></li>
+<li><p><a class="reference internal" href="Description%20of%20KVSQL%20Demo.html#description-of-kvsql-demo"><span class="std std-ref">一键链改Demo说明</span></a></p></li>
+<li><p><a class="reference internal" href="DDL%20User%20Manual.html#ddl-user-manual"><span class="std std-ref">DDL语句使用手册</span></a></p></li>
+<li><p><a class="reference internal" href="DML%20User%20Manual.html#dml-user-manual"><span class="std std-ref">DML语句使用手册</span></a></p></li>
+<li><p><a class="reference internal" href="DQL%20User%20Manual.html#dql-user-manual"><span class="std std-ref">DQL语句使用手册</span></a></p></li>
+<li><p><a class="reference internal" href="Expression%20User%20Manual.html#expression-user-manual"><span class="std std-ref">Expression使用手册</span></a></p></li>
+<li><p><a class="reference internal" href="Data%20Type%20User%20Manual.html#data-type-user-manual"><span class="std std-ref">数据类型Type使用手册</span></a></p></li>
+<li><p><a class="reference internal" href="Operators%20Funtions%20User%20Manual.html#operators-funtions-user-manual"><span class="std std-ref">Operators&amp;Funtions使用手册</span></a></p></li>
+</ul>
+<div class="section" id="id2">
+<h2>1. 引言<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1.1 编写目的<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>本文档用于介绍Hyperchain一键链改功能的使用方法。面向的用户为应用开发人员，为其在将现有应用进行”一键链改”或者直接基于一键链改功能进行新应用的开发时作为指导和参考。</p>
+</div>
+<div class="section" id="id4">
+<h3>1.2背景<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>作为领先的区块链底层平台，为提升数据使用的便捷程度所提供的数据使用方式，方便区块链服务于更多的业务场景，Hyperchain拟内生支持SQL语句的使用，能够简化用户将数据从普通业务转换为区块链业务应用的适配复杂度。通常，用户只需将原来MySql的JDBC驱动变更为一键链改提供的JDBC驱动，即可完成应用上链。</p>
+</div>
+<div class="section" id="id5">
+<h3>1.3术语<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 86%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名词</p></th>
+<th class="head"><p>解释</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>JDBC</p></td>
+<td><p>Java数据库连接，（Java Database
+Connectivity，简称JDBC）是 一 种可用于执行 SQL 语句的
+Java API。JDBC
+为数据库应用开发人
+员、数据库前台开发人员提供了一种标准的应用程序设计接口，
+使开发人员可以用纯 Java 语言编写完整的数据库应用程序。</p></td>
+</tr>
+<tr class="row-odd"><td><p>DDL</p></td>
+<td><p>数据定义语言，主要为创建、修
+改、删除数据库的逻辑结构，其中包括表结构，视图和索引等。</p></td>
+</tr>
+<tr class="row-even"><td><p>DML</p></td>
+<td><p>数据操纵语
+言，主要用于数据库中数据的修改，包括添加、删除、修改等。</p></td>
+</tr>
+<tr class="row-odd"><td><p>DQL</p></td>
+<td><p>数据查询语言，用于数据库中数据的检索查询。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>2. 安装和初始化<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>2.1 平台安装<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>一键链改为Hyperchain平台提供的一个新特性，请确认安装包含一键链改功能特性的Hyperchain平台版本。</p>
+</div>
+<div class="section" id="id8">
+<h3>2.2 创建“库”<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Hyperchain平台支持SQL语句的执行，与MySql存在概念上的差异：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>元素</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>合约地址</p></td>
+<td><p>区块链上的数据将存储在
+一个地址下，由于联盟链的数据为联盟链成员或全链所有，因
+此将数据归属于一个用户使用的账户不合适，应参考智能合约
+的模式，为多个强关联的数据表创建一个合约地址作为“库”。</p></td>
+</tr>
+<tr class="row-odd"><td><p>表</p></td>
+<td><p>一个合约地
+址下可以有多张数据表，表用于记录业务数据，应拥有primary
+key，并于创建时建立索引。</p></td>
+</tr>
+<tr class="row-even"><td><p>列</p></td>
+<td><p>一张数据表内可以有多列，初期不支持对列的修改</p></td>
+</tr>
+<tr class="row-odd"><td><p>行值</p></td>
+<td><p>普通的行值，按列的数据规则插入的数据。</p></td>
+</tr>
+</tbody>
+</table>
+<p>因此，类似于MySql使用前需要创建一个库，在Hyperchain上也需要进行类似操作先创建一个”库”。其操作方式为通过SDK向区块链平台发起一个创建库请求，示例代码如下（详见litesdk文档）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Account</span> <span class="n">account</span> <span class="o">=</span> <span class="n">accountService</span><span class="o">.</span><span class="n">genAccount</span><span class="p">(</span><span class="n">Algo</span><span class="o">.</span><span class="n">SMRAW</span><span class="p">);</span>
+<span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span><span class="n">SQLBuilder</span><span class="p">(</span><span class="n">account</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span><span class="n">create</span><span class="p">()</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
+<span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">account</span><span class="p">);</span>
+<span class="n">ReceiptResponse</span> <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">sqlService</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">contractAddress</span> <span class="o">=</span> <span class="n">receiptResponse</span><span class="o">.</span><span class="n">getContractAddress</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>上述示例中最终得到 <cite>contractAddress</cite> 即为“库”地址，供后续步骤使用。</p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>3.操作说明<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>完成Hyperchain平台安装和初始化后，即可开始进行应用的改造。应用改造包括驱动配置改造与应用功能检查</p>
+<div class="section" id="id10">
+<h3>3.1 替换驱动配置<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>我们提供了一个JDBC驱动，用于替代传统SQL数据库的JDBC驱动。通过对驱动接口的调用，会直接与区块链平台进行交互。</p>
+<p>替换驱动配置的步骤为：</p>
+<ol class="arabic simple">
+<li><p><strong>替换JDBC class name</strong></p></li>
+</ol>
+<p>一键链改驱动class name为 <cite>cn.hyperchain.sql.driver.KVSQLDriver</cite> ，将其替换mysql的驱动名称</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>替换url</strong></p></li>
+</ol>
+<p>数据库的URL设计遵循JDBC规范，如下</p>
+<p><a href="#id13"><span class="problematic" id="id14">`jdbc:kvsql://blockchain/&lt;database_name&gt;?property1=value1&amp;property2=value2 &lt;jdbc:kvsql://blockchain/&lt;database_name&gt;?property1=value1&amp;property2=value2&gt;`_</span></a></p>
+<p>其含义如下：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>内容</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>jdbc</p></td>
+<td><p>代表jdbc协议</p></td>
+</tr>
+<tr class="row-odd"><td><p>kvsql</p></td>
+<td><p>协议实现标识</p></td>
+</tr>
+<tr class="row-even"><td><p>blockchain</p></td>
+<td><p>固定字符，当前未保留内容</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>使用的
+库名称（具体为库地址，为2.2中创建的结果）</p></td>
+</tr>
+<tr class="row-even"><td><p>property1
+=value1&amp;property2=value2</p></td>
+<td><p>连接属性，可以
+将配置项直接写入url，具体配置项可参考下文</p></td>
+</tr>
+</tbody>
+</table>
+<p>说明：url中传入的配置项会被通过properties传入的配置项所覆盖。</p>
+<ol class="arabic simple">
+<li><p><strong>修改驱动配置项</strong></p></li>
+</ol>
+<p>与MySql JDBC驱动的配置项类似，一键链改JDBC驱动也有自己的配置项，用户可以使用和MySql JDBC驱动配置项相同的方式进行配置，区别是配置项名称有所不同。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 17%" />
+<col style="width: 36%" />
+<col style="width: 20%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>配
+置项名称</p></th>
+<th class="head"><p>配置项说明</p></th>
+<th class="head"><p>缺省值</p></th>
+<th class="head"><p>最低版
+本要求</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>基本</p></td>
+<td><p>user</p></td>
+<td><p>区块链账户（Account）</p></td>
+<td><p>必须配置</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>password</p></td>
+<td><p>区块链账户加密密码</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>SDK相关</p></td>
+<td><p>urls</p></td>
+<td><p>区块链节点的url列表</p></td>
+<td><p>必须配置</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>namespace</p></td>
+<td><p>区块链的namespace</p></td>
+<td><p>global</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>attempt</p></td>
+<td><p>SDK重发次数</p></td>
+<td><p>10</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sleepTime</p></td>
+<td><p>SDK重发间隔</p></td>
+<td><p>50</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>stepSize</p></td>
+<td><p>SDK重发间隔增长幅度</p></td>
+<td><p>50</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sendTCert</p></td>
+<td><p>SD
+K发送交易是否开启证书</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>sdkCert</p></td>
+<td><p>sdkCert证书(字符串)</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sdkPriv</p></td>
+<td><p>sdkPriv(字符串)</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uniquePub</p></td>
+<td><p>uniquePub证书(字符串)</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>u
+niquePriv</p></td>
+<td><p>uniquePriv（字符串）</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>https</p></td>
+<td><p>是否开启https</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>tlsCA</p></td>
+<td><p>tlsCA证书（字符串）</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tl
+sPeerCert</p></td>
+<td><p>tlsP
+eerCert证书（字符串）</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>tl
+sPeerPriv</p></td>
+<td><p>tlsPeerPriv（字符串）</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>rea
+dSimulate</p></td>
+<td><p>是否开启查询
+语句为simulate交易（
+即所有的select语句走
+simulate查询不上链）</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cfca</p></td>
+<td><p>是否使用cfca</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cf
+caSdkCert</p></td>
+<td><p>cfca
+sdkCert证书(字符串)</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cf
+caSdkPriv</p></td>
+<td><p>cfca sdkPriv(字符串)</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>其他</p></td>
+<td><p>dbname</p></td>
+<td><p>”库”地址</p></td>
+<td><p>必须配置</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>logger</p></td>
+<td><p>指定使用的logger类</p></td>
+<td><p>cn.
+hyperchain.
+sql.log.Sta
+ndardLogger</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>p
+rofileSQL</p></td>
+<td><p>是否打印单次调用时间
+（向平台请求以及得到
+响应的时间）消耗日志</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>characte
+rEncoding</p></td>
+<td><p>驱
+动程序在处理字符串时
+应该使用什么字符编码</p></td>
+<td><p>utf-8</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>co
+ntinueBat
+chOnError</p></td>
+<td><p>Batch执行
+时一条语句执行出错是
+否继续执行剩下的语句</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>gene
+rateSimpl
+eParamete
+rMetadata</p></td>
+<td><p>是否
+生成简单的参数元数据</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>pro
+cessEscap
+eCodesFor
+PrepStmts</p></td>
+<td><p>是否在prepare
+statement中处理转义</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>useStream
+LengthsIn
+PrepStmts</p></td>
+<td><p>是否使用
+PreparedStatement/Res
+ultSet.setXXXStream()
+方
+法调用中的流长度参数</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>emptySt
+ringsConv
+ertToZero</p></td>
+<td><p>驱动
+程序是否应允许从空字
+符串字段转换为数值“0”</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>jdbcC
+ompliantT
+runcation</p></td>
+<td><p>是
+否截断数据时抛出异常</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>padChars
+WithSpace</p></td>
+<td><p>如果结果集列具有 CHAR
+类型并且该值未填充
+DDL
+中为该
+列指定的字符数量，驱
+动程序是否应该用空格
+填充剩余的字符（符合
+ANSI）</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tiny
+Int1isBit</p></td>
+<td><p>驱动程
+序是否应该将数据类型
+TINYINT(1) 视为 BIT
+类型</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>trans
+formedBit
+IsBoolean</p></td>
+<td><p>如果驱动程序将
+TINYINT(1)
+转换为不同的
+类型，它是否应该使用
+BOOLEAN 而不是 BIT</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>autoDe
+serialize</p></td>
+<td><p>驱动程序是否应该自动
+检测和反序列化存储在
+BLOB 字段中的对象？</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>blobsA
+reStrings</p></td>
+<td><p>驱
+动程序是否应该始终将
+BLOB 视为字符串</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>functio
+nsNeverRe
+turnBlobs</p></td>
+<td><p>驱动程
+序是否应该始终将返回
+BLOB
+的函
+数中的数据视为字符串</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>clo
+bCharacte
+rEncoding</p></td>
+<td><p>用于发送和检索
+TEXT、MEDIUMTEXT 和
+LONGTEXT
+值的字符编
+码，而不是配置的连接
+characterEncoding</p></td>
+<td><p>null</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>emulat
+eLocators</p></td>
+<td><p>是
+否应该使用定位器模拟
+java.sql.Blobs</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>treatU
+tilDateAs
+Timestamp</p></td>
+<td><p>出于
+Prepared
+Statement.setObject()
+的目
+的，驱动程序是否应将
+java.util.Date 视为
+TIMESTAMP？</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sen
+dFraction
+alSeconds</p></td>
+<td><p>是否从 TIMESTAMP
+秒发送小数部分</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>s
+endFracti
+onalSecon
+dsForTime</p></td>
+<td><p>是否呈现小数秒</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>yearI
+sDateType</p></td>
+<td><p>是否应该将 MySQL
+类型“YEAR”视为
+java.sql.Date</p></td>
+<td><p>true</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ze
+roDateTim
+eBehavior</p></td>
+<td><p>当驱动程
+序遇到完全由零组成的
+DATETIME 值（MySQL
+用于表示无效日期）时
+会发生什么？有效值为
+“EXCEPTION”、“ROUND”
+和“CONVERT_TO_NULL”。</p></td>
+<td><p>EXCEPTION</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>useColum
+nNamesInF
+indColumn</p></td>
+<td><p>将此属性
+设置为“true”将提供与
+JDBC-3.0 和早期版本的
+JDBC 规范一致的行为</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>useOldAli
+asMetadat
+aBehavior</p></td>
+<td><p>驱动程序是否应该
+对列和表的“AS”子句使
+用旧行为，并且只返回
+ResultSetMet
+aData.getColumnName()
+或
+ResultSetMe
+taData.getTableName()
+的别名（如果有
+）而不是原始列/表名称</p></td>
+<td><p>false</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>注</strong> <strong>：标注为“必须配置”的配置项为使用一键链改功能必须配置的配置项，不管是通过url配置还是properties配置，必须有一个地方要包含。</strong></p>
+<p>需要说明的是，任何可以将配置项传入到Driver的connect方法所需要的Properties参数的方式，均可以作为配置项传入的方式，例如，在使用Spring Boot框架时可以通过其默认使用的数据库连接池hikari提供的方式进行配置项传入:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">SpringBoot</span> <span class="n">项目启动入口</span>
+
+<span class="n">Properties</span> <span class="n">properties</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Properties</span><span class="p">();</span>
+<span class="n">properties</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;spring.datasource.hikari.data-source-properties.urls&quot;</span><span class="p">,</span> <span class="s2">&quot;localhost:8081&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">accountJson</span> <span class="o">=</span> <span class="s2">&quot;{</span><span class="se">\&quot;</span><span class="s2">address</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">2a8dba2c1c991de7d98f3f4ec54327478ec5a0fa</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\&quot;</span><span class="s2">publicKey</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">04228994bd8b59c25adf142bcbb1296d90710d85f6224889c36dd803bb40c5478332a4c2f14c9d48c09c8557cff7d6a8ff3572835835555fd6c97d23c89cab8d5d</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\&quot;</span><span class="s2">privateKey</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">5d95ecde330a24c11decc4034f325c3b42e0698f5d0523b67fa64b82e0571af4</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\&quot;</span><span class="s2">version</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">4.0</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\&quot;</span><span class="s2">algo</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">0x03</span><span class="se">\&quot;</span><span class="s2">}&quot;</span><span class="p">;</span>
+<span class="n">properties</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;spring.datasource.hikari.data-source-properties.user&quot;</span><span class="p">,</span> <span class="n">accountJson</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">将properties配置项传入</span>
+<span class="n">new</span> <span class="n">SpringApplicationBuilder</span><span class="p">(</span><span class="n">DemoApplication</span><span class="o">.</span><span class="n">class</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">properties</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>3.2 检查应用中当前不支持的功能<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>一键链改JDBC驱动实现了标准的JDBC协议，但由于区块链平台和传统SQL数据库存在差异，部分在传统数据库中（如：MySQL）支持的功能特性并未在Hyperchain中支持或使用语法有些许差异，因此用户在使用一键链改JDBC驱动时需要检查应用中是否有使用到不支持与有差异的特性，并进行更改与规避。</p>
+<div class="section" id="jdbc">
+<h4>3.2.1 检查JDBC不支持的功能列表<a class="headerlink" href="#jdbc" title="Permalink to this headline">¶</a></h4>
+<p>以下特性当前不支持：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>不支持的特性</p></th>
+<th class="head"><p>修改与规避建议</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>不支持事务</p></td>
+<td><p>建议在应用层进行事务的控制</p></td>
+</tr>
+<tr class="row-odd"><td><p>不支持存储过程</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>不支持设置事务隔离级别</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>不支持Catalog</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>不支持设置只读模式</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>不支持获取Warning</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>不支持typeMap</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>不支持setClientInfo</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sqlmysql">
+<h4>3.2.2 检查使用的SQL的语法与Mysql的差异性<a class="headerlink" href="#sqlmysql" title="Permalink to this headline">¶</a></h4>
+<p>一键链改辅助用户将基于SQL语句开发的业务应用系统迁移至区块链上，并成为运行在区块链上业务系统。平台已支持的数据类型、运算符、函数、表达式请参考 <strong>“Operators &amp; Functions使用手册”，“数据类型Type使用手册”，“Expression使用手册”</strong> 。</p>
+<p>区块链的数据都将记录在一个地址中，一键链改功能的表数据将记录在一个合约地址中，一个合约地址可记录多个表，因此可将存储表数据的合约地址理解为存储多张表的一个业务数据库。用户需规划库表关系，将表数据写入正确的合约地址下。</p>
+<p>平台已支持常用的SQL语句，包括：用于创建表、插入行值、修改行值、删除行值、查询行值。SQL语句表达范式请参考 <strong>“DDL语句使用手册”，“DML语句使用手册”，“DQL语句使用手册”</strong> 。</p>
+<p>在使用本功能进行数据操作时，请注意以下事项：</p>
+<ol class="arabic simple">
+<li><p>在区块链中使用SQL语句将通过向链上提交携带拟执行的SQL语句的交易，一个包含子语句的SQL语句被视为一笔交易进行执行。</p></li>
+<li><p>在对表进行创建时，需明确定义会使用的索引列（主键、索引键）。在表创建后，暂不支持对表结构进行变更、增删索引列、删除表、查询表结构的操作，亦不支持外键的设置。</p></li>
+<li><p>在对表进行行值定位、行值查询时，建议基于索引列进行查询，否则将触发全表扫描的行为。面对数据规模较大的表，若进行全表扫描则容易导致执行时间较长乃至执行超时的情况。</p></li>
+<li><p>由于本功能的执行将由区块链完成，因此语句执行后不可回退，执行隔离级别默认为串行执行。平台支持一次性输入多条SQL语句进行执行，多条SQL语句为自动提交模式，不支持使用事务特性控制SQL语句的执行结果。</p></li>
+<li><p>上述SQL语句相关的使用文档中未明确支持的SQL语句、数据类型、运算及函数皆为暂不支持的功能。</p></li>
+<li><p>本功能支持联表、并表、多表的操作，但不支持外键的使用，需注意在业务中是否使用了外键。</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>4. 注意事项<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>由于hibernate以及当前平台特性的限制，当前不支持hibernate中的 <cite>ddl-auto</cite> 配置项，请将其设置为 <cite>none</cite> 。</p></li>
+<li><p>由于当前不支持事务以及相关的语法（如select … for update;)，因此在使用框架（如ORM框架）时不支持依赖事务以及其相关语法的特性，如JPA主键自增策略中的 <cite>GenerationType.AUTO</cite> 由于其依赖 <cite>select … for update;</cite> 语法，因此无法使用。</p></li>
+<li><p>由于区块链系统与MySql的差异，应用通过驱动与区块链平台进行交互时需要进行SDK轮询，默认延时可能会比使用MySql时高，可以通过调整SDK轮询配置以及区块链打包时间进行实际调整。</p></li>
+<li><p>当前默认开启simulate查询，即所有selcet查询语句均为simulate交易，实际使用时可根据需要进行配置调整；另外，如需要控制特定语句走simulate, 特定语句不走simulate，可以在应用端构造两个实例，两个实例使用不同的配置进行。</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

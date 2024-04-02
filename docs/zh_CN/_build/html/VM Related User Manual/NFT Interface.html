@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>数字藏品相关接口 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>数字藏品相关接口</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/VM Related User Manual/NFT Interface.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nft-interface">
+<span id="id1"></span><h1>数字藏品相关接口<a class="headerlink" href="#nft-interface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>说明<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>从Hyperchain2.2.0版本开始，数字藏品可映射为平台底层账户，由区块链原生提供数字藏品操作功能，因此在合约层面，也提供了能够操作底层数字藏品账户的接口。</p>
+</div>
+<div class="section" id="id3">
+<h2>接口<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>从hvm-sdk1.1.4版本开始，内置了类ERC721的接口定义，用于协定发布的数字藏品的合约的管理行为，接口为约定内容，并非数字合约必须实现的，可按自己实际业务进行实现。</p>
+<div class="section" id="hpc721">
+<h3>HPC721接口<a class="headerlink" href="#hpc721" title="Permalink to this headline">¶</a></h3>
+<p>hvm智能合约提供类ERC721的HPC721标准，在合约灵活方便的基础上，提供标准化接口的实现。配合底层数字藏品账户，即可灵活定制数字玩法，也可高效完成数字交易:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public interface HPC721 {
+    /**
+     * Emitted when `id` property is transferred from `from` to `to`.
+     */
+    void eventTransfer(String from, String to, long id);
+
+    /**
+     * Emitted when `owner` enables `approved` to manage the `id` property.
+     */
+    void eventApproval(String owner, String approved, long id);
+
+    /**
+     * Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.
+     */
+    void eventApprovalForAll(String owner, String operator, boolean approved);
+
+    /**
+     * Returns the number of properties in `owner`&#39;s account.
+     */
+    long balanceOf(String owner);
+
+    /**
+     * Returns the owner of the `id` property.
+     */
+    String ownerOf(long id);
+
+    /**
+     * Safely transfers `id` property from `from` to `to`
+     */
+    void transferFrom(String from, String to, long id);
+
+    /**
+     * Safely transfers `id` property from `from` to `to`
+     */
+    void transferFrom(String from, String to, long id, byte[] calldata);
+
+    /**
+     * Gives permission to `to` to transfer `id` property to another account.
+     */
+    void approve(String to, long id);
+
+    /**
+     * Returns the account approved for `id` property.
+     */
+    String getApproved(long id);
+
+    /**
+     * Approve or remove `operator` as an operator for the caller.
+     */
+    void setApprovalForAll(String operator, boolean approved);
+
+    /**
+     * Returns if the `operator` is allowed to manage all of the assets of `owner`.
+     */
+    boolean isApprovedForAll(String owner, String operator);
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="hpc721metadata">
+<h3>HPC721Metadata接口<a class="headerlink" href="#hpc721metadata" title="Permalink to this headline">¶</a></h3>
+<p>HPC721Metadata作为HPC721的补充接口，增加了数字藏品项目的扩展指定内容，本身改接口继承自HPC721接口:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public interface HPC721Metadata extends HPC721 {
+
+    /**
+     * Returns the property collection name.
+     */
+    String name();
+
+    /**
+     * Returns the property collection symbol.
+     */
+    String symbol();
+
+    /**
+     * Returns the Uniform Resource Identifier (URI) for `id` property.
+     */
+    String uri(long id);
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>数字藏品操作接口<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>所有数字藏品的操作都是基于一个智能合约的，因此对于操作数字藏品的接口均基于智能合约的内置方法，具体介绍可参考《HVM合约内置方法使用手册》，这里描述与数字藏品相关的接口。</p>
+<div class="section" id="id5">
+<h3>发布数字藏品<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p><strong>emit0</strong></p>
+<p>铸造数字藏品账户，默认会为创建的数字藏品账户设置的平台地址为当前合约地址，默认初始状态为0:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">final</span> <span class="n">native</span> <span class="n">String</span> <span class="n">emit0</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">identity</span><span class="p">,</span> <span class="n">String</span> <span class="n">owner</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">meta</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 15%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>emit0</p></td>
+<td></td>
+<td><p>藏品的底层账户地址</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">propertyAddr</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">emit0</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="s2">&quot;0x123456&quot;</span><span class="p">,</span> <span class="s2">&quot;meta&quot;</span><span class="o">.</span><span class="n">getBytes</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>获取数字藏品<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p><strong>getProperty0</strong></p>
+<p>通过数字藏品唯一标识获取到当前合约下发布的数字藏品账户</p>
+<p>该只能获取到当前合约地址先发布的数字藏品，若藏品不存在，则会返回null。 <strong>需要注意的是取出来的藏品为账本中藏品账户的映射，对应的setXXX方法将会对账本进行修改，需要注意好访问权限问题。</strong></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">final</span> <span class="n">native</span> <span class="n">PropertyV1</span> <span class="n">getProperty0</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">identity</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 14%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getProperty0</p></td>
+<td></td>
+<td><p>藏品账户结构</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PropertyV1</span> <span class="nb">property</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getProperty0</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>藏品结构<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">PropertyV1</span> <span class="p">{</span>
+
+    <span class="n">private</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">entityID</span><span class="p">;</span>
+    <span class="n">private</span> <span class="n">String</span> <span class="n">metaData</span><span class="p">;</span>
+    <span class="n">private</span> <span class="nb">int</span> <span class="n">status</span><span class="p">;</span>
+    <span class="n">private</span> <span class="n">String</span> <span class="n">owner</span><span class="p">;</span>
+    <span class="n">private</span> <span class="n">String</span> <span class="n">updateFrom</span><span class="p">;</span>
+
+    <span class="n">private</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">addr</span><span class="p">;</span>
+
+    <span class="n">public</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">getEntityID</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">entityID</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">String</span> <span class="n">getMetaData</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">metaData</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="nb">int</span> <span class="n">getStatus</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">status</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">String</span> <span class="n">getOwner</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">owner</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">native</span> <span class="n">void</span> <span class="n">setMetaData</span><span class="p">(</span><span class="n">String</span> <span class="n">metaData</span><span class="p">);</span>
+
+    <span class="n">public</span> <span class="n">native</span> <span class="n">void</span> <span class="n">setStatus</span><span class="p">(</span><span class="nb">int</span> <span class="n">status</span><span class="p">);</span>
+
+    <span class="n">public</span> <span class="n">native</span> <span class="n">void</span> <span class="n">setOwner</span><span class="p">(</span><span class="n">String</span> <span class="n">owner</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>PropertyV1可通过合约内置方法获取得到，其属性的含义如下：</p>
+<ul class="simple">
+<li><p>entityID：合约内藏品唯一标识</p></li>
+<li><p>metaData：藏品的自定义meta信息</p></li>
+<li><p>status：藏品状态，数字表示，每个数字对应的含义由合约决定，默认为0</p></li>
+<li><p>owner：藏品拥有者地址</p></li>
+<li><p>updateFrom：是否从某个藏品更新而来，暂未开放更新地址修改功能</p></li>
+</ul>
+<p>同时PropertyV1提供了 <cite>getEntityID</cite> ， <cite>getMetaData</cite> ， <cite>getStatus</cite> ， <cite>getOwner</cite> 接口来获取上述的属性。</p>
+<p>PropertyV1接口同时还提供了 <cite>setMetaData</cite> ， <cite>setStatus</cite> ， <cite>setOwner</cite> 方法，直接从合约内置方法中获取到的PropertyV1对象的set方法的修改将直接对账本中的藏品账户结构产生影响，因此需要注意权限问题，合约内对外返回的Property对象需要经过拷贝。</p>
+</div>
+</div>
+<div class="section" id="demo">
+<h2>demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://upload.filoop.com/RTD-Hyperchain%2Fproperty%20(1).zip">property.zip</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

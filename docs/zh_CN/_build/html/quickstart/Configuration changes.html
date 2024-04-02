@@ -1,0 +1,622 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>配置变更 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>配置变更</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/quickstart/Configuration changes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration-changes">
+<span id="id1"></span><h1>配置变更<a class="headerlink" href="#configuration-changes" title="Permalink to this headline">¶</a></h1>
+<p>本文是v2.3.0-&gt; v2.7.0的配置变更说明文档</p>
+<p><strong>说明：</strong>在2.0.8版本及以后的安装包中的配置文件只包含了最精简化的配置，<strong>安装包中的配置文件已经足够满足hyperchain的正常使用</strong>。若您是第一次使用hyperchain，且希望更深入地使用hyperchain时，可以查阅相关功能的使用手册从而知晓配置文件的修改方法；若您以前已经部署过hyperchain，那么仍可以沿用原先的全量配置文件，只不过需要参考《配置变更》对一些配置上的变化进行确认。</p>
+<div class="section" id="id2">
+<h2>增删节点<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><strong>新增配置</strong></p>
+<ul class="simple">
+<li><p>配置文件路径：configuration/config/global/ns_genesis.toml</p></li>
+<li><p>变更所述模块：genesis</p></li>
+<li><p>变更原因：将链的ca模式上链，且不可更改</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>配置项</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>genes
+is.ca_mode</p></td>
+<td><p>ca模式，配置后不支持修改。支持的ca模式有：中
+心化ca，即Center；分布式ca，即Distributed；无ca，即none</p></td>
+</tr>
+<tr class="row-odd"><td><p>genes
+is.root_ca</p></td>
+<td><p>当ca模式为中心化ca，即Center时，配置信任的root ca</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>删除配置</strong></p>
+<ul class="simple">
+<li><p>配置文件路径：configuration/config/global/ns_static.toml</p></li>
+<li><p>变更所述模块：encryption, distributedCA</p></li>
+<li><p>变更原因：删除是否开启分布式ca及是否启用Ecert的开关，通过ca_mode控制</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 59%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>配置项</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>encryption.check.enable</p></td>
+<td><p>是否启用ecert</p></td>
+</tr>
+<tr class="row-odd"><td><p>distributedCA.enable</p></td>
+<td><p>是否启用分布式ca</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>不再支持rockit</strong></p>
+</div>
+<div class="section" id="baas">
+<h2>嵌入式BaaS<a class="headerlink" href="#baas" title="Permalink to this headline">¶</a></h2>
+<p><strong>新增配置</strong></p>
+<ul class="simple">
+<li><p>配置文件路径：configuration/config/system.toml</p></li>
+<li><p>变更所述模块：baas</p></li>
+<li><p>变更原因：新增内嵌版BaaS开关</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>配置项</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>baas.enable</p></td>
+<td><p>是否开启内嵌版BaaS</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>新增配置</strong></p>
+<ul class="simple">
+<li><p>配置文件路径：configuration/config/dynamic.toml</p></li>
+<li><p>变更所述模块：port</p></li>
+<li><p>变更原因：新增内嵌版BaaS访问接口</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>配置项</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>port.baas</p></td>
+<td><p>baas的访问端口</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="noxbft">
+<h2>NoxBFT<a class="headerlink" href="#noxbft" title="Permalink to this headline">¶</a></h2>
+<p><strong>新增配置</strong></p>
+<ul class="simple">
+<li><p>配置文件路径：configuration/config/global/ns_static.toml</p></li>
+<li><p>变更所述模块：consensus.hotstuff</p></li>
+<li><p>变更原因：共识checkpoint协议重构以及稳定性优化</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 13%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>配置项</p></th>
+<th class="head"><p>默认值</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>consensus.hotstuf
+f.checkpoint_interval</p></td>
+<td><p>100</p></td>
+<td><p>配置NoxBFT允许最大不生成检查点的
+轮次数，超过此数量未生成检查点时，
+会发起验证区块提案以强制生成检查点</p></td>
+</tr>
+<tr class="row-odd"><td><p>co
+nsensus.hotstuff.chec
+kpoint_mem_cache_size</p></td>
+<td><p>2</p></td>
+<td><p>配置NoxBFT在blo
+cktree中允许缓存几个检查点中的区块</p></td>
+</tr>
+<tr class="row-even"><td><p>consensus.hotstuff
+.backward_round_limit</p></td>
+<td><p>10</p></td>
+<td><p>配置
+NoxBFT落后多少轮后去调用syncchain
+同步，落后的轮次低于此数量时，只会
+采用fetch的方式拉取落后的共识区块</p></td>
+</tr>
+<tr class="row-odd"><td><p>co
+nsensus.hotstuff.memp
+ool.commit_cache_size</p></td>
+<td><p>3</p></td>
+<td><p>配置mempool
+允许缓存多少个提交过的区块中的交易</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2>轻节点<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p><strong>新增配置</strong></p>
+<ul class="simple">
+<li><p>配置文件路径：configuration/config/global/ns_static.toml</p></li>
+<li><p>变更所述模块：executor</p></li>
+<li><p>变更原因：新增lp节点类型</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 16%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>配置项</p></th>
+<th class="head"><p>默认值</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>executor.lp.send_limit</p></td>
+<td><p>500</p></td>
+<td><p>vp节点给lp节点
+发送的一批区块的数量限制</p></td>
+</tr>
+<tr class="row-odd"><td><p>executor.lp.resend_interval</p></td>
+<td><p>5s</p></td>
+<td><p>p节点给lp节点、lp节点给
+vp节点重发数据的时间间隔</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="gas">
+<h2>gas排序<a class="headerlink" href="#gas" title="Permalink to this headline">¶</a></h2>
+<p><strong>配置项变更</strong></p>
+<ul class="simple">
+<li><p>配置文件路径：configuration/global/ns_static.toml</p></li>
+<li><p>变更所述模块：consensus</p></li>
+<li><p>变更原因：新增了交易池类型”priced”用于NFT等需求中支持打包时根据交易的优先级（通常指gas
+price）进行排序。</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 24%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>配置项</p></th>
+<th class="head"><p>含义</p></th>
+<th class="head"><p>变更类型</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>consensus.hotst
+uff.mempool.type</p></td>
+<td><p>启动ho
+tstuff算法时使
+用的交易池类型</p></td>
+<td><p>新增交易池类型”pric
+ed”，用于支持hotstuff算法按照gas
+price进行打包排序</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sync-chain">
+<h2>sync_chain模块<a class="headerlink" href="#sync-chain" title="Permalink to this headline">¶</a></h2>
+<p><strong>配置项变更</strong></p>
+<ul class="simple">
+<li><p>配置文件路径：configuration/global/ns_static.toml</p></li>
+<li><p>变更所述模块：sync</p></li>
+<li><p>变更原因：sync_chain流程重构，使用一套新的配置项。目前，sync_chain相关的配置完全处于[sync]标签下，原<strong>[executor.sync_chain]下的配置均已弃用。</strong></p></li>
+</ul>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">sync</span><span class="p">]</span>
+    <span class="p">[</span><span class="n">sync</span><span class="p">.</span><span class="n">target</span><span class="p">]</span>
+        <span class="n">epoch</span>  <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">hash</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+    <span class="p">[</span><span class="n">sync</span><span class="p">.</span><span class="n">provider</span><span class="p">]</span>
+        <span class="n">available_mem</span> <span class="o">=</span> <span class="s">&quot;100mb&quot;</span>
+    <span class="p">[</span><span class="n">sync</span><span class="p">.</span><span class="n">fetcher</span><span class="p">]</span>
+        <span class="n">priority</span> <span class="o">=</span> <span class="s">&quot;block&quot;</span>
+        <span class="n">sync_journal_receipt</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="n">sync_hpc_blocks</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="n">batch_block_num</span> <span class="o">=</span> <span class="mi">50</span>
+        <span class="n">ledger_part_size</span> <span class="o">=</span> <span class="s">&quot;100kb&quot;</span>
+        <span class="p">[</span><span class="n">sync</span><span class="p">.</span><span class="n">fetcher</span><span class="p">.</span><span class="n">task</span><span class="p">]</span>
+            <span class="n">timeout</span> <span class="o">=</span> <span class="s">&quot;7s&quot;</span>
+            <span class="n">limit</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 43%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>配置项</p></th>
+<th class="head"><p>含义</p></th>
+<th class="head"><p>配置规则</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sync.target.epoch</p></td>
+<td><p>节点启动时预期同步的epoch值</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>sync.target.height</p></td>
+<td><p>节点启动时预期同步的区块号</p></td>
+<td><p>要求该配置项 &gt;=
+sync.targ
+et.epoch对应的ch
+eckpoint的区块号</p></td>
+</tr>
+<tr class="row-even"><td><p>sync.target.hash</p></td>
+<td><p>sync.
+target.height对应的区块hash</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>sync.prov
+ider.available_mem</p></td>
+<td><p>提供数据端每
+一次提供的数据占用内存上限</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>syn
+c.fetcher.priority</p></td>
+<td><p>优先同步更
+多的区块还是更高的snapshot</p></td>
+<td><p>合法可选值为：</p></td>
+</tr>
+<tr class="row-odd"><td><p>sync.fetcher.sy
+nc_journal_receipt</p></td>
+<td><p>拉取区块数据时
+，是否同时拉取journal和rece
+ipt（如果配置为true，则会执
+行journal，否则会执行交易）</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>sync.fetch
+er.sync_hpc_blocks</p></td>
+<td><p>是否要同步hype
+rchain1.8产生的历史数据（只
+针对从1.8升级到2.X的场景）</p></td>
+<td><p>该配置项如果为
+true，则节点一定
+采用“优先同步更
+多区块”的模式，
+即sync.fetcher.
+priority不再生效</p></td>
+</tr>
+<tr class="row-odd"><td><p>sync.fetch
+er.batch_block_num</p></td>
+<td><p>每一批拉取的数据
+包数量（该配置通用于拉取数
+据的各个流程中，表示一个请
+求包含多少个数据包的拉取）</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>sync.fetche
+r.ledger_part_size</p></td>
+<td><p>当需要同
+步账本时，账本数据会被视为
+一个文件，该配置项表示一个
+账本文件数据包分片的大小（
+例如：账本数据大小为1M，该
+配置项为50kb;那么一共需要21
+[1024/50向上取整]个数据包）</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>sync.fe
+tcher.task.timeout</p></td>
+<td><p>拉取
+数据流程内部会将拉取一批ba
+tch_block_num个数据包的过程
+视为一个task，该配置项表示
+：系统时间每经过多久回尝试
+一次将未完成的task重新发送</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>sync.
+fetcher.task.limit</p></td>
+<td><p>该配置项表示同时可以有
+多少个未完成的task并行执行</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
