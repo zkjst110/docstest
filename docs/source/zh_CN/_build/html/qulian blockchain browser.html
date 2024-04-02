@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>趣链区块链浏览器 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="（用户）智能合约使用手册" href="VM%20Related%20User%20Manual.html" />
+    <link rel="prev" title="数据监控" href="Data%20Monitor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">趣链区块链浏览器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1. 功能概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2. 使用说明</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.1 快速启动</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.1.1 配置说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.1.2 启动趣链区块链浏览器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2.2 区块链浏览器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">2.2.1 查看区块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">2.2.2 查看交易</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">2.3 节点管理-节点信息</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">2.3.1 查看节点信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">2.3.2 节点连接状态管理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">2.4 节点管理-节点配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id14">2.4.1 节点网络配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">2.4.2 节点日志等级配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">2.4.3 节点命名空间配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">2.4.4 节点全量配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">2.5 合约实例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id19">2.5.1 部署合约实例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">2.5.2 查看合约实例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">2.5.3 调用合约实例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">2.5.4 升级合约实例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">2.5.5 冻结合约实例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">2.5.6 解冻合约实例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id25">3. 注意事项</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>趣链区块链浏览器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/qulian blockchain browser.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>趣链区块链浏览器<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. 功能概述<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>趣链区块链浏览器是管理人员可视化管理hyperchain相关链上业务的可视化工具，支持查看区块链上信息、节点/合约实例可视化管理等核心操作。</p>
+<p>本使用手册将从启动趣链区块链浏览器、查看区块链浏览器、节点管理、合约实例管理等方面展开介绍。</p>
+</div>
+<div class="section" id="id3">
+<h2>2. 使用说明<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>2.1 快速启动<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>2.1.1 配置说明<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>使用区块链浏览器功能需要在hyperchain启动之前进行相关配置。主要配置项如下:</p>
+<ol class="arabic simple">
+<li><p><strong>system.toml</strong></p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">baas</span><span class="p">]</span>
+<span class="n">enable</span> <span class="o">=</span> <span class="n">true</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>在system.toml配置文件下，将bass.enable配置设置为true</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>dynamic.toml</strong></p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">port</span><span class="p">]</span>
+<span class="o">......</span>
+<span class="n">baas</span>        <span class="o">=</span> <span class="mi">12001</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>在dynamic.toml配置文件下，配置baas的访问端口，默认为12001。即在hyperchain启动成功后，可以在浏览器访问 <strong>ip:12001</strong> 来打开区块链浏览器。</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>证书配置</strong></p></li>
+</ol>
+<p>趣链区块链浏览器通过sdk访问节点，故需要在节点的baas/conf目录下配置相关证书。</p>
+<p>需要配置的证书及目录结构如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>conf
+├── certs
+│   ├── sdkcert.cert
+│   ├── sdkcert.priv
+│   ├── unique.priv
+│   └── unique.pub
+│   ├── tls
+│   │   ├── tls_peer.cert
+│   │   ├── tls_peer.priv
+│   │   └── tlsca.ca
+</pre></div>
+</div>
+<p>注意，证书的配置取决于链上相关证书是否开启。</p>
+</div>
+<div class="section" id="id6">
+<h4>2.1.2 启动趣链区块链浏览器<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p>您在部署hyperchain后，可获取目标节点的IP和端口信息（具体方式参见hyperchain部署手册），在相同域下的电脑设备内打开网页浏览器，在地址栏中输入对应的IP和端口，即可进入对应节点的趣链区块链浏览器。</p>
+<p>示例：</p>
+<p><img alt="image0" src="_images/browser1.png" /></p>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>2.2 区块链浏览器<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>区块链浏览器页面内，支持查看 <strong>实时总览数据</strong> 和 <strong>网络拓扑图</strong> ，更进一步地，您可以从“区块”、“交易”两个维度进一步查看区块链数据。</p>
+<p><img alt="image1" src="_images/browser2.png" /></p>
+<div class="section" id="id8">
+<h4>2.2.1 查看区块<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p><strong>步骤一：</strong> 在搜索框中输入区块高度或区块哈希，或者点击【区块】tab下的【区块高度】，进入区块详情页。</p>
+<p><img alt="image2" src="_images/browser3.png" /></p>
+<p><strong>步骤二：</strong> 在区块详情页中，可以查看区块详情和该区块下进行的交易，还可以继续搜索想要查看的区块和交易。其中，父区块哈希和交易哈希可以点击跳转至对应详情页，区块哈希、父区块哈希、Merkle树的根哈希可复制。</p>
+<p><img alt="image3" src="_images/browser4.png" /></p>
+</div>
+<div class="section" id="id9">
+<h4>2.2.2 查看交易<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p><strong>步骤一：</strong> 在搜索框中输入交易哈希，或者点击【交易】tab下的【交易哈希】，进入交易详情页。</p>
+<p><img alt="image4" src="_images/browser5.png" /></p>
+<p><strong>步骤二：</strong> 在交易详情页中，可以查看交易详情，还可以继续搜索想要查看的区块和交易。其中，区块哈希可以点击跳转至对应详情页，交易哈希、区块哈希、发起地址、接收地址可复制。</p>
+<p><img alt="image5" src="_images/browser6.png" /></p>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>2.3 节点管理-节点信息<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>趣链区块链浏览器提供【节点信息】和【节点配置】两个可视化的节点管理页面。下文将介绍【节点信息】的使用说明，【节点配置】请参考2.4节内容。</p>
+<div class="section" id="id11">
+<h4>2.3.1 查看节点信息<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p><strong>步骤一：</strong> 点击【节点管理】下【节点信息】，进入节点信息页面。</p>
+<p><strong>步骤二：</strong> 在节点信息页面中，可以查看该当前节点的具体信息，包括：节点类型、节点ID、节点端口。</p>
+<p><img alt="image6" src="_images/browser7.png" /></p>
+</div>
+<div class="section" id="id12">
+<h4>2.3.2 节点连接状态管理<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p><strong>建立节点连接</strong></p></li>
+</ol>
+<p><strong>步骤一：</strong> 点击【节点管理】下【节点信息】，进入节点信息页面。</p>
+<p><strong>步骤二：</strong> 在节点信息页面中，可以看到节点关联列表，点击【建立节点连接】。</p>
+<p><img alt="image7" src="_images/browser8.png" /></p>
+<p><strong>步骤三：</strong> 在弹窗中填写待与当前节点关联的新节点参数，点击【确定】开始建立连接。</p>
+<p><img alt="image8" src="_images/browser9.png" /></p>
+<p>参数说明如下：</p>
+<ul class="simple">
+<li><p><strong>节点名称</strong> ：新节点的节点名称，不可与当前节点关联列表的节点名称相同；</p></li>
+<li><p><strong>节点IP地址</strong> ：新节点的端口信息，系统检验可连接后，即可建立新节点与当前节点的网络连接。</p></li>
+</ul>
+<p><strong>步骤四：</strong> 连接成功后，可在节点关联列表中查看。</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>重新连接节点</strong></p></li>
+</ol>
+<p><strong>步骤一：</strong> 点击【节点管理】下【节点信息】，进入节点信息页面。</p>
+<p><strong>步骤二：</strong> 在节点信息页面中，可以看到节点关联列表，选择与当前节点建立连接的其他节点，点击【…】操作列的【重新连接】。</p>
+<p><img alt="image9" src="_images/browser10.png" /></p>
+<p><strong>步骤三：</strong> 在弹窗内，点击“确定”，即可重新建立所选节点与当前节点之间的连接。</p>
+<p><img alt="image10" src="_images/browser11.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p><strong>断开节点连接</strong></p></li>
+</ol>
+<p><strong>步骤一：</strong> 点击【节点管理】下【节点信息】，进入节点信息页面。</p>
+<p><strong>步骤二：</strong> 在节点信息页面中，可以看到节点关联列表，选择与当前节点建立连接的其他节点，点击【…】操作列的【断开连接】。</p>
+<p><img alt="image11" src="_images/browser12.png" /></p>
+<p><strong>步骤三：</strong> 在弹窗内，点击“确定”，即可断开所选节点与当前节点之间的连接，断开连接后该所选的节点将会从关联节点列表中消失，请谨慎操作。</p>
+<p><img alt="image12" src="_images/browser13.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p><strong>节点链路检测</strong></p></li>
+</ol>
+<p><strong>步骤一：</strong> 点击【节点管理】下【节点信息】，进入节点信息页面。</p>
+<p><strong>步骤二：</strong> 在节点信息页面中，可以看到节点关联列表，选择与当前节点建立连接的其他节点，点击【…】操作列的【链路检测】。</p>
+<p><img alt="image13" src="_images/browser14.png" /></p>
+<p><strong>步骤三：</strong> 在弹窗内，您可以查看到链路检测结果。</p>
+<p><img alt="image14" src="_images/browser15.png" /></p>
+</div>
+</div>
+<div class="section" id="id13">
+<h3>2.4 节点管理-节点配置<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h4>2.4.1 节点网络配置<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<p>节点网络配置是针对节点Domain配置，支持新增Domain和修改Domain操作。</p>
+<ol class="arabic simple">
+<li><p><strong>新增Domain</strong></p></li>
+</ol>
+<p><strong>步骤一：</strong> 点击【节点配置】中【网络配置】，进入网络配置页面。</p>
+<p><img alt="image15" src="_images/browser16.png" /></p>
+<p><strong>步骤二：</strong> 点击【新增Domain】，在新增行中，填写Domain参数，点击【保存】。</p>
+<p><img alt="image16" src="_images/browser17.png" /></p>
+<p><strong>步骤三：</strong> 保存后，点击【更新网络配置】，网络配置更新成功。</p>
+<p><img alt="image17" src="_images/browser18.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p><strong>修改Domain</strong></p></li>
+</ol>
+<p><strong>步骤一：</strong> 点击【节点配置】中【网络配置】tab，进入网络配置页面。</p>
+<p><img alt="image18" src="_images/browser19.png" /></p>
+<p><strong>步骤二：</strong> 选择列表中某个Domain，点击【修改】。在修改框中，重新填写Domain参数，点击【保存】。</p>
+<p><img alt="image19" src="_images/browser20.png" /></p>
+<p><strong>步骤三：</strong> 保存后，点击【更新网络配置】，网络配置更新成功。</p>
+</div>
+<div class="section" id="id15">
+<h4>2.4.2 节点日志等级配置<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p><strong>查看当前日志等级</strong></p></li>
+</ol>
+<p><strong>步骤一：</strong> 点击【节点配置】中，【日志等级】tab，进入日志等级配置页面。</p>
+<p><img alt="image20" src="_images/browser21.png" /></p>
+<p><strong>步骤二：</strong> 在选择框中，选择系统级别或Namespace级别的日志等级，查看不同模块下日志等级配置。</p>
+<p><img alt="image21" src="_images/browser22.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p><strong>修改日志等级配置</strong></p></li>
+</ol>
+<p><strong>步骤一：</strong> 点击【节点配置】中，【日志等级】tab，进入日志等级配置页面。</p>
+<p><a href="#id26"><span class="problematic" id="id27">|iamge22|</span></a></p>
+<p><strong>步骤二：</strong> 点击【修改日志等级】，在弹窗中填写修改参数，点击【确定】，可修改日志等级。</p>
+<p><img alt="image23" src="_images/browser24.png" /></p>
+<p>每个分区模块的日志级别，日志级别由高到低为CRITICAL/ ERROR/WARNING/NOTICE INFO，级别越低日志内容越详细，对系统性能影响越大。</p>
+</div>
+<div class="section" id="id16">
+<h4>2.4.3 节点命名空间配置<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<p>节点命名空间配置提供可视化的 <strong>命名空间启动或停止</strong> 操作。</p>
+<p><strong>步骤一：</strong> 点击【节点配置】中，【命名空间】tab，进入命名空间配置页面。</p>
+<p><img alt="image24" src="_images/browser25.png" /></p>
+<p><strong>步骤二：</strong> 选择某个命名空间，点击【启动】/【停止】按钮。</p>
+<p><img alt="image25" src="_images/browser26.png" /></p>
+<p><strong>步骤三：</strong> 该节点会启动/停止在命名空间中的运行。</p>
+</div>
+<div class="section" id="id17">
+<h4>2.4.4 节点全量配置<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<p><strong>步骤一：</strong> 点击【节点配置】中，【全量配置】tab，进入全量配置界面。</p>
+<p><img alt="image26" src="_images/browser27.png" /></p>
+<p><strong>步骤二：</strong> 在左侧文件目录下，选择文件，进入编辑框修改配置。</p>
+<p><img alt="image27" src="_images/browser28.png" /></p>
+<p><strong>步骤三：</strong> 修改完成后，点击【更新高级配置】，链将重启并完成配置更新。</p>
+</div>
+</div>
+<div class="section" id="id18">
+<h3>2.5 合约实例<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>本模块提供对合约实例的管理操作。目前，支持Solidity合约实例和Java合约实例管理。</p>
+<div class="section" id="id19">
+<h4>2.5.1 部署合约实例<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<p><strong>前置条件：</strong></p>
+<ol class="arabic simple">
+<li><p>已编写完成的合约文件，并有编译文件；</p></li>
+<li><p>准备私钥文件（用于当前账户部署的合约实例的操作授权）；</p></li>
+<li><p>当前节点连接正常；</p></li>
+<li><p>联盟链正常运行。</p></li>
+</ol>
+<p><strong>操作步骤：</strong></p>
+<ol class="arabic simple">
+<li><p>点击【合约实例】tab，进入合约实例页面；</p></li>
+<li><p>点击【上传私钥】，上传合约部署、升级等操作时需要使用的私钥，点击【确定】；</p></li>
+</ol>
+<p><img alt="image28" src="_images/browser29.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>私钥上传完成后，点击【部署合约实例】，在弹窗中填写部署参数，点击【确定】，开始部署合约；</p></li>
+</ol>
+<p><img alt="image29" src="_images/browser30.png" /></p>
+<p>参数说明：</p>
+<ul class="simple">
+<li><p><strong>合约实例类型：</strong> 支持Solidity和Java两种合约类型</p></li>
+<li><p><strong>可选入参：</strong> 部署合约实例的初始化参数，如没有可不填</p></li>
+<li><p><strong>合约文件：</strong> 对于Solidity合约需分别上传编译后的abi文件和bin文件；对于Java合约需分别上传编译后的abi文件和jar文件</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>部署成功后，合约实例列表中将自动更新该合约实例，其状态为【运行中】。</p></li>
+</ol>
+</div>
+<div class="section" id="id20">
+<h4>2.5.2 查看合约实例<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<p><strong>前置条件</strong> ：合约已完成部署。</p>
+<p><strong>操作步骤</strong> ：</p>
+<ol class="arabic simple">
+<li><p>点击【合约实例】tab，进入合约实例页面；</p></li>
+<li><p>选择目标合约实例，点击【查看】，可进入合约实例详情页；</p></li>
+</ol>
+<p><img alt="image30" src="_images/browser31.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>如下所示，在详情页可查看合约实例地址、合约类型、部署地址、合约调用记录等。</p></li>
+</ol>
+<p><img alt="image31" src="_images/browser32.png" /></p>
+</div>
+<div class="section" id="id21">
+<h4>2.5.3 调用合约实例<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<p><strong>前置条件</strong> ：</p>
+<ol class="arabic simple">
+<li><p>在合约实例列表中，已有合约实例，且状态为【运行中】；</p></li>
+<li><p>联盟链处于正常运行状态。</p></li>
+</ol>
+<p><strong>操作步骤</strong> ：</p>
+<ol class="arabic simple">
+<li><p>点击【合约实例】tab，进入合约实例页面；</p></li>
+<li><p>选择某个合约实例，点击【调用】；</p></li>
+</ol>
+<p><img alt="image32" src="_images/browser33.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>弹窗中，填写调用参数，点击【确定】。</p></li>
+</ol>
+<p><strong>Solidity合约调用参数说明</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数名</p></th>
+<th class="head"><p>填写说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>函数名</p></td>
+<td><p>该合约实例的调用函数名</p></td>
+</tr>
+<tr class="row-odd"><td><p>可选入参</p></td>
+<td><p>该合约的调用参数，如没有可不填</p></td>
+</tr>
+<tr class="row-even"><td><p>合约文件</p></td>
+<td><p>该合约编译后的abi文件</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Solidity合约调用示例</strong></p>
+<p><img alt="image33" src="_images/browser34.png" /></p>
+<p><strong>Java 合约调用参数说明</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数名</p></th>
+<th class="head"><p>填写说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BeanName</p></td>
+<td><p>该合约实例的调用方法名</p></td>
+</tr>
+<tr class="row-odd"><td><p>可选入参</p></td>
+<td><p>该合约的调用参数，如没有可不填</p></td>
+</tr>
+<tr class="row-even"><td><p>合约文件</p></td>
+<td><p>该合约编译后的abi文件</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Java合约调用示例</strong></p>
+<p><img alt="image34" src="_images/browser35.png" /></p>
+<ol class="arabic simple">
+<li><p>调用成功，会跳出调用结果的详情弹窗，可查看调用信息，点击蓝色字符串【交易哈希】，可进行跳转至对应的区块链浏览器交易详情页，或者您也可在合约详情中查看调用记录。</p></li>
+</ol>
+<p><img alt="image35" src="_images/browser36.png" /></p>
+</div>
+<div class="section" id="id22">
+<h4>2.5.4 升级合约实例<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<p><strong>前置条件：</strong></p>
+<ol class="arabic simple">
+<li><p>在合约实例列表中，已有合约实例，且状态为【运行中】；</p></li>
+<li><p>链处于正常运行状态。</p></li>
+</ol>
+<p><strong>操作步骤</strong> ：</p>
+<ol class="arabic simple">
+<li><p>点击【合约实例】tab，进入合约实例页面；</p></li>
+<li><p>选择目标合约实例，点击【升级】；</p></li>
+<li><p>弹窗中填写升级参数，点击【确定】，合约开始升级；</p></li>
+</ol>
+<p><strong>Solidity合约升级参数说明</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数名</p></th>
+<th class="head"><p>填写说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>可选入参</p></td>
+<td><p>该合约的调用参数，如没有可不填</p></td>
+</tr>
+<tr class="row-odd"><td><p>合约文件</p></td>
+<td><p>分别上传该合约编译后的abi文件与bin文件</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Java 合约升级参数说明</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数名</p></th>
+<th class="head"><p>填写说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>可选入参</p></td>
+<td><p>该合约的调用参数，如没有可不填</p></td>
+</tr>
+<tr class="row-odd"><td><p>合约文件</p></td>
+<td><p>分别上传该合约编译后的abi文件与bin文件</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li><p>升级成功后，列表将自动刷新，且在合约实例详情中将新增相应的升级记录信息。</p></li>
+</ol>
+</div>
+<div class="section" id="id23">
+<h4>2.5.5 冻结合约实例<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<p>由于区块链网络中，数据一旦上链就不可篡改，那么对于合约也一样，一旦部署上链就不可以被删除。但是，会出现用户不需要使用合约或合约出现问题需要暂停使用的情况，针对这一问题，平台提供了合约冻结功能，可以暂停合约的使用。</p>
+<p><strong>前置条件</strong> :</p>
+<ol class="arabic simple">
+<li><p>在合约实例列表中，已有合约实例，且状态为【运行中】；</p></li>
+<li><p>链处于正常运行状态。</p></li>
+</ol>
+<p><strong>操作步骤</strong> ：</p>
+<ol class="arabic simple">
+<li><p>点击【合约实例】tab，进入合约实例页面；</p></li>
+<li><p>选择某个合约实例，点击【冻结】；</p></li>
+</ol>
+<p><img alt="image36" src="_images/browser37.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>冻结成功后，列表将自动刷新，合约状态更新为【已冻结】。</p></li>
+</ol>
+<p><img alt="image37" src="_images/browser38.png" /></p>
+</div>
+<div class="section" id="id24">
+<h4>2.5.6 解冻合约实例<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<p><strong>前置条件</strong> ：</p>
+<ol class="arabic simple">
+<li><p>在合约实例列表中，已有合约实例，且状态为【已冻结】；</p></li>
+<li><p>联盟链处于正常运行状态。</p></li>
+</ol>
+<p><strong>操作步骤</strong> ：</p>
+<ol class="arabic simple">
+<li><p>点击【合约实例】tab，进入合约实例页面；</p></li>
+<li><p>选择某个【已冻结】的合约实例，点击【解冻】；</p></li>
+</ol>
+<p><img alt="image38" src="_images/browser39.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>在弹窗中点击确定；</p></li>
+</ol>
+<p><img alt="image39" src="_images/browser40.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>解冻成功后，列表将自动更新，合约状态更新为【运行中】。</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>3. 注意事项<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>区块链浏览器为节点级别功能，目前监控功能仅针对global分区，后续版本将完善</p></li>
+<li><p>cvp节点暂不支持区块链浏览器开启</p></li>
+<li><p>区块链浏览器相关日志保存在节点目录下的baas/logs</p></li>
+<li><p>当前版本暂不支持部署java合约</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="VM%20Related%20User%20Manual.html" class="btn btn-neutral float-right" title="（用户）智能合约使用手册" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Data%20Monitor.html" class="btn btn-neutral float-left" title="数据监控" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

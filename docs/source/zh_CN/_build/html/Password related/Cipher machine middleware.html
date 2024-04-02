@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>密码机中间件用户开发手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>密码机中间件用户开发手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Password related/Cipher machine middleware.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cipher-machine-middleware">
+<span id="id1"></span><h1>密码机中间件用户开发手册<a class="headerlink" href="#cipher-machine-middleware" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. 引言<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1.1 编写目的<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>密码机中间件的接口实现与测试涉及部分硬件环境，本文档为密码机中间件的开发与测试提供一定的指导。</p>
+</div>
+</div>
+<div class="section" id="guide">
+<h2>2. 开发guide<a class="headerlink" href="#guide" title="Permalink to this headline">¶</a></h2>
+<p>本文档通过结合接口定义与实现demo，为密码机中间件的开发提供一定的指导。</p>
+<p>注意：</p>
+<ol class="arabic simple">
+<li><p>plugin应该仅依赖 <a class="reference external" href="https://github.com/meshplus/crypto">github.com/meshplus/crypto</a> 和go官方包进行开发</p></li>
+<li><p>go版本和配套使用的平台版本保持一致，目前(flato1.0.6及之前)是go1.15.6</p></li>
+<li><p>golang编译插件需要使用–trimpath编译选项</p></li>
+<li><p>开发的插件名称(动态链接库的名称)应该有前缀 “<a href="#id16"><span class="problematic" id="id17">plugin_</span></a>”</p></li>
+</ol>
+<div class="section" id="id4">
+<h3>2.1 接口定义与说明<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>接口包可以从 <a class="reference external" href="https://github.com/meshplus/crypto">https://github.com/meshplus/crypto</a> 获取</p>
+<div class="section" id="id5">
+<h4>2.1.1 插件对外提供的方法<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">GetLevelArray</span><span class="p">()</span> <span class="p">[]</span><span class="n">crypto</span><span class="o">.</span><span class="n">Level</span><span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="hash">
+<h4>2.1.2  hash、随机数生成器、加解密等工厂接口<a class="headerlink" href="#hash" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">Level</span> <span class="n">priority</span> <span class="n">of</span> <span class="n">plugins</span>
+<span class="nb">type</span> <span class="n">Level</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">GetLevel</span><span class="p">()</span> <span class="p">([]</span><span class="nb">int</span><span class="p">,</span> <span class="n">uint8</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">PluginRandomFunc</span> <span class="n">random</span> <span class="n">function</span>
+<span class="nb">type</span> <span class="n">PluginRandomFunc</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">Level</span>
+   <span class="n">Rander</span><span class="p">()</span> <span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">Reader</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">PluginHashFunc</span> <span class="nb">hash</span> <span class="n">function</span>
+<span class="nb">type</span> <span class="n">PluginHashFunc</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">Level</span>
+   <span class="n">GetHash</span><span class="p">(</span><span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Hasher</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">PluginCryptFunc</span> <span class="n">symmetric</span> <span class="n">encryption</span> <span class="ow">and</span> <span class="n">decryption</span> <span class="n">function</span>
+<span class="nb">type</span> <span class="n">PluginCryptFunc</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">Level</span>
+   <span class="n">GetSecretKey</span><span class="p">(</span><span class="n">mode</span> <span class="nb">int</span><span class="p">,</span> <span class="n">pwd</span><span class="p">,</span> <span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">)</span> <span class="p">(</span><span class="n">SecretKey</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">PluginEncKeyFunc</span> <span class="n">asymmetric</span> <span class="n">encryption</span> <span class="n">function</span>
+<span class="nb">type</span> <span class="n">PluginEncKeyFunc</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">Level</span>
+   <span class="o">//</span><span class="n">enter</span> <span class="n">a</span> <span class="n">raw</span> <span class="n">publicKey</span> <span class="ow">and</span> <span class="n">mod</span><span class="p">,</span> <span class="k">return</span> <span class="n">a</span> <span class="n">VerifyKey</span>
+   <span class="o">//</span><span class="n">see</span> <span class="n">GetVerifyKey</span><span class="s1">&#39;s comment for the meaning of a raw publicKey</span>
+   <span class="n">GetEncKey</span><span class="p">(</span><span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">EncKey</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">PluginDecKeyFunc</span> <span class="n">asymmetric</span> <span class="n">decryption</span> <span class="n">function</span>
+<span class="nb">type</span> <span class="n">PluginDecKeyFunc</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">Level</span>
+   <span class="o">//</span><span class="n">enter</span> <span class="n">index</span> <span class="ow">or</span> <span class="n">raw</span> <span class="n">privat</span> <span class="n">key</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">DecKey</span><span class="p">,</span> <span class="n">key</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">persistent</span>
+   <span class="o">//</span> <span class="n">a</span> <span class="n">raw</span> <span class="n">private</span> <span class="n">key</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">big</span> <span class="n">integer</span>
+   <span class="n">GetDecKey</span><span class="p">(</span><span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">DecKey</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+   <span class="o">//</span><span class="n">enter</span> <span class="n">raw</span> <span class="n">private</span> <span class="n">key</span><span class="p">,</span> <span class="k">return</span> <span class="n">index</span><span class="p">,</span> <span class="n">key</span> <span class="n">should</span> <span class="n">be</span> <span class="n">persistent</span>
+   <span class="n">ImportDecKey</span><span class="p">(</span><span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">index</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">err</span> <span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">PluginCreateDecKeyFunc</span> <span class="n">create</span> <span class="n">decryption</span> <span class="n">function</span>
+<span class="nb">type</span> <span class="n">PluginCreateDecKeyFunc</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">Level</span>
+   <span class="o">//</span><span class="n">generate</span> <span class="n">a</span> <span class="n">DecKey</span><span class="p">,</span> <span class="ow">and</span> <span class="k">return</span> <span class="n">index</span> <span class="ow">or</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">raw</span> <span class="n">form</span>
+   <span class="o">//</span><span class="k">if</span> <span class="n">persistent</span> <span class="ow">is</span> <span class="n">true</span><span class="p">,</span> <span class="n">key</span> <span class="n">should</span> <span class="n">be</span> <span class="n">persistent</span> <span class="ow">and</span> <span class="k">return</span> <span class="n">index</span>
+   <span class="o">//</span> <span class="ow">or</span> <span class="n">persistent</span> <span class="ow">is</span> <span class="n">false</span><span class="p">,</span> <span class="n">key</span> <span class="n">should</span> <span class="n">be</span> <span class="n">persistent</span> <span class="ow">and</span> <span class="n">output</span> <span class="n">should</span> <span class="ow">in</span> <span class="n">raw</span> <span class="n">form</span>
+   <span class="n">CreateDecKey</span><span class="p">(</span><span class="n">persistent</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">index</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">k</span> <span class="n">DecKey</span><span class="p">,</span> <span class="n">err</span> <span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h4>2.1.3签名验签接口<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">PluginSignFunc</span> <span class="n">sign</span> <span class="n">function</span>
+<span class="nb">type</span> <span class="n">PluginSignFunc</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">Level</span>
+   <span class="o">//</span><span class="n">enter</span> <span class="n">index</span> <span class="ow">or</span> <span class="n">raw</span> <span class="n">privat</span> <span class="n">key</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">SignKey</span><span class="p">,</span> <span class="n">key</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">persistent</span>
+   <span class="o">//</span> <span class="n">a</span> <span class="n">raw</span> <span class="n">private</span> <span class="n">key</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">big</span> <span class="n">integer</span>
+   <span class="n">GetSignKey</span><span class="p">(</span><span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">SignKey</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+   <span class="o">//</span><span class="n">enter</span> <span class="n">raw</span> <span class="n">private</span> <span class="n">key</span><span class="p">,</span> <span class="k">return</span> <span class="n">index</span><span class="p">,</span> <span class="n">key</span> <span class="n">should</span> <span class="n">be</span> <span class="n">persistent</span>
+   <span class="n">ImportSignKey</span><span class="p">(</span><span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">index</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">err</span> <span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">PluginVerifyFunc</span> <span class="n">verify</span> <span class="n">function</span>
+<span class="nb">type</span> <span class="n">PluginVerifyFunc</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">Level</span>
+   <span class="o">//</span><span class="n">enter</span> <span class="n">a</span> <span class="n">raw</span> <span class="n">publicKey</span> <span class="ow">and</span> <span class="n">mod</span><span class="p">,</span> <span class="k">return</span> <span class="n">a</span> <span class="n">VerifyKey</span>
+   <span class="o">//</span><span class="n">a</span> <span class="n">raw</span> <span class="n">publicKey</span> <span class="n">means</span><span class="p">:</span>
+   <span class="o">//</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">sm2</span><span class="p">,</span> <span class="n">key</span> <span class="ow">is</span> <span class="mi">65</span><span class="nb">bytes</span> <span class="ow">and</span> <span class="ow">in</span> <span class="mh">0x04</span><span class="o">||</span><span class="n">X</span><span class="o">||</span><span class="n">Y</span> <span class="n">form</span><span class="p">,</span> <span class="n">see</span> <span class="n">GMT0009</span><span class="o">-</span><span class="mi">2012</span> <span class="mf">7.1</span>
+   <span class="o">//</span>      <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gmbz</span><span class="o">.</span><span class="n">org</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">viewfile</span><span class="o">/</span><span class="mf">2018011001400692565.</span><span class="n">html</span> <span class="n">may</span> <span class="n">help</span>
+   <span class="o">//</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">ecdsa</span><span class="p">,</span> <span class="n">key</span> <span class="ow">is</span> <span class="ow">in</span> <span class="mh">0x04</span><span class="o">||</span><span class="n">X</span><span class="o">||</span><span class="n">Y</span><span class="o">.</span> <span class="n">The</span> <span class="n">length</span> <span class="n">depends</span> <span class="n">on</span> <span class="n">the</span> <span class="n">curve</span><span class="p">,</span> <span class="k">for</span> <span class="n">example</span><span class="p">,</span>
+   <span class="o">//</span>    <span class="mi">65</span> <span class="nb">bytes</span> <span class="k">for</span> <span class="n">secp256k1</span> <span class="ow">and</span> <span class="mi">133</span> <span class="k">for</span> <span class="n">secp521r1</span><span class="p">,</span> <span class="n">see</span> <span class="mf">2.3.3</span> <span class="ow">in</span> <span class="p">[</span><span class="n">SEC1</span><span class="p">]</span> <span class="n">uncompressed</span> <span class="n">form</span><span class="o">.</span>
+   <span class="o">//</span>    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">rfc</span><span class="o">-</span><span class="n">editor</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">rfc</span><span class="o">/</span><span class="n">rfc5480</span><span class="o">.</span><span class="n">txt</span> <span class="n">may</span> <span class="n">help</span>
+   <span class="o">//</span> <span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">rsa</span><span class="p">,</span> <span class="n">key</span> <span class="ow">is</span> <span class="ow">in</span> <span class="n">PKCS</span><span class="c1">#1 form, see RFC2313 RSAPublicKey</span>
+   <span class="o">//</span>    <span class="n">RSAPublicKey</span> <span class="p">:</span><span class="o">:=</span> <span class="n">SEQUENCE</span> <span class="p">{</span>
+   <span class="o">//</span>            <span class="n">modulus</span> <span class="n">INTEGER</span><span class="p">,</span> <span class="o">--</span> <span class="n">n</span>
+   <span class="o">//</span>            <span class="n">publicExponent</span> <span class="n">INTEGER</span> <span class="o">--</span> <span class="n">e</span> <span class="p">}</span>
+   <span class="o">//</span>    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">rfc</span><span class="o">-</span><span class="n">editor</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">rfc</span><span class="o">/</span><span class="n">rfc2313</span><span class="o">.</span><span class="n">txt</span> <span class="n">may</span> <span class="n">help</span>
+   <span class="n">GetVerifyKey</span><span class="p">(</span><span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">VerifyKey</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">PluginCreateSignFunc</span> <span class="n">create</span> <span class="n">SignKey</span>
+<span class="nb">type</span> <span class="n">PluginCreateSignFunc</span> <span class="n">interface</span> <span class="p">{</span>
+   <span class="n">Level</span>
+   <span class="o">//</span><span class="n">generate</span> <span class="n">a</span> <span class="n">SignKey</span><span class="p">,</span> <span class="ow">and</span> <span class="k">return</span> <span class="n">index</span> <span class="ow">or</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">raw</span> <span class="n">form</span>
+   <span class="o">//</span><span class="k">if</span> <span class="n">persistent</span> <span class="ow">is</span> <span class="n">true</span><span class="p">,</span> <span class="n">key</span> <span class="n">should</span> <span class="n">be</span> <span class="n">persistent</span> <span class="ow">and</span> <span class="k">return</span> <span class="n">index</span>
+   <span class="o">//</span> <span class="ow">or</span> <span class="n">persistent</span> <span class="ow">is</span> <span class="n">false</span><span class="p">,</span> <span class="n">key</span> <span class="n">should</span> <span class="n">be</span> <span class="n">persistent</span> <span class="ow">and</span> <span class="n">output</span> <span class="n">should</span> <span class="ow">in</span> <span class="n">raw</span> <span class="n">form</span>
+   <span class="n">CreateSignKey</span><span class="p">(</span><span class="n">persistent</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">index</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">k</span> <span class="n">SignKey</span><span class="p">,</span> <span class="n">err</span> <span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>PluginSignFunc接口实现密钥的签名功能，该接口的两个关键方法为GetSignKey和ImportSignKey。</p>
+<p>1.GetSignKey：获取签名密钥</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>key参数的内容由插件解释，flato会从私钥索引文件中读取相关内容传递给插件。关于私钥索引文件的约定格式见下文</p></li>
+<li><p>mode表示对应的算法，对于不支持的算法可以返回crypto包中定义的ErrNotSupport错误</p></li>
+<li><p>私钥索引文件的约定格式。所谓私钥索引文件是用于替代私钥文件的占位文件。该文件只有一行文本内容，由三部分组成，三部分间用空格分割，样例如下:</p></li>
+</ul>
+<blockquote>
+<div><p>plugin sm2 3081a40201010430bdb9839c08ee793d1157886a7</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>第一部分</strong> 是固定开头plugin； <strong>第二部分</strong> 是算法名称，为如下字符串之一：sm2、secp256k1、secp256r1、secp256k1recover，flato会解析得到算法类型后用mode参数传递给GetSignKey方法； <strong>第三部分</strong> 是hex编码，flato会将hex解码后的字节数组传递给GetSignKey方法作为key参数。第三部分的具体内容和含义是plugin负责解释的，对flato透明，因此第三部分可以是密钥的名称，索引，密钥本身，加密后的密钥等等。</p>
+<p>2.ImportSignKey：导入签名密钥</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>如果key是crypto.None，则key内容是pkcs8格式私钥，DER编码</p></li>
+<li><p>如果key是crypto中定义的具体算法，则key内容是对应算法的私钥，但是解析方式由插件确定，对flato透明（因此可以是加密格式）</p></li>
+<li><p>返回值index是该密钥导入后的索引，对应GetSignKey接口的第一个参数</p></li>
+<li><p>该方法在falto运行的主流程中不会调用，但是未来可能在ipc中增加相应调用功能，帮助用户完成密钥导入。</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="demo">
+<h3>2.2 接口实现demo以及具体说明<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h4>2.2.1 对外提供函数的实现<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">GetLevelArray</span><span class="p">()</span> <span class="p">[]</span><span class="n">crypto</span><span class="o">.</span><span class="n">Level</span><span class="p">{</span>
+   <span class="k">return</span> <span class="p">[]</span><span class="n">crypto</span><span class="o">.</span><span class="n">Level</span><span class="p">{</span><span class="n">new</span><span class="p">(</span><span class="n">hashManager</span><span class="p">),</span> <span class="n">new</span><span class="p">(</span><span class="n">randManager</span><span class="p">),</span> <span class="n">new</span><span class="p">(</span><span class="n">cryptManager</span><span class="p">),</span> <span class="n">new</span><span class="p">(</span><span class="n">verifyManager</span><span class="p">),</span>
+      <span class="n">new</span><span class="p">(</span><span class="n">signManager</span><span class="p">),</span> <span class="n">new</span><span class="p">(</span><span class="n">signCreator</span><span class="p">),</span> <span class="n">new</span><span class="p">(</span><span class="n">encManager</span><span class="p">),</span> <span class="n">new</span><span class="p">(</span><span class="n">decManager</span><span class="p">),</span> <span class="n">new</span><span class="p">(</span><span class="n">decCreator</span><span class="p">)}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>本例中提供了所有类别的实现，实际插件可以仅仅实现其中的部分。例如如果仅仅需要签名验签，就只需要实现 以下几个就可以了。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">[]</span><span class="n">crypto</span><span class="o">.</span><span class="n">Level</span><span class="p">{</span> <span class="n">new</span><span class="p">(</span><span class="n">verifyManager</span><span class="p">),</span>
+      <span class="n">new</span><span class="p">(</span><span class="n">signManager</span><span class="p">),</span> <span class="n">new</span><span class="p">(</span><span class="n">signCreator</span><span class="p">)</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h4>2.2.2 hash工厂实现<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">priority</span> <span class="n">uint8</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">func</span> <span class="n">getGlobalLevel</span><span class="p">()</span> <span class="n">uint8</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="n">priority</span>
+<span class="p">}</span>
+
+<span class="nb">type</span> <span class="n">hashManager</span> <span class="n">struct</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">hashManager</span><span class="p">)</span> <span class="n">GetLevel</span><span class="p">()</span> <span class="p">([]</span><span class="nb">int</span><span class="p">,</span> <span class="n">uint8</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="n">crypto</span><span class="o">.</span><span class="n">SM3</span><span class="p">},</span> <span class="n">getGlobalLevel</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">hashManager</span><span class="p">)</span> <span class="n">GetHash</span><span class="p">(</span><span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">Hasher</span><span class="p">,</span> <span class="n">error</span><span class="p">){</span>
+   <span class="k">return</span> <span class="n">NewHash</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>1、其中GetLevel 函数返回支持的算法列表以及算法使用的优先级别，默认1最小，255最大。</p>
+<p>2、GetHash 返回并创建一个支持的模式（mode）的 Hash实例。</p>
+</div>
+<div class="section" id="id9">
+<h4>2.2.3 随机数生成器工厂实现<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span> <span class="n">randManager</span> <span class="n">struct</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">randManager</span><span class="p">)</span> <span class="n">GetLevel</span><span class="p">()</span> <span class="p">([]</span><span class="nb">int</span><span class="p">,</span> <span class="n">uint8</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="n">crypto</span><span class="o">.</span><span class="kc">None</span><span class="p">},</span> <span class="n">getGlobalLevel</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">randManager</span><span class="p">)</span> <span class="n">Rander</span><span class="p">()</span> <span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">Reader</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">rd</span> <span class="o">:=</span> <span class="n">NewHRand</span><span class="p">()</span>
+   <span class="k">if</span> <span class="n">rd</span> <span class="o">==</span> <span class="n">nil</span><span class="p">{</span>
+      <span class="k">return</span> <span class="n">nil</span><span class="p">,</span> <span class="n">errors</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;no session open&quot;</span><span class="p">)</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">rd</span><span class="p">,</span> <span class="n">nil</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>1、GetLevel 以及以下所有的GetLevel 说明参考2.2.2</p>
+<p>2、Rander()创建一个随机数生成器</p>
+</div>
+<div class="section" id="id10">
+<h4>2.2.4  签名工厂实现<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>1、签名Key的工厂实现</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span> <span class="n">signManager</span> <span class="n">struct</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">signManager</span><span class="p">)</span> <span class="n">GetLevel</span><span class="p">()</span> <span class="p">([]</span><span class="nb">int</span><span class="p">,</span> <span class="n">uint8</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="n">crypto</span><span class="o">.</span><span class="n">Sm2p256v1</span><span class="p">},</span> <span class="n">getGlobalLevel</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">signManager</span><span class="p">)</span> <span class="n">GetSignKey</span><span class="p">(</span><span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">SignKey</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">nil</span><span class="p">{</span>
+      <span class="o">//</span><span class="k">return</span> <span class="n">nil</span><span class="p">,</span> <span class="n">errors</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;index nil&quot;</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">GenerateHSm2PrivateKey</span><span class="p">(</span><span class="n">nil</span><span class="p">),</span> <span class="n">nil</span>
+   <span class="p">}</span>
+   <span class="k">if</span> <span class="n">mode</span> <span class="o">!=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">Sm2p256v1</span><span class="p">{</span>
+      <span class="k">return</span> <span class="n">nil</span><span class="p">,</span> <span class="n">modeNotSupport</span>
+   <span class="p">}</span>
+   <span class="n">priv</span> <span class="o">:=</span> <span class="n">new</span><span class="p">(</span><span class="n">PrivateKey</span><span class="p">)</span>
+   <span class="n">priv</span><span class="o">.</span><span class="n">Curve</span> <span class="o">=</span> <span class="n">sm2Curve</span><span class="p">()</span>
+   <span class="n">priv</span><span class="o">.</span><span class="n">D</span> <span class="o">=</span> <span class="n">new</span><span class="p">(</span><span class="n">big</span><span class="o">.</span><span class="n">Int</span><span class="p">)</span><span class="o">.</span><span class="n">SetBytes</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+   <span class="n">priv</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="n">priv</span><span class="o">.</span><span class="n">Y</span> <span class="o">=</span> <span class="n">priv</span><span class="o">.</span><span class="n">ScalarBaseMult</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+   <span class="k">return</span> <span class="n">GenerateHSm2PrivateKey</span><span class="p">(</span><span class="n">priv</span><span class="p">),</span> <span class="n">nil</span>
+<span class="p">}</span>
+
+<span class="n">var</span> <span class="n">modeNotSupport</span> <span class="o">=</span> <span class="n">errors</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;mode is not sm2&quot;</span><span class="p">)</span>
+<span class="n">var</span> <span class="n">keyFmtNotSupport</span> <span class="o">=</span> <span class="n">errors</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;key format is not pkcs8 of sm2&quot;</span><span class="p">)</span>
+
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">signManager</span><span class="p">)</span> <span class="n">ImportSignKey</span><span class="p">(</span><span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">error</span><span class="p">){</span>
+   <span class="n">var</span> <span class="n">priv</span> <span class="o">*</span><span class="n">hSm2PrivateKey</span>
+   <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">nil</span><span class="p">{</span>
+      <span class="k">if</span> <span class="n">mode</span> <span class="o">!=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">Sm2p256v1</span><span class="p">{</span>
+         <span class="k">return</span> <span class="n">nil</span><span class="p">,</span> <span class="n">modeNotSupport</span>
+      <span class="p">}</span>
+      <span class="n">priv</span> <span class="o">=</span> <span class="n">GenerateHSm2PrivateKey</span><span class="p">(</span><span class="n">nil</span><span class="p">)</span>
+   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">k</span> <span class="o">:=</span> <span class="n">new</span><span class="p">(</span><span class="n">PrivateKey</span><span class="p">)</span>
+      <span class="n">k</span><span class="o">.</span><span class="n">Curve</span> <span class="o">=</span> <span class="n">sm2Curve</span><span class="p">()</span>
+      <span class="n">k</span><span class="o">.</span><span class="n">D</span> <span class="o">=</span> <span class="n">new</span><span class="p">(</span><span class="n">big</span><span class="o">.</span><span class="n">Int</span><span class="p">)</span><span class="o">.</span><span class="n">SetBytes</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+      <span class="n">k</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="n">k</span><span class="o">.</span><span class="n">Y</span> <span class="o">=</span> <span class="n">k</span><span class="o">.</span><span class="n">ScalarBaseMult</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+      <span class="n">priv</span> <span class="o">=</span> <span class="n">GenerateHSm2PrivateKey</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+   <span class="p">}</span>
+   <span class="k">if</span> <span class="n">priv</span> <span class="o">==</span> <span class="n">nil</span><span class="p">{</span>
+      <span class="k">return</span> <span class="n">nil</span><span class="p">,</span> <span class="n">keyFmtNotSupport</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">MarshalPKCS8PrivateKey</span><span class="p">(</span><span class="n">ToSm2PrivateKey</span><span class="p">(</span><span class="o">&amp;</span><span class="n">priv</span><span class="o">.</span><span class="n">k</span><span class="p">))</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>注意事项：</p>
+<p>1）GetSignKey 的key入参不是pkcs8的私钥，定义如下：</p>
+<p>ecdsa、sm2 为大整数的大端序，例如10000 代表1万，而不是1</p>
+<p>rsa key为pkcs1私钥格式</p>
+<p>2）ImportSignKey 的key入参参照GetSignKey</p>
+<p>ImportSignKey返回 []byte 为</p>
+<p>3）如果key可以导出，则 key为pkcs8模式</p>
+<p>4）如果key不可导出，则 key为实际的信息索引，例如gm0018所规定的 uint 值</p>
+<p>2、签名Key的生成器工厂实现</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span> <span class="n">signCreator</span> <span class="n">struct</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">signCreator</span><span class="p">)</span> <span class="n">GetLevel</span><span class="p">()</span> <span class="p">([]</span><span class="nb">int</span><span class="p">,</span> <span class="n">uint8</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="n">crypto</span><span class="o">.</span><span class="n">Sm2p256v1</span><span class="p">},</span> <span class="n">getGlobalLevel</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">signCreator</span><span class="p">)</span> <span class="n">CreateSignKey</span><span class="p">(</span><span class="n">write</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">index</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">k</span> <span class="n">crypto</span><span class="o">.</span><span class="n">SignKey</span><span class="p">,</span> <span class="n">err</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span> <span class="n">mode</span> <span class="o">!=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">Sm2p256v1</span><span class="p">{</span>
+      <span class="n">err</span> <span class="o">=</span> <span class="n">modeNotSupport</span>
+      <span class="k">return</span>
+   <span class="p">}</span>
+
+   <span class="n">s</span> <span class="o">:=</span> <span class="n">GenerateHSm2PrivateKey</span><span class="p">(</span><span class="n">nil</span><span class="p">)</span>
+   <span class="n">k</span> <span class="o">=</span> <span class="n">s</span>
+   <span class="k">if</span> <span class="n">s</span> <span class="o">!=</span> <span class="n">nil</span><span class="p">{</span>
+      <span class="n">index</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">MarshalPKCS8PrivateKey</span><span class="p">(</span><span class="n">ToSm2PrivateKey</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="o">.</span><span class="n">k</span><span class="p">))</span>
+   <span class="p">}</span>
+   <span class="k">return</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id11">
+<h4>2.2.5 验签工厂实现<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span> <span class="n">verifyManager</span> <span class="n">struct</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">verifyManager</span><span class="p">)</span> <span class="n">GetLevel</span><span class="p">()</span> <span class="p">([]</span><span class="nb">int</span><span class="p">,</span> <span class="n">uint8</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="p">[]</span><span class="nb">int</span><span class="p">{</span><span class="n">crypto</span><span class="o">.</span><span class="n">Sm2p256v1</span><span class="p">},</span> <span class="n">getGlobalLevel</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">func</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span><span class="n">verifyManager</span><span class="p">)</span> <span class="n">GetVerifyKey</span><span class="p">(</span><span class="n">key</span> <span class="p">[]</span><span class="n">byte</span><span class="p">,</span> <span class="n">mode</span> <span class="nb">int</span><span class="p">)</span> <span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">VerifyKey</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span> <span class="n">mode</span> <span class="o">!=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">Sm2p256v1</span><span class="p">{</span>
+      <span class="k">return</span> <span class="n">nil</span><span class="p">,</span> <span class="n">modeNotSupport</span>
+   <span class="p">}</span>
+   <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">:=</span> <span class="n">elliptic</span><span class="o">.</span><span class="n">Unmarshal</span><span class="p">(</span><span class="n">sm2Curve</span><span class="p">(),</span> <span class="n">key</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">nil</span> <span class="o">||</span> <span class="n">y</span> <span class="o">==</span> <span class="n">nil</span><span class="p">{</span>
+      <span class="k">return</span> <span class="n">nil</span><span class="p">,</span> <span class="n">keyFmtNotSupport</span>
+   <span class="p">}</span>
+   <span class="n">pub</span> <span class="o">:=</span> <span class="n">new</span><span class="p">(</span><span class="n">hSm2PublicKey</span><span class="p">)</span>
+   <span class="n">FromSm2PublickKey</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PublicKey</span><span class="p">{</span><span class="n">sm2Curve</span><span class="p">(),</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">},</span> <span class="o">&amp;</span><span class="n">pub</span><span class="o">.</span><span class="n">k</span><span class="p">)</span>
+   <span class="k">return</span> <span class="n">pub</span><span class="p">,</span> <span class="n">nil</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>1、GetVerifyKey的入参key 定义如下：</p>
+<p>ecdsa、sm2为公钥点x，y 的椭圆曲线序列化 elliptic.Unmarshal(）</p>
+<p>rsa 为pkcs1 公钥格式</p>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>3.测试说明<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>3.1 插件自测<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>应针对插件所支持的算法提供测试用例，例如demo实现中对于sm3的测试，可以参考如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var msgHash = []string{
+   &quot;4d2d682913a35ea55a75361a179b8ebd30633326a362a7c08213293de095a669ccb7bfb70e96777f90ef95647be7523e&quot;,
+   &quot;a49f3ef47efd3b1006faf58114888ecce3d242a8300392e3d866c4515440b98e&quot;,
+   &quot;38d679db0a70e3cdf78f0fa3c993550ef1b9f9d63f389e678577e27150e24251d26ba6152acf20023068fbb7c205e486&quot;,
+   &quot;995b376dcbbd2382ae8661e9c4ab7b1f7668332153c38f38385683aa60ed8539&quot;,
+   &quot;67adfca17d4612d17631dc71e4b928b8e7524cec141fe7c8a9df8dd1ca334fe86fcf9e99ff6dd07957cf927019dfecdc&quot;,
+   &quot;a5be8103079838d17ccf21dc5bd46d6de828e3c29c0325652a120c99ed4f1974&quot;,
+   &quot;48475fe720fc174d926a137707c789cab5250b82a848bf5bbf63a267196b7b493ef63d118e5752449d50273f1665ba3b&quot;,
+   &quot;f32afbaf007df2d354ed65ed486e7becf3b935b0eb2c3ec9350acbc56c5a1b5a&quot;,
+   &quot;959b84b08c29c1174d794b9f936c4f221b22a98c92a04cac57246043dfda5a0bdaae4e164d7eaf16a6c30b6ddb8c01d4&quot;,
+   &quot;9abf09f207fc8294f59b0657520be0cdc58d61ce2d51bf83d59ce4009b93163b&quot;,
+}
+
+
+func TestHash(t *testing.T) {
+   hm := new(hashManager)
+   for i := 0; i &lt; len(msgHash); i++{
+      h, err := hm.GetHash(crypto.SM3)
+      if err != nil{
+         t.Fatal(err)
+      }
+      h.Write(gets(hex.DecodeString(msgHash[i])))
+      i++
+      if !bytes.Equal(h.Sum(nil), gets(hex.DecodeString(msgHash[i]))){
+         t.Fatal(i)
+      }
+   }
+}
+</pre></div>
+</div>
+<p>其它签名验签的方法测试用例也要完整覆盖到，这样发现的错误可以以最小的成本解决。</p>
+</div>
+<div class="section" id="hyperchain">
+<h3>3.2 hyperchain 接入测试<a class="headerlink" href="#hyperchain" title="Permalink to this headline">¶</a></h3>
+<p>hyperchain 接入插件，需要修改hyperchain 配置文件。为使外部插件生效，如果为优先级模式，需插件的GetLevel为所有插件最大；指定插件模式，需指定当前插件。具体可参照密码机中间件的设计文档。</p>
+</div>
+<div class="section" id="id14">
+<h3>3.3加载成功关键日志<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>example:</p>
+<p>&gt; NOTI [2021-02-22T15:01:38.772] [identitymanager] plugin/engine_external.go:84 start load external crypto engine: <strong>plugin_ceb.so</strong></p>
+<p>&gt; NOTI [2021-02-22T15:01:38.834] [identitymanager] plugin/engine_external.go:100 crypto engine <strong>[plugin_ceb.so]</strong> have  <strong>1</strong> function: <strong>[sign]</strong></p>
+<p>&gt; NOTI [2021-02-22T15:01:38.834] [identitymanager] plugin/external_algo_select.go:105 crypto engine: external function [SignGet] for Sm2p256v1 from plugin_ceb.so is loading…</p>
+<p>&gt; NOTI [2021-02-22T15:01:38.834] [identitymanager] plugin/engine.go:406 loading a external crypto engine (plugin_ceb.so) finish</p>
+<p>&gt; NOTI [2021-02-22T15:01:38.834] [identitymanager] plugin/engine.go:409 external plugin loading info:</p>
+<p>&gt; <strong>[SignGet]       : Sm2p256v1 -&gt; plugin_ceb.so</strong></p>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>4.注意事项<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<p>1、具体实现的注意事项请参照2.2章节</p>
+<p>2、由于密码机中间件的接口实现与测试涉及部分硬件环境，这给程序的测试带来了一定的难度，因此插件内部实现的自测就显得十分重要。</p>
+<p>3、插件名要以plugin为前缀，例如: go build - <strong>trimpath</strong> -buildmode=plugin -o plugin_pcie.so plug.go</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

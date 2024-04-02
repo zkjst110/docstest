@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Operators&amp;Funtions 使用说明 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Operators&amp;Funtions 使用说明</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/VM Related User Manual/KVSQL/Operators Funtions User Manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="operators-funtions">
+<span id="operators-funtions-user-manual"></span><h1>Operators&amp;Funtions 使用说明<a class="headerlink" href="#operators-funtions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>说明<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>KVSQL是一款SQL合约执行引擎，可以运行符合范围的SQL语句，目标支持了部分常见运算符以及函数功能。以及在区块链的特殊场景下，并非所有功能都能够正常使用，部分函数被KVSQL限制以保障SQL智能合约执行的沙箱环境的安全。</p>
+<p>限制功能主要包括如下：</p>
+<ul class="simple">
+<li><p>随机数</p></li>
+<li><p>部分浮点数函数</p></li>
+</ul>
+</div>
+<div class="section" id="operators">
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&amp;</p></td>
+<td><p>Bitwise AND</p></td>
+</tr>
+<tr class="row-odd"><td><p>&gt;</p></td>
+<td><p>Greater than operator</p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;&gt;</p></td>
+<td><p>Right shift</p></td>
+</tr>
+<tr class="row-odd"><td><p>&gt;=</p></td>
+<td><p>Greater than or equal operator</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;</p></td>
+<td><p>Less than operator</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;&gt;,!=</p></td>
+<td><p>Not equal operator</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;&lt;</p></td>
+<td><p>Left shift</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;=</p></td>
+<td><p>Less than or equal operator</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;=&gt;</p></td>
+<td><p>NULL-safe equal to operator</p></td>
+</tr>
+<tr class="row-odd"><td><p>%,MOD</p></td>
+<td><p>Modulo operator</p></td>
+</tr>
+<tr class="row-even"><td><p>*</p></td>
+<td><p>Multiplication operator</p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Addition operator</p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Minus operator</p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Change the sign of the argument</p></td>
+</tr>
+<tr class="row-even"><td><p>/</p></td>
+<td><p>Division operator</p></td>
+</tr>
+<tr class="row-odd"><td><p>=</p></td>
+<td><p>Assign a value (as part of aSETstatement, or as
+part of theSETclause in aUPDATEstatement)</p></td>
+</tr>
+<tr class="row-even"><td><p>=</p></td>
+<td><p>Equal operator</p></td>
+</tr>
+<tr class="row-odd"><td><p>^</p></td>
+<td><p>Bitwise XOR</p></td>
+</tr>
+<tr class="row-even"><td><p>AND, &amp;&amp;</p></td>
+<td><p>Logical AND</p></td>
+</tr>
+<tr class="row-odd"><td><p>BETWEEN … AND …</p></td>
+<td><p>Whether a value is within a range of values</p></td>
+</tr>
+<tr class="row-even"><td><p>BINARY</p></td>
+<td><p>Cast a string to a binary string</p></td>
+</tr>
+<tr class="row-odd"><td><p>CASE</p></td>
+<td><p>Case operator</p></td>
+</tr>
+<tr class="row-even"><td><p>DIV</p></td>
+<td><p>Integer division</p></td>
+</tr>
+<tr class="row-odd"><td><p>IN()</p></td>
+<td><p>Whether a value is within a set of values</p></td>
+</tr>
+<tr class="row-even"><td><p>IS</p></td>
+<td><p>Test a value against a boolean</p></td>
+</tr>
+<tr class="row-odd"><td><p>IS NOT</p></td>
+<td><p>Test a value against a boolean</p></td>
+</tr>
+<tr class="row-even"><td><p>IS NOT NULL</p></td>
+<td><p>NOT NULL value test</p></td>
+</tr>
+<tr class="row-odd"><td><p>IS NULL</p></td>
+<td><p>NULL value test</p></td>
+</tr>
+<tr class="row-even"><td><p>LIKE</p></td>
+<td><p>Simple pattern matching</p></td>
+</tr>
+<tr class="row-odd"><td><p>NOT,!</p></td>
+<td><p>Negates value</p></td>
+</tr>
+<tr class="row-even"><td><p>NOT BETWEEN …
+AND …</p></td>
+<td><p>Whether a value is not within a range of values</p></td>
+</tr>
+<tr class="row-odd"><td><p>NOT IN()</p></td>
+<td><p>Whether a value is not within a set of values</p></td>
+</tr>
+<tr class="row-even"><td><p>NOT LIKE</p></td>
+<td><p>Negation of simple pattern matching</p></td>
+</tr>
+<tr class="row-odd"><td><p>NOT REGEXP</p></td>
+<td><p>Negation of REGEXP</p></td>
+</tr>
+<tr class="row-even"><td><p>OR,</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>REGEXP</p></td>
+<td><p>Whether string matches regular expression</p></td>
+</tr>
+<tr class="row-even"><td><p>RLIKE</p></td>
+<td><p>Whether string matches regular expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>XOR</p></td>
+<td><p>Logical XOR</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>~</p></td>
+<td><p>Bitwise inversion</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="flow-control-functions">
+<h2>Flow Control Functions<a class="headerlink" href="#flow-control-functions" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CASE</p></td>
+<td><p>Case operator</p></td>
+</tr>
+<tr class="row-odd"><td><p>IF()</p></td>
+<td><p>If/else construct</p></td>
+</tr>
+<tr class="row-even"><td><p>IFNULL()</p></td>
+<td><p>Null if/else construct</p></td>
+</tr>
+<tr class="row-odd"><td><p>NULLIF()</p></td>
+<td><p>Return NULL if expr1 = expr2</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>CASE value WHEN compare_value THEN result [WHEN compare_value THEN result …] [ELSE result] END</p>
+</div></blockquote>
+<p>需要注意的是，以上四种语句中的结果表达式的类型不同时，会将所有的表达式返回类型统一。这一点与mySQL存在差异。</p>
+</div>
+<div class="section" id="numeric-functions-and-operators">
+<h2>Numeric Functions and Operators<a class="headerlink" href="#numeric-functions-and-operators" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>%,MOD</p></td>
+<td><p>Modulo operator</p></td>
+</tr>
+<tr class="row-odd"><td><p>*</p></td>
+<td><p>Multiplication operator</p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Addition operator</p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Minus operator</p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Change the sign of the argument</p></td>
+</tr>
+<tr class="row-odd"><td><p>/</p></td>
+<td><p>Division operator</p></td>
+</tr>
+<tr class="row-even"><td><p>ABS()</p></td>
+<td><p>Return the absolute value</p></td>
+</tr>
+<tr class="row-odd"><td><p>CEIL()</p></td>
+<td><p>Return the smallest integer value not less than the argument</p></td>
+</tr>
+<tr class="row-even"><td><p>CEILING()</p></td>
+<td><p>Return the smallest integer value not less than the argument</p></td>
+</tr>
+<tr class="row-odd"><td><p>CONV()</p></td>
+<td><p>Convert numbers between different number bases</p></td>
+</tr>
+<tr class="row-even"><td><p>CRC32()</p></td>
+<td><p>Compute a cyclic redundancy check value</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEGREES()</p></td>
+<td><p>Convert radians to degrees</p></td>
+</tr>
+<tr class="row-even"><td><p>DIV</p></td>
+<td><p>Integer division</p></td>
+</tr>
+<tr class="row-odd"><td><p>FLOOR()</p></td>
+<td><p>Return the largest integer value not greater than the argument</p></td>
+</tr>
+<tr class="row-even"><td><p>MOD()</p></td>
+<td><p>Return the remainder</p></td>
+</tr>
+<tr class="row-odd"><td><p>PI()</p></td>
+<td><p>Return the value of pi</p></td>
+</tr>
+<tr class="row-even"><td><p>RADIANS()</p></td>
+<td><p>Return argument converted to radians</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROUND()</p></td>
+<td><p>Round the argument</p></td>
+</tr>
+<tr class="row-even"><td><p>SIGN()</p></td>
+<td><p>Return the sign of the argument</p></td>
+</tr>
+<tr class="row-odd"><td><p>SQRT()</p></td>
+<td><p>Return the square root of the argument</p></td>
+</tr>
+<tr class="row-even"><td><p>TRUNCATE()</p></td>
+<td><p>Truncate to specified number of decimal places</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="date-and-time-functions">
+<h2>Date and Time Functions<a class="headerlink" href="#date-and-time-functions" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CURDATE()</p></td>
+<td><p>Return the current date</p></td>
+</tr>
+<tr class="row-odd"><td><p>CURRENT_DATE(),CURRENT_DATE</p></td>
+<td><p>Synonyms for CURDATE()</p></td>
+</tr>
+<tr class="row-even"><td><p>CURRENT_TIME(),CURRENT_TIME</p></td>
+<td><p>Synonyms for CURTIME()</p></td>
+</tr>
+<tr class="row-odd"><td><p>CURRE
+NT_TIMESTAMP(),CURRENT_TIMESTAMP</p></td>
+<td><p>Synonyms for NOW()</p></td>
+</tr>
+<tr class="row-even"><td><p>CURTIME()</p></td>
+<td><p>Return the current time</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTC_DATE()</p></td>
+<td><p>Return the current UTC date</p></td>
+</tr>
+<tr class="row-even"><td><p>UTC_TIME()</p></td>
+<td><p>Return the current UTC time</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTC_TIMESTAMP()</p></td>
+<td><p>Return the current UTC date and
+time</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="string-functions-and-operators">
+<h2>String Functions and Operators<a class="headerlink" href="#string-functions-and-operators" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CONCAT()</p></td>
+<td><p>Return concatenated string</p></td>
+</tr>
+<tr class="row-odd"><td><p>FORMAT()</p></td>
+<td><p>Return a number formatted to specified number of
+decimal places</p></td>
+</tr>
+<tr class="row-even"><td><p>LIKE</p></td>
+<td><p>Simple pattern matching</p></td>
+</tr>
+<tr class="row-odd"><td><p>LOWER()</p></td>
+<td><p>Return the argument in lowercase</p></td>
+</tr>
+<tr class="row-even"><td><p>NOT LIKE</p></td>
+<td><p>Negation of simple pattern matching</p></td>
+</tr>
+<tr class="row-odd"><td><p>NOT REGEXP</p></td>
+<td><p>Negation of REGEXP</p></td>
+</tr>
+<tr class="row-even"><td><p>REGEXP</p></td>
+<td><p>Whether string matches regular expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>RLIKE</p></td>
+<td><p>Whether string matches regular expression</p></td>
+</tr>
+<tr class="row-even"><td><p>TRIM()</p></td>
+<td><p>Remove leading and trailing spaces</p></td>
+</tr>
+<tr class="row-odd"><td><p>UPPER()</p></td>
+<td><p>Convert to uppercase</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cast-functions-and-operators">
+<h2>Cast Functions and Operators<a class="headerlink" href="#cast-functions-and-operators" title="Permalink to this headline">¶</a></h2>
+<p>不支持json类型的转换与被转换；不支持指定字符集</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BINARY</p></td>
+<td><p>Cast a string to a binary string</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAST()</p></td>
+<td><p>Cast a value as a certain type</p></td>
+</tr>
+<tr class="row-even"><td><p>CONVERT()</p></td>
+<td><p>Cast a value as a certain type</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bit-functions-and-operators">
+<h2><strong>Bit Functions and Operators</strong><a class="headerlink" href="#bit-functions-and-operators" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&amp;</p></td>
+<td><p>Bitwise AND</p></td>
+</tr>
+<tr class="row-odd"><td><p>&gt;&gt;</p></td>
+<td><p>Right shift</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;&lt;</p></td>
+<td><p>Left shift</p></td>
+</tr>
+<tr class="row-odd"><td><p>^</p></td>
+<td><p>Bitwise XOR</p></td>
+</tr>
+<tr class="row-even"><td><p>BIT_COUNT()</p></td>
+<td><p>Return the number of bits that are set</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>~</p></td>
+<td><p>Bitwise inversion</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="aggregate-functions">
+<h2>Aggregate Functions<a class="headerlink" href="#aggregate-functions" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AVG()</p></td>
+<td><p>Return the average value of the argument</p></td>
+</tr>
+<tr class="row-odd"><td><p>BIT_AND()</p></td>
+<td><p>Return bitwise AND</p></td>
+</tr>
+<tr class="row-even"><td><p>BIT_OR()</p></td>
+<td><p>Return bitwise OR</p></td>
+</tr>
+<tr class="row-odd"><td><p>BIT_XOR()</p></td>
+<td><p>Return bitwise XOR</p></td>
+</tr>
+<tr class="row-even"><td><p>COUNT()</p></td>
+<td><p>Return a count of the number of rows returned</p></td>
+</tr>
+<tr class="row-odd"><td><p>COUNT(DISTINCT)</p></td>
+<td><p>Return the count of a number of different values</p></td>
+</tr>
+<tr class="row-even"><td><p>GROUP_CONCAT()</p></td>
+<td><p>Return a concatenated string</p></td>
+</tr>
+<tr class="row-odd"><td><p>MAX()</p></td>
+<td><p>Return the maximum value</p></td>
+</tr>
+<tr class="row-even"><td><p>MIN()</p></td>
+<td><p>Return the minimum value</p></td>
+</tr>
+<tr class="row-odd"><td><p>STDDEV_POP()</p></td>
+<td><p>Return the population standard deviation</p></td>
+</tr>
+<tr class="row-even"><td><p>STDDEV_SAMP()</p></td>
+<td><p>Return the sample standard deviation</p></td>
+</tr>
+<tr class="row-odd"><td><p>SUM()</p></td>
+<td><p>Return the sum</p></td>
+</tr>
+<tr class="row-even"><td><p>VAR_POP()</p></td>
+<td><p>Return the population standard variance</p></td>
+</tr>
+<tr class="row-odd"><td><p>VAR_SAMP()</p></td>
+<td><p>Return the sample variance</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

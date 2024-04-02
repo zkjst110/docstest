@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>证书上链使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>证书上链使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Password related/On the certificate chain.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="on-the-certificate-chain">
+<span id="id1"></span><h1>证书上链使用手册<a class="headerlink" href="#on-the-certificate-chain" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. 引言<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1.1 编写目的<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>本文档提供hyperchain中证书链上状态修改的操作指南，作为证书上链的使用说明。以下所述证书均为平台管理的证书，crl外部证书仅适用于本使用手册部分内容（2.4）。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>2. 证书上链管理概述<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>证书上链管理用于节点间同步变更证书的使用状态。如下图所示，证书生命周期包括四个状态：可用，冻结，吊销和过期。</p>
+<p>证书是否过期由证书字段在生成证书时预先设定，已过期的证书不可进行任何操作。当可用证书通过revoke操作转换为吊销态后状态将无法恢复，而冻结状态与可用态之间可以随意转换。不可用状态下的证书将无法通过安全验证，因此在配置证书时需确认该证书在链上的状态，对此提供了check操作来方便检查。</p>
+<p><img alt="image0" src="../_images/cert_on_chain1.png" /></p>
+<div class="section" id="id5">
+<h3>2.1 <strong>证书吊销</strong><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>节点证书的吊销：ecert/rcert</p></li>
+</ol>
+<p>节点证书的吊销 <strong>不提供单独的用户接口</strong> ，但将作为节点删除的附加操作，即当执行删除节点的操作时，被删节点的证书也将自动转为吊销状态。该被删节点如需重新启动，应更换节点目录下的相关证书。</p>
+<ol class="arabic simple" start="2">
+<li><p>sdk证书的吊销</p></li>
+</ol>
+<p>使用sdk接口发起一笔 <strong>调用bvm合约的普通交易</strong> ，完成证书的吊销操作。当发起操作的角色为管理员时，无需提供sdk证书私钥的签名；若为普通角色则需要通过验签证明自己为该证书私钥的所有者。</p>
+</div>
+<div class="section" id="sdk">
+<h3>2.2 sdk证书冻结与恢复<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>sdk证书冻结</p></li>
+</ol>
+<p>只能将目前处于可用状态的证书修改为冻结状态。同样地，与sdk证书吊销类似，使用sdk接口发起一笔 <strong>调用bvm合约的普通交易</strong> ，完成证书的吊销操作。当发起操作的角色为管理员时，无需提供sdk证书私钥的签名；若为普通角色则需要通过验签证明自己为该证书私钥的所有者。</p>
+<ol class="arabic simple" start="2">
+<li><p>sdk证书恢复</p></li>
+</ol>
+<p>恢复冻结状态的证书同样需要发起一笔交易。具体步骤与sdk证书冻结类似，不再赘述。</p>
+</div>
+<div class="section" id="id6">
+<h3>2.3 证书替换<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>节点证书替换：ecert/rcert</p></li>
+</ol>
+<p>实现节点证书的不停机替换包括以下两步。在正常执行本操作后，原证书将被注销，建议在执行成功后通过2.4的方式检查原证书状态来确保替换正常完成。</p>
+<p>step1 <strong>手动替换</strong> 节点主机hyperchain目录( ./namespaces/global/certs/certs)下的全部文件</p>
+<p>step2 通过 <strong>rpc命令</strong> 使节点的证书修改生效</p>
+<p><strong>注：</strong></p>
+<p>新文件可通过certgen工具手动生成</p>
+<p>若step1中替换后的证书存在问题，将在step2的rpc命令返回中体现。</p>
+<p>当仅完成step1时对节点实际使用证书并未产生影响，但若在此时节点发生重启，节点将直接使用替换后的证书同时原证书并未被吊销。</p>
+<ol class="arabic simple" start="2">
+<li><p>sdk证书替换</p></li>
+</ol>
+<p><strong>手动替换</strong> sdk证书并在sdk配置中修改指定的证书即可</p>
+</div>
+<div class="section" id="id7">
+<h3>2.4 证书状态检查<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>使用sdk接口发起一笔 <strong>调用bvm合约的普通交易</strong> ，返回的回执包含指定证书的状态描述。发起交易时需将证书内容作为参数来指定待查询的证书。此功能可查询crl证书状态。</p>
+</div>
+</div>
+<div class="section" id="litesdk">
+<h2>3. litesdk接口说明<a class="headerlink" href="#litesdk" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>3.1 sdk证书吊销接口<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/**
+ * create revoke CertOperation to revoke cert.
+ *
+ * @param cert the der cert wait to revoke
+ * @param priv the private key of this cert
+ * @return {@link CertOperation.CertBuilder}
+ */
+public CertOperation.CertBuilder revoke(String cert, String priv)
+
+//使用示例，若为管理员用户，priv字段可填写任意内容
+public void testCertOperationRevoke() throws Exception {
+        String ecert = &quot;-----BEGIN CERTIFICATE-----\n&quot; +
+                &quot;MIICODCCAeSgAwIBAgIBATAKBggqhkjOPQQDAjB0MQkwBwYDVQQIEwAxCTAHBgNV\n&quot; +
+                &quot;BAcTADEJMAcGA1UECRMAMQkwBwYDVQQREwAxDjAMBgNVBAoTBWZsYXRvMQkwBwYD\n&quot; +
+                &quot;VQQLEwAxDjAMBgNVBAMTBW5vZGUxMQswCQYDVQQGEwJaSDEOMAwGA1UEKhMFZWNl\n&quot; +
+                &quot;cnQwIBcNMjAwNTIxMDQyNTQ0WhgPMjEyMDA0MjcwNTI1NDRaMHQxCTAHBgNVBAgT\n&quot; +
+                &quot;ADEJMAcGA1UEBxMAMQkwBwYDVQQJEwAxCTAHBgNVBBETADEOMAwGA1UEChMFZmxh\n&quot; +
+                &quot;dG8xCTAHBgNVBAsTADEOMAwGA1UEAxMFbm9kZTExCzAJBgNVBAYTAlpIMQ4wDAYD\n&quot; +
+                &quot;VQQqEwVlY2VydDBWMBAGByqGSM49AgEGBSuBBAAKA0IABDoBjgQsvY4xhyIy3aWh\n&quot; +
+                &quot;4HLOTTY6te1VbmZaH5EZnKzqjU1f436bVsfi9HLE3/MCeZD6ISe1U5giM5NuwF6T\n&quot; +
+                &quot;ZEOjaDBmMA4GA1UdDwEB/wQEAwIChDAmBgNVHSUEHzAdBggrBgEFBQcDAgYIKwYB\n&quot; +
+                &quot;BQUHAwEGAioDBgOBCwEwDwYDVR0TAQH/BAUwAwEB/zANBgNVHQ4EBgQEAQIDBDAM\n&quot; +
+                &quot;BgMqVgEEBWVjZXJ0MAoGCCqGSM49BAMCA0IAuVuDqguvjPPveimWruESBYqMJ1qq\n&quot; +
+                &quot;ryhXiMhlYwzH1FgUz0TcayuY+4KebRhFhb14ZDXBBPXcn9CYdtbbSxXTogE=\n&quot; +
+                &quot;-----END CERTIFICATE-----&quot;;
+        String priv = &quot;-----BEGIN EC PRIVATE KEY-----\n&quot; +
+                &quot;MHQCAQEEIFO8E/zYebPTI++gmHNYZEUetgn3DychVadgTUMIJX3VoAcGBSuBBAAK\n&quot; +
+                &quot;oUQDQgAEOgGOBCy9jjGHIjLdpaHgcs5NNjq17VVuZlofkRmcrOqNTV/jfptWx+L0\n&quot; +
+                &quot;csTf8wJ5kPohJ7VTmCIzk27AXpNkQw==\n&quot; +
+                &quot;-----END EC PRIVATE KEY-----&quot;;
+
+        Account ac = accountService.fromAccountJson(accountJsons[5]);
+        Transaction transaction = new Transaction.
+                BVMBuilder(ac.getAddress()).
+                invoke(new CertOperation.CertBuilder().revoke(
+                        ecert, priv).build()).
+                build();
+        transaction.sign(ac);
+        ReceiptResponse receiptResponse = contractService.invoke(transaction).send().polling();
+        Result result = Decoder.decodeBVM(receiptResponse.getRet());
+        System.out.println(result.toString());
+        Assert.assertTrue(result.isSuccess());
+        Assert.assertEquals(&quot;&quot;, result.getErr());
+   }
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id9">
+<h3>3.2 sdk证书冻结与恢复接口<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> <span class="n">create</span> <span class="n">freeze</span> <span class="n">CertOperation</span> <span class="n">to</span> <span class="n">freeze</span> <span class="n">cert</span><span class="o">.</span>
+ <span class="o">*</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="n">cert</span> <span class="n">the</span> <span class="n">der</span> <span class="n">cert</span> <span class="n">wait</span> <span class="n">to</span> <span class="n">check</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="n">priv</span> <span class="n">the</span> <span class="n">private</span> <span class="n">key</span> <span class="n">of</span> <span class="n">this</span> <span class="n">cert</span>
+ <span class="o">*</span> <span class="nd">@return</span> <span class="p">{</span><span class="nd">@link</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span><span class="p">}</span>
+ <span class="o">*/</span>
+ <span class="n">public</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span> <span class="n">freeze</span><span class="p">(</span><span class="n">String</span> <span class="n">cert</span><span class="p">,</span> <span class="n">String</span> <span class="n">priv</span><span class="p">)</span>
+
+<span class="o">/**</span>
+ <span class="o">*</span> <span class="n">create</span> <span class="n">unfreeze</span> <span class="n">CertOperation</span> <span class="n">to</span> <span class="n">unfreeze</span> <span class="n">cert</span><span class="o">.</span>
+ <span class="o">*</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="n">cert</span> <span class="n">the</span> <span class="n">der</span> <span class="n">cert</span> <span class="n">wait</span> <span class="n">to</span> <span class="n">check</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="n">priv</span> <span class="n">the</span> <span class="n">private</span> <span class="n">key</span> <span class="n">of</span> <span class="n">this</span> <span class="n">cert</span>
+ <span class="o">*</span> <span class="nd">@return</span> <span class="p">{</span><span class="nd">@link</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span><span class="p">}</span>
+ <span class="o">*/</span>
+ <span class="n">public</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span> <span class="n">unfreeze</span><span class="p">(</span><span class="n">String</span> <span class="n">cert</span><span class="p">,</span> <span class="n">String</span> <span class="n">priv</span><span class="p">)</span>
+
+<span class="o">//</span><span class="n">使用示例</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">testCertOperationFreeze</span><span class="p">()</span> <span class="n">throws</span> <span class="ne">Exception</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">sdkcert</span> <span class="o">=</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;MIICFDCCAbqgAwIBAgIIbGmp7HEb95UwCgYIKoEcz1UBg3UwPTELMAkGA1UEBhMC</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;Q04xEzARBgNVBAoTCkh5cGVyY2hhaW4xDjAMBgNVBAMTBW5vZGUxMQkwBwYDVQQq</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;EwAwHhcNMjEwMzEwMDAwMDAwWhcNMjUwMzEwMDAwMDAwWjA/MQswCQYDVQQGEwJD</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;TjEOMAwGA1UEChMFZmxhdG8xDjAMBgNVBAMTBW5vZGUxMRAwDgYDVQQqEwdzZGtj</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;ZXJ0MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1hoClj022lTxWSUCw0Ht4PT+dr8/</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;n0BQLeuQVBCnZWKNntBg6cMyVSbMVtcyhAyB8s4+tvzS5bIOqYjLqdO18KOBpDCB</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;oTAOBgNVHQ8BAf8EBAMCAe4wMQYDVR0lBCowKAYIKwYBBQUHAwIGCCsGAQUFBwMB</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;BggrBgEFBQcDAwYIKwYBBQUHAwQwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUEo46</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;euyltTBBzeqlUhbr7DhPVvowHwYDVR0jBBgwFoAUmrWTObRDvo/F/zj5lGV+tYEr</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;LbswDgYDKlYBBAdzZGtjZXJ0MAoGCCqBHM9VAYN1A0gAMEUCIHnScuepuomkq2OT</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;prJL44lxsSkc4Zhpq6c+IpX5cbmZAiEA6l2BMWHuDrVudJ2COYWo8E42mvn7lLPD</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;mpMkfrWt5ek=</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;-----END CERTIFICATE-----</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">priv</span> <span class="o">=</span> <span class="s2">&quot;-----BEGIN EC PRIVATE KEY-----</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;MHQCAQEEICKWeh1X4x1cZI+nfsAw5VXDgLPspN9vixkTlOTSllknoAcGBSuBBAAK</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;oUQDQgAE1hoClj022lTxWSUCw0Ht4PT+dr8/n0BQLeuQVBCnZWKNntBg6cMyVSbM</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;VtcyhAyB8s4+tvzS5bIOqYjLqdO18A==</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;-----END EC PRIVATE KEY-----</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+
+        <span class="n">Account</span> <span class="n">ac</span> <span class="o">=</span> <span class="n">accountService</span><span class="o">.</span><span class="n">fromAccountJson</span><span class="p">(</span><span class="n">accountJsons</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+        <span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span>
+                <span class="n">BVMBuilder</span><span class="p">(</span><span class="n">ac</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span>
+                <span class="n">invoke</span><span class="p">(</span><span class="n">new</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">freeze</span><span class="p">(</span><span class="n">sdkcert</span><span class="p">,</span> <span class="n">priv</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">())</span><span class="o">.</span>
+                <span class="n">build</span><span class="p">();</span>
+        <span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">ac</span><span class="p">);</span>
+        <span class="n">ReceiptResponse</span> <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">new</span> <span class="n">String</span><span class="p">(</span><span class="n">ByteUtil</span><span class="o">.</span><span class="n">fromHex</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">())));</span>
+        <span class="n">Result</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeBVM</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+        <span class="n">Assert</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">isSuccess</span><span class="p">());</span>
+        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">getErr</span><span class="p">());</span>
+
+        <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span>
+                <span class="n">BVMBuilder</span><span class="p">(</span><span class="n">ac</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span>
+                <span class="n">invoke</span><span class="p">(</span><span class="n">new</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">sdkcert</span><span class="o">.</span><span class="n">getBytes</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">())</span><span class="o">.</span>
+                <span class="n">build</span><span class="p">();</span>
+        <span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">ac</span><span class="p">);</span>
+        <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">new</span> <span class="n">String</span><span class="p">(</span><span class="n">ByteUtil</span><span class="o">.</span><span class="n">fromHex</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">())));</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeBVM</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+        <span class="n">Assert</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">isSuccess</span><span class="p">());</span>
+        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="s2">&quot;this cert is freezing&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">getErr</span><span class="p">());</span>
+
+        <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span>
+                <span class="n">BVMBuilder</span><span class="p">(</span><span class="n">ac</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span>
+                <span class="n">invoke</span><span class="p">(</span><span class="n">new</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">unfreeze</span><span class="p">(</span><span class="n">sdkcert</span><span class="p">,</span> <span class="n">priv</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">())</span><span class="o">.</span>
+                <span class="n">build</span><span class="p">();</span>
+        <span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">ac</span><span class="p">);</span>
+        <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">new</span> <span class="n">String</span><span class="p">(</span><span class="n">ByteUtil</span><span class="o">.</span><span class="n">fromHex</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">())));</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeBVM</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+        <span class="n">Assert</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">isSuccess</span><span class="p">());</span>
+        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">getErr</span><span class="p">());</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="gosdk">
+<h3>3.3 节点证书替换接口(仅gosdk开放)<a class="headerlink" href="#gosdk" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/*输入值：节点hostname
+ *返回值：替换交易的hash值，可通过查询交易信息检查操作是否执行成功
+ */
+func (rpc *RPC) ReplaceNodeCerts(hostname string) (string, StdError)
+
+//step2使用示例 (step1已完成)
+func TestRPC_ReplaceNodeCerts(t *testing.T) {
+    rpc, _ = rpc.BindNodes(1)
+    hash1, err := rpc.ReplaceNodeCerts(&quot;node1&quot;)
+    assert.Nil(t, err)
+    fmt.Println(hash1)
+}
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h3>3.4 证书状态检查接口<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> <span class="n">create</span> <span class="n">check</span> <span class="n">CertOperation</span> <span class="n">to</span> <span class="n">check</span> <span class="n">cert</span><span class="o">.</span>
+ <span class="o">*</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="n">cert</span> <span class="n">the</span> <span class="n">der</span> <span class="n">cert</span> <span class="n">wait</span> <span class="n">to</span> <span class="n">check</span>
+ <span class="o">*</span> <span class="nd">@return</span> <span class="p">{</span><span class="nd">@link</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span><span class="p">}</span>
+ <span class="o">*/</span>
+ <span class="n">public</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span> <span class="n">check</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">cert</span><span class="p">)</span>
+
+<span class="o">//</span><span class="n">使用示例</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">testCertOperationCheck</span><span class="p">()</span> <span class="n">throws</span> <span class="ne">Exception</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">ecert</span> <span class="o">=</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;MIICSTCCAfWgAwIBAgIBATAKBggqhkjOPQQDAjB0MQkwBwYDVQQIEwAxCTAHBgNV</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;BAcTADEJMAcGA1UECRMAMQkwBwYDVQQREwAxDjAMBgNVBAoTBWZsYXRvMQkwBwYD</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;VQQLEwAxDjAMBgNVBAMTBW5vZGUyMQswCQYDVQQGEwJaSDEOMAwGA1UEKhMFZWNl</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;cnQwIBcNMjAwNTIxMDU1MTE0WhgPMjEyMDA0MjcwNjUxMTRaMHQxCTAHBgNVBAgT</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;ADEJMAcGA1UEBxMAMQkwBwYDVQQJEwAxCTAHBgNVBBETADEOMAwGA1UEChMFZmxh</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;dG8xCTAHBgNVBAsTADEOMAwGA1UEAxMFbm9kZTExCzAJBgNVBAYTAlpIMQ4wDAYD</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;VQQqEwVlY2VydDBWMBAGByqGSM49AgEGBSuBBAAKA0IABBI3ewNK21vHNOPG6U3X</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;mKJohSNNz72QKDxUpRt0fCJHwaGYfSvY4cnqkbliclfckUTpCkFSRr4cqN6PURCF</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;zkWjeTB3MA4GA1UdDwEB/wQEAwIChDAmBgNVHSUEHzAdBggrBgEFBQcDAgYIKwYB</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;BQUHAwEGAioDBgOBCwEwDwYDVR0TAQH/BAUwAwEB/zANBgNVHQ4EBgQEAQIDBDAP</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;BgNVHSMECDAGgAQBAgMEMAwGAypWAQQFZWNlcnQwCgYIKoZIzj0EAwIDQgB3Cfo8</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;/Vdzzlz+MW+MIVuYQkcNkACY/yU/IXD1sHDGZQWcGKr4NR7FHJgsbjGpbUiCofw4</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;4rK6biAEEAOcv1BQAA==</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;-----END CERTIFICATE-----&quot;</span><span class="p">;</span>
+
+        <span class="n">Account</span> <span class="n">ac</span> <span class="o">=</span> <span class="n">accountService</span><span class="o">.</span><span class="n">fromAccountJson</span><span class="p">(</span><span class="n">accountJsons</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+        <span class="n">Transaction</span> <span class="n">transaction</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Transaction</span><span class="o">.</span>
+                <span class="n">BVMBuilder</span><span class="p">(</span><span class="n">ac</span><span class="o">.</span><span class="n">getAddress</span><span class="p">())</span><span class="o">.</span>
+                <span class="n">invoke</span><span class="p">(</span><span class="n">new</span> <span class="n">CertOperation</span><span class="o">.</span><span class="n">CertBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">check</span><span class="p">(</span>
+                        <span class="n">ecert</span><span class="o">.</span><span class="n">getBytes</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">())</span><span class="o">.</span>
+                <span class="n">build</span><span class="p">();</span>
+        <span class="n">transaction</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">ac</span><span class="p">);</span>
+        <span class="n">ReceiptResponse</span> <span class="n">receiptResponse</span> <span class="o">=</span> <span class="n">contractService</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span><span class="o">.</span><span class="n">send</span><span class="p">()</span><span class="o">.</span><span class="n">polling</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">new</span> <span class="n">String</span><span class="p">(</span><span class="n">ByteUtil</span><span class="o">.</span><span class="n">fromHex</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">())));</span>
+        <span class="n">Result</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Decoder</span><span class="o">.</span><span class="n">decodeBVM</span><span class="p">(</span><span class="n">receiptResponse</span><span class="o">.</span><span class="n">getRet</span><span class="p">());</span>
+        <span class="n">Assert</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">isSuccess</span><span class="p">());</span>
+        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">getErr</span><span class="p">());</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

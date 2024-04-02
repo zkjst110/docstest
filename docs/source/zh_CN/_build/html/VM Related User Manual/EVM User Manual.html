@@ -1,0 +1,834 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>EVM使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>EVM使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/VM Related User Manual/EVM User Manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="evm">
+<span id="evm-user-manual"></span><h1>EVM使用手册<a class="headerlink" href="#evm" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1.使用方式<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>evm的基本使用方式大致与以太坊相同, 基本语法参见solidity官方文档</p>
+<p><a class="reference external" href="https://docs.soliditylang.org/en/v0.8.15/">https://docs.soliditylang.org/en/v0.8.15/</a></p>
+</div>
+<div class="section" id="id2">
+<h2>2.与以太坊差异<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="blockhash">
+<h3>2.1 blockhash<a class="headerlink" href="#blockhash" title="Permalink to this headline">¶</a></h3>
+<p>以太坊中获取指定区块的区块哈希可以使用 <cite>blockhash(uint blockNumber) returns (bytes32)</cite> 方法来获取前256个区块号中任意区块号的hash，但是由于flato平台存在区块归档功能，与此功能冲突，因此不提供此功能。</p>
+</div>
+<div class="section" id="id3">
+<h3>2.2 跨合约调用<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>在以太坊evm中，跨合约调用时如果跨合约调用的方法失败，跨合约调用的方法会返回false，并不会导致当前调用的直接失败， 而在flato-evm中交易的执行会失败。</p>
+<p>跨合约调用demo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">&gt;=</span><span class="mf">0.7.0</span> <span class="o">&lt;</span><span class="mf">0.9.0</span><span class="p">;</span>
+
+<span class="n">contract</span> <span class="n">Base</span> <span class="p">{</span>
+   <span class="n">uint</span> <span class="n">public</span> <span class="n">test_count</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+   <span class="n">function</span> <span class="n">test</span><span class="p">()</span> <span class="n">public</span> <span class="p">{</span>
+       <span class="n">test_count</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>假若base合约部署后的地址为 <cite>0xca35b7d915458ef540ade6068dfe2f44e8fa733c</cite></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">&gt;=</span><span class="mf">0.7.0</span> <span class="o">&lt;</span><span class="mf">0.9.0</span><span class="p">;</span>
+
+<span class="n">contract</span> <span class="n">CrossCall</span><span class="p">{</span>
+   <span class="n">address</span> <span class="n">addr</span> <span class="o">=</span> <span class="mh">0xca35b7d915458ef540ade6068dfe2f44e8fa733c</span><span class="p">;</span>
+   <span class="n">function</span> <span class="n">delegatecall</span><span class="p">()</span> <span class="n">public</span> <span class="p">{</span>
+       <span class="n">addr</span><span class="o">.</span><span class="n">delegatecall</span><span class="p">(</span><span class="n">abi</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">bytes4</span><span class="p">(</span><span class="n">keccak256</span><span class="p">(</span><span class="s2">&quot;test()&quot;</span><span class="p">))));</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>说明：evm的使用同样支持create2的方式部署发合约，此操作失败时的行为与上文描述一致。</p>
+</div>
+<div class="section" id="gas">
+<h3>2.3 Gas问题<a class="headerlink" href="#gas" title="Permalink to this headline">¶</a></h3>
+<p>为保证兼容性，evm升级时，对应gas计费方式一般不会升级的，因此会与以太坊标准的Gas消耗有所差异</p>
+</div>
+<div class="section" id="id4">
+<h3>2.4 调用预编译合约<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4><strong>2.4.1 调用方式</strong><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>我们有两种调用方式</p>
+<ol class="arabic simple">
+<li><p>通过抽象合约调用</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">合约中取得hash示例</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.10</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">TxHashAccessor</span> <span class="p">{</span>
+   <span class="n">function</span> <span class="n">getHash</span><span class="p">()</span> <span class="n">returns</span><span class="p">(</span><span class="n">bytes32</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">TxHashAccessor</span> <span class="n">hasher</span> <span class="o">=</span> <span class="n">TxHashAccessor</span><span class="p">(</span><span class="mh">0x00000000000000000000000000000000000000fa</span><span class="p">);</span>
+<span class="n">bytes32</span> <span class="n">txhash</span> <span class="o">=</span> <span class="n">hasher</span><span class="o">.</span><span class="n">getHash</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>通过call指令调用</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">address</span> <span class="n">txHashGetter</span> <span class="o">=</span> <span class="mh">0x00000000000000000000000000000000000000fa</span><span class="p">;</span>
+<span class="p">(</span><span class="nb">bool</span> <span class="n">success</span><span class="p">,</span> <span class="nb">bytes</span> <span class="n">memory</span> <span class="n">returnData</span><span class="p">)</span> <span class="o">=</span> <span class="n">txHashGetter</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">payload</span><span class="p">);</span>
+<span class="n">bytes32</span> <span class="n">txHash</span> <span class="o">=</span> <span class="n">bytesToBytes32</span><span class="p">(</span><span class="n">returnData</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h4><strong>2.4.2 新增预编译合约</strong><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p>当前在兼容以太坊预编译合约的前提下新增了一个预编译合约，如下：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 49%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>合约名称</p></th>
+<th class="head"><p>合约功能</p></th>
+<th class="head"><p>合约
+地址</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ecrecover</p></td>
+<td><p>与以太
+坊一致，请查阅solidity官方文档</p></td>
+<td><p>0x1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sha256hash</p></td>
+<td></td>
+<td><p>0x2</p></td>
+</tr>
+<tr class="row-even"><td><p>ripemd160hash</p></td>
+<td></td>
+<td><p>0x3</p></td>
+</tr>
+<tr class="row-odd"><td><p>memCpy</p></td>
+<td></td>
+<td><p>0x4</p></td>
+</tr>
+<tr class="row-even"><td><p>bigModExp</p></td>
+<td></td>
+<td><p>0x5</p></td>
+</tr>
+<tr class="row-odd"><td><p>bn256Add</p></td>
+<td></td>
+<td><p>0x6</p></td>
+</tr>
+<tr class="row-even"><td><p>bn256ScalarMul</p></td>
+<td></td>
+<td><p>0x7</p></td>
+</tr>
+<tr class="row-odd"><td><p>bn256Pairing</p></td>
+<td></td>
+<td><p>0x8</p></td>
+</tr>
+<tr class="row-even"><td><p>getTransactionHash
+（新增合约）</p></td>
+<td><p>获取当前交易的txHash</p></td>
+<td><p>0xfa</p></td>
+</tr>
+</tbody>
+</table>
+<p>使用方式参考2.4.1</p>
+<div class="section" id="id7">
+<h5>3. 合约升级规范<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<p>对于已部署到区块链上的智能合约做版本升级需要用到合约升级的功能。合约编码者要注意一个正确的新版合约需要满足以下所有的升级规范，若不符合以下规范而进行合约代码升级的话，在之后的合约调用过程中，会出现**变量内容读取失败、变量内容读取异常、虚拟机执行失败**等情况，造成合约中存储的数据与变量名无法对应的情况。出现这种情况，可能会造成合约中某些**数据永久无法恢复**。因此合约编码者若需要做合约升级，请务必阅读以下升级规范。</p>
+<p>注意，不规范的新版合约在升级过程中是不会报错的，即使在造成了数据混乱的情况下，在之后的调用过程中，虚拟机也有可能是不会报错的，即调用者感知错误比较困难。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>3.1 变量定义<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>3.1.1 新增变量定义<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>新版合约若需要新增变量定义，注意一定要在旧版合约变量定义的基础上，在尾部追加新定义。示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">旧版合约</span>
+    <span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+    <span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+       <span class="n">uint</span>    <span class="n">var1</span><span class="p">;</span>
+       <span class="n">string</span>   <span class="n">var2</span><span class="p">;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>若旧版合约源码如上所示，在合约中定义了两个类型为uint和string的变量，若新版合约想要新增类型为bytes32类型的变量var3, 正确的定义方式为:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">正确的新版合约</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">uint</span>    <span class="n">var1</span><span class="p">;</span>
+   <span class="n">string</span>   <span class="n">var2</span><span class="p">;</span>
+   <span class="n">byte32</span>  <span class="n">var3</span><span class="p">;</span>      <span class="o">//</span> <span class="n">将新增的变量定义追加在旧合约变量定义的尾部</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>而以下这种新增变量定义的行为均是错误的:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">错误的新版合约</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+<span class="n">uint</span>    <span class="n">var1</span><span class="p">;</span>
+<span class="n">byte32</span>  <span class="n">var3</span><span class="p">;</span>  <span class="o">//</span> <span class="n">将新增的变量定义插入在旧合约变量定义的中间</span>
+<span class="n">string</span>   <span class="n">var2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="id10">
+<h4>3.1.2 删除变量定义<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>新版合约若需要删除部分在旧合约中定义的变量，需要注意的是只能删除在尾部定义的变量。示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">旧版合约</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">uint</span>    <span class="n">var1</span><span class="p">;</span>
+   <span class="n">string</span>   <span class="n">var2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>若旧版合约源码如上所示，在合约中定义了两个类型为uint和string的变量，若新版合版合约试图删除变量var2的定义，这种行为是容许的。正确示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 正确的新版合约
+pragma solidity ^0.4.4;
+contract Demo {
+   uint    var1;
+   // string   var2;   // 删除了定义在“尾部”的变量
+}
+</pre></div>
+</div>
+<p>若新版合约试图删除变量var1的定义，这种行为是错误的。错误示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 错误的新版合约
+pragma solidity ^0.4.4;
+contract Demo {
+   // uint    var1;     // 删除了定义在“非尾部”的变量
+   string   var2;
+}
+</pre></div>
+</div>
+<p>即合约编码者想要在新版合约中删除部分旧变量的定义，当且仅当删除的这些旧变量全部是定义在尾部的才是合法的。</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>3.1.3 修改变量定义<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>更改变量定义的变量名是允许的，更改变量的类型是不被允许的。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">旧版合约</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">uint</span>    <span class="n">var1</span><span class="p">;</span>
+   <span class="n">string</span>   <span class="n">var2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>修改变量名的示例如下，这种行为是合法的:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">正确的新版合约</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">uint</span>    <span class="n">var3</span><span class="p">;</span>  <span class="o">//</span> <span class="n">将变量名由var1改为了var3</span><span class="p">,</span> <span class="n">合法</span>
+   <span class="n">string</span>   <span class="n">var4</span><span class="p">;</span>  <span class="o">//</span> <span class="n">将变量名由var2改为了var4</span><span class="p">,</span> <span class="n">合法</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>修改变量的类型的示例如下，这种行为是错误的:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">错误的新版合约</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">uint8</span>     <span class="n">var1</span><span class="p">;</span>  <span class="o">//</span> <span class="n">将变量var1的类型改为uint8</span><span class="p">,</span> <span class="n">不合法</span>
+   <span class="n">bytes32</span>   <span class="n">var2</span><span class="p">;</span>  <span class="o">//</span> <span class="n">将变量var2的类型改为bytes32</span><span class="p">,</span> <span class="n">不合法</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>3.1.4 更改变量定义顺序<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>修改变量定义的顺序是不被允许的。</p>
+<p>以下有个错误示例，合约编码者在新版合约中将旧版合约定义的var1,var2调换了定义顺序:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">旧版合约</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">uint</span>    <span class="n">var1</span><span class="p">;</span>
+   <span class="n">string</span>   <span class="n">var2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">错误的新版合约</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">string</span>    <span class="n">var2</span><span class="p">;</span>
+   <span class="n">uint</span>     <span class="n">var1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>3.2 变量声明<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h3>3.2.1 新增变量声明<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>变量声明包括例如结构体的声明，枚举类型的声明等。新增变量声明是允许的，且允许声明在合约的任意位置。示例如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">旧版合约</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4.4</span><span class="p">;</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">uint</span>    <span class="n">var1</span><span class="p">;</span>
+   <span class="n">string</span>   <span class="n">var2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>以下几种新增定义方式都是合法的。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 正确的新版合约
+pragma solidity ^0.4.4;
+contract Demo {
+   // 将结构体User声明在合约首部，合法
+   struct User {
+     bytes32      ID;
+     uint         balance;
+   }
+   uint    var1;
+   string   var2;
+   // 将枚举类型UserType声明在合约尾部，合法
+   enum UserType{ STUDENT, TEACHER, STUFF }
+}
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id15">
+<h3>3.2.2 删除变量声明<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>若在新版合约中删除旧版合约中未使用的变量声明，这种行为是合法的；若在新版合约中删除旧版合约正在使用的变量声明，这种行为是错误的。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">旧版合约</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">enum</span> <span class="n">UserType</span> <span class="p">{</span><span class="n">STUDENT</span><span class="p">,</span> <span class="n">TEACHER</span><span class="p">,</span> <span class="n">STUFF</span><span class="p">}</span>
+   <span class="n">enum</span> <span class="n">ClassType</span> <span class="p">{</span><span class="n">MATH</span><span class="p">,</span> <span class="n">ENGLISH</span><span class="p">,</span> <span class="n">CHINESE</span><span class="p">}</span>
+   <span class="n">struct</span> <span class="n">User</span> <span class="p">{</span>
+       <span class="n">string</span>     <span class="nb">id</span><span class="p">;</span>
+       <span class="n">UserType</span>   <span class="n">t</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="n">User</span><span class="p">[]</span> <span class="n">users</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>若在新版合约中删除未使用的变量声明ClassType, 这种行为是合法的</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 正确的新版合约
+contract Demo {
+   enum UserType {STUDENT, TEACHER, STUFF}
+   // enum ClassType {MATH, ENGLISH, CHINESE}  // 删除未使用的enum类型声明，合法
+   struct User {
+       string     id;
+       UserType   t;
+   }
+   User[] users;
+}
+</pre></div>
+</div>
+</div></blockquote>
+<p>若在新版合约中删除正在使用的变量声明UserType, 这种行为是错误的:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">错误的新版合约</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+<span class="o">//</span> <span class="n">enum</span> <span class="n">UserType</span> <span class="p">{</span><span class="n">STUDENT</span><span class="p">,</span> <span class="n">TEACHER</span><span class="p">,</span> <span class="n">STUFF</span><span class="p">}</span>   <span class="o">//</span> <span class="n">删除正在使用的enum类型声明</span>
+                                        <span class="o">//</span> <span class="n">非法</span>
+   <span class="n">enum</span> <span class="n">ClassType</span> <span class="p">{</span><span class="n">MATH</span><span class="p">,</span> <span class="n">ENGLISH</span><span class="p">,</span> <span class="n">CHINESE</span><span class="p">}</span>
+   <span class="n">struct</span> <span class="n">User</span> <span class="p">{</span>
+       <span class="n">string</span>     <span class="nb">id</span><span class="p">;</span>
+       <span class="n">UserType</span>   <span class="n">t</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="n">User</span><span class="p">[]</span> <span class="n">users</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>3.2.3 修改变量声明<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>修改已有的变量声明是错误的:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">旧版合约</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">enum</span> <span class="n">UserType</span> <span class="p">{</span><span class="n">STUDENT</span><span class="p">,</span> <span class="n">TEACHER</span><span class="p">,</span> <span class="n">STUFF</span><span class="p">}</span>
+   <span class="n">enum</span> <span class="n">ClassType</span> <span class="p">{</span><span class="n">MATH</span><span class="p">,</span> <span class="n">ENGLISH</span><span class="p">,</span> <span class="n">CHINESE</span><span class="p">}</span>
+   <span class="n">struct</span> <span class="n">User</span> <span class="p">{</span>
+       <span class="n">string</span>     <span class="nb">id</span><span class="p">;</span>
+       <span class="n">UserType</span>   <span class="n">t</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="n">User</span><span class="p">[]</span> <span class="n">users</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>错误示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 错误的新版合约
+contract Demo {
+   enum UserType {STUDENT, TEACHER}  // 删除了UserType中的STUFF枚举项，非法
+   enum ClassType {MATH, ENGLISH, CHINESE}
+   struct User {
+       // string     id;             // 删除了User结构体中的id字段，非法
+       UserType    t;
+       ClassType    c;             // 新增了类型为ClassType的c字段，非法
+   }
+   User[] users;
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>3.2.4 更改变量声明顺序<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>更改变量声明的顺序是合法的示例如下</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 旧版合约
+contract Demo {
+   enum UserType {STUDENT, TEACHER, STUFF}
+   enum ClassType {MATH, ENGLISH, CHINESE}
+   struct User {
+       string     id;
+       UserType   t;
+   }
+   User[] users;
+}
+
+// 正确的新版合约
+contract Demo {
+   // 调换了User结构体，ClassType，UserTyep枚举类型的声明位置，合法
+   struct User {
+       string     id;
+       UserType   t;
+   }
+   enum ClassType {MATH, ENGLISH, CHINESE}
+   enum UserType {STUDENT, TEACHER, STUFF}
+   User[] users;
+}
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>3.3 函数定义<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id19">
+<h3>3.3.1 新增函数定义<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p>所有新增函数定义的行为都是合法的。</p>
+<p>示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 旧版合约
+contract Demo {
+   enum UserType {STUDENT, TEACHER, STUFF}
+   enum ClassType {MATH, ENGLISH, CHINESE}
+   struct User {
+       string     id;
+       UserType   t;
+   }
+   User[] users;
+   function AddStudent(string id) {
+       users.push(User(id, UserType.STUDENT));
+   }
+}
+
+// 正确的新版合约
+contract Demo {
+   enum UserType {STUDENT, TEACHER, STUFF}
+   enum ClassType {MATH, ENGLISH, CHINESE}
+   struct User {
+       string     id;
+       UserType   t;
+   }
+   User[] users;
+   function AddStudent(string id) {
+       users.push(User(id, UserType.STUDENT));
+   }
+   // 新增AddTeacher函数定义，合法
+   function AddTeacher (string id) {
+       users.push(User(id, UserType.TEACHER));
+   }
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h3>3.3.2 删除函数定义<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p>所有删除函数定义的行为都是合法的。</p>
+<p>示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">旧版合约</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">enum</span> <span class="n">UserType</span> <span class="p">{</span><span class="n">STUDENT</span><span class="p">,</span> <span class="n">TEACHER</span><span class="p">,</span> <span class="n">STUFF</span><span class="p">}</span>
+   <span class="n">enum</span> <span class="n">ClassType</span> <span class="p">{</span><span class="n">MATH</span><span class="p">,</span> <span class="n">ENGLISH</span><span class="p">,</span> <span class="n">CHINESE</span><span class="p">}</span>
+   <span class="n">struct</span> <span class="n">User</span> <span class="p">{</span>
+       <span class="n">string</span>     <span class="nb">id</span><span class="p">;</span>
+       <span class="n">UserType</span>   <span class="n">t</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="n">User</span><span class="p">[]</span> <span class="n">users</span><span class="p">;</span>
+   <span class="n">function</span> <span class="n">AddStudent</span><span class="p">(</span><span class="n">string</span> <span class="nb">id</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">users</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">UserType</span><span class="o">.</span><span class="n">STUDENT</span><span class="p">));</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">在新版合约中删除了AddStudent函数</span><span class="p">,</span> <span class="n">合法</span>
+
+<span class="o">//</span> <span class="n">正确的新版合约</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+   <span class="n">enum</span> <span class="n">UserType</span> <span class="p">{</span><span class="n">STUDENT</span><span class="p">,</span> <span class="n">TEACHER</span><span class="p">,</span> <span class="n">STUFF</span><span class="p">}</span>
+   <span class="n">enum</span> <span class="n">ClassType</span> <span class="p">{</span><span class="n">MATH</span><span class="p">,</span> <span class="n">ENGLISH</span><span class="p">,</span> <span class="n">CHINESE</span><span class="p">}</span>
+   <span class="n">struct</span> <span class="n">User</span> <span class="p">{</span>
+       <span class="n">string</span>     <span class="nb">id</span><span class="p">;</span>
+       <span class="n">UserType</span>   <span class="n">t</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="n">User</span><span class="p">[]</span> <span class="n">users</span><span class="p">;</span>
+<span class="o">//</span> <span class="n">删除了函数AddStudent</span><span class="p">,</span> <span class="n">合法</span>
+<span class="o">//</span> <span class="n">function</span> <span class="n">AddStudent</span><span class="p">(</span><span class="n">string</span> <span class="nb">id</span><span class="p">)</span> <span class="p">{</span>
+<span class="o">//</span>         <span class="n">users</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">UserType</span><span class="o">.</span><span class="n">STUDENT</span><span class="p">));</span>
+<span class="o">//</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id21">
+<h3>3.3.3 修改函数定义<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>所有修改函数定义的行为都是合法的</p>
+<p>示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">旧版合约</span>
+<span class="n">contract</span> <span class="n">Demo</span> <span class="p">{</span>
+    <span class="n">enum</span> <span class="n">UserType</span> <span class="p">{</span><span class="n">STUDENT</span><span class="p">,</span> <span class="n">TEACHER</span><span class="p">,</span> <span class="n">STUFF</span><span class="p">}</span>
+    <span class="n">enum</span> <span class="n">ClassType</span> <span class="p">{</span><span class="n">MATH</span><span class="p">,</span> <span class="n">ENGLISH</span><span class="p">,</span> <span class="n">CHINESE</span><span class="p">}</span>
+    <span class="n">struct</span> <span class="n">User</span> <span class="p">{</span>
+        <span class="n">string</span>     <span class="nb">id</span><span class="p">;</span>
+        <span class="n">UserType</span>   <span class="n">t</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">User</span><span class="p">[]</span> <span class="n">users</span><span class="p">;</span>
+    <span class="n">function</span> <span class="n">AddStudent</span><span class="p">(</span><span class="n">string</span> <span class="nb">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">users</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">UserType</span><span class="o">.</span><span class="n">STUDENT</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>修改了AddStudent函数的定义，合法</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 正确的新版合约
+contract Demo {
+    enum UserType {STUDENT, TEACHER, STUFF}
+    enum ClassType {MATH, ENGLISH, CHINESE}
+    struct User {
+        string     id;
+        UserType   t;
+    }
+    User[] users;
+    uint  userCnt;     // 在变量定义尾巴追加定义uint类型的变量userCnt，合法
+    function AddStudent(string id) {
+        users.push(User(id, UserType.STUDENT));
+        userCnt += 1;     // 更改函数逻辑，合法
+    }
+}
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id22">
+<h3>3.3.4 更改函数定义顺序<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p>所有更改函数定义顺序的行为都是合法的</p>
+<p>示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 旧版合约
+contract Demo {
+    struct User {
+        string     id;
+        UserType   t;
+    }
+    enum ClassType {MATH, ENGLISH, CHINESE}
+    enum UserType {STUDENT, TEACHER, STUFF}
+    User[] users;
+    function AddStudent(string id) {
+        users.push(User(id, UserType.STUDENT));
+    }
+    function AddTeacher(string id) {
+        users.push(User(id, UserType.TEACHER));
+    }
+}
+
+// 新版合约
+contract Demo {
+    struct User {
+        string     id;
+        UserType   t;
+    }
+    enum ClassType {MATH, ENGLISH, CHINESE}
+    enum UserType {STUDENT, TEACHER, STUFF}
+    User[] users;
+    // 更改AddTeacher与AddStudent两个函数的定义顺序，合法
+    function AddTeacher(string id) {
+        users.push(User(id, UserType.TEACHER));
+    }
+    function AddStudent(string id) {
+        users.push(User(id, UserType.STUDENT));
+    }
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>4. 编译器最高版本对应<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>flato</p></th>
+<th class="head"><p>solidity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1.0.0~1.0.5</p></td>
+<td><p>0.5.x</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.0.6+</p></td>
+<td><p>0.8.x</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

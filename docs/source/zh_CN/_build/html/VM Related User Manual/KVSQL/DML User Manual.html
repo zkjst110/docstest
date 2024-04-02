@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>DML语句使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>DML语句使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/VM Related User Manual/KVSQL/DML User Manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dml">
+<span id="dml-user-manual"></span><h1>DML语句使用手册<a class="headerlink" href="#dml" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="insert">
+<h2>INSERT<a class="headerlink" href="#insert" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">InsertIntoStmt</span><span class="p">:</span>
+    <span class="s2">&quot;INSERT&quot;</span> <span class="n">TableOptimizerHints</span> <span class="n">PriorityOpt</span> <span class="n">IgnoreOptional</span> <span class="n">IntoOpt</span> <span class="n">TableName</span> <span class="n">PartitionNameListOpt</span> <span class="n">InsertValues</span> <span class="n">OnDuplicateKeyUpdate</span>
+
+<span class="n">TableOptimizerHints</span><span class="p">:</span>
+        <span class="s2">&quot;&quot;</span>
+
+<span class="n">PriorityOpt</span><span class="p">:</span>
+        <span class="s2">&quot;&quot;</span>
+
+<span class="n">IgnoreOptional</span><span class="p">:</span>
+        <span class="s2">&quot;&quot;</span>
+
+<span class="n">IntoOpt</span><span class="p">:</span>
+    <span class="p">{}</span> <span class="o">|</span>    <span class="s2">&quot;INTO&quot;</span>
+
+<span class="n">TableName</span><span class="p">:</span>
+        <span class="n">Identifier</span>
+    <span class="o">|</span>       <span class="n">Identifier</span> <span class="s1">&#39;.&#39;</span> <span class="n">Identifier</span>
+
+<span class="n">PartitionNameListOpt</span><span class="p">:</span>
+    <span class="s2">&quot;&quot;</span>
+
+<span class="n">InsertValues</span><span class="p">:</span>
+        <span class="s1">&#39;(&#39;</span> <span class="n">ColumnNameListOpt</span> <span class="s1">&#39;)&#39;</span> <span class="n">ValueSym</span> <span class="n">ValuesList</span>
+    <span class="o">|</span>       <span class="n">ValueSym</span> <span class="n">ValuesList</span>
+    <span class="o">|</span>       <span class="s2">&quot;SET&quot;</span> <span class="n">ColumnSetValueList</span>
+
+<span class="n">OnDuplicateKeyUpdate</span><span class="p">:</span>
+        <span class="s2">&quot;&quot;</span>
+
+<span class="n">ColumnNameListOpt</span><span class="p">:</span>
+    <span class="s2">&quot;&quot;</span> <span class="o">|</span>    <span class="n">ColumnNameList</span>
+
+<span class="n">ColumnNameList</span><span class="p">:</span>
+    <span class="n">ColumnName</span> <span class="o">|</span> <span class="n">ColumnNameList</span> <span class="s1">&#39;,&#39;</span> <span class="n">ColumnName</span>
+
+<span class="n">ValueSym</span><span class="p">:</span>
+    <span class="s2">&quot;VALUE&quot;</span> <span class="o">|</span>       <span class="s2">&quot;VALUES&quot;</span>
+
+<span class="n">ValuesList</span><span class="p">:</span>
+    <span class="n">RowValue</span> <span class="o">|</span> <span class="n">ValuesList</span> <span class="s1">&#39;,&#39;</span> <span class="n">RowValue</span>
+
+<span class="n">RowValue</span><span class="p">:</span>
+    <span class="s1">&#39;(&#39;</span> <span class="n">ValuesOpt</span> <span class="s1">&#39;)&#39;</span>
+
+<span class="n">ValuesOpt</span><span class="p">:</span>
+    <span class="s2">&quot;&quot;</span> <span class="o">|</span> <span class="n">Values</span>
+
+<span class="n">Values</span><span class="p">:</span>
+    <span class="n">Values</span> <span class="s1">&#39;,&#39;</span> <span class="n">ExprOrDefault</span> <span class="o">|</span> <span class="n">ExprOrDefault</span>
+
+<span class="n">ExprOrDefault</span><span class="p">:</span>
+    <span class="n">Expression</span> <span class="o">|</span> <span class="s2">&quot;DEFAULT&quot;</span>
+
+<span class="n">ColumnSetValueList</span><span class="p">:</span>
+    <span class="s2">&quot;&quot;</span> <span class="o">|</span>    <span class="n">ColumnSetValue</span> <span class="o">|</span>        <span class="n">ColumnSetValueList</span> <span class="s1">&#39;,&#39;</span> <span class="n">ColumnSetValue</span>
+
+<span class="n">ColumnSetValue</span><span class="p">:</span>
+    <span class="n">ColumnName</span> <span class="n">eq</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span> <span class="n">ExprOrDefault</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="update">
+<h2>UPDATE<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>UpdateStmt:
+    &quot;UPDATE&quot; TableRef &quot;SET&quot; AssignmentList WhereClauseOptional OrderByOptional LimitClause
+|   &quot;UPDATE&quot; TableRefs &quot;SET&quot; AssignmentList WhereClauseOptional
+
+Empty:
+    /* empty */
+
+TableName:
+    Identifier
+|   Identifier &#39;.&#39; Identifier
+
+TableRefs:
+    EscapedTableRef
+|   TableRefs &#39;,&#39; EscapedTableRef
+
+EscapedTableRef:
+    TableRef
+|   &#39;{&#39; Identifier TableRef &#39;}&#39;
+
+TableRef:
+    TableFactor
+|   JoinTable
+
+TableFactor:
+    TableName TableAsNameOpt
+|   &#39;(&#39; SelectStmt &#39;)&#39; TableAsName
+|   &#39;(&#39; SetOprStmt &#39;)&#39; TableAsName
+|   &#39;(&#39; TableRefs &#39;)&#39;
+
+TableAsNameOpt:
+    Empty
+|   TableAsName
+
+TableAsName:
+    Identifier
+|   &quot;AS&quot; Identifier
+
+JoinTable:
+    TableRef CrossOpt TableRef
+|   TableRef CrossOpt TableRef &quot;ON&quot; Expression
+|   TableRef CrossOpt TableRef &quot;USING&quot; &#39;(&#39; ColumnNameList &#39;)&#39;
+|   TableRef JoinType OuterOpt &quot;JOIN&quot; TableRef &quot;ON&quot; Expression
+|   TableRef JoinType OuterOpt &quot;JOIN&quot; TableRef &quot;USING&quot; &#39;(&#39; ColumnNameList &#39;)&#39;
+|   TableRef &quot;NATURAL&quot; &quot;JOIN&quot; TableRef
+|   TableRef &quot;NATURAL&quot; JoinType OuterOpt &quot;JOIN&quot; TableRef
+|   TableRef &quot;STRAIGHT_JOIN&quot; TableRef
+|   TableRef &quot;STRAIGHT_JOIN&quot; TableRef &quot;ON&quot; Expression
+
+CrossOpt:
+    &quot;JOIN&quot;
+|   &quot;CROSS&quot; &quot;JOIN&quot;
+|   &quot;INNER&quot; &quot;JOIN&quot;
+
+JoinType:
+    &quot;LEFT&quot;
+|   &quot;RIGHT&quot;
+
+OuterOpt:
+    Empty
+|   &quot;OUTER&quot;
+
+ColumnName:
+    Identifier
+|   Identifier &#39;.&#39; Identifier
+
+ColumnNameList:
+    ColumnName
+|   ColumnNameList &#39;,&#39; ColumnName
+
+AssignmentList:
+    Assignment
+|   AssignmentList &#39;,&#39; Assignment
+
+Assignment:
+    ColumnName eq ExprOrDefault
+
+ExprOrDefault:
+    Expression
+|   &quot;DEFAULT&quot;
+
+WhereClauseOptional:
+    Empty
+|   WhereClause
+
+WhereClause:
+    &quot;WHERE&quot; Expression
+
+OrderByOptional:
+    Empty
+|   OrderBy
+
+
+OrderBy:
+    &quot;ORDER&quot; &quot;BY&quot; ByList
+
+ByList:
+    ByItem
+|   ByList &#39;,&#39; ByItem
+
+ByItem:
+    Expression Order
+
+Order:
+    Empty
+|   &quot;ASC&quot;
+|   &quot;DESC&quot;
+
+LimitClause:
+    Empty
+|   &quot;LIMIT&quot; LimitOption
+
+LimitOption:
+    LengthNum
+
+LengthNum:
+    NUM
+
+NUM:
+    intLit
+
+Identifier:
+    identifier
+
+/**************查阅DQL、Expression************/
+
+
+Expression:
+
+SelectStmt:
+
+SetOprStmt:
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="delete">
+<h2>DELETE<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DeleteFromStmt</span><span class="p">:</span>
+    <span class="s2">&quot;DELETE&quot;</span> <span class="s2">&quot;FROM&quot;</span> <span class="n">TableName</span> <span class="n">TableAsNameOpt</span> <span class="n">WhereClauseOptional</span> <span class="n">OrderByOptional</span> <span class="n">LimitClause</span>
+<span class="o">|</span>   <span class="s2">&quot;DELETE&quot;</span> <span class="n">TableAliasRefList</span> <span class="s2">&quot;FROM&quot;</span> <span class="n">TableRefs</span> <span class="n">WhereClauseOptional</span>
+<span class="o">|</span>   <span class="s2">&quot;DELETE&quot;</span> <span class="s2">&quot;FROM&quot;</span> <span class="n">TableAliasRefList</span> <span class="s2">&quot;USING&quot;</span> <span class="n">TableRefs</span> <span class="n">WhereClauseOptional</span>
+
+<span class="n">Empty</span><span class="p">:</span>
+<span class="o">/*</span> <span class="n">empty</span> <span class="o">*/</span>
+
+<span class="n">TableName</span><span class="p">:</span>
+    <span class="n">Identifier</span>
+<span class="o">|</span>   <span class="n">Identifier</span> <span class="s1">&#39;.&#39;</span> <span class="n">Identifier</span>
+
+<span class="n">TableAsNameOpt</span><span class="p">:</span>
+    <span class="n">Empty</span>
+<span class="o">|</span>   <span class="n">TableAsName</span>
+
+<span class="n">TableAsName</span><span class="p">:</span>
+    <span class="n">Identifier</span>
+<span class="o">|</span>   <span class="s2">&quot;AS&quot;</span> <span class="n">Identifier</span>
+
+<span class="n">WhereClauseOptional</span><span class="p">:</span>
+    <span class="n">Empty</span>
+<span class="o">|</span>   <span class="n">WhereClause</span>
+
+<span class="n">WhereClause</span><span class="p">:</span>
+    <span class="s2">&quot;WHERE&quot;</span> <span class="n">Expression</span>
+
+<span class="n">OrderByOptional</span><span class="p">:</span>
+    <span class="n">Empty</span>
+<span class="o">|</span>   <span class="n">OrderBy</span>
+
+
+<span class="n">OrderBy</span><span class="p">:</span>
+    <span class="s2">&quot;ORDER&quot;</span> <span class="s2">&quot;BY&quot;</span> <span class="n">ByList</span>
+
+<span class="n">ByList</span><span class="p">:</span>
+    <span class="n">ByItem</span>
+<span class="o">|</span>   <span class="n">ByList</span> <span class="s1">&#39;,&#39;</span> <span class="n">ByItem</span>
+
+<span class="n">ByItem</span><span class="p">:</span>
+    <span class="n">Expression</span> <span class="n">Order</span>
+
+<span class="n">Order</span><span class="p">:</span>
+    <span class="n">Empty</span>
+<span class="o">|</span>   <span class="s2">&quot;ASC&quot;</span>
+<span class="o">|</span>   <span class="s2">&quot;DESC&quot;</span>
+
+<span class="n">LimitClause</span><span class="p">:</span>
+    <span class="n">Empty</span>
+<span class="o">|</span>   <span class="s2">&quot;LIMIT&quot;</span> <span class="n">LimitOption</span>
+
+<span class="n">LimitOption</span><span class="p">:</span>
+    <span class="n">LengthNum</span>
+
+<span class="n">LengthNum</span><span class="p">:</span>
+    <span class="n">NUM</span>
+
+<span class="n">NUM</span><span class="p">:</span>
+    <span class="n">intLit</span>
+
+<span class="n">TableAliasRefList</span><span class="p">:</span>
+    <span class="n">TableNameOptWild</span>
+<span class="o">|</span>   <span class="n">TableAliasRefList</span> <span class="s1">&#39;,&#39;</span> <span class="n">TableNameOptWild</span>
+
+<span class="n">TableNameOptWild</span><span class="p">:</span>
+    <span class="n">Identifier</span> <span class="n">OptWild</span>
+<span class="o">|</span>   <span class="n">Identifier</span> <span class="s1">&#39;.&#39;</span> <span class="n">Identifier</span> <span class="n">OptWild</span>
+
+<span class="n">OptWild</span><span class="p">:</span>
+    <span class="n">Empty</span>
+<span class="o">|</span>   <span class="s1">&#39;.&#39;</span> <span class="s1">&#39;*&#39;</span>
+
+<span class="n">TableRefs</span><span class="p">:</span>
+    <span class="n">EscapedTableRef</span>
+<span class="o">|</span>   <span class="n">TableRefs</span> <span class="s1">&#39;,&#39;</span> <span class="n">EscapedTableRef</span>
+
+<span class="n">EscapedTableRef</span><span class="p">:</span>
+    <span class="n">TableRef</span>
+<span class="o">|</span>   <span class="s1">&#39;{&#39;</span> <span class="n">Identifier</span> <span class="n">TableRef</span> <span class="s1">&#39;}&#39;</span>
+
+<span class="n">TableRef</span><span class="p">:</span>
+    <span class="n">TableFactor</span>
+<span class="o">|</span>   <span class="n">JoinTable</span>
+
+<span class="n">TableFactor</span><span class="p">:</span>
+    <span class="n">TableName</span> <span class="n">TableAsNameOpt</span>
+<span class="o">|</span>   <span class="s1">&#39;(&#39;</span> <span class="n">SelectStmt</span> <span class="s1">&#39;)&#39;</span> <span class="n">TableAsName</span>
+<span class="o">|</span>   <span class="s1">&#39;(&#39;</span> <span class="n">SetOprStmt</span> <span class="s1">&#39;)&#39;</span> <span class="n">TableAsName</span>
+<span class="o">|</span>   <span class="s1">&#39;(&#39;</span> <span class="n">TableRefs</span> <span class="s1">&#39;)&#39;</span>
+
+
+<span class="n">JoinTable</span><span class="p">:</span>
+    <span class="o">/*</span> <span class="n">Use</span> <span class="o">%</span><span class="n">prec</span> <span class="n">to</span> <span class="n">evaluate</span> <span class="n">production</span> <span class="n">TableRef</span> <span class="n">before</span> <span class="n">cross</span> <span class="n">join</span> <span class="o">*/</span>
+    <span class="n">TableRef</span> <span class="n">CrossOpt</span> <span class="n">TableRef</span>
+<span class="o">|</span>   <span class="n">TableRef</span> <span class="n">CrossOpt</span> <span class="n">TableRef</span> <span class="s2">&quot;ON&quot;</span> <span class="n">Expression</span>
+<span class="o">|</span>   <span class="n">TableRef</span> <span class="n">CrossOpt</span> <span class="n">TableRef</span> <span class="s2">&quot;USING&quot;</span> <span class="s1">&#39;(&#39;</span> <span class="n">ColumnNameList</span> <span class="s1">&#39;)&#39;</span>
+<span class="o">|</span>   <span class="n">TableRef</span> <span class="n">JoinType</span> <span class="n">OuterOpt</span> <span class="s2">&quot;JOIN&quot;</span> <span class="n">TableRef</span> <span class="s2">&quot;ON&quot;</span> <span class="n">Expression</span>
+<span class="o">|</span>   <span class="n">TableRef</span> <span class="n">JoinType</span> <span class="n">OuterOpt</span> <span class="s2">&quot;JOIN&quot;</span> <span class="n">TableRef</span> <span class="s2">&quot;USING&quot;</span> <span class="s1">&#39;(&#39;</span> <span class="n">ColumnNameList</span> <span class="s1">&#39;)&#39;</span>
+<span class="o">|</span>   <span class="n">TableRef</span> <span class="s2">&quot;NATURAL&quot;</span> <span class="s2">&quot;JOIN&quot;</span> <span class="n">TableRef</span>
+<span class="o">|</span>   <span class="n">TableRef</span> <span class="s2">&quot;NATURAL&quot;</span> <span class="n">JoinType</span> <span class="n">OuterOpt</span> <span class="s2">&quot;JOIN&quot;</span> <span class="n">TableRef</span>
+<span class="o">|</span>   <span class="n">TableRef</span> <span class="s2">&quot;STRAIGHT_JOIN&quot;</span> <span class="n">TableRef</span>
+<span class="o">|</span>   <span class="n">TableRef</span> <span class="s2">&quot;STRAIGHT_JOIN&quot;</span> <span class="n">TableRef</span> <span class="s2">&quot;ON&quot;</span> <span class="n">Expression</span>
+
+<span class="n">CrossOpt</span><span class="p">:</span>
+    <span class="s2">&quot;JOIN&quot;</span>
+<span class="o">|</span>   <span class="s2">&quot;CROSS&quot;</span> <span class="s2">&quot;JOIN&quot;</span>
+<span class="o">|</span>   <span class="s2">&quot;INNER&quot;</span> <span class="s2">&quot;JOIN&quot;</span>
+
+<span class="n">JoinType</span><span class="p">:</span>
+    <span class="s2">&quot;LEFT&quot;</span>
+<span class="o">|</span>   <span class="s2">&quot;RIGHT&quot;</span>
+
+<span class="n">OuterOpt</span><span class="p">:</span>
+    <span class="n">Empty</span>
+<span class="o">|</span>   <span class="s2">&quot;OUTER&quot;</span>
+
+<span class="n">ColumnName</span><span class="p">:</span>
+    <span class="n">Identifier</span>
+<span class="o">|</span>   <span class="n">Identifier</span> <span class="s1">&#39;.&#39;</span> <span class="n">Identifier</span>
+
+<span class="n">ColumnNameList</span><span class="p">:</span>
+    <span class="n">ColumnName</span>
+<span class="o">|</span>   <span class="n">ColumnNameList</span> <span class="s1">&#39;,&#39;</span> <span class="n">ColumnName</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,992 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>HVM ABI插件使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>HVM ABI插件使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/VM Related User Manual/HVM/HVM ABI plug-in.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hvm-abi">
+<span id="hvm-abi-plug-in"></span><h1>HVM ABI插件使用手册<a class="headerlink" href="#hvm-abi" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>HVM提供了一种maven插件hvm-abi，插件目前包含以下功能：</p>
+<ul class="simple">
+<li><p>ABI生成：插件可以生成HVM合约的ABI文件。用户可以通过ABI在SDK中生成合约执行的payload，进行合约的调用。</p></li>
+<li><p>字节码增强：对原始hvm合约的字节码进行增强处理，从而让合约中的storefield实现懒加载功能（指当合约执行过程中使用到某个storefield时，hvm执行引擎会从账本中读取数据），提高合约直接调用的性能。</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>hvm-abi获取<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>目前hvm-abi并没有发布到公共maven仓库中，如果需要使用有以下两种方法：</p>
+<ul class="simple">
+<li><p>联系基础平台部的运维人员获取hvm-abi的jar包，放入到本地的maven仓库中</p></li>
+<li><p>如果在趣链内网环境下，可以在内网中的maven仓库获取。</p></li>
+</ul>
+</div>
+<div class="section" id="hvm-abiabi">
+<h2>1. 使用hvm-abi插件生成abi文件<a class="headerlink" href="#hvm-abiabi" title="Permalink to this headline">¶</a></h2>
+<p>用户可以在自己的HVM合约项目的pom.xml文件中加入， <strong>其中configuration的部分需要根据合约实际情况进行修改</strong> 。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;plugin&gt;
+   &lt;groupId&gt;cn.hyperchain.hvm&lt;/groupId&gt;
+   &lt;artifactId&gt;hvm-maven-plugin&lt;/artifactId&gt;
+   &lt;version&gt;0.0.6&lt;/version&gt;
+   &lt;!-- configuration内容请根据实际情况进行修改 --&gt;
+   &lt;configuration&gt;
+       &lt;!-- &lt;jarFile&gt; hvm合约的jar包路径 --&gt;
+       &lt;jarFile&gt;${project.basedir}/target/share-1.0.jar&lt;/jarFile&gt;
+       &lt;!-- &lt;invokeBeanPath&gt; hvm合约的class字节码文件夹路径 --&gt;
+       &lt;invokeBeanPath&gt;${project.basedir}/target/classes&lt;/invokeBeanPath&gt;
+       &lt;!-- &lt;invokeBeanPackages&gt;中包含很多&lt;param&gt;标签，每个&lt;param&gt;标签中都是一个实现BaseInvoke接口的类的全限定名 --&gt;
+       &lt;invokeBeanPackages&gt;
+               &lt;!--&lt;param&gt;com.hyperchain.invoke.ShareInvoke&lt;/param&gt;--&gt;
+               &lt;!--&lt;param&gt;com.hyperchain.invoke.ShareInvoke&lt;/param&gt;--&gt;
+       &lt;/invokeBeanPackages&gt;
+       &lt;!--&lt;outputFile&gt;中存放的是生成的.abi的存放目录--&gt;
+       &lt;outputFile&gt;${project.basedir}/target/hvm.abi&lt;/outputFile&gt;
+   &lt;/configuration&gt;
+&lt;/plugin&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p>其中</p>
+<ul class="simple">
+<li><p>&lt;jarFile&gt; 中是hvm合约的jar包路径</p></li>
+<li><p>&lt;invokeBeanPath&gt; 是hvm合约的class字节码文件夹路径</p></li>
+<li><p>&lt;invokeBeanPackages&gt;中包含很多&lt;param&gt;标签，每个&lt;param&gt;标签中都是一个实现 <em>BaseInvoke</em> 接口的类的全限定名。</p></li>
+<li><p>&lt;outputFile&gt;中存放的是生成的.abi的存放目录</p></li>
+</ul>
+<p>在生成合约jar文件后，执行以下命令可以生成hvm.abi文件。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mvn</span> <span class="n">hvm</span><span class="p">:</span><span class="n">abi</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="abi">
+<h3>abi文件格式<a class="headerlink" href="#abi" title="Permalink to this headline">¶</a></h3>
+<p>HVM目前提供两种合约调用的方式：通过invokeBean和直接调用，abi文件通过一种 <cite>BeanAbi</cite> 的类型保存调用所需的基本信息：</p>
+<ul class="simple">
+<li><p>invokeBean：扫描&lt;invokeBeanPackages&gt;中所有的类文件，每一个invokeBean对应一个 <cite>BeanAbi</cite> 。</p></li>
+<li><p>直接调用：扫描合约体的 <strong>除构造方法和钩子方法以外的</strong> <cite>public</cite> <strong>方法</strong> ，每一个方法对应一个 <cite>BeanAbi</cite> 。</p></li>
+</ul>
+<div class="section" id="entry">
+<h4>entry<a class="headerlink" href="#entry" title="Permalink to this headline">¶</a></h4>
+<p>hvm.abi中通过一个 <cite>entry</cite> 的结构体表示一个变量，其结构如下：</p>
+<ul class="simple">
+<li><p>name： 变量名称</p></li>
+<li><p>type：变量类型</p></li>
+<li><p>structname：如果变量是结构体则代表结构体类的名称</p></li>
+<li><p>properties：是一个entry数组，与type有关：</p>
+<ul>
+<li><p>Map：长度为2，分别表示key和value的变量类型信息；</p></li>
+<li><p>List：长度为1，表示元素的变量类型信息；</p></li>
+<li><p>基础类型：为空</p></li>
+<li><p>结构体：表示该结构体各字段变量类型信息；</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="beanabi">
+<h4>BeanAbi<a class="headerlink" href="#beanabi" title="Permalink to this headline">¶</a></h4>
+<p>hvm.abi中以json的形式保存了一个 <cite>BeanAbi</cite> 类型的数组，BeanAbi包含的参数如下：</p>
+<ul class="simple">
+<li><p>version：hvm.abi的版本</p></li>
+<li><p>beanName：实现*BaseInvoke*接口的类的名称</p></li>
+<li><p>inputs：invoke方法的参数，是一个entry数组</p></li>
+<li><p>output：invoke方法的返回值，为entry类型</p></li>
+<li><p>structs：HVM合约中的结构体，是一个entry数组</p></li>
+<li><p>beanType：表示beanAbi的类型，有 <cite>InvokeBean</cite> 和 <cite>MethodBean</cite> 两种类型</p>
+<ul>
+<li><p>InvokeBean：以InvokeBean的形式调用合约</p></li>
+<li><p>MethodBean：以DirectlyInvoke的形式调用合约</p></li>
+</ul>
+</li>
+<li><p>classBytes：invokeBean的字节码， <strong>是</strong> <cite>**InvokeBean**</cite> <strong>类型特有的参数</strong></p></li>
+</ul>
+<p>hvm.abi的示例可以在 <strong>demo实例</strong> 小节中查看。</p>
+</div>
+</div>
+<div class="section" id="gosdkabi">
+<h3>gosdk使用abi文件<a class="headerlink" href="#gosdkabi" title="Permalink to this headline">¶</a></h3>
+<p>本节将介绍如何在gosdk中通过abi文件调用hvm合约。</p>
+<div class="section" id="hvm">
+<h4>部署hvm合约<a class="headerlink" href="#hvm" title="Permalink to this headline">¶</a></h4>
+<p><strong>读取jar文件</strong></p>
+<p>gosdk中提供了hvm.ReadJar()函数来读取jar文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jarPath</span> <span class="o">:=</span> <span class="s2">&quot;/path/to/AbiDemo-1.0-SNAPSHOT.jar&quot;</span>
+<span class="n">payload</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">hvm</span><span class="o">.</span><span class="n">ReadJar</span><span class="p">(</span><span class="n">jarPath</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>部署合约</strong></p>
+<p>将从jar文件读取的内容作为payload，通过交易进行合约部署:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">transaction</span> <span class="o">:=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">NewTransaction</span><span class="p">(</span><span class="n">ecKey</span><span class="o">.</span><span class="n">GetAddress</span><span class="p">()</span><span class="o">.</span><span class="n">Hex</span><span class="p">())</span><span class="o">.</span>
+   <span class="n">Deploy</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span><span class="o">.</span>
+   <span class="n">VMType</span><span class="p">(</span><span class="n">rpc</span><span class="o">.</span><span class="n">HVM</span><span class="p">)</span>
+<span class="n">transaction</span><span class="o">.</span><span class="n">Sign</span><span class="p">(</span><span class="n">ecKey</span><span class="p">)</span>
+<span class="n">receipt</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">hrpc</span><span class="o">.</span><span class="n">DeployContract</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="invokebeanabi">
+<h4>获取指定方法/InvokeBean的abi<a class="headerlink" href="#invokebeanabi" title="Permalink to this headline">¶</a></h4>
+<p>将abi的json数据读到abiJson中，通过GenAbi获取abi实例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abiPath</span> <span class="o">:=</span> <span class="s2">&quot;/path/to/hvm.abi&quot;</span>
+<span class="n">abiJson</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">common</span><span class="o">.</span><span class="n">ReadFileAsString</span><span class="p">(</span><span class="n">abiPath</span><span class="p">)</span>
+<span class="n">abi</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">hvm</span><span class="o">.</span><span class="n">GenAbi</span><span class="p">(</span><span class="n">abiJson</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>在gosdk中给abi提供了以下两个函数：</p>
+<p><strong>GetBeanAbi</strong></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="p">(</span><span class="n">abi</span> <span class="n">Abi</span><span class="p">)</span> <span class="n">GetBeanAbi</span><span class="p">(</span><span class="n">beanName</span> <span class="n">string</span><span class="p">)</span> <span class="p">(</span><span class="o">*</span><span class="n">BeanAbi</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>查找abi中符合beanName且 <cite>beanType</cite> 为 <cite>InvokeBean</cite> <strong>类型</strong> 的BeanAbi，返回的BeanAbi唯一。</p>
+<p><strong>GetMethodAbi</strong></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="p">(</span><span class="n">abi</span> <span class="n">Abi</span><span class="p">)</span> <span class="n">GetMethodAbi</span><span class="p">(</span><span class="n">methodName</span> <span class="n">string</span><span class="p">)</span> <span class="p">(</span><span class="o">*</span><span class="n">BeanAbi</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>根据方法的名称返回 <cite>MethodBean</cite> <strong>类型</strong> 的 <cite>BeanAbi</cite> 。考虑到Java中的方法存在重载的情况，Java的方法重载具有以下特点：在同一个类中， 允许存在一个以上的同名方法， 只要它们的 <strong>参数个数或者参数类型不同</strong> 即可， <strong>与返回值无关</strong> 。</p>
+<p>因此，我们对methodName进行以下规定：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 43%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>格式</p></th>
+<th class="head"><p>描述</p></th>
+<th class="head"><p>示例</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>通过方
+法名进行查询，返回第一个na
+me符合的BeanAbi。若存在重载
+方法，不建议使用这种方式。</p></td>
+<td><p>abi.GetMethodAbi(”Hello“)</p></td>
+</tr>
+<tr class="row-odd"><td><p>name
+(params)</p></td>
+<td><p>通过方法名和参
+数类型进行查询，参数类型对
+应abi中input的参数structNa
+me，两个参数之间通过,分隔。
+能够准确查询到方法名和参数
+类型符合的BeanAbi。若存在重
+载方法，建议使用这种方式。</p></td>
+<td><p>abi.GetMethodAbi(“Hello
+()”)abi.GetMethodAbi(“Hello
+(java.lang.String)”)abi.Get
+MethodAbi(“Hello(int;int)”)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beanabipayload">
+<h4>通过BeanAbi生成payload<a class="headerlink" href="#beanabipayload" title="Permalink to this headline">¶</a></h4>
+<p>在我们获得了 <cite>BeanAbi</cite> 以后，我们可以通过 <cite>GenPayload</cite> 函数构造对应的payload，需要传入 <cite>BeanAbi</cite> 以及对应的参数params（ <strong>要求与</strong> <cite>BeanAbi</cite> <strong>的Inputs参数个数和类型一致</strong> ）。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">GenPayload</span><span class="p">(</span><span class="n">beanAbi</span> <span class="o">*</span><span class="n">BeanAbi</span><span class="p">,</span> <span class="n">params</span> <span class="o">...</span><span class="n">interface</span><span class="p">{})</span> <span class="p">([]</span><span class="n">byte</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>我们对传入的params参数做了以下规定：</p>
+<ul class="simple">
+<li><p>基本类型数据：传入这个参数的字符串形式。如对于 <cite>int 6</cite> ，传入 <cite>”6”</cite> 这个字符串。</p></li>
+<li><p>list类型和Array类型：传入interface数组。如对于List&lt;String&gt;，我们传入</p></li>
+</ul>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[]</span><span class="n">interface</span><span class="p">{}{</span><span class="s2">&quot;strList1&quot;</span><span class="p">,</span> <span class="s2">&quot;strList2&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><p>map类型：传入interface数组。如对于map&lt;String,Bean&gt;，我们传入</p></li>
+</ul>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[]</span><span class="n">interface</span><span class="p">{}{[]</span><span class="n">interface</span><span class="p">{}{</span><span class="s2">&quot;bean1&quot;</span><span class="p">,</span> <span class="n">bean1</span><span class="p">},</span> <span class="p">[]</span><span class="n">interface</span><span class="p">{}{</span><span class="s2">&quot;bean2&quot;</span><span class="p">,</span> <span class="n">bean2</span><span class="p">}}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>具体表格如下：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 44%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>类 型</p></th>
+<th class="head"><p>写法1</p></th>
+<th class="head"><p>写法2(json格式)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bool</p></td>
+<td><p>“true”</p></td>
+<td><p>“true”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Char</p></td>
+<td><p>“c”</p></td>
+<td><p>“c”</p></td>
+</tr>
+<tr class="row-even"><td><p>Short</p></td>
+<td><p>“20”</p></td>
+<td><p>“20”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Int</p></td>
+<td><p>“20”</p></td>
+<td><p>“20”</p></td>
+</tr>
+<tr class="row-even"><td><p>Float</p></td>
+<td><p>“1.1”</p></td>
+<td><p>“1.1”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Double</p></td>
+<td><p>“1.11”</p></td>
+<td><p>“1.11”</p></td>
+</tr>
+<tr class="row-even"><td><p>Byte</p></td>
+<td><p>“1”</p></td>
+<td><p>“1”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Long</p></td>
+<td><p>“10000000000”</p></td>
+<td><p>“10000000000”</p></td>
+</tr>
+<tr class="row-even"><td><p>List</p></td>
+<td><p>[]interface{}{“strList1”,
+“strList2”}</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[&quot;strList1&quot;,&quot;strList2&quot;]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Map</p></td>
+<td><p>[]interf
+ace{}{[]interface{}{“bean1”,
+bean1},
+[]interface{}{“bean2”,
+bean2}}</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{789:</span>
+<span class="pre">{456:12.2},234:{345:12.2}}</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Struct</p></td>
+<td><p>bean1 :=
+[]interface{}{“hvm-bean1”,
+person}
+（其中person是基本类型）</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{&quot;bean1&quot;:{&quot;beanName&quot;:&quot;hv</span>
+<span class="pre">m-bean1&quot;,&quot;person&quot;:{&quot;name&quot;:&quot;t</span>
+<span class="pre">om&quot;,&quot;age&quot;:21}},&quot;bean2&quot;:{&quot;bea</span>
+<span class="pre">nName&quot;:&quot;hvm-bean2&quot;,&quot;person&quot;:</span>
+<span class="pre">{&quot;name&quot;:&quot;jack&quot;,&quot;age&quot;:18}}}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Array</p></td>
+<td><p>array1 =
+[]interface{}{“strList1”,
+“strList2”}</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[&quot;strList1&quot;,&quot;strList2&quot;]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>此外，gosdk中还提供了一种hvm.Convert()方法，将go支持的type（如map，list）转成上面这个表格所示的[]interface{}</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fcmap</span> <span class="o">:=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="n">string</span><span class="p">)</span>
+<span class="n">fcmap</span><span class="p">[</span><span class="s2">&quot;789&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="n">string</span><span class="p">)</span>
+<span class="n">fcmap</span><span class="p">[</span><span class="s2">&quot;234&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="nb">map</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="n">string</span><span class="p">)</span>
+<span class="n">fcmap</span><span class="p">[</span><span class="s2">&quot;789&quot;</span><span class="p">][</span><span class="s2">&quot;456&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;12.2&quot;</span>
+<span class="n">fcmap</span><span class="p">[</span><span class="s2">&quot;234&quot;</span><span class="p">][</span><span class="s2">&quot;345&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;12.2&quot;</span>
+<span class="o">//</span> <span class="n">ans</span> <span class="n">的值为</span> <span class="p">[]</span><span class="n">interface</span><span class="p">{}{[]</span><span class="n">interface</span><span class="p">{}{</span><span class="s2">&quot;789&quot;</span><span class="p">,[]</span><span class="n">interface</span><span class="p">{}{[]</span><span class="n">interface</span><span class="p">{}{</span><span class="s2">&quot;456&quot;</span><span class="p">,</span><span class="s2">&quot;12.2&quot;</span><span class="p">}}},</span> <span class="p">[]</span><span class="n">interface</span><span class="p">{}{</span><span class="s2">&quot;234&quot;</span><span class="p">,[]</span><span class="n">interface</span><span class="p">{}{[]</span><span class="n">interface</span><span class="p">{}{</span><span class="s2">&quot;345&quot;</span><span class="p">,</span><span class="s2">&quot;12.2&quot;</span><span class="p">}}}},</span>
+<span class="n">ans</span> <span class="o">:=</span> <span class="n">hvm</span><span class="o">.</span><span class="n">Convert</span><span class="p">(</span><span class="n">fcmap</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="demo">
+<h3>demo实例<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h3>
+<p>为了更好地帮助用户理解abi的使用方式，我们给出了一个demo使用实例。</p>
+<div class="section" id="id3">
+<h4>合约代码<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>下面的代码给出了用于演示的合约，主要功能为在日志中打印传入的参数。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public class SimpleInvokeContract
+       extends BaseContract implements ISimpleInvokeContract {
+   public Logger logger = Logger.getLogger(SimpleInvokeContract.class);
+
+   @Override
+   public void printint(int v) {
+       logger.notice(&quot;printint: &quot; + v);
+   }
+
+   @Override
+   public void printInteger(Integer v) {
+       logger.notice(&quot;printInteger: &quot; + v);
+   }
+
+   @Override
+   public void printIntegers(Integer[] v) {
+       StringBuilder s = new StringBuilder();
+       for (Integer i : v) {
+           s.append(i);
+           s.append(&quot; &quot;);
+       }
+       logger.notice(&quot;printIntegers: &quot; + s.toString());
+   }
+
+   @Override
+   public void printMan(Man v) {
+       logger.notice(&quot;printShort: &quot; + v.toString());
+   }
+
+   @Override
+   public void printMap(HashMap&lt;String, Man&gt; v) {
+       logger.notice(&quot;printMap: &quot; + v);
+   }
+
+   @Override
+   public void printList(ArrayList&lt;String&gt; v) {
+       logger.notice(&quot;printList: &quot; + v);
+   }
+   ……
+}
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="invokebean">
+<h4>InvokeBean调用<a class="headerlink" href="#invokebean" title="Permalink to this headline">¶</a></h4>
+<p>首先我们通过InvokeBean调用我们的合约，InvokeBean的代码如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">IntegerInvoke</span> <span class="n">implements</span> <span class="n">BaseInvoke</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="p">,</span> <span class="n">ISimpleInvokeContract</span><span class="o">&gt;</span> <span class="p">{</span>
+   <span class="n">private</span> <span class="nb">int</span> <span class="n">v1</span><span class="p">;</span>
+   <span class="n">private</span> <span class="n">Integer</span> <span class="n">v2</span><span class="p">;</span>
+   <span class="n">private</span> <span class="n">Integer</span><span class="p">[]</span> <span class="n">v3</span><span class="p">;</span>
+
+   <span class="n">public</span> <span class="n">IntegerInvoke</span><span class="p">()</span> <span class="p">{</span>
+   <span class="p">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="n">public</span> <span class="n">Boolean</span> <span class="n">invoke</span><span class="p">(</span><span class="n">ISimpleInvokeContract</span> <span class="n">iSimpleInvokeContract</span><span class="p">)</span>
+   <span class="p">{</span>
+       <span class="n">iSimpleInvokeContract</span><span class="o">.</span><span class="n">printint</span><span class="p">(</span><span class="n">v1</span><span class="p">);</span>
+       <span class="n">iSimpleInvokeContract</span><span class="o">.</span><span class="n">printInteger</span><span class="p">(</span><span class="n">v2</span><span class="p">);</span>
+       <span class="n">iSimpleInvokeContract</span><span class="o">.</span><span class="n">printIntegers</span><span class="p">(</span><span class="n">v3</span><span class="p">);</span>
+       <span class="k">return</span> <span class="n">true</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>该InvokeBean对应的abi数据如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[{
+   &quot;classBytes&quot;: &quot;cafebabe00000032003b0a000c002……&quot;,
+   &quot;version&quot;: &quot;v1&quot;,
+   &quot;beanName&quot;: &quot;org.example.invoke.IntegerInvoke&quot;,
+   &quot;inputs&quot;: [{
+       &quot;name&quot;: &quot;v1&quot;,
+       &quot;type&quot;: &quot;Int&quot;,
+       &quot;structName&quot;: &quot;int&quot;
+   }, {
+       &quot;name&quot;: &quot;v2&quot;,
+       &quot;type&quot;: &quot;Int&quot;,
+       &quot;structName&quot;: &quot;java.lang.Integer&quot;
+   }, {
+       &quot;name&quot;: &quot;v3&quot;,
+       &quot;type&quot;: &quot;Array&quot;,
+       &quot;properties&quot;: [{
+           &quot;name&quot;: &quot;java.lang.Integer&quot;,
+           &quot;type&quot;: &quot;Int&quot;,
+           &quot;structName&quot;: &quot;java.lang.Integer&quot;
+       }]
+   }],
+   &quot;output&quot;: {
+       &quot;name&quot;: &quot;java.lang.Boolean&quot;,
+       &quot;type&quot;: &quot;Bool&quot;,
+       &quot;structName&quot;: &quot;java.lang.Boolean&quot;
+   },
+   &quot;structs&quot;: [],
+   &quot;beanType&quot;: &quot;InvokeBean&quot;
+},
+   ……
+]
+</pre></div>
+</div>
+<p>可以看出，要构造该payload，我们需要传入 <cite>int，int，int[]</cite> 类型的参数，因此在gosdk中的使用代码如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abiBean1</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">abi</span><span class="o">.</span><span class="n">GetBeanAbi</span><span class="p">(</span><span class="s2">&quot;org.example.invoke.IntegerInvoke&quot;</span><span class="p">)</span>
+<span class="n">invokePayload1</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">hvm</span><span class="o">.</span><span class="n">GenPayload</span><span class="p">(</span><span class="n">abiBean1</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+   <span class="p">[]</span><span class="n">interface</span><span class="p">{}{</span><span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">})</span>
+<span class="n">transaction1</span> <span class="o">:=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">NewTransaction</span><span class="p">(</span><span class="n">ecKey</span><span class="o">.</span><span class="n">GetAddress</span><span class="p">()</span><span class="o">.</span><span class="n">Hex</span><span class="p">())</span><span class="o">.</span>
+   <span class="n">Invoke</span><span class="p">(</span><span class="n">contractAddress</span><span class="p">,</span> <span class="n">invokePayload1</span><span class="p">)</span><span class="o">.</span>
+   <span class="n">VMType</span><span class="p">(</span><span class="n">rpc</span><span class="o">.</span><span class="n">HVM</span><span class="p">)</span>
+<span class="n">transaction1</span><span class="o">.</span><span class="n">Sign</span><span class="p">(</span><span class="n">ecKey</span><span class="p">)</span>
+<span class="n">receipt1</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">hrpc</span><span class="o">.</span><span class="n">InvokeContract</span><span class="p">(</span><span class="n">transaction1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>payload还可以下面的形式构造:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>invokePayload1, _ := hvm.GenPayload(abiBean1, &quot;1&quot;, &quot;2&quot;, `[&quot;3&quot;, &quot;4&quot;]`)
+
+a := []int{3, 4}
+invokePayload1, _ := hvm.GenPayload(abiBean1, &quot;1&quot;, &quot;2&quot;, hvm.Convert(a))
+</pre></div>
+</div>
+<p>调用成功后，会在平台的日志中打印以下内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NOTI</span> <span class="p">[</span><span class="mi">2020</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span><span class="n">T18</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mf">48.514</span><span class="p">]</span> <span class="p">[</span><span class="n">executor</span><span class="p">]</span> <span class="n">core</span><span class="o">/</span><span class="n">logger</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">48</span> <span class="p">[</span><span class="n">SimpleInvokeContract</span><span class="p">]:</span> <span class="n">printint</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">NOTI</span> <span class="p">[</span><span class="mi">2020</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span><span class="n">T18</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mf">48.515</span><span class="p">]</span> <span class="p">[</span><span class="n">executor</span><span class="p">]</span> <span class="n">core</span><span class="o">/</span><span class="n">logger</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">48</span> <span class="p">[</span><span class="n">SimpleInvokeContract</span><span class="p">]:</span> <span class="n">printInteger</span><span class="p">:</span> <span class="mi">2</span>
+<span class="n">NOTI</span> <span class="p">[</span><span class="mi">2020</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span><span class="n">T18</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mf">48.515</span><span class="p">]</span> <span class="p">[</span><span class="n">executor</span><span class="p">]</span> <span class="n">core</span><span class="o">/</span><span class="n">logger</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">48</span> <span class="p">[</span><span class="n">SimpleInvokeContract</span><span class="p">]:</span> <span class="n">printIntegers</span><span class="p">:</span> <span class="mi">3</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h4>直接调用<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>直接调用与InvokeBean调用使用abi的方法类似，我们将通过直接调用的方式调用 <cite>printMan</cite> 、 <cite>printMap</cite> 、 <cite>printList</cite> 这三个方法，他们逻辑可以在前面 <strong>合约代码</strong> 处查看。</p>
+<p><strong>printMan</strong></p>
+<p><cite>printMan</cite> 方法的abi如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[{
+   &quot;version&quot;: &quot;v1&quot;,
+   &quot;beanName&quot;: &quot;printMan&quot;,
+   &quot;inputs&quot;: [{
+       &quot;name&quot;: &quot;org.example.bean.Man&quot;,
+       &quot;type&quot;: &quot;Struct&quot;,
+       &quot;structName&quot;: &quot;org.example.bean.Man&quot;
+   }],
+   &quot;output&quot;: {
+       &quot;name&quot;: &quot;void&quot;,
+       &quot;type&quot;: &quot;Void&quot;,
+       &quot;structName&quot;: &quot;void&quot;
+   },
+   &quot;structs&quot;: [{
+       &quot;name&quot;: &quot;org.example.bean.Man&quot;,
+       &quot;type&quot;: &quot;Struct&quot;,
+       &quot;properties&quot;: [{
+           &quot;name&quot;: &quot;name&quot;,
+           &quot;type&quot;: &quot;String&quot;,
+           &quot;structName&quot;: &quot;java.lang.String&quot;
+       }, {
+           &quot;name&quot;: &quot;age&quot;,
+           &quot;type&quot;: &quot;Int&quot;,
+           &quot;structName&quot;: &quot;int&quot;
+       }]
+   }],
+   &quot;beanType&quot;: &quot;MethodBean&quot;
+},
+   ……
+]
+</pre></div>
+</div>
+<p>可以看出，要构造该payload，我们需要传入 <cite>Man</cite> 类型的参数，在gosdk中的使用代码如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>abiBean2, _ := abi.GetMethodAbi(&quot;printMan&quot;)
+invokePayload2, _ := hvm.GenPayload(abiBean2,
+   `{&quot;name&quot;: &quot;Ming&quot;, &quot;age&quot;: &quot;20&quot;}`)
+transaction2 := rpc.NewTransaction(ecKey.GetAddress().Hex()).
+   Invoke(contractAddress, invokePayload2).
+   VMType(rpc.HVM)
+transaction2.Sign(ecKey)
+receipt2, _ := hrpc.InvokeContract(transaction2)
+</pre></div>
+</div>
+<p>调用成功后，会在平台打印以下内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NOTI</span> <span class="p">[</span><span class="mi">2020</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span><span class="n">T20</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mf">50.267</span><span class="p">]</span> <span class="p">[</span><span class="n">executor</span><span class="p">]</span> <span class="n">core</span><span class="o">/</span><span class="n">logger</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">48</span> <span class="p">[</span><span class="n">SimpleInvokeContract</span><span class="p">]:</span> <span class="n">printShort</span><span class="p">:</span> <span class="n">Man</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Ming&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">20</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>printMap</strong></p>
+<p><cite>printMap</cite> 方法的abi如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[{
+   &quot;version&quot;: &quot;v1&quot;,
+   &quot;beanName&quot;: &quot;printMap&quot;,
+   &quot;inputs&quot;: [{
+       &quot;name&quot;: &quot;java.util.HashMap&quot;,
+       &quot;type&quot;: &quot;Map&quot;,
+       &quot;properties&quot;: [{
+           &quot;name&quot;: &quot;class java.lang.String&quot;,
+           &quot;type&quot;: &quot;String&quot;,
+           &quot;structName&quot;: &quot;class java.lang.String&quot;
+       }, {
+           &quot;name&quot;: &quot;class org.example.bean.Man&quot;,
+           &quot;type&quot;: &quot;Struct&quot;,
+           &quot;structName&quot;: &quot;class org.example.bean.Man&quot;
+       }]
+   }],
+   &quot;output&quot;: {
+       &quot;name&quot;: &quot;void&quot;,
+       &quot;type&quot;: &quot;Void&quot;,
+       &quot;structName&quot;: &quot;void&quot;
+   },
+   &quot;structs&quot;: [{
+       &quot;name&quot;: &quot;org.example.bean.Man&quot;,
+       &quot;type&quot;: &quot;Struct&quot;,
+       &quot;properties&quot;: [{
+           &quot;name&quot;: &quot;name&quot;,
+           &quot;type&quot;: &quot;String&quot;,
+           &quot;structName&quot;: &quot;java.lang.String&quot;
+       }, {
+           &quot;name&quot;: &quot;age&quot;,
+           &quot;type&quot;: &quot;Int&quot;,
+           &quot;structName&quot;: &quot;int&quot;
+       }]
+   }],
+   &quot;beanType&quot;: &quot;MethodBean&quot;
+},
+   ……
+]
+</pre></div>
+</div>
+<p>相应的调用代码如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>abiBean3, _ := abi.GetMethodAbi(&quot;printMap&quot;)
+invokePayload3, _ := hvm.GenPayload(abiBean3,
+  `{&quot;man1&quot;:{&quot;name&quot;:&quot;Ming&quot;,&quot;age&quot;:20},&quot;man2&quot;:{&quot;name&quot;:&quot;Yi&quot;,&quot;age&quot;:22}}`)
+transaction3 := rpc.NewTransaction(ecKey.GetAddress().Hex()).
+  Invoke(contractAddress, invokePayload3).
+  VMType(rpc.HVM)
+transaction3.Sign(ecKey)
+receipt3, _ := hrpc.InvokeContract(transaction3)
+</pre></div>
+</div>
+<p>调用成功后，会在平台打印以下内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NOTI</span> <span class="p">[</span><span class="mi">2020</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span><span class="n">T21</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">17.640</span><span class="p">]</span> <span class="p">[</span><span class="n">executor</span><span class="p">]</span> <span class="n">core</span><span class="o">/</span><span class="n">logger</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">48</span> <span class="p">[</span><span class="n">SimpleInvokeContract</span><span class="p">]:</span> <span class="n">printMap</span><span class="p">:</span> <span class="p">{</span><span class="n">man2</span><span class="o">=</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="n">Yi</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mf">22.0</span><span class="p">},</span> <span class="n">man1</span><span class="o">=</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="n">Ming</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mf">20.0</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p><strong>printList</strong></p>
+<p><cite>printList</cite> 方法abi内容如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[{
+   &quot;version&quot;: &quot;v1&quot;,
+   &quot;beanName&quot;: &quot;printList&quot;,
+   &quot;inputs&quot;: [{
+       &quot;name&quot;: &quot;java.util.ArrayList&quot;,
+       &quot;type&quot;: &quot;List&quot;,
+       &quot;properties&quot;: [{
+           &quot;name&quot;: &quot;class java.lang.String&quot;,
+           &quot;type&quot;: &quot;String&quot;,
+           &quot;structName&quot;: &quot;class java.lang.String&quot;
+       }]
+   }],
+   &quot;output&quot;: {
+       &quot;name&quot;: &quot;void&quot;,
+       &quot;type&quot;: &quot;Void&quot;,
+       &quot;structName&quot;: &quot;void&quot;
+   },
+   &quot;structs&quot;: [],
+   &quot;beanType&quot;: &quot;MethodBean&quot;
+},
+   ……
+]
+</pre></div>
+</div>
+<p>相应的调用代码如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>abiBean4, _ := abi.GetMethodAbi(&quot;printList&quot;)
+invokePayload4, _ := hvm.GenPayload(abiBean4,
+  `[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]`)
+transaction4 := rpc.NewTransaction(ecKey.GetAddress().Hex()).
+  Invoke(contractAddress, invokePayload4).
+  VMType(rpc.HVM)
+transaction4.Sign(ecKey)
+receipt4, _ := hrpc.InvokeContract(transaction4)
+</pre></div>
+</div>
+<p>调用成功后，会在平台打印以下内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NOTI</span> <span class="p">[</span><span class="mi">2020</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span><span class="n">T21</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mf">18.184</span><span class="p">]</span> <span class="p">[</span><span class="n">executor</span><span class="p">]</span> <span class="n">core</span><span class="o">/</span><span class="n">logger</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">48</span> <span class="p">[</span><span class="n">SimpleInvokeContract</span><span class="p">]:</span> <span class="n">printList</span><span class="p">:</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>2. 使用hvm-abi对合约进行增强<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>hvm-abi插件字节码增强相关配置<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>用户可以在自己的HVM合约项目的pom.xml文件中加入以下内容。其中主要包含以下参数：</p>
+<ul class="simple">
+<li><p>&lt;inputPaths&gt;：待增强合约jar文件的路径。如果传入的路径是jar文件，则会对该jar文件进行字节码增强处理；如果传入的路径是文件夹，那么会对该文件夹下所有的带有 <cite>jar</cite> 后缀的文件进行字节码增强处理。</p></li>
+<li><p>&lt;outputPaths&gt;：合约增强后的jar文件的输出路径，建议输出路径是一个空的文件夹。</p></li>
+</ul>
+<p>在插件中，可以配置多个 <cite>inputPath</cite> 和多个 <cite>outputPath</cite> ，要求配置的 <cite>inputPath</cite> 个数与 <cite>outputPath</cite> 个数相同，并且第n个 <cite>inputPath</cite> 对应第n个 <cite>outputPath</cite> 。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">plugin</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">cn</span><span class="o">.</span><span class="n">hyperchain</span><span class="o">.</span><span class="n">hvm</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">hvm</span><span class="o">-</span><span class="n">maven</span><span class="o">-</span><span class="n">plugin</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.6</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">inputPaths</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="n">inputPath</span><span class="o">&gt;</span>
+               <span class="o">/</span><span class="n">inputpath1</span><span class="o">/</span>
+           <span class="o">&lt;/</span><span class="n">inputPath</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="n">inputPath</span><span class="o">&gt;</span>
+               <span class="o">/</span><span class="n">path2</span><span class="o">/</span><span class="n">target</span><span class="o">/</span><span class="n">bank</span><span class="o">.</span><span class="n">jar</span>
+           <span class="o">&lt;/</span><span class="n">inputPath</span><span class="o">&gt;</span>
+       <span class="o">&lt;/</span><span class="n">inputPaths</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">outputPaths</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="n">outputPath</span><span class="o">&gt;</span>
+               <span class="o">/</span><span class="n">outputpath1</span>
+           <span class="o">&lt;/</span><span class="n">outputPath</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="n">outputPath</span><span class="o">&gt;</span>
+               <span class="o">/</span><span class="n">path2</span><span class="o">/</span><span class="n">target</span>
+           <span class="o">&lt;/</span><span class="n">outputPath</span><span class="o">&gt;</span>
+       <span class="o">&lt;/</span><span class="n">outputPaths</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id7">
+<h3>其他插件配置说明<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>为了maven包引用不出现冲突，这里要求使用 <cite>mven-jar-plugin</cite> 的插件版本为 <cite>3.1.0</cite> 。</p>
+</div>
+<div class="section" id="id8">
+<h3>执行合约增强的命令<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>在完成上述配置后，在终端输入以下命令可以生成增强合约的jar文件。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mvn</span> <span class="n">hvm</span><span class="p">:</span><span class="n">enhance</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>以对bank.jar进行增强为例，效果如下图所示，插件会对inputpath下的合约jar文件进行处理，并在outputpath路径下输出两个合约jar文件：</p>
+<ol class="arabic simple">
+<li><p>bank-hvm.jar：如果在客户端需要使用合约中的某些类，则可以引入这个jar包依赖。</p></li>
+<li><p>bank-hvm-deploy.jar：在合约部署/升级时，将deploy.jar文件传到节点端进行部署/升级，该合约jar的大小相比原合约jar会稍大， <strong>需要注意是否超过了hvm合约jar大小的最大限制</strong> 。</p></li>
+</ol>
+<p><img alt="image0" src="../../_images/ABI_plug-in.png" /></p>
+</div>
+<div class="section" id="id9">
+<h3>执行效果<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>使用hvm增强合约后，合约的部署、调用、升级、冻结等操作与原先的合约一致，使用上并不会有差异。</p>
+<p>hvm增强合约目前在 <strong>直接调用的场景下相比原始合约有性能提升，</strong> 其提升程度取决于合约中storefield的个数以及直接调用中使用的storefield个数。合约原本storefield个数越多，被直接调用的方法。而在invokeBean调用的场景下，两者的性能一致。</p>
+</div>
+<div class="section" id="hvmtype">
+<h3>配合hvmType注解元素使用<a class="headerlink" href="#hvmtype" title="Permalink to this headline">¶</a></h3>
+<p>用户在编写HVM合约时，建议 <strong>使用StoreField注解元素hvmType。</strong> hvmType会告知hvm执行引擎所要实例化的类型，在字节码增强的场景下，效率更高。</p>
+<p>HVM合约中提供了HyperMap、HyperList、HyperTable、NestedMap四种账本数据结构类，用户在编写合约时需要通过以下两种方式声明字段，合约才能正常执行：</p>
+<ol class="arabic simple">
+<li><p>使用hvmType注解元素。推荐使用这种写法</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">MyContract</span> <span class="n">extends</span> <span class="n">BaseContract</span> <span class="n">implements</span> <span class="n">IMyContract</span> <span class="p">{</span>
+   <span class="nd">@StoreField</span>
+   <span class="n">public</span> <span class="nb">int</span> <span class="n">num</span><span class="p">;</span>
+
+   <span class="nd">@StoreField</span><span class="p">(</span><span class="n">hvmType</span> <span class="o">=</span> <span class="n">StoreField</span><span class="o">.</span><span class="n">TypeHyperMap</span><span class="p">)</span>
+   <span class="n">public</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">hyperMap</span><span class="p">;</span>
+
+   <span class="nd">@StoreField</span><span class="p">(</span><span class="n">hvmType</span> <span class="o">=</span> <span class="n">StoreField</span><span class="o">.</span><span class="n">TypeHyperList</span><span class="p">)</span>
+   <span class="n">public</span> <span class="n">HyperList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">hyperList</span><span class="p">;</span>
+
+   <span class="nd">@StoreField</span><span class="p">(</span><span class="n">hvmType</span> <span class="o">=</span> <span class="n">StoreField</span><span class="o">.</span><span class="n">TypeHyperTable</span><span class="p">)</span>
+   <span class="n">public</span> <span class="n">HyperTable</span> <span class="n">hyperTable</span><span class="p">;</span>
+
+   <span class="nd">@StoreField</span><span class="p">(</span><span class="n">hvmType</span> <span class="o">=</span> <span class="n">StoreField</span><span class="o">.</span><span class="n">TypeNestedMap</span><span class="p">)</span>
+   <span class="n">public</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">nestedMap</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>声明时创建实例</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">MyContract</span> <span class="n">extends</span> <span class="n">BaseContract</span> <span class="n">implements</span> <span class="n">IMyContract</span> <span class="p">{</span>
+   <span class="nd">@StoreField</span>
+   <span class="n">public</span> <span class="nb">int</span> <span class="n">num</span><span class="p">;</span>
+
+   <span class="nd">@StoreField</span>
+   <span class="n">public</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">hyperMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+   <span class="nd">@StoreField</span>
+   <span class="n">public</span> <span class="n">HyperList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">hyperList</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HyperList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+   <span class="nd">@StoreField</span>
+   <span class="n">public</span> <span class="n">HyperTable</span> <span class="n">hyperTable</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HyperTable</span><span class="p">();</span>
+
+   <span class="nd">@StoreField</span>
+   <span class="n">public</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">nestedMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">NestedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h3>注意事项<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>在使用hvm字节码增强功能时，有以下几点需要注意：</p>
+<ol class="arabic simple">
+<li><p>如果合约存在跨合约调用， <strong>要求两个合约都经过字节码增强</strong> 。不允许增强合约和非增强合约之间进行跨合约调用。</p></li>
+<li><p>使用跨合约调用时，建议通过接口的形式来调用</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">正确示范</span>
+<span class="n">public</span> <span class="n">boolean</span> <span class="n">crossISetA</span><span class="p">(</span><span class="n">String</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">IBank</span> <span class="n">iBank</span> <span class="o">=</span> <span class="n">crossCall</span><span class="o">.</span><span class="n">getCrossContract</span><span class="p">();</span>
+   <span class="n">iBank</span><span class="o">.</span><span class="n">setA</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+   <span class="k">return</span> <span class="n">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>建议通过合约的钩子函数 <cite>onInit</cite> 和 <cite>onCreated</cite> 来编写合约的初始化逻辑。不建议在构造方法和类初始化方法中编写合约逻辑。</p></li>
+<li><p>建议将StoreField声明为类实例字段</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">MyContract</span> <span class="n">extends</span> <span class="n">BaseContract</span> <span class="n">implements</span> <span class="n">IMyContract</span> <span class="p">{</span>
+   <span class="o">//</span> <span class="n">建议用法</span>
+   <span class="nd">@StoreField</span><span class="p">(</span><span class="n">hvmType</span> <span class="o">=</span> <span class="n">StoreField</span><span class="o">.</span><span class="n">TypeHyperMap</span><span class="p">)</span>
+   <span class="n">public</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map1</span><span class="p">;</span>
+
+   <span class="o">//</span> <span class="n">不建议声明为static</span>
+   <span class="nd">@StoreField</span><span class="p">(</span><span class="n">hvmType</span> <span class="o">=</span> <span class="n">StoreField</span><span class="o">.</span><span class="n">TypeHyperMap</span><span class="p">)</span>
+   <span class="n">public</span> <span class="n">static</span> <span class="n">HyperMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>不建议合约引用非JDK和hvm-sdk以外包的类。如果合约中类或类实例的字段，那么合约Jar包中必须有这个类的class文件，即使用JDK和hvm-sdk包以外类并操作字段，hvm-abi将无法进行增强。</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

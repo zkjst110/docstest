@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>状态证明使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>状态证明使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Chain Authority Management/chain conf mange.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chain-conf-mange">
+<span id="id1"></span><h1>状态证明使用手册<a class="headerlink" href="#chain-conf-mange" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. 数据准备<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>archivereader的状态证明依赖一份archivereader维护的归档路径下的线下账本数据。即如图所示的情况：</p>
+<p><img alt="image0" src="../_images/conf1.png" /></p>
+<p>红色方框中的数据就是状态证明所需要的数据。这份数据与hyperchain上归档产生的数据有一定的区别：</p>
+<ol class="arabic simple">
+<li><p>只需要账本数据即可；</p></li>
+<li><p>ledger.zip文件需解压缩后，得到accountdb、statedb、diddb、credentialdb这四个文件夹；（backup.meta和compress.meta是因为这个路径被当成了一个hyperchainDB打开了，系统自动生成了这两个文件；当解压完成后，ledger.zip这个文件与证明过程完全无关）</p></li>
+</ol>
+<p>因此，联动hyperchain和archiveReader，完整的数据拷贝过程应该是：</p>
+<ol class="arabic" start="3">
+<li><p>hyperchain仓库调用Snapshot接口（这一个步骤在第3章会做详细说明），制作出一个seqNo对应的照数据，这份数据在hyperchain上的路径为：<cite>namespaces/any-ns/data/archive/any-filterID/ledger.zip</cite>；</p></li>
+<li><p>将上述的ledger.zip文件拷贝到archiveReader的相同路径下（<cite>namespaces/same-ns/data/archive/same-filterID/ledger.zip</cite>）;</p></li>
+<li><p>在archiveReader的`namespaces/same-ns/data/archive/same-filterID`路径下解压缩文件，得到如下目录结构:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>namespaces/same-ns/data/archive/same-filterID/
+  · accountdb/
+  · statedb/
+  · diddb/(这个文件可以删除)
+  · credentialdb/(这个文件可以删除)
+  · ledger.zip(这个文件可以删除)
+</pre></div>
+</div>
+</li>
+</ol>
+<p>至此，archiveReader便可以读取到这份数据并对外提供证明服务。</p>
+</div>
+<div class="section" id="id3">
+<h2>2. 接口说明<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>archiveReader会新增两个api接口，用户可以通过curl的形式向archiveReader发送请求。新增的两个接口分别为：</p>
+<div class="line-block">
+<div class="line">接口名称                     | 参数               | 返回值              |</div>
+<div class="line">———————— | —————- | —————- |</div>
+<div class="line">proof_getStateProof      | json结构ProofParam | json结构StateProof |</div>
+<div class="line">proof_validateStateProof |                  | true/false       |</div>
+</div>
+<div class="section" id="jsonproofparam">
+<h3>json结构ProofParam<a class="headerlink" href="#jsonproofparam" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">案例</span>
+<span class="p">{</span>
+    <span class="s2">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;snapshotID&quot;</span><span class="p">:</span> <span class="s2">&quot;0x5b1a5bb7b10d15bc9d47701eed9c9349&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;seqNo&quot;</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;0x6de31be7a30204189d70bd202340c6d9b395523e&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fieldName&quot;</span><span class="p">:</span> <span class="s2">&quot;hyperMap1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;key1&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;vmType&quot;</span><span class="p">:</span> <span class="s2">&quot;HVM&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>首先，整体上上述结构包含两个子部分：<strong>meta**和**key</strong>：</p>
+<ul>
+<li><p><a href="#id4"><span class="problematic" id="id5">**</span></a>meta**的含义是这一次proof相请求涉及的是哪一个账本数据：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>snapshotID</strong>：（带0x的16进制字符串）即当前账本所在的snapshotID目录；</p></li>
+<li><p><strong>seqNo</strong>：（uint64）因为vidb会保留最近的40个区块的数据，即假设hyperchain上在100号做了snapshot，那么在这份账本数据中61-100号的账本数据都是可查的；因此用户可以传入seqNo声明基于哪个区块的数据做证明或者验证证明；</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a href="#id6"><span class="problematic" id="id7">**</span></a>key**的结构中封装了本次proof操作请求相关的账本上的key的全部信息：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a href="#id8"><span class="problematic" id="id9">**</span></a>address：<a href="#id10"><span class="problematic" id="id11">**</span></a>（带0x的16进制字符串）合约地址</p></li>
+<li><p><a href="#id12"><span class="problematic" id="id13">**</span></a>filedName：<a href="#id14"><span class="problematic" id="id15">**</span></a>（string）用于预期查询的合约中的字段名称（带&#64;StoreField注解的合约类中的属性）</p></li>
+<li><p><a href="#id16"><span class="problematic" id="id17">**</span></a>params：<a href="#id18"><span class="problematic" id="id19">**</span></a>（string数组）为复杂的复合key准备的额外参数，具体的规则见文档（）第2.1节</p></li>
+<li><p><a href="#id20"><span class="problematic" id="id21">**</span></a>vmType：<a href="#id22"><span class="problematic" id="id23">**</span></a>（string）虚拟机类型</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="jsonstateproof">
+<h3>json结构StateProof<a class="headerlink" href="#jsonstateproof" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">案例</span>
+<span class="p">{</span>
+    <span class="s2">&quot;statePath&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;isData&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LWNvZGVIYXNo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;M2F24RPlGgP6pdOEvFaeSaNArXvVL6/ADLekYQhIsLE=&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;inodes&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LWNvZGVIYXNo&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;ebbt0Gg5QYTb990MKgeD5FBmWrPIk/G0z04E77aHHj0=&quot;</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="s2">&quot;isData&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LWNvZGVIYXNo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;ebbt0Gg5QYTb990MKgeD5FBmWrPIk/G0z04E77aHHj0=&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;inodes&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LWNvZGVIYXNo&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;8La+721N+BJDzA1KSauVKmVX+mWcd17T5eCAbwCyUwI=&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LWNvZGXwtr7vbU34EkPMDUpJq5UqZVf6ZZx3XtPl4IBvALJTAg==&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;ACZjb20uaHlwZXJjaGFpbi5wcm9vZi5LZXlQYXJzZXJDb250cmFjdAAAAyYAJsr+ur4AAAA0ACQKAAkAGgcAGwoAAgAaCQAIABwIAB0IAB4KAAIAHwcAIAcAIQEACWh5cGVyTWFwMQEAHUxjbi9oeXBlcmNoYWluL2NvcmUvSHlwZXJNYXA7AQAJU2lnbmF0dXJlAQBDTGNuL2h5cGVyY2hhaW4vY29yZS9IeXBlck1hcDxMamF2YS9sYW5nL1N0cmluZztMamF2YS9sYW5nL1N0cmluZzs+OwEAGVJ1bnRpbWVWaXNpYmxlQW5ub3RhdGlvbnMBACZMY24vaHlwZXJjaGFpbi9hbm5vdGF0aW9ucy9TdG9yZUZpZWxkOwEABjxpbml0PgEAAygpVgEABENvZGUBAA9MaW5lTnVtYmVyVGFibGUBABJMb2NhbFZhcmlhYmxlVGFibGUBAAR0aGlzAQAoTGNvbS9oeXBlcmNoYWluL3Byb29mL0tleVBhcnNlckNvbnRyYWN0OwEABm9uSW5pdAEAClNvdXJjZUZpbGUBABZLZXlQYXJzZXJDb250cmFjdC5qYXZhDAAQABEBABtjbi9oeXBlcmNoYWluL2NvcmUvSHlwZXJNYXAMAAoACwEABGtleTEBAAZ2YWx1ZTEMACIAIwEAJmNvbS9oeXBlcmNoYWluL3Byb29mL0tleVBhcnNlckNvbnRyYWN0AQAjY24vaHlwZXJjaGFpbi9jb250cmFjdC9CYXNlQ29udHJhY3QBAANwdXQBADgoTGphdmEvbGFuZy9PYmplY3Q7TGphdmEvbGFuZy9PYmplY3Q7KUxqYXZhL2xhbmcvT2JqZWN0OwAhAAgACQAAAAEAAgAKAAsAAgAMAAAAAgANAA4AAAAGAAEADwAAAAIAAQAQABEAAQASAAAAQgADAAEAAAAQKrcAASq7AAJZtwADtQAEsQAAAAIAEwAAAA4AAwAAAAwABAAJAA8ADgAUAAAADAABAAAAEAAVABYAAAABABcAEQABABIAAAA7AAMAAQAAAA0qtAAEEgUSBrYAB1exAAAAAgATAAAACgACAAAAEgAMABMAFAAAAAwAAQAAAA0AFQAWAAAAAQAYAAAAAgAZY29tL2h5cGVyY2hhaW4vcHJvb2YvS2V5UGFyc2VyQ29udHJhY3Q=&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LXN0b3JhZ2VoeXBlck1hcDEtX19zaXplX18=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;MQI=&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LXN0b3JhZ2VoeXBlck1hcDFAImtleTEi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;InZhbHVlMSIC&quot;</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="mi">3</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;accountPath&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;isData&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAD//wI=&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;qi/Wc2VvS62m/22FiEmCOe6zICIUokAF1s8BOKnzCnk=&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;inodes&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAD//wI=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;JO9J8Ol/DmWYFjFBMS28Ob3eFhliJ4k6TY/zAlIavJM=&quot;</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="s2">&quot;isData&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAD//wI=&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;JO9J8Ol/DmWYFjFBMS28Ob3eFhliJ4k6TY/zAlIavJM=&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;inodes&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAD//wI=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwZmZmZjAyIiwiYmFsYW5jZSI6MCwibWVya2xlUm9vdCI6IjB4N2NmMDM4Y2YxMWNiM2M2ODQ4YzgxMDYzNWRlY2VmODVhMTRhYmRmYTE3MDUyMTk5NTk5NTg2ZWY2N2NlZWQ0ZSIsInR5cGUiOjEsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJjcmVhdG9yIjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwic3RhdHVzIjowfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAD//wU=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwZmZmZjA1IiwiYmFsYW5jZSI6MCwibWVya2xlUm9vdCI6IjB4ZjkyMDRhOGIzNGU0MTU1YmM1YzU1YmM3OTY2NmIyNTkxN2JlNDU5YWRkYzE1MmFkMzViYTNlM2Q2OTBmYzc3YiIsInR5cGUiOjEsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJjcmVhdG9yIjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwic3RhdHVzIjowfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAD//wY=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwZmZmZjA2IiwiYmFsYW5jZSI6MCwibWVya2xlUm9vdCI6IjB4MWQyMjk3OTVhMGVjOGJlMjU0ZDZhYThlNGRiNzE3MDI4YmVjYjM3MmMzYTY0NDQ4NWUzYTg3NzFjMzlmYTVhZSIsInR5cGUiOjEsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJjcmVhdG9yIjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwic3RhdHVzIjowfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;AA8aegjMxI5dMPgIUM8c8oOqOr0=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHgwMDBmMWE3YTA4Y2NjNDhlNWQzMGY4MDg1MGNmMWNmMjgzYWEzYWJkIiwiYmFsYW5jZSI6MTAwMDAwMDAwMCwibWVya2xlUm9vdCI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInR5cGUiOjAsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJSb2xlcyI6WyJhZG1pbiIsImNvbnRyYWN0TWFuYWdlciJdfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;HcA8LJupP3nrMr7ztm9l21vtB3s=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHgxZGMwM2MyYzliYTkzZjc5ZWIzMmJlZjNiNjZmNjVkYjViZWQwNzdiIiwiYmFsYW5jZSI6MCwibWVya2xlUm9vdCI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInR5cGUiOjAsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJSb2xlcyI6WyJub2RlT2ZWUCJdfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Ko26LByZHefZjz9OxUMnR47FoPo=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHgyYThkYmEyYzFjOTkxZGU3ZDk4ZjNmNGVjNTQzMjc0NzhlYzVhMGZhIiwiYmFsYW5jZSI6MCwibWVya2xlUm9vdCI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInR5cGUiOjAsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MiwiY29udHJhY3RzIjpbIjB4MmVjNGZiZmNmODc1MTJjNmExZDg4OTQyMmU2MjhhYzYxNWY0ZGI5OCIsIjB4NmRlMzFiZTdhMzAyMDQxODlkNzBiZDIwMjM0MGM2ZDliMzk1NTIzZSJdLCJjcmVhdGVUaW1lIjowLCJSb2xlcyI6bnVsbH0=&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;LsT7/Ph1Esah2IlCLmKKxhX025g=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHgyZWM0ZmJmY2Y4NzUxMmM2YTFkODg5NDIyZTYyOGFjNjE1ZjRkYjk4IiwiYmFsYW5jZSI6MCwibWVya2xlUm9vdCI6IjB4MzM2MTc2ZTExM2U1MWEwM2ZhYTVkMzg0YmM1NjllNDlhMzQwYWQ3YmQ1MmZhZmMwMGNiN2E0NjEwODQ4YjBiMSIsInR5cGUiOjEsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjoxLCJjcmVhdG9yIjoiMHgyYThkYmEyYzFjOTkxZGU3ZDk4ZjNmNGVjNTQzMjc0NzhlYzVhMGZhIiwic3RhdHVzIjowfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;YgHLBEiWSsWX+vb98fRy7fKiK4k=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHg2MjAxY2IwNDQ4OTY0YWM1OTdmYWY2ZmRmMWY0NzJlZGYyYTIyYjg5IiwiYmFsYW5jZSI6MTAwMDAwMDAwMCwibWVya2xlUm9vdCI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInR5cGUiOjAsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJSb2xlcyI6WyJhZG1pbiIsImNvbnRyYWN0TWFuYWdlciJdfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;beMb56MCBBidcL0gI0DG2bOVUj4=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHg2ZGUzMWJlN2EzMDIwNDE4OWQ3MGJkMjAyMzQwYzZkOWIzOTU1MjNlIiwiYmFsYW5jZSI6MCwibWVya2xlUm9vdCI6IjB4MzM2MTc2ZTExM2U1MWEwM2ZhYTVkMzg0YmM1NjllNDlhMzQwYWQ3YmQ1MmZhZmMwMGNiN2E0NjEwODQ4YjBiMSIsInR5cGUiOjEsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjoyLCJjcmVhdG9yIjoiMHgyYThkYmEyYzFjOTkxZGU3ZDk4ZjNmNGVjNTQzMjc0NzhlYzVhMGZhIiwic3RhdHVzIjowfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;hW4rml+oL9GwMdH/aGOGTbrHmV0=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHg4NTZlMmI5YTVmYTgyZmQxYjAzMWQxZmY2ODYzODY0ZGJhYzc5OTVkIiwiYmFsYW5jZSI6MTAwMDAwMDAwMCwibWVya2xlUm9vdCI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInR5cGUiOjAsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJSb2xlcyI6WyJhZG1pbiIsImNvbnRyYWN0TWFuYWdlciJdfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;sYyFdeMoTnm5IQACWjE3j+uBANY=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHhiMThjODU3NWUzMjg0ZTc5YjkyMTAwMDI1YTMxMzc4ZmViODEwMGQ2IiwiYmFsYW5jZSI6MTAwMDAwMDAwMCwibWVya2xlUm9vdCI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInR5cGUiOjAsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJSb2xlcyI6WyJhZG1pbiIsImNvbnRyYWN0TWFuYWdlciJdfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;6TuS8doI+SW97kTpHndoOAroMwc=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHhlOTNiOTJmMWRhMDhmOTI1YmRlZTQ0ZTkxZTc3NjgzODBhZTgzMzA3IiwiYmFsYW5jZSI6MTAwMDAwMDAwMCwibWVya2xlUm9vdCI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInR5cGUiOjAsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJSb2xlcyI6WyJhZG1pbiIsImNvbnRyYWN0TWFuYWdlciJdfQ==&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;+8pqfp4pcodzsnDT8AFTx10E4a0=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJBZGRyZXNzIjoiMHhmYmNhNmE3ZTllMjk3Mjg3NzNiMjcwZDNmMDAxNTNjNzVkMDRlMWFkIiwiYmFsYW5jZSI6MTAwMDAwMDAwMCwibWVya2xlUm9vdCI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInR5cGUiOjAsInZlcnNpb24iOiJmbGF0b18xLjAiLCJub25jZSI6MCwiY29udHJhY3RzIjpudWxsLCJjcmVhdGVUaW1lIjowLCJSb2xlcyI6WyJhZG1pbiIsImNvbnRyYWN0TWFuYWdlciJdfQ==&quot;</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="mi">8</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>上述json案例就是一个完整的“证明数据”返回值。其中包含两个字段：statePath、accountPath。</p>
+<p>其中statePath表示的是：statedb目录对应的vidb中获取的proofPath；</p>
+<p>相应的，accountPath表示的是：accountdb目录对应的vidb获取的proofPath；</p>
+<p><strong>proofPath说明：</strong></p>
+<blockquote>
+<div><p><img alt="image1" src="../_images/conf2.png" /></p>
+</div></blockquote>
+<p>对于vidb而言，证明路径就是由每层一个节点构成的。节点的内容定义如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{
+    // bool值，是否为数据节点
+    &quot;isData&quot;: false,
+    // byte数组，base64编码，表示当前节点的最小的key
+    &quot;key&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAD//wI=&quot;,
+    // 节点的哈希值，base64编码，表示当前节点所有数据的hash
+    &quot;hash&quot;: &quot;qi/Wc2VvS62m/22FiEmCOe6zICIUokAF1s8BOKnzCnk=&quot;,
+    // 数组结构，每一个元素都是一个json结构：{key是base64编码的byte数组，hash是base64编码的byte数组}
+    &quot;inodes&quot;: [{
+        &quot;key&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAD//wI=&quot;,
+        &quot;hash&quot;: &quot;JO9J8Ol/DmWYFjFBMS28Ob3eFhliJ4k6TY/zAlIavJM=&quot;
+    }],
+    // index表示的是在向下层寻找key的过程中，当前节点使用的是哪个位置的分支继续向下寻找的
+    &quot;index&quot;: 0
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="hyperchain">
+<h2>3. hyperchain上制作快照<a class="headerlink" href="#hyperchain" title="Permalink to this headline">¶</a></h2>
+<p>hyperchain上暴露了一个新的jsonrpc接口用于制作快照：</p>
+<div class="line-block">
+<div class="line">接口名称             | 参数      | 返回值              | 同步接口 |</div>
+<div class="line">—————- | ——- | —————- | —- |</div>
+<div class="line">archive_snapshot | int-区块号 | string-账本快照的标识ID | 是    |</div>
+</div>
+<p>hyperchain在执行命令时，会以apply journal的形式，制作出“至入参区块号执行完成时为止”的账本快照数据。该过程可以类比archive过程中的制作快照步骤。</p>
+<p>当制作快照完成时，hyperchain节点下会新增`namespaces/specific-ns/data/archive/current-filterID/<a href="#id24"><span class="problematic" id="id25">`</span></a>目录，在这个目录下的`ledger.zip压缩文件`就是账本快照数据。</p>
+<p>示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span>  <span class="n">localhost</span><span class="p">:</span><span class="mi">8081</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;[{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 0, &quot;method&quot;: &quot;archive_snapshot&quot;, &quot;params&quot;: [123], &quot;namespace&quot;: &quot;global&quot;}]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>4. 备注说明<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<p>在合约执行过程中，拼接出来最后提交到数据库层的数据是带有前缀的，但是在vidb中，数据真正存到磁盘上时，会将前缀trim掉，因此getStateProof接口返回的路径最后一个数据节点的元素中，key都是不带前缀的。</p>
+<p>从hyperchain2.7的数据开始支持状态证明，之前版本生成的数据不支持证明</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

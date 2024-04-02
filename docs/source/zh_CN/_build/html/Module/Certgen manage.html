@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Certgen使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Certgen使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Module/Certgen manage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="certgen">
+<span id="certgen-manage"></span><h1>Certgen使用手册<a class="headerlink" href="#certgen" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>一、安装包获取<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>1.1下载<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>可以通过OA系统或者飞洛下载</p>
+<p>目前提供多种操作系统版本下载</p>
+<p><img alt="image0" src="../_images/certgen1.png" /></p>
+</div>
+<div class="section" id="id3">
+<h3>1.2安装包结构<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>安装包解压后包含certgen二进制文件、README.md文档、依赖库tools和两个脚本文件。两个脚本分别为install.sh和gencert.sh。前者可以完成安装功能，后者可以快速生成证书套件。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>二、安装（可选步骤）<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>certgen二进制文件本身是编译好的命令行工具，能够提供全部功能。gencert.sh脚本能够简化生成证书套件的操作，帮助快速生成可供flato使用的证书套件。</p>
+<p>我们提供开箱即用的使用体验，当下载解压并进入解压后的目录后，这两个可执行文件（certgen和gencert.sh）已经完成工作。例如:</p>
+<p><img alt="image1" src="../_images/certgen2.png" /></p>
+<p>但是此时仅能够在当前目录中使用该工具，我们建议此时执行安装脚本install.sh完成安装。您可以查看install.sh脚本的内容。</p>
+</div>
+<div class="section" id="id5">
+<h2>三、快速上手<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p><strong>certgen</strong> 提供了证书和密钥的验证、签发、补发和相关套件的一系列功能。cergen有五个命令，主要功能可以分为三类：</p>
+<p><strong>1. 生成证书、私钥等文件；</strong></p>
+<p><strong>2. 查看私钥、相关证书文件的具体内容；</strong></p>
+<p><strong>3. 验证证书的合法性和有效性。</strong></p>
+<p>建议您查看README.md的内容以便学习certgen的使用。但是也有一些快速上手的方式，下面我们逐一介绍。</p>
+<div class="section" id="id6">
+<h3>3.1利用certgen的提示功能快速上手<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>为了提供完备功能，certgen有若干条命令，每条命令都有若干选项可以指定。我不建议您尝试记忆这些命令和选择，利用certgen的提示功能是快速上手的好办法。</p>
+<p>例如直接在命令行键入certgen（如果没有安装则需要进入到certgen所在目录执行./certgen），则可以看到全部命令，您将了解到生成根证书的命令为gs。这时您还不知道gs需要哪些参数或者选项，没有关系，现在您可以键入certgen gs来查看帮助：</p>
+<p><img alt="image2" src="../_images/certgen3.png" /></p>
+<p>可以看到，Example中提供了最基础的用法实例，大部分情况下您直接按照example执行即可。而下方的flags是详细的选项说明。</p>
+<p><strong>*注意⚠️：可以使用flag直接指定相关内容，也可以留空通过交互式操作手动填充关键信息。*</strong> 详情可分别通过根命令和子命令的 <cite>–help</cite> 自行查看相关用法。</p>
+</div>
+<div class="section" id="gencert-sh">
+<h3>3.2通过查看gencert.sh脚本内容快速上手<a class="headerlink" href="#gencert-sh" title="Permalink to this headline">¶</a></h3>
+<p>gencert.sh是bash脚本，可以用来自动化生成一整套的证书套件。如果您熟悉bash脚本的语法，那么阅读gencert.sh也可以快速了解到certgen的使用方法。</p>
+</div>
+<div class="section" id="id7">
+<h3>3.3使用gencert.sh脚本<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>gencert.sh是交互式的，只会询问必要的参数选项即可生成一套证书套件，例如执行国密算法和非分布式ca，并且输入一些选项即可生成证书目录。</p>
+<p>非分布式CA</p>
+<p><img alt="image3" src="../_images/certgen4.png" /></p>
+<p>分布式CA：</p>
+<p><img alt="image4" src="../_images/certgen5.png" /></p>
+<p>tls证书：</p>
+<p><img alt="image5" src="../_images/certgen6.png" /></p>
+<p>生成的证书目录certsDir结构如下：</p>
+<p>非分布式CA下有按照节点名称命名的目录，以node1为例，其目录结构如下图:</p>
+<p><img alt="image6" src="../_images/certgen7.png" /></p>
+<p>分布式CA下有按照节点名称命名的目录，以node1为例，其目录结构如下图：</p>
+<p><img alt="image7" src="../_images/certgen8.png" /></p>
+<p>tls,生成的tls证书被放在当前路径的tlsCertsDir目录下，其内的结构如图：</p>
+<p><img alt="image8" src="../_images/certgen9.png" /></p>
+<p>以配置node1的global下证书为例，只需要将certsDir下的CA和certs目录拷贝到节点目录./namespaces/global/certs下即可。替换后的节点目录如下：</p>
+<p><img alt="image9" src="../_images/certgen19.png" /></p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>四、命令详解<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>4.1. <strong>生成</strong><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p><strong>1.1</strong> <cite>gc</cite> 命令通过根CA签发子证书(请查阅附录所有的flag用法)</p>
+<p>示例 1(全交互式)：假设需要一个子证书。</p>
+<p>终端输入： <cite>certgen gc ./root_ca.pem ./root_priv.pem ./sub.pem</cite></p>
+<p>终端输出：</p>
+<p><img alt="image10" src="../_images/certgen10.png" /></p>
+<p><em>删除光标处的内容后可以输入其他证书类型</em></p>
+<p><img alt="image11" src="../_images/certgen11.png" /></p>
+<p><em>若成功，输出如上图所示</em></p>
+<p><a href="#id10"><span class="problematic" id="id11">**</span></a><a href="#id12"><span class="problematic" id="id13">*</span></a></p>
+<p>示例 2(使用flag)：假设需要一个ecert类型的子证书(且为CA证书)，有P10请求文件。主机名为node2，组织为Hyperchain，曲线为p256类型。</p>
+<p>终端输入： <cite>certgen gc ./root_ca.pem ./root_priv.pem ./sub.pem –p10 ./p10.csr –cn node2 –org Hyperchain –c p256 –ct ecert –isca yroot_ca.pem: CA证书文件root_priv.pem: CA私钥文件sub.pem: 目标子证书文件P10.csr: P10请求文件路径</cite></p>
+<p>终端输出：</p>
+<p><img alt="image12" src="../_images/certgen12.png" /></p>
+<p><em>若成功，输出如上图所示</em></p>
+<p><a href="#id14"><span class="problematic" id="id15">**</span></a><a href="#id16"><span class="problematic" id="id17">*</span></a></p>
+<p><strong>1.2</strong> <cite>gs</cite> 命令生成自签名证书类似于 <cite>gc</cite> 命令，flag减少为四个，分别为 <cite>–c, –cn, –ct, –org</cite></p>
+<p>示例 1(全交互式)：假设需要一个自签名证书。</p>
+<p>终端输入： <cite>certgen gs ./root_ca.pem ./root_priv.pem</cite></p>
+<p>终端输出：</p>
+<p><img alt="image13" src="../_images/certgen13.png" /></p>
+<p><em>删除光标处内容后可以输入其他曲线类型</em></p>
+<p>同 <cite>gc</cite> 命令的交互式反馈</p>
+<p><img alt="image14" src="../_images/certgen14.png" /></p>
+<p><em>若成功，输出如上图所示</em></p>
+<p><a href="#id18"><span class="problematic" id="id19">**</span></a><a href="#id20"><span class="problematic" id="id21">*</span></a></p>
+<p>示例 2(使用flag)：假设需要一个ecert类型的自签名子证书，主机名为node3，组织为HyperChain，曲线为p256类型。</p>
+<p>终端输入： <cite>certgen gs ./root_ca.pem ./root_priv.pem –ct ecert –cn node2 –org Hyperchain –c p256</cite></p>
+<p>终端输出：</p>
+<p><img alt="image15" src="../_images/certgen15.jpg" /></p>
+<p><em>若成功，输出如上图所示</em></p>
+<p><a href="#id22"><span class="problematic" id="id23">**</span></a><a href="#id24"><span class="problematic" id="id25">*</span></a></p>
+<p><strong>1.3</strong>  <cite>gk</cite> 命令生成PEM格式的私钥</p>
+<p>示例 1(交互式)：生成一个密钥对，然后终端输入加密算法</p>
+<p>终端输入： <cite>certgen gk ./PrivKey.pem ./PubKey.pem</cite></p>
+<p>终端输出：</p>
+<p><img alt="image16" src="../_images/certgen16.jpg" /></p>
+<p><em>删除光标处内容后可以输入其他曲线，如p256, sm2</em></p>
+<p><img alt="image17" src="../_images/certgen17.jpg" /></p>
+<p>若成功，输出如上图所示</p>
+<p>示例 2(使用flag)：生成一个使用secp256k1的密钥对</p>
+<p>终端输入： <cite>certgen gk ./PrivKey.pem ./PubKey.pem –c secp256k1</cite></p>
+<p>示例 3(使用flag)：生成一对使用p256的密钥对</p>
+<p>终端输入： <cite>certgen gk ./PrivKey.pem ./PubKey.pem –c p256</cite></p>
+<p>示例 4(使用flag)：生成一个使用sm2的密钥对</p>
+<p>终端输入： <cite>certgen gk ./PrivKey.pem ./PubKey.pem –c sm2</cite></p>
+<p>终端输出：</p>
+<p><img alt="image18" src="../_images/certgen18.jpg" /></p>
+<p><em>若成功，示例2、3、4的输出如上图所示</em></p>
+<p><cite>PrivKey.pem: 目标私钥文件</cite></p>
+<p><cite>PubKey.pem: 目标公钥文件</cite></p>
+<p><a href="#id26"><span class="problematic" id="id27">**</span></a><a href="#id28"><span class="problematic" id="id29">*</span></a></p>
+<p><strong>1.4</strong>  <cite>gp</cite> 命令合并私钥和对应证书生成pfx证书</p>
+<p>终端输入： <cite>certgen gp ./cert.pem ./priv.pem ./tartget.pfx –pwd 12345</cite></p>
+<p><a href="#id30"><span class="problematic" id="id31">**</span></a><a href="#id32"><span class="problematic" id="id33">*</span></a></p>
+<p><strong>1.5</strong>  <cite>env</cite> 命令编码并输出输入的路径；解码并创建输入的编码后的路径</p>
+<p>示例 1：</p>
+<p>终端输入： <cite>certgen env /DirA/DirB/</cite></p>
+<p>终端输出： <cite>Base64编码后的路径名</cite></p>
+<p>示例 2：</p>
+<p>终端输入： <cite>certgen env base64路径名 –decode</cite></p>
+<p><a href="#id34"><span class="problematic" id="id35">**</span></a><a href="#id36"><span class="problematic" id="id37">*</span></a></p>
+</div>
+<div class="section" id="id38">
+<h3>4.2. <strong>查看信息</strong><a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<p><cite>print</cite> 命令打印相关信息,如密钥对(私钥/公钥)，证书</p>
+<p>终端输入：</p>
+<p><cite>certgen print ./PrivKey.pem certgen print ./PubKey.pemPrivKey.pem: 需要打印的私钥文件PubKey.pem: 需要打印的公钥文件</cite></p>
+<p><strong>*注意⚠️：如果私钥创建时没有设置passphrase，则不需填写password(密码)。*</strong></p>
+<p>假设输入一个无 <em>passphrase</em> 的P256曲线的PEM私钥，输出如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Private</span> <span class="n">Key</span><span class="p">:</span>    <span class="n">ECDSA</span> <span class="n">Private</span> <span class="n">Key</span>
+    <span class="n">D</span><span class="p">:</span><span class="mh">0x8a47c85fa6439c45c5369995158de14f8a5f2df3ba31c5c27bfbd50809b4a5aa</span>
+<span class="n">Public</span> <span class="n">Key</span><span class="p">:</span>    <span class="n">ECDSA</span> <span class="n">Public</span> <span class="n">Key</span><span class="p">,</span> <span class="n">Curve</span> <span class="n">Name</span><span class="p">:</span> <span class="n">P</span><span class="o">-</span><span class="mi">256</span>
+    <span class="n">X</span><span class="p">:</span><span class="mh">0x347ea1811a00c37024c502ab711772d27b29ba814bde47772c62f44bc73770be</span>
+    <span class="n">Y</span><span class="p">:</span><span class="mh">0x333be106d78a67e532cdccea800769e08a64a84182ce374339ced1bbe3f22e6</span>
+<span class="n">Addr</span><span class="p">:</span> <span class="mh">0x1c117c590ca127ad224f82c52496e8810f63d2f9</span>
+<span class="n">Public</span> <span class="n">PEM</span> <span class="p">:</span>
+<span class="o">-----</span><span class="n">BEGIN</span> <span class="n">PUBLIC</span> <span class="n">KEY</span><span class="o">-----</span>
+<span class="n">MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAENH6hgRoAw3AkxQKrcRdy0nspuoFL</span>
+<span class="mi">3</span><span class="n">kd3LGL0S8c3cL4DM74QbXimflMs3M6oAHaeCKZKhBgs43QznO0bvj8i5g</span><span class="o">==</span>
+<span class="o">-----</span><span class="n">END</span> <span class="n">PUBLIC</span> <span class="n">KEY</span><span class="o">-----</span>
+</pre></div>
+</div>
+<p><a href="#id39"><span class="problematic" id="id40">**</span></a><a href="#id41"><span class="problematic" id="id42">*</span></a></p>
+<p>终端输入： <cite>certgen print ./X509.pemX509.pem: 需要打印的证书文件</cite></p>
+<p>假设输入一个 <em>ecert</em> 类型证书文件，输出如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Certificate</span><span class="p">:</span>
+    <span class="n">Data</span><span class="p">:</span>
+        <span class="o">//</span><span class="n">版本</span>
+        <span class="n">Version</span><span class="p">:</span> <span class="mi">3</span>
+        <span class="o">//</span><span class="n">序列号</span>
+        <span class="n">Serial</span> <span class="n">Number</span><span class="p">:</span> <span class="mh">0x1</span>
+        <span class="o">//</span><span class="n">签名算法</span>
+        <span class="n">Signature</span> <span class="n">Algorithm</span><span class="p">:</span> <span class="n">ECDSA</span><span class="o">-</span><span class="n">SHA256</span>
+        <span class="o">//</span><span class="n">颁发者</span>
+        <span class="n">Issuer</span><span class="p">:</span> <span class="n">CN</span><span class="o">=</span><span class="n">node1</span><span class="p">,</span><span class="n">O</span><span class="o">=</span><span class="n">flato</span><span class="p">,</span><span class="n">C</span><span class="o">=</span><span class="n">ZH</span>
+        <span class="o">//</span><span class="n">有效期</span>
+        <span class="n">Validity</span>
+            <span class="o">//</span><span class="n">此前无效</span>
+            <span class="n">Not</span> <span class="n">Before</span><span class="p">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">09</span> <span class="mi">01</span><span class="p">:</span><span class="mi">57</span><span class="p">:</span><span class="mi">04</span> <span class="o">+</span><span class="mi">0000</span> <span class="n">UTC</span>
+            <span class="o">//</span><span class="n">此后无效</span>
+            <span class="n">Not</span> <span class="n">After</span> <span class="p">:</span> <span class="mi">2120</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">16</span> <span class="mi">02</span><span class="p">:</span><span class="mi">57</span><span class="p">:</span><span class="mi">04</span> <span class="o">+</span><span class="mi">0000</span> <span class="n">UTC</span>
+        <span class="o">//</span><span class="n">主题</span>
+        <span class="n">Subject</span><span class="p">:</span> <span class="n">CN</span><span class="o">=</span><span class="n">node1</span><span class="p">,</span><span class="n">O</span><span class="o">=</span><span class="n">flato</span><span class="p">,</span><span class="n">C</span><span class="o">=</span><span class="n">ZH</span>
+        <span class="o">//</span><span class="n">主题公钥信息</span>
+        <span class="n">Subject</span> <span class="n">Public</span> <span class="n">Key</span> <span class="n">Info</span><span class="p">:</span>
+            <span class="o">//</span><span class="n">公钥算法</span>
+            <span class="n">Public</span> <span class="n">Key</span> <span class="n">Algorithm</span><span class="p">:</span> <span class="n">ECDSA</span>
+            <span class="o">//</span><span class="n">公钥长度</span>
+            <span class="n">Public</span><span class="o">-</span><span class="n">Key</span><span class="p">:</span> <span class="p">(</span><span class="mi">256</span> <span class="n">bit</span><span class="p">)</span>
+            <span class="o">//</span><span class="n">公钥</span>
+            <span class="n">Pub</span><span class="p">(</span><span class="ow">in</span> <span class="n">HEX</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="mi">65</span><span class="p">):</span>
+                <span class="mi">04</span><span class="n">be4a031f974728c6c080b775ebafd23828c74dd788c1214992bc56d2fa748f</span>
+                <span class="n">d5c40ad83d737c6bcd801d3c4a317e934ab347ad03f85acc475681f51a5187df</span>
+                <span class="n">c0</span>
+            <span class="o">//</span><span class="n">使用了p256曲线的椭圆函数</span>
+            <span class="n">CURVE</span><span class="p">:</span> <span class="n">P</span><span class="o">-</span><span class="mi">256</span>
+        <span class="o">//</span><span class="n">扩展部分</span>
+        <span class="n">X509v3</span> <span class="n">extensions</span><span class="p">:</span>
+            <span class="n">X509v3</span> <span class="n">Key</span> <span class="n">Usage</span><span class="p">:</span> <span class="n">critical</span>
+                <span class="n">DigitalSignature</span>
+            <span class="n">X509v3</span> <span class="n">Extended</span> <span class="n">Key</span> <span class="n">Usage</span><span class="p">:</span>
+                <span class="n">ClientAuth</span><span class="p">,</span> <span class="n">ServerAuth</span><span class="p">,</span> <span class="mf">1.2.3</span><span class="p">,</span> <span class="mf">2.59.1</span>
+            <span class="o">//</span><span class="n">基本约束</span>
+            <span class="n">X509v3</span> <span class="n">Basic</span> <span class="n">Constraints</span><span class="p">:</span> <span class="n">critical</span>
+                <span class="n">Is</span> <span class="n">CA</span><span class="p">:</span> <span class="n">true</span>
+            <span class="o">//</span><span class="n">主题关键标识符</span>
+            <span class="n">X509v3</span> <span class="n">Subject</span> <span class="n">Key</span> <span class="n">Identifier</span><span class="p">:</span>
+                <span class="mh">0x040401020304</span>
+        <span class="o">//</span><span class="n">签名算法</span>
+        <span class="n">Signature</span> <span class="n">Algorithm</span><span class="p">:</span> <span class="n">ECDSA</span><span class="o">-</span><span class="n">SHA256</span>
+        <span class="o">//</span><span class="n">签名</span>
+        <span class="n">Signature</span><span class="p">(</span><span class="ow">in</span> <span class="n">HEX</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="mi">71</span><span class="p">):</span>
+            <span class="mi">304502206</span><span class="n">a457087bf7442b867d33e2359ea95aeab4d3719906f45afbefa5026</span>
+                <span class="mi">04</span><span class="n">d021ac022100cf89b5cfa82e405f8494943a90fd40d6f82c0c6bc858abdc63</span>
+                <span class="mi">0</span><span class="n">f5dcbbd3ecb18</span>
+</pre></div>
+</div>
+<p><a href="#id43"><span class="problematic" id="id44">**</span></a><a href="#id45"><span class="problematic" id="id46">*</span></a></p>
+</div>
+<div class="section" id="id47">
+<h3>4.3. <strong>证书验证</strong><a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<p><cite>cc</cite> 命令负责验证目标证书是是否由CA签发</p>
+<p>终端输入：</p>
+<p><cite>certgen cc ./root_ca.pem ./cert.pemroot_ca.pem: CA证书文件cert.pem: 需要验证的证书文件</cite></p>
+<p>如果验证通过，输出:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="n">the</span> <span class="n">sub</span> <span class="n">cert</span> <span class="ow">is</span> <span class="n">signed</span> <span class="n">by</span> <span class="n">root</span> <span class="n">cert</span> <span class="ow">or</span> <span class="ow">not</span>
+<span class="o">&gt;</span> <span class="n">root</span> <span class="n">cert</span><span class="p">:</span> <span class="n">root_ca</span><span class="o">.</span><span class="n">pem</span>
+<span class="o">&gt;</span> <span class="n">sub</span> <span class="n">cert</span><span class="p">:</span> <span class="n">cert</span><span class="o">.</span><span class="n">pem</span>
+<span class="o">======================</span>
+<span class="n">SUCCESS</span>
+</pre></div>
+</div>
+<p><a href="#id48"><span class="problematic" id="id49">**</span></a><a href="#id50"><span class="problematic" id="id51">*</span></a></p>
+<p>如果验证失败，输出:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="n">the</span> <span class="n">sub</span> <span class="n">cert</span> <span class="ow">is</span> <span class="n">signed</span> <span class="n">by</span> <span class="n">root</span> <span class="n">cert</span> <span class="ow">or</span> <span class="ow">not</span>
+<span class="o">&gt;</span> <span class="n">root</span> <span class="n">cert</span><span class="p">:</span> <span class="n">root_ca</span><span class="o">.</span><span class="n">pem</span>
+<span class="o">&gt;</span> <span class="n">sub</span> <span class="n">cert</span><span class="p">:</span> <span class="n">cert</span><span class="o">.</span><span class="n">pem</span>
+<span class="o">======================</span>
+<span class="n">FAILED</span><span class="p">,</span> <span class="n">reason</span><span class="p">:</span><span class="n">x509</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">signature</span><span class="p">:</span> <span class="n">parent</span> <span class="n">certificate</span> <span class="n">cannot</span> <span class="n">sign</span> <span class="n">this</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">certificate</span>
+</pre></div>
+</div>
+<p><a href="#id52"><span class="problematic" id="id53">**</span></a><a href="#id54"><span class="problematic" id="id55">*</span></a></p>
+</div>
+<div class="section" id="idcert">
+<h3>4.4生成IDCert（账户证书）<a class="headerlink" href="#idcert" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>使用gc命令可以签发账户证书。其中账户证书中绑定的地址需要通过–cn指定</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">certgen</span> <span class="n">gc</span> <span class="o">./</span><span class="n">root</span><span class="o">.</span><span class="n">ca</span> <span class="o">./</span><span class="n">root</span><span class="o">.</span><span class="n">priv</span>   <span class="o">./</span><span class="n">idcert</span><span class="o">.</span><span class="n">cert</span> \
+<span class="o">--</span><span class="n">cn</span> <span class="s2">&quot;ffffffffff04dd69707ba4aa9d350a59d1aaaaa1&quot;</span> \
+<span class="o">--</span><span class="n">to</span> <span class="s2">&quot;2221-10-30&quot;</span> <span class="o">--</span><span class="n">ct</span> <span class="n">idcert</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>通过上述命令产生./idcert.cert文件，该文件为pen编码的x509格式，其中不包含私钥信息，不能直接用于在SDK中新建账户。通过openssl的pkcs12命令可以将格式转换为需要的pfx格式。需要两个输入为证书和私钥。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  openssl pkcs12 -export \
+  -out certificate.pfx -inkey subcert.priv -in idcert.cert
+
+注意，pfx是有加密保护的格式，因此在生成pfx证书时需要输入密码。此后SDK调用NewAccount时需要传入此密码。
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="appendix">
+<h3>Appendix<a class="headerlink" href="#appendix" title="Permalink to this headline">¶</a></h3>
+<p>相关参数:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">必须通过参数指定</span>
+<span class="n">CACertPath</span><span class="p">:</span> <span class="n">根CA证书的路径</span>
+<span class="n">CAPrivPath</span><span class="p">:</span>  <span class="n">根CA私钥的路径</span>
+<span class="n">SubCertPath</span><span class="p">:</span> <span class="n">目标子证书的路径</span>
+
+<span class="n">必须通过flag或者交互式</span><span class="p">(</span><span class="n">二选一</span><span class="p">)</span><span class="n">指定</span>
+<span class="n">CertType</span><span class="p">:</span> <span class="n">证书类型</span>
+</pre></div>
+</div>
+<p>flag说明:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CertType: --ct，证书的类型。支持三种类型的参数，为“ecert”、“rcert”和“sdkcert”
+SubPub: --pub，用于子证书的公钥文件路径
+SubJson: --json， 用于子证书的账号文件路径(json类型的文件)
+P10: --p10，用于子证书的p10文件路径
+PWD: --pwd，用于加密文件的密码
+IsCA: --isca，指定是否将子证书指定为CA证书(参数为y/n，默认为n)
+HostName: --cn，指定hostname或者domain。默认为node1
+Organization: --org，指定组织名称。默认为flato
+Curve: --c，指定曲线的类型。支持三种类型，为“p256”、“secp256k1”和“sm2”
+SubCertPrivPath: --priv，指定子证书私钥的生成路径
+    NVP: --nvp 后面参数为NVP或LP要绑定的VP节点的hostname
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

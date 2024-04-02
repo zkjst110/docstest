@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Simulate交易使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Simulate交易使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/VM Related User Manual/Simulate User Manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="simulate">
+<span id="simulate-user-manual"></span><h1>Simulate交易使用手册<a class="headerlink" href="#simulate" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1. 引言<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>1.1 编写目的<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>提供Simulate交易的使用方式</p>
+</div>
+<div class="section" id="id3">
+<h3>1.2背景<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>在与区块链平台交互的业务场景中，区块链作为业务数据存储平台，常会接收到数据查询的用户请求， <strong>但当前区块链平台对于用户的一些数据查询请求，会当作一笔“真实的业务数据”存在链上，这个是没有必要，会导致链上存储多余的无用信息，进而影响平台数据的读写效率</strong> 。为解决上述痛点问题，我们拟采取“模拟交易”的方式，提供一个与真实环境分离的镜像模拟环境给用户进行数据读写的模拟查询，其数据变更和行为记录不会存在真实的底层数据库，从而做到“ <strong>模拟数据不上链，提升数据查询效率</strong> ”。</p>
+</div>
+<div class="section" id="id4">
+<h3>1.3术语<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 12%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>英文</p></th>
+<th class="head"><p>中文</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Simulate Transaction</p></td>
+<td><p>模拟交易</p></td>
+<td><p>只用于查询，不改变链上数据状态的交易。</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h3>1.4参考文献<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>2. 安装和初始化<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>只需要运行Flato v1.0.4以上的版本即支持simulate交易。</p>
+</div>
+<div class="section" id="id7">
+<h2>3.操作说明<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>simulate交易是为了方便用户使用区块链平台模拟执行交易提供的接口，simulate交易遵循即用即销毁的原则，在执行完成simulate交易之后，节点上不会存在任何关于该笔交易的痕迹，包括交易修改的状态、交易的哈希值等等。具体的，simulate交易支持如下几种类型的调用：</p>
+<ol class="arabic simple">
+<li><p>模拟部署合约；</p></li>
+<li><p>模拟调用合约；</p></li>
+<li><p>模拟维护合约（升级、冻结、解冻）。</p></li>
+</ol>
+<p>需要注意的是，simulate交易 <strong>不支持如下几种</strong> 类型的调用：</p>
+<ol class="arabic simple">
+<li><p>普通转账交易/存证交易，因为simulate是模拟交易，因此不支持转账操作。其次，simulate执行完后即销毁，因此存证请求不会在链上留痕，也就失去了意义；</p></li>
+<li><p>bvm合约调用，由于bvm合约大都涉及到的是管理员权限的合约操作，因此需要由管理员进行谨慎操作，simulate交易不支持此类调用</p></li>
+<li><p>大文件存储调用，同样的，大文件存储面向的存储请求，但是simulate交易不会在链上留痕，也就无需支持大文件存储调用了。</p></li>
+</ol>
+<p>simulate合约服务接口概览表</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>RPC方法</p></th>
+<th class="head"><p>功能</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>simulate_deployContract</p></td>
+<td><p>部署合约</p></td>
+</tr>
+<tr class="row-odd"><td><p>simulate _invokeContract</p></td>
+<td><p>调用合约</p></td>
+</tr>
+<tr class="row-even"><td><p>simulate _maintainContract</p></td>
+<td><p>升级合约、冻结合约、解冻合约</p></td>
+</tr>
+</tbody>
+</table>
+<p>由于simulate交易调用流程与普通交易类似，因此发送simulate交易请求是可以参照《GoSDK/LiteSDK使用文档》将普通交易设置为simulate交易类型即可。</p>
+<p>例（GoSDK设置交易类型为simulate）：</p>
+<p>方法签名:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fun</span> <span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">Transaction</span><span class="p">)</span> <span class="n">Simulate</span><span class="p">(</span><span class="n">simulate</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">*</span><span class="n">Transaction</span>
+</pre></div>
+</div>
+<p>例（LiteSDK设置交易类型为simulate）：</p>
+<p><img alt="image0" src="../_images/simulate1.png" /></p>
+<div class="section" id="id8">
+<h3>3.1 模拟部署合约<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>调用流程：模拟部署合约的流程可以参照GoSDK/LiteSDK的正常部署合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。</p>
+<p><strong>模拟部署合约的调用操作结束后，该合约不会记录到链上。</strong></p>
+</div>
+<div class="section" id="id9">
+<h3>3.2 模拟调用合约<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>说明：模拟调用合约之前，需要通过正常部署合约的方式先部署一个合约，随后才能通过模拟调用的方式调用该合约。即如果前序步骤是通过模拟部署合约的方式部署了一个合约的话，是不能通过模拟调用的方式调用该合约的，因为模拟部署合约的信息不会在链上留痕。</p>
+<p>调用流程：模拟调用合约的流程可以参照GoSDK/LiteSDK的正常调用合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。</p>
+<p><strong>模拟调用合约的调用操作结束后，合约状态的修改不会记录到链上，即模拟调用不影响链上合约的状态。</strong></p>
+</div>
+<div class="section" id="id10">
+<h3>3.3 模拟升级合约<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>说明：只有合约的部署者才拥有模拟升级合约的权限。模拟升级合约之前，需要通过正常部署合约的方式先部署一个合约，随后才能通过模拟升级的方式升级该合约。即如果前序步骤是通过模拟部署合约的方式部署了一个合约的话，是不能通过模拟升级的方式升级该合约的。</p>
+<p>调用流程：模拟升级合约的流程可以参照GoSDK/LiteSDK的正常升级合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。</p>
+<p><strong>模拟升级合约的调用操作结束后，合约状态的修改不会记录到链上，即模拟升级不影响链上合约的状态。</strong></p>
+</div>
+<div class="section" id="id11">
+<h3>3.4 模拟冻结合约<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>说明：只有合约的部署者才拥有模拟冻结合约的权限。模拟冻结合约之前，需要通过正常部署合约的方式先部署一个合约，随后才能通过模拟冻结的方式冻结该合约。即如果前序步骤是通过模拟部署合约的方式部署了一个合约的话，是不能通过模拟冻结的方式冻结该合约的。</p>
+<p>调用流程：模拟冻结合约的流程可以参照GoSDK/LiteSDK的正常冻结合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。</p>
+<p><strong>模拟冻结合约的调用操作结束后，合约状态的修改不会记录到链上，即模拟冻结不影响链上合约的状态。</strong></p>
+</div>
+<div class="section" id="id12">
+<h3>3.5 模拟解冻合约<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>说明：只有合约的部署者才拥有模拟解冻合约的权限。模拟解冻合约之前，需要通过正常部署合约的方式先部署一个合约，并通过正常冻结合约的方式将其冻结，随后才能通过模拟解冻的方式解冻该合约。即如果前序步骤是通过模拟部署合约的方式部署了一个合约的话，或者前序步骤是通过模拟冻结合约的方式冻结了该合约的话，是不能通过模拟解冻的方式解冻该合约的。</p>
+<p>调用流程：模拟解冻合约的流程可以参照GoSDK/LiteSDK的正常解冻合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。</p>
+<p><strong>模拟解冻合约的调用操作结束后，合约状态的修改不会记录到链上，即模拟解冻不影响链上合约的状态。</strong></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

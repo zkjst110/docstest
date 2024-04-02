@@ -1,0 +1,1682 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>HVM合约内置方法和工具方法使用手册 &mdash; hyperchain  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> hyperchain
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">平台介绍:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction.html">平台介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Version%20information.html">版本信息</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">快速入门:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../General%20Concepts.html">通用概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Prepare.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Deployedfile.html">部署运维</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">基础协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../consensus%20mechanism.html">共识机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Networking%20protocol.html">网络协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../execution%20engine.html">执行引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Storage%20model.html">存储模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security%20mechanism.html">加密机制</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">扩展协议:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Architecture%20development.html">架构拓展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Digital%20Service.html">数字服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Safe%20Privacy.html">隐私保护</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Governonce%20and%20audit.html">治理与审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20management.html">数据管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Operation%20manage.html">运维管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Ecological%20components.html">区块链生态组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../External%20Interface.html">外部接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Chain%20Authority%20Management.html">链级权限管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Node%20and%20zone%20management.html">节点及分区管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Consensus%20related%20user%20manual.html">共识相关使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cross%20domain%20network%20User%20Manual.html">跨域网络使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20storage%20and%20management.html">数据存储使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Password%20related.html">密码学相关</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Security%20Audit.html">安全审计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Data%20Monitor.html">数据监控</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qulian%20blockchain%20browser.html">趣链区块链浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VM%20Related%20User%20Manual.html">（用户）智能合约使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Module.html">（用户）组件库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">应用场景:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../application.html">应用案例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NFT%20and%20contract%20writing.html">数字藏品合约编写</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">更多资源:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Community_Resources.html">社区与资源</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">hyperchain</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>HVM合约内置方法和工具方法使用手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/VM Related User Manual/HVM/HVM Contract built-in methods and tools.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hvm">
+<span id="hvm-contract-built-in-methods-and-tools"></span><h1>HVM合约内置方法和工具方法使用手册<a class="headerlink" href="#hvm" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1. 合约内置变量<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>目前合约的内置变量</p>
+<ul class="simple">
+<li><p><cite>sender</cite> ：合约方法调用者的地址（当且仅当存在跨合约调用时值会与orgin不同）</p></li>
+<li><p><cite>origin</cite> ：合约调用者的地址</p></li>
+<li><p><cite>txHash</cite> ：当前交易的哈希</p></li>
+<li><p><cite>blockTimestamp</cite> ：交易所在区块的时间戳</p></li>
+<li><p><cite>blockNumber</cite> ：交易所在区块</p></li>
+<li><p><cite>contractAddress</cite> ：合约地址</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>2. 合约内置方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>合约内置方法是HVM合约实现类继承自BaseContract的方法，可在合约主类中通过this引用直接使用。</p>
+<div class="section" id="extra">
+<h3>获取交易extra信息<a class="headerlink" href="#extra" title="Permalink to this headline">¶</a></h3>
+<p><strong>getValueFromExtra</strong></p>
+<p>获得当前交易的extra字段信息，其中extra记录了链上额外的存证信息，是一个json字符串。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">String</span> <span class="n">getValueFromExtra</span><span class="p">(</span><span class="n">String</span> <span class="n">path</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 43%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getVal
+ueFromExtra</p></td>
+<td><p>path：对得
+到的extra字段进行过滤的规则</p></td>
+<td><p>String类型
+，从extra字段得到的信息</p></td>
+</tr>
+</tbody>
+</table>
+<p>其中path是一系列由 <cite>.</cite> 分隔的key组成的字符串。</p>
+<p>在key中可以包含一些特殊的通配符比如 <cite>*</cite> 和 <cite>?</cite> 。如果要访问数组的指定元素，使用下标作为key。要获取数组的长度或者要基于数组添加子path，可以使用 <cite>#</cite> 。</p>
+<p>你可以对一个数组使用条件查询， <cite>#[…]</cite> 将返回第一个匹配元素， <cite>#[…]#</cite> 将返回所有匹配元素，其中查询条件支持比较运算符： <cite>==</cite> ，  <cite>!=</cite> ，  <cite>&lt;</cite> ， <cite>&lt;=</cite> ， <cite>&gt;</cite> ， <cite>&gt;=</cite> ，还有一些简单的模式匹配： <cite>%</cite> （like）和 <cite>!%</cite> （not like）。</p>
+<p>注意： <cite>.</cite> 和 <cite>?</cite> 和 <cite>*</cite> 可以通过 <cite>\</cite> 转义成为一般字符。</p>
+<p>实例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;first&quot;</span><span class="p">:</span> <span class="s2">&quot;Tom&quot;</span><span class="p">,</span> <span class="s2">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;Anderson&quot;</span><span class="p">},</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">37</span><span class="p">,</span><span class="s2">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Sara&quot;</span><span class="p">,</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span><span class="s2">&quot;Jack&quot;</span><span class="p">],</span><span class="s2">&quot;fav.movie&quot;</span><span class="p">:</span> <span class="s2">&quot;Deer Hunter&quot;</span><span class="p">,</span><span class="s2">&quot;friends&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;first&quot;</span><span class="p">:</span> <span class="s2">&quot;Dale&quot;</span><span class="p">,</span> <span class="s2">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;Murphy&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">44</span><span class="p">},{</span><span class="s2">&quot;first&quot;</span><span class="p">:</span> <span class="s2">&quot;Roger&quot;</span><span class="p">,</span> <span class="s2">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;Craig&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">68</span><span class="p">},{</span><span class="s2">&quot;first&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="s2">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;Murphy&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">47</span><span class="p">}]}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 19%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Path</p></th>
+<th class="head"><p>Result</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>“name.last”</p></td>
+<td><p>Anderson</p></td>
+<td><p>name的属性</p></td>
+</tr>
+<tr class="row-odd"><td><p>“age”</p></td>
+<td><p>37</p></td>
+<td><p>age属性</p></td>
+</tr>
+<tr class="row-even"><td><p>“children”</p></td>
+<td><p>[“Sara”,“Al
+ex”,“Jack”]</p></td>
+<td><p>children属性</p></td>
+</tr>
+<tr class="row-odd"><td><p>“children.#”</p></td>
+<td><p>3</p></td>
+<td><p>children数组的长度</p></td>
+</tr>
+<tr class="row-even"><td><p>“children.1”</p></td>
+<td><p>“Alex”</p></td>
+<td><p>children数组的下标为1的元素</p></td>
+</tr>
+<tr class="row-odd"><td><p>c?ildren.0”</p></td>
+<td><p>“Sara”</p></td>
+<td><p>匹配模式
+为“c?ildren”的元素的下标为0的元素</p></td>
+</tr>
+<tr class="row-even"><td><p>“fav.movie”</p></td>
+<td><p>“Deer
+Hunter”</p></td>
+<td><p>转义.，“fav.movie”属性</p></td>
+</tr>
+<tr class="row-odd"><td><p>“friends.#.first”</p></td>
+<td><p>[
+“Dale”,“Rog
+er”,“Jane”]</p></td>
+<td><p>friends数组内每个元素的first属性</p></td>
+</tr>
+<tr class="row-even"><td><p>“friends.1.last”</p></td>
+<td><p>“Craig”</p></td>
+<td><p>friends数组的第2个元素的last属性</p></td>
+</tr>
+<tr class="row-odd"><td><p>“friends.#[last=
+=”Murphy”].first”</p></td>
+<td><p>“Dale”</p></td>
+<td><p>friends数组中第一个满足last
+属性等于“Murphy”的元素的first属性</p></td>
+</tr>
+<tr class="row-even"><td><p>“friends.#[last==
+”Murphy”]#.first”</p></td>
+<td><p>[“Da
+le”,“Jane”]</p></td>
+<td><p>friends数组中所有满足last
+属性等于“Murphy”的元素的first属性</p></td>
+</tr>
+<tr class="row-odd"><td><p>“friends
+.#[age&gt;45]#.last”</p></td>
+<td><p>[“Craig
+”,“Murphy”]</p></td>
+<td><p>friends数组中所有
+满足age属性大于45的元素的last属性</p></td>
+</tr>
+<tr class="row-even"><td><p>“friends.#[
+first%”D*”].last”</p></td>
+<td><p>“Murphy”</p></td>
+<td><p>friends数组中第一个满足：first属
+性符合”D*“模式，的元素的last属性</p></td>
+</tr>
+<tr class="row-odd"><td><p>“friends.#[f
+irst!%”D*”].last”</p></td>
+<td><p>“Craig”</p></td>
+<td><p>f
+riends数组中第一个不满足：first属
+性符合”D*“模式，的元素的last属性</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">extra</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getValueFromExtra</span><span class="p">(</span><span class="s2">&quot;friends.1.last&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>合约事件推送<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>hvm为合约的开发者提供了合约事件推送的功能，即可以在合约的执行过程中，将事件推送给客户端。订阅了相关事件类型的客户端可以接收到该事件消息。</p>
+<div class="section" id="id4">
+<h4>合约事件的推送<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>合约事件推送的功能由合约基础类BaseContract实现，提供的接口如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">final</span> <span class="n">void</span> <span class="n">event</span><span class="p">(</span><span class="n">Object</span> <span class="n">data</span><span class="p">,</span> <span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span><span class="o">...</span> <span class="n">topics</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>参数：</strong></p>
+<ul class="simple">
+<li><p>data：指定的合约推送数据，最后会转换json的数据的形式推送给客户端</p></li>
+<li><p>name：事件的名称，必须提供一个非空的字符串来作为标识。</p></li>
+<li><p>topics：用来事件的类型。用户订阅时，可以指定自己想要接收的topic来精确订阅相应的事件。通过topics来确定要接收哪些类型的事件。</p></li>
+</ul>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="nb">map</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="nb">map</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;tom&quot;</span><span class="p">,</span><span class="s2">&quot;99&quot;</span><span class="p">);</span>
+<span class="nb">map</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;bob&quot;</span><span class="p">,</span><span class="s2">&quot;98&quot;</span><span class="p">);</span>
+<span class="n">event</span><span class="p">(</span><span class="nb">map</span><span class="p">,</span> <span class="s2">&quot;testEvent&quot;</span><span class="p">,</span> <span class="s2">&quot;topicA&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h4>合约事件的订阅<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>用户可以通过LiteSdk提供的API来订阅合约事件，合约事件必须通过MQParam来注册订阅队列。</p>
+<p>MQParam对象的创建示例如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">array</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">array</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;SignedMQBlock&quot;</span><span class="p">);</span>
+<span class="n">array</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;MQLog&quot;</span><span class="p">);</span>
+<span class="n">array</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;MQException&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">qname</span> <span class="o">=</span> <span class="s2">&quot;node1queue&quot;</span><span class="p">;</span>
+<span class="n">MQParam</span> <span class="n">mqParam</span> <span class="o">=</span> <span class="n">new</span> <span class="n">MQParam</span><span class="o">.</span><span class="n">Builder</span><span class="p">()</span><span class="o">.</span>
+       <span class="o">//</span><span class="n">队列订阅相关的参数</span>
+       <span class="n">msgTypes</span><span class="p">(</span><span class="n">array</span><span class="p">)</span><span class="o">.</span>     <span class="o">//</span><span class="n">表示要订阅的消息类型</span>
+       <span class="n">queueName</span><span class="p">(</span><span class="n">qname</span><span class="p">)</span><span class="o">.</span>    <span class="o">//</span><span class="n">表示队列名称</span>
+       <span class="o">//</span> <span class="n">MQlog事件订阅需要的参数</span>
+       <span class="n">logFromBlock</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span><span class="o">.</span>       <span class="o">//</span><span class="n">表示需要推送log事件的起始区块号</span>
+       <span class="n">logToBlock</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span><span class="o">.</span>         <span class="o">//</span><span class="n">表示需要推送log事件的终止区块号</span>
+       <span class="n">logAddress</span><span class="p">(</span><span class="s2">&quot;0x12...&quot;</span><span class="p">)</span><span class="o">.</span>   <span class="o">//</span><span class="n">表示log事件需要匹配的合约地址</span>
+       <span class="n">logTopics</span><span class="p">(</span><span class="n">new</span> <span class="n">String</span><span class="p">[]{</span><span class="s2">&quot;topicA&quot;</span><span class="p">,</span> <span class="s2">&quot;topicB&quot;</span><span class="p">})</span><span class="o">.</span>
+       <span class="o">//</span><span class="n">表示log事件需要匹配的topic集合</span>
+       <span class="n">logTopics</span><span class="p">(</span><span class="n">new</span> <span class="n">String</span><span class="p">[]{</span><span class="s2">&quot;topicC&quot;</span><span class="p">,</span> <span class="s2">&quot;topicD&quot;</span><span class="p">})</span><span class="o">.</span>
+       <span class="o">//</span><span class="n">可多次调用添加多个topic数组</span>
+       <span class="n">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>详细的订阅规则请查看LiteSdk使用文档的 <strong>第七章. MQ相关接口(MQService)</strong> 以及Litedk的 <strong>MQ使用手册</strong></p>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>获取内置变量<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h4>获取合约方法调用者地址<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<p><strong>getSender</strong></p>
+<p>得到sender，合约方法调用者的地址（当且仅当存在跨合约调用时值会与orgin不同）</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">final</span> <span class="n">String</span> <span class="n">getSender</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 13%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getSender</p></td>
+<td><p>无</p></td>
+<td><p>sender，即合约方法调用者的地址</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">sender</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getSender</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h4>获取合约调用者地址<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p><strong>getOrigin</strong></p>
+<p>得到origin，合约调用者的地址:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">final</span> <span class="n">String</span> <span class="n">getOrigin</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 10%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getOrigin</p></td>
+<td><p>无</p></td>
+<td><p>origin，即合约调用者的地址</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">origin</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getOrigin</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>获取交易哈希<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p><strong>getTxHash</strong></p>
+<p>得到txHash，当前交易哈希</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">final</span> <span class="n">String</span> <span class="n">getTxHash</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 11%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getTxHash</p></td>
+<td><p>无</p></td>
+<td><p>txHash，即当前交易的hash</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">txHash</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getTxHash</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h4>获取时间戳<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p><strong>getBlockTimestamp</strong></p>
+<p>得到blockTimestamp，交易所在区块的时间戳</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">final</span> <span class="n">long</span> <span class="n">getBlockTimestamp</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 7%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getBlockTimestamp</p></td>
+<td><p>无</p></td>
+<td><p>blockTimestamp，即交易所在区块的时间戳</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">long</span> <span class="n">blockTimestamp</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getBlockTimestamp</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h4>获取区块号<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p><strong>getBlockNumber</strong></p>
+<p>得到blockNumber，交易所在的区块号</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">final</span> <span class="n">long</span> <span class="n">getBlockNumber</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 9%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getBlockNumber</p></td>
+<td><p>无</p></td>
+<td><p>blockNumber，即交易所在区块号</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">long</span> <span class="n">blockNumber</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getBlockNumber</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h4>获取合约地址<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p><strong>getContractAddress</strong></p>
+<p>得到contractAddress，合约地址</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">String</span> <span class="n">getContractAddress</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 8%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getContractAddress</p></td>
+<td><p>无</p></td>
+<td><p>contractAddress，即合约地址</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">contractAddress</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getContractAddress</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="demo">
+<h3>合约内置方法使用demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h3>
+<p><strong>【源码包可参考HVM使用手册 - HVM合约Demo附件源码- hvm-manual-demo的contractMethodDemo目录】</strong></p>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>3. HVM合约工具方法<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h3>概述<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>本文档介绍HVM合约编写过程可能使用到的工具方法，将分为以下8类进行说明。</p>
+<ul class="simple">
+<li><p>ByteUtil</p></li>
+<li><p>CryproUtil</p></li>
+<li><p>HashUtil</p></li>
+<li><p>ObjectsUtil</p></li>
+<li><p>StringUtil</p></li>
+<li><p>Logger</p></li>
+<li><p>DIDUtil</p></li>
+<li><p>Hyperson</p></li>
+</ul>
+</div>
+<div class="section" id="byteutil">
+<h3>ByteUtil<a class="headerlink" href="#byteutil" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="bytehex-string">
+<h4>byte数组与Hex String转换<a class="headerlink" href="#bytehex-string" title="Permalink to this headline">¶</a></h4>
+<p><strong>bytesToHex</strong></p>
+<p>byte数组转换为十六进制String类型</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">native</span> <span class="n">String</span> <span class="n">bytesToHex</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="nb">input</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 51%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bytesToHex</p></td>
+<td><p>input：需要转换的byte数组</p></td>
+<td><p>十六进制String</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">byte</span><span class="p">[]</span> <span class="nb">input</span> <span class="o">=</span> <span class="n">new</span> <span class="n">byte</span><span class="p">[]{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">};</span>
+<span class="n">String</span> <span class="n">hexString</span> <span class="o">=</span> <span class="n">ByteUtil</span><span class="o">.</span><span class="n">bytesToHex</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="nb">input</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>fromHexString</strong></p>
+<p>十六进制String类型转换为byte数组</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">native</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">fromHexString</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 54%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>fromHexString</p></td>
+<td><p>s：需要转换的十六进制String</p></td>
+<td><p>byte[]类型</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;0xabd43f&quot;</span><span class="p">;</span>
+<span class="n">ByteUtil</span><span class="o">.</span><span class="n">fromHexString</span><span class="p">(</span><span class="n">s1</span><span class="p">);</span>
+
+<span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;abd43f&quot;</span><span class="p">;</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="nb">bytes</span> <span class="o">=</span> <span class="n">ByteUtil</span><span class="o">.</span><span class="n">fromHexString</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
+<span class="o">//</span><span class="n">结果相同</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="byteint">
+<h4>byte数组和int转换<a class="headerlink" href="#byteint" title="Permalink to this headline">¶</a></h4>
+<p><strong>bytesToInt</strong></p>
+<p>byte数组转换为int类型</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="nb">int</span> <span class="n">bytesToInt</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="nb">bytes</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 51%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bytesToHex</p></td>
+<td><p>input：需要转换的byte数组</p></td>
+<td><p>十六进制String</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">byte</span><span class="p">[]</span> <span class="nb">bytes</span> <span class="o">=</span> <span class="n">new</span> <span class="n">byte</span><span class="p">[]{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">};</span>
+<span class="nb">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">ByteUtil</span><span class="o">.</span><span class="n">bytesToInt</span><span class="p">(</span><span class="nb">bytes</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>intToBytes</strong></p>
+<p>int类型转换为byte数组</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">intToBytes</span><span class="p">(</span><span class="nb">int</span> <span class="n">value</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 53%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>intToBytes</p></td>
+<td><p>value：需要转换的int类型</p></td>
+<td><p>byte[] 类型</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">48</span><span class="p">;</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">intBytes</span> <span class="o">=</span> <span class="n">ByteUtil</span><span class="o">.</span><span class="n">intToBytes</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="base64byte">
+<h4>base64编码转byte数组<a class="headerlink" href="#base64byte" title="Permalink to this headline">¶</a></h4>
+<p><strong>fromBase64Str</strong></p>
+<p>将base64编码的String转换为byte数组</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">native</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">fromBase64Str</span><span class="p">(</span><span class="n">String</span> <span class="n">string</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 63%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>fromBase64Str</p></td>
+<td><p>string：需要转换的base64编码的String类型</p></td>
+<td><p>byte[] 类型</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">byte</span><span class="p">[]</span> <span class="nb">bytes</span> <span class="o">=</span> <span class="n">ByteUtil</span><span class="o">.</span><span class="n">fromBase64Str</span><span class="p">(</span><span class="n">string</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="cryptoutil">
+<h3>CryptoUtil<a class="headerlink" href="#cryptoutil" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ecdsa">
+<h4>ECDSA账户验签<a class="headerlink" href="#ecdsa" title="Permalink to this headline">¶</a></h4>
+<p><strong>verifySignature</strong></p>
+<p>EC账户验签，通过公钥、原文和签名内容来验证签名内容。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">boolean</span> <span class="n">verifySignature</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">addr</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">origin</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">signature</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 63%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>fromBase64Str</p></td>
+<td><p>string：需要转换的base64编码的String类型</p></td>
+<td><p>byte[] 类型</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">以下代码使用了一些litesdk的工具类</span>
+<span class="n">ECKey</span> <span class="n">ecKey</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ECKey</span><span class="p">(</span><span class="n">new</span> <span class="n">SecureRandom</span><span class="p">());</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">address</span> <span class="o">=</span> <span class="n">ecKey</span><span class="o">.</span><span class="n">getAddress</span><span class="p">();</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">origin</span> <span class="o">=</span> <span class="s2">&quot;hyperchain&quot;</span><span class="o">.</span><span class="n">getBytes</span><span class="p">();</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="nb">hash</span> <span class="o">=</span> <span class="n">HashUtil</span><span class="o">.</span><span class="n">sha3</span><span class="p">(</span><span class="n">origin</span><span class="p">);</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">ecKey</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="nb">hash</span><span class="p">)</span><span class="o">.</span><span class="n">toByteArray</span><span class="p">();</span>
+<span class="n">CryptoUtil</span><span class="o">.</span><span class="n">verifySignature</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="nb">hash</span><span class="p">,</span> <span class="n">signature</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sm2">
+<h4>SM2国密账户验签<a class="headerlink" href="#sm2" title="Permalink to this headline">¶</a></h4>
+<p><strong>verifySM2Signature</strong></p>
+<p>SM账户验签，通过公钥、原文和签名内容来验证签名内容是否正确。</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">boolean</span> <span class="n">verifySM2Signature</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">pubKey</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">origin</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">signature</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 59%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>verifySM2
+Signature</p></td>
+<td><p>pubKey：byte[]
+类型的公钥origin：byte[]类
+型的原文signature：byte[]类型的签名。</p></td>
+<td><p>布尔值，签名正
+确则返回true，
+否则返回false。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">以下代码使用类litesdk的工具类</span>
+<span class="n">AsymmetricCipherKeyPair</span> <span class="n">keyPair</span> <span class="o">=</span> <span class="n">SM2Util</span><span class="o">.</span><span class="n">generateKeyPair</span><span class="p">();</span>
+<span class="n">ECPublicKeyParameters</span> <span class="n">ecPub</span><span class="p">;</span>
+<span class="n">ecpub</span> <span class="o">=</span> <span class="p">(</span><span class="n">ECPublicKeyParameters</span><span class="p">)</span> <span class="n">keyPair</span><span class="o">.</span><span class="n">getPublic</span><span class="p">();</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">origin</span> <span class="o">=</span> <span class="s2">&quot;hyperchain&quot;</span><span class="o">.</span><span class="n">getBytes</span><span class="p">();</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">publicKey</span> <span class="o">=</span> <span class="n">ecPub</span><span class="o">.</span><span class="n">getQ</span><span class="p">()</span><span class="o">.</span><span class="n">getEncoded</span><span class="p">(</span><span class="n">false</span><span class="p">);</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">SM2Util</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">keyPair</span><span class="p">,</span> <span class="n">origin</span><span class="p">);</span>
+<span class="n">CryptoUtil</span><span class="o">.</span><span class="n">verifySM2Signature</span><span class="p">(</span><span class="n">publicKey</span><span class="p">,</span><span class="n">origin</span><span class="p">,</span><span class="n">signature</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sm4">
+<h4>SM4加解密<a class="headerlink" href="#sm4" title="Permalink to this headline">¶</a></h4>
+<p><strong>sm4Encrypt</strong></p>
+<p>sm4加密:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">sm4Encrypt</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">key</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">src</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 54%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sm4Encrypt</p></td>
+<td><p>key：16字节的
+对称加密密钥src：需要被加密的内容</p></td>
+<td><p>byte[]
+类型被加密的密文</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>sm4Decrypt</strong></p>
+<p>sm4解密:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">sm4Decrypt</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">key</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">src</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 54%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sm4Decrypt</p></td>
+<td><p>key：16字节的
+对称加密密钥src：需要被解密的内容</p></td>
+<td><p>byte[]
+类型被解密的原文</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">byte</span><span class="p">[]</span> <span class="n">key</span> <span class="o">=</span> <span class="n">new</span> <span class="n">byte</span><span class="p">[]{</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">};</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;hyperchain&quot;</span><span class="o">.</span><span class="n">getBytes</span><span class="p">();</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">encryptBytes</span> <span class="o">=</span> <span class="n">CryptoUtil</span><span class="o">.</span><span class="n">sm4Encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">src</span><span class="p">);</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">decryptBytes</span> <span class="o">=</span> <span class="n">CryptoUtil</span><span class="o">.</span><span class="n">sm4Decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">encryptBytes</span><span class="p">);</span>
+<span class="n">ByteUtil</span><span class="o">.</span><span class="n">bytesToHex</span><span class="p">(</span><span class="n">src</span><span class="p">)</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">ByteUtil</span><span class="o">.</span><span class="n">bytesToHex</span><span class="p">(</span><span class="n">decryptBytes</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="aes">
+<h4>AES加解密<a class="headerlink" href="#aes" title="Permalink to this headline">¶</a></h4>
+<p><strong>aesEncrypt</strong></p>
+<p>AES加密:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">aesEncrypt</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">key</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">src</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 54%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>aesEncrypt</p></td>
+<td><p>key：32字节的
+对称加密密钥src：需要被加密的内容</p></td>
+<td><p>byte[]
+类型被加密的密文</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>aesDecrypt</strong></p>
+<p>AES解密:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">aesDecrypt</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">key</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">src</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 54%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>aesDecrypt</p></td>
+<td><p>key：32字节的
+对称加密密钥src：需要被解密的内容</p></td>
+<td><p>byte[]
+类型被解密的原文</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keyStr</span> <span class="o">=</span> <span class="n">keyStr</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">32</span><span class="p">);</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">key</span> <span class="o">=</span> <span class="n">keyStr</span><span class="o">.</span><span class="n">getBytes</span><span class="p">();</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;hyperchain&quot;</span><span class="o">.</span><span class="n">getBytes</span><span class="p">();</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">encryptBytes</span> <span class="o">=</span> <span class="n">CryptoUtil</span><span class="o">.</span><span class="n">aesEncrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">src</span><span class="p">);</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">decryptBytes</span> <span class="o">=</span> <span class="n">CryptoUtil</span><span class="o">.</span><span class="n">aesDecrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">encryptBytes</span><span class="p">);</span>
+<span class="n">ByteUtil</span><span class="o">.</span><span class="n">bytesToHex</span><span class="p">(</span><span class="n">src</span><span class="p">)</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">ByteUtil</span><span class="o">.</span><span class="n">bytesToHex</span><span class="p">(</span><span class="n">decryptBytes</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tripledes">
+<h4>tripleDES加解密<a class="headerlink" href="#tripledes" title="Permalink to this headline">¶</a></h4>
+<p><strong>tripleDESEncrypt</strong></p>
+<p>tripleDES 加密:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">tripleDESEncrypt</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">key</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">src</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 48%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tripleDESEncrypt</p></td>
+<td><p>key：24字节的对称
+加密密钥src：需要被加密的内容</p></td>
+<td><p>byte[]
+类
+型被加密的密文</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>tripleDESDecrypt</strong></p>
+<p>tripleDES 解密:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">tripleDESDecrypt</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">key</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">src</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 48%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tripleDESDecrypt</p></td>
+<td><p>key：24字节的对称
+加密密钥src：需要被解密的内容</p></td>
+<td><p>byte[]
+类
+型被解密的原文</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keyStr</span> <span class="o">=</span> <span class="n">keyStr</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">24</span><span class="p">);</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">key</span> <span class="o">=</span> <span class="n">keyStr</span><span class="o">.</span><span class="n">getBytes</span><span class="p">();</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;hyperchain&quot;</span><span class="o">.</span><span class="n">getBytes</span><span class="p">();</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">encryptBytes</span> <span class="o">=</span> <span class="n">CryptoUtil</span><span class="o">.</span><span class="n">tripleDESEncrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">src</span><span class="p">);</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">decryptBytes</span> <span class="o">=</span> <span class="n">CryptoUtil</span><span class="o">.</span><span class="n">tripleDESDecrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">encryptBytes</span><span class="p">);</span>
+<span class="n">ByteUtil</span><span class="o">.</span><span class="n">bytesToHex</span><span class="p">(</span><span class="n">src</span><span class="p">)</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">ByteUtil</span><span class="o">.</span><span class="n">bytesToHex</span><span class="p">(</span><span class="n">decryptBytes</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ecc">
+<h4>ecc加密<a class="headerlink" href="#ecc" title="Permalink to this headline">¶</a></h4>
+<p><strong>eccEncrypt</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">eccEncrypt</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">publicKey</span><span class="p">,</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">src</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 51%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>eccEncrypt</p></td>
+<td><p>key：加密密钥src：需要被加密的内容</p></td>
+<td><p>byte[] 类型被加密的原文</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cryptoutildemo">
+<h4>CryptoUtil使用demo<a class="headerlink" href="#cryptoutildemo" title="Permalink to this headline">¶</a></h4>
+<p>【源码包可参考HVM使用手册 - HVM合约Demo附件源码 -** hvm-manual-demo的cryptoCallDemo目录**】</p>
+</div>
+</div>
+<div class="section" id="hashutil">
+<h3>HashUtil<a class="headerlink" href="#hashutil" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="sha3-256">
+<h4>sha3-256哈希计算<a class="headerlink" href="#sha3-256" title="Permalink to this headline">¶</a></h4>
+<p><strong>sha3</strong></p>
+<p>对输入的byte数组进行sha3-256哈希计算，返回散列值:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">byte</span><span class="p">[]</span> <span class="n">sha3</span><span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="nb">input</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 54%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sha3</p></td>
+<td><p>input：需要哈希的byte数组</p></td>
+<td><p>byte[] 类型散列值</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">byte</span><span class="p">[]</span> <span class="nb">input</span> <span class="o">=</span> <span class="n">new</span> <span class="n">byte</span><span class="p">[]{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">};</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">hashResult</span> <span class="o">=</span> <span class="n">HashUtil</span><span class="o">.</span><span class="n">sha3</span><span class="p">(</span><span class="nb">input</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="objectsutil">
+<h3>ObjectsUtil<a class="headerlink" href="#objectsutil" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h4>判断对象是否相等<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<p><strong>equals</strong></p>
+<p>判断Object是否相等，返回布尔值:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">boolean</span> <span class="n">equals</span><span class="p">(</span><span class="n">final</span> <span class="n">Object</span> <span class="n">x</span><span class="p">,</span> <span class="n">final</span> <span class="n">Object</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 42%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>equals</p></td>
+<td><p>x：Java Object。y：Java
+Object</p></td>
+<td><p>布尔值，x和y相等，
+返回true，否则返回false。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="n">new</span> <span class="n">String</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">);</span>
+<span class="n">Integer</span> <span class="n">y</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Integet</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">boolean</span> <span class="n">isEqual</span> <span class="o">=</span> <span class="n">ObjectsUtil</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h4>哈希计算<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<p><strong>hash</strong></p>
+<p>计算多个Object的哈希值，返回多个Object的哈希值:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="nb">int</span> <span class="nb">hash</span><span class="p">(</span><span class="n">final</span> <span class="n">Object</span><span class="o">...</span> <span class="n">values</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 58%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hash</p></td>
+<td><p>values：0个或多个Java Object。</p></td>
+<td><p>多个Object的哈希值</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">object1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">String</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">);</span>
+<span class="n">Integer</span> <span class="n">object2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Integet</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="nb">int</span> <span class="n">hashResult0</span> <span class="o">=</span> <span class="n">ObjectsUtil</span><span class="o">.</span><span class="n">hash</span><span class="p">();</span>
+<span class="nb">int</span> <span class="n">hashResult1</span> <span class="o">=</span> <span class="n">ObjectsUtil</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="n">object1</span><span class="p">);</span>
+<span class="nb">int</span> <span class="n">hashResult2</span> <span class="o">=</span> <span class="n">ObjectsUtil</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="n">object1</span><span class="p">,</span> <span class="n">object2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="stringutil">
+<h3>StringUtil<a class="headerlink" href="#stringutil" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="string">
+<h4>检查String对象是否为空<a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h4>
+<p><strong>checkEmpty</strong></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">boolean</span> <span class="n">checkEmpty</span><span class="p">(</span><span class="n">String</span> <span class="n">string</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 30%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>checkEmpty</p></td>
+<td><p>string:
+需检查的String对象</p></td>
+<td><p>布尔值，String对象
+为空则返回true，否则返回false。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">string</span> <span class="o">=</span> <span class="n">new</span> <span class="n">String</span><span class="p">();</span>
+<span class="n">boolean</span> <span class="n">isEmpty</span> <span class="o">=</span> <span class="n">StringUtil</span><span class="o">.</span><span class="n">checkEmpty</span><span class="p">(</span><span class="n">string</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="logger">
+<h3>Logger<a class="headerlink" href="#logger" title="Permalink to this headline">¶</a></h3>
+<p>Logger类提供了打印对应classlog信息的功能。</p>
+<div class="section" id="id17">
+<h4>获取logger<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<p><strong>getLogger</strong></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">Logger</span> <span class="n">getLogger</span><span class="p">(</span><span class="n">Class</span> <span class="n">clazz</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 54%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getLogger</p></td>
+<td><p>clazz: 对应的class对象</p></td>
+<td><p>Logger对象</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">InvokeTripleDES</span> <span class="n">implements</span> <span class="n">BaseInvoke</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="p">,</span> <span class="n">ICrypto</span><span class="o">&gt;</span> <span class="p">{</span>
+   <span class="n">private</span> <span class="n">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">Logger</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">InvokeTripleDES</span><span class="o">.</span><span class="n">class</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id18">
+<h4>日志级别<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<p><strong>critical级别的日志</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">critical</span><span class="p">(</span><span class="n">Object</span> <span class="n">message</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 73%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>critical</p></td>
+<td><p>message: Object对象，需打印的日志信息</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;logger critical message&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>err级别的日志</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">err</span><span class="p">(</span><span class="n">Object</span> <span class="n">message</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 79%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>err</p></td>
+<td><p>message: Object对象，需打印的日志信息</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span><span class="o">.</span><span class="n">err</span><span class="p">(</span><span class="s2">&quot;logger err message&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>warning级别的日志</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">warning</span><span class="p">(</span><span class="n">Object</span> <span class="n">message</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 74%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>warning</p></td>
+<td><p>message: Object对象，需打印的日志信息</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;logger warning message&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>notice级别的日志</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">notice</span><span class="p">(</span><span class="n">Object</span> <span class="n">message</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 76%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>notice</p></td>
+<td><p>message: Object对象，需打印的日志信息</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span><span class="o">.</span><span class="n">notice</span><span class="p">(</span><span class="s2">&quot;logger notice message&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>info级别的日志</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">info</span><span class="p">(</span><span class="n">Object</span> <span class="n">message</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 79%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>info</p></td>
+<td><p>message: Object对象，需打印的日志信息</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;logger info message&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>debug级别的日志</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">debug</span><span class="p">(</span><span class="n">Object</span> <span class="n">message</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 77%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>debug</p></td>
+<td><p>message: Object对象，需打印的日志信息</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;logger debug message&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="didutil">
+<h3>DIDUtil<a class="headerlink" href="#didutil" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id19">
+<h4>检查凭证是否有效<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<p><strong>credentialIsValid</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">native</span> <span class="n">boolean</span> <span class="n">credentialIsValid</span><span class="p">(</span><span class="n">String</span> <span class="n">creID</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 24%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>credent
+ialIsValid</p></td>
+<td><p>string:
+需检查的凭证ID</p></td>
+<td><p>布尔值，凭证被
+吊销或过期则返回false，否则返回true。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boolean</span> <span class="n">isValid</span> <span class="o">=</span> <span class="n">DIDUtil</span><span class="o">.</span><span class="n">credentialIsValid</span><span class="p">(</span><span class="n">creID</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h4>检查凭证是否吊销<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<p><strong>credentialIsAbondoned</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">native</span> <span class="n">boolean</span> <span class="n">credentialIsAbondoned</span><span class="p">(</span><span class="n">String</span> <span class="n">creID</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 25%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>credent
+ialIsAbondoned</p></td>
+<td><p>string:
+需检查的凭证ID</p></td>
+<td><p>布尔值，凭证
+被吊销则返回true，否则返回false。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boolean</span> <span class="n">isValid</span> <span class="o">=</span> <span class="n">DIDUtil</span><span class="o">.</span><span class="n">credentialIsAbondoned</span><span class="p">(</span><span class="n">creID</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="hyperson">
+<h3>Hyperson<a class="headerlink" href="#hyperson" title="Permalink to this headline">¶</a></h3>
+<p>Hyperson提供了 <cite>toHyperson</cite> 方法将Java对象序列化成json字符串，以及 <cite>fromHyperson</cite> 方法将json字符串反序列化成Java对象。</p>
+<p>在使用Hyperson提供的序列化和反序列化方法之前，首先要构造一个Hyperson对象，可通过构造方法以及HypersonBuilder来构建，示例如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 无参构造函数, 配置均按照默认值
+Hyperson hyperson = new Hyperson();
+
+// 有参构造函数，可传入相关配置
+Hyperson hyperson = new Hyperson(escapeHtml, serialzeNull, excludeAnnotationField, excludeClassField);
+
+// HypersonBuilder构建
+Hyperson hyperson = new Hyperson.HypersonBuilder()
+       .disableEscapeHtml()
+       .enableSerializeNull()
+       .addExcludeAnnotationField(StoreField.class)
+       .addExcludeClassField(PersonName.class)
+       .create();
+</pre></div>
+</div>
+<p>配置项说明如下：</p>
+<ul class="simple">
+<li><p>serializeNull 控制是否序列化对象中值为null的字段，设置为true，则序列化值为null的字段；设置为false，则忽略值为null的字段，默认为false。</p></li>
+<li><p>escapeHtml 控制是否转义html字符，如 <cite>&lt;</cite> ，设置为true，则对html字符进行转义；设置为false，则不对html字符转义，默认为true。</p></li>
+<li><p>excludeAnnotationField 记录了注解类型，序列化和反序列化的过程中，将会忽略添加了这些注解的字段。即如果不想序列化对象中的某些字段，可以给相应字段添加注解，并将该注解类型设置到excludeAnnotationField中，那么添加了该注解的对象字段将不会被序列化。</p></li>
+<li><p>excludeClassField 记录了不被序列化及反序列化的字段类型。即如果不想序列化某一类型的字段，则可以将该类型设置到excludeClassField中，那么该类型的字段将不会被序列化。</p></li>
+</ul>
+<div class="section" id="id21">
+<h4>序列化<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<p><strong>toHyperson</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">String</span> <span class="n">toHyperson</span><span class="p">(</span><span class="n">Object</span> <span class="nb">object</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 34%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>toHyperson</p></td>
+<td><p>object: 需序列化的对象</p></td>
+<td><p>字符串，对象序列化后的json字符串</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Hyperson</span> <span class="n">hyperson</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Hyperson</span><span class="p">();</span>
+<span class="n">Student</span> <span class="n">student</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Student</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">json</span> <span class="o">=</span> <span class="n">hyperson</span><span class="o">.</span><span class="n">toHyperson</span><span class="p">(</span><span class="n">student</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id22">
+<h4>反序列化<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<p><strong>fromHyperson</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="n">fromHyperson</span><span class="p">(</span><span class="n">String</span> <span class="n">hyperson</span><span class="p">,</span> <span class="n">Type</span> <span class="nb">type</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 58%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>参数</p></th>
+<th class="head"><p>返回值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>fromHyperson</p></td>
+<td><p>hyperson:
+对象的json字符串type：对象的类型</p></td>
+<td><p>反
+序列化生成
+的对象实例</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Hyperson</span> <span class="n">hyperson</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Hyperson</span><span class="p">();</span>
+
+<span class="n">String</span> <span class="n">json</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span><span class="p">;</span>
+<span class="n">Type</span> <span class="nb">type</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="n">class</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">res</span> <span class="o">=</span> <span class="n">hyperson</span><span class="o">.</span><span class="n">fromHyperson</span><span class="p">(</span><span class="n">json</span><span class="p">,</span> <span class="nb">type</span><span class="p">);</span>
+
+<span class="n">String</span> <span class="n">mapJson</span> <span class="o">=</span> <span class="s2">&quot;{</span><span class="se">\&quot;</span><span class="s2">key</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">value</span><span class="se">\&quot;</span><span class="s2">}&quot;</span><span class="p">;</span>
+<span class="n">Type</span> <span class="n">mapType</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ParameterizedTypeImpl</span><span class="p">(</span><span class="n">HashMap</span><span class="o">.</span><span class="n">class</span><span class="p">,</span> <span class="n">new</span> <span class="n">Type</span><span class="p">[]{</span><span class="n">String</span><span class="o">.</span><span class="n">class</span><span class="p">,</span> <span class="n">String</span><span class="o">.</span><span class="n">class</span><span class="p">},</span> <span class="n">null</span><span class="p">);</span>
+<span class="n">Map</span> <span class="n">mapRes</span> <span class="o">=</span> <span class="n">hyperson</span><span class="o">.</span><span class="n">fromHyperson</span><span class="p">(</span><span class="n">mapJson</span><span class="p">,</span> <span class="n">mapType</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>注意事项</strong></p>
+<ul class="simple">
+<li><p>对象中不允许存在同名字段，即父类和子类不能存在同名字段</p></li>
+<li><p>序列化Map类型的对象时，其key不能为复杂类型，可为八大基本类型或String类型</p></li>
+<li><p>反序列化时，传入的类型参数必须是class类型对象或者实现了ParameterizedType接口的对象</p></li>
+<li><p>反序列化时，如果没有传入相应的类型参数，则数组、集合对象默认反序列化为ArrayList；byte、short、int、long、float、double默认为Double；char、String默认为String；boolean默认为Boolean；其他对象反序列化为LinkedHashMap对象</p></li>
+<li><p>反序列化时，当传入的类型参数是抽象类或接口时，如果其为继承或实现Collection的接口或抽象类类型，则SortedSet接口类型对应TreeSet类型，EnumSet类型对应EnumSet的子类，Set接口类型对应LinkedHashSet类型，Queue接口类型对应ArrayDeque类型，其他为ArrayList类型；如果其为继承或实现Map的接口或抽象类类型，则ConcurrentNavigableMap接口类型对应ConcurrentSkipListMap类型，ConcurrentMap接口类型对应ConcurrentHashMap类型，SortedMap接口类型对应TreeMap类型，其他为LinkedHashMap类型。如果不为Map、Collection以及Number，其他抽象类或接口会反序列化失败。</p></li>
+<li><p>浮点数不允许为NaN或者inf(无穷值）</p></li>
+<li><p>Hyperson不支持对增加了注释的json字符串进行反序列化</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2016-2023, Hangzhou Hyperchain Technology Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
