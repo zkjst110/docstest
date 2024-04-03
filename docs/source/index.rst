@@ -17,8 +17,9 @@ Contents
 --------
 
 .. toctree::
-
-zh_CN/index
+   :maxdepth: 2
+   :caption: 目录:
+   zh_CN/index
    .. usage
    .. api
    .. application
