@@ -9,6 +9,7 @@ and offers a *simple* and *intuitive* API.
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.this is a sentence different from master ,belong to addtest1.
 the change i hope deal auto.
+test for new branch v1.1 label.
 
 .. note::
 
