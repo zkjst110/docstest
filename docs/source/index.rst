@@ -18,7 +18,8 @@ Contents
 
 .. toctree::
 
-   usage
-   api
-   application
+zh_CN/index
+   .. usage
+   .. api
+   .. application
     
